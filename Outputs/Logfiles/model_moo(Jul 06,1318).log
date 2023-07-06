@@ -1,0 +1,32 @@
+
+Gurobi 10.0.2 (win64) logging started Thu Jul  6 13:18:12 2023
+
+Set parameter LogFile to value "Outputs/Logfiles/model_moo(Jul 06,1318).log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (win64)
+
+CPU model: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 12102 rows, 8060 columns and 20060 nonzeros
+Model fingerprint: 0x6f3fde4f
+Variable types: 6000 continuous, 2060 integer (2060 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+05]
+  Objective range  [3e-03, 1e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+00, 2e+07]
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 6001 rows and 60 columns
+Presolve time: 0.02s
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.07 seconds (0.00 work units)
+Model is infeasible
+

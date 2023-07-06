@@ -1,0 +1,539 @@
+
+Gurobi 10.0.2 (win64) logging started Thu Jul  6 13:57:47 2023
+
+Set parameter LogFile to value "Outputs/Logfiles/model_moo(Jul 06,1357).log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (win64)
+
+CPU model: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 12101 rows, 8060 columns and 20060 nonzeros
+Model fingerprint: 0x9ff60754
+Variable types: 6000 continuous, 2060 integer (2060 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+05]
+  Objective range  [1e-04, 1e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+00, 2e+02]
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 10000 rows and 4000 columns
+Presolve time: 0.04s
+Presolved: 2101 rows and 4060 columns
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective -190.1375610
+Presolve removed 2100 rows and 4040 columns
+Presolve time: 0.13s
+Presolved: 1 rows, 20 columns, 20 nonzeros
+Found heuristic solution: objective -9498.352669
+Variable types: 0 continuous, 20 integer (20 binary)
+Found heuristic solution: objective -9498.400602
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.24 seconds (0.01 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: -9498.4 -9498.35 
+No other solutions better than -9498.4
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -9.498400602299e+03, best bound -9.498400602299e+03, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 260000
+
+Presolve removed 2001 rows and 2176 columns
+Presolve time: 0.02s
+Presolved: 101 rows, 1884 columns, 3768 nonzeros
+Variable types: 0 continuous, 1884 integer (1880 binary)
+
+Root relaxation: cutoff, 105 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      260000.000 260000.000  0.00%     -    0s
+
+Explored 1 nodes (105 simplex iterations) in 0.32 seconds (0.03 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 260000 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.600000000000e+05, best bound 2.600000000000e+05, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.34 seconds (0.03 work units), solution count 2
+
+
+    Variable            X 
+-------------------------
+cover[o74,s14]            1 
+cover[o74,s16]            1 
+cover[o74,s17]            1 
+cover[o98,s13]            1 
+cover[o98,s15]            1 
+cover[o98,s16]            1 
+cover[o53,s8]            1 
+cover[o53,s10]            1 
+cover[o53,s11]            1 
+cover[o178,s1]            1 
+cover[o178,s2]            1 
+cover[o178,s3]            1 
+cover[o203,s18]            1 
+cover[o203,s19]            1 
+cover[o203,s20]            1 
+cover[o127,s13]            1 
+cover[o127,s14]            1 
+cover[o127,s16]            1 
+cover[o172,s2]            1 
+cover[o172,s3]            1 
+cover[o172,s4]            1 
+cover[o51,s12]            1 
+cover[o51,s13]            1 
+cover[o51,s15]            1 
+cover[o7,s18]            1 
+cover[o7,s19]            1 
+cover[o7,s20]            1 
+cover[o30,s1]            1 
+cover[o30,s2]            1 
+cover[o30,s5]            1 
+cover[o221,s1]            1 
+cover[o221,s2]            1 
+cover[o221,s5]            1 
+cover[o64,s8]            1 
+cover[o64,s10]            1 
+cover[o64,s11]            1 
+cover[o25,s1]            1 
+cover[o25,s2]            1 
+cover[o25,s5]            1 
+cover[o94,s18]            1 
+cover[o94,s19]            1 
+cover[o94,s20]            1 
+cover[o119,s9]            1 
+cover[o119,s12]            1 
+cover[o119,s13]            1 
+cover[o148,s3]            1 
+cover[o148,s4]            1 
+cover[o148,s6]            1 
+cover[o208,s3]            1 
+cover[o208,s4]            1 
+cover[o208,s5]            1 
+cover[o86,s18]            1 
+cover[o86,s19]            1 
+cover[o86,s20]            1 
+cover[o93,s18]            1 
+cover[o93,s19]            1 
+cover[o93,s20]            1 
+cover[o108,s9]            1 
+cover[o108,s12]            1 
+cover[o108,s13]            1 
+cover[o131,s9]            1 
+cover[o131,s10]            1 
+cover[o131,s11]            1 
+cover[o6,s18]            1 
+cover[o6,s19]            1 
+cover[o6,s20]            1 
+cover[o10,s15]            1 
+cover[o10,s18]            1 
+cover[o10,s20]            1 
+cover[o41,s2]            1 
+cover[o41,s3]            1 
+cover[o41,s4]            1 
+cover[o144,s3]            1 
+cover[o144,s4]            1 
+cover[o144,s6]            1 
+cover[o169,s1]            1 
+cover[o169,s2]            1 
+cover[o169,s3]            1 
+cover[o185,s1]            1 
+cover[o185,s2]            1 
+cover[o185,s3]            1 
+cover[o87,s18]            1 
+cover[o87,s19]            1 
+cover[o87,s20]            1 
+cover[o168,s2]            1 
+cover[o168,s3]            1 
+cover[o168,s4]            1 
+cover[o24,s1]            1 
+cover[o24,s2]            1 
+cover[o24,s3]            1 
+cover[o190,s8]            1 
+cover[o190,s10]            1 
+cover[o190,s11]            1 
+cover[o97,s13]            1 
+cover[o97,s15]            1 
+cover[o97,s16]            1 
+cover[o162,s2]            1 
+cover[o162,s3]            1 
+cover[o162,s4]            1 
+cover[o106,s13]            1 
+cover[o106,s15]            1 
+cover[o106,s16]            1 
+cover[o157,s2]            1 
+cover[o157,s3]            1 
+cover[o157,s4]            1 
+cover[o175,s1]            1 
+cover[o175,s2]            1 
+cover[o175,s3]            1 
+cover[o136,s9]            1 
+cover[o136,s10]            1 
+cover[o136,s11]            1 
+cover[o145,s3]            1 
+cover[o145,s6]            1 
+cover[o145,s7]            1 
+cover[o3,s8]            1 
+cover[o3,s10]            1 
+cover[o3,s11]            1 
+cover[o28,s1]            1 
+cover[o28,s2]            1 
+cover[o28,s5]            1 
+cover[o45,s10]            1 
+cover[o45,s11]            1 
+cover[o45,s14]            1 
+cover[o27,s1]            1 
+cover[o27,s2]            1 
+cover[o27,s5]            1 
+cover[o219,s1]            1 
+cover[o219,s2]            1 
+cover[o219,s5]            1 
+cover[o9,s13]            1 
+cover[o9,s15]            1 
+cover[o9,s16]            1 
+cover[o212,s3]            1 
+cover[o212,s4]            1 
+cover[o212,s5]            1 
+cover[o139,s6]            1 
+cover[o139,s7]            1 
+cover[o139,s9]            1 
+cover[o214,s3]            1 
+cover[o214,s4]            1 
+cover[o214,s5]            1 
+cover[o113,s9]            1 
+cover[o113,s12]            1 
+cover[o113,s13]            1 
+cover[o160,s2]            1 
+cover[o160,s3]            1 
+cover[o160,s4]            1 
+cover[o191,s8]            1 
+cover[o191,s10]            1 
+cover[o191,s11]            1 
+cover[o104,s12]            1 
+cover[o104,s13]            1 
+cover[o104,s15]            1 
+cover[o184,s1]            1 
+cover[o184,s2]            1 
+cover[o184,s3]            1 
+cover[o37,s1]            1 
+cover[o37,s2]            1 
+cover[o37,s3]            1 
+cover[o165,s2]            1 
+cover[o165,s3]            1 
+cover[o165,s4]            1 
+cover[o83,s18]            1 
+cover[o83,s19]            1 
+cover[o83,s20]            1 
+cover[o114,s9]            1 
+cover[o114,s12]            1 
+cover[o114,s13]            1 
+cover[o155,s2]            1 
+cover[o155,s3]            1 
+cover[o155,s4]            1 
+cover[o91,s18]            1 
+cover[o91,s19]            1 
+cover[o91,s20]            1 
+cover[o138,s6]            1 
+cover[o138,s7]            1 
+cover[o138,s9]            1 
+cover[o183,s1]            1 
+cover[o183,s2]            1 
+cover[o183,s5]            1 
+cover[o11,s12]            1 
+cover[o11,s13]            1 
+cover[o11,s15]            1 
+cover[o181,s1]            1 
+cover[o181,s2]            1 
+cover[o181,s3]            1 
+cover[o159,s2]            1 
+cover[o159,s3]            1 
+cover[o159,s4]            1 
+cover[o48,s12]            1 
+cover[o48,s13]            1 
+cover[o48,s14]            1 
+cover[o129,s13]            1 
+cover[o129,s14]            1 
+cover[o129,s16]            1 
+cover[o158,s2]            1 
+cover[o158,s3]            1 
+cover[o158,s4]            1 
+cover[o117,s9]            1 
+cover[o117,s12]            1 
+cover[o117,s13]            1 
+cover[o153,s3]            1 
+cover[o153,s4]            1 
+cover[o153,s6]            1 
+cover[o101,s12]            1 
+cover[o101,s13]            1 
+cover[o101,s14]            1 
+cover[o44,s16]            1 
+cover[o44,s17]            1 
+cover[o44,s19]            1 
+cover[o109,s13]            1 
+cover[o109,s15]            1 
+cover[o109,s18]            1 
+cover[o59,s8]            1 
+cover[o59,s10]            1 
+cover[o59,s11]            1 
+cover[o121,s9]            1 
+cover[o121,s12]            1 
+cover[o121,s13]            1 
+cover[o13,s9]            1 
+cover[o13,s10]            1 
+cover[o13,s11]            1 
+cover[o128,s13]            1 
+cover[o128,s14]            1 
+cover[o128,s16]            1 
+cover[o90,s18]            1 
+cover[o90,s19]            1 
+cover[o90,s20]            1 
+cover[o79,s16]            1 
+cover[o79,s17]            1 
+cover[o79,s19]            1 
+cover[o161,s2]            1 
+cover[o161,s3]            1 
+cover[o161,s4]            1 
+cover[o163,s2]            1 
+cover[o163,s3]            1 
+cover[o163,s4]            1 
+cover[o130,s9]            1 
+cover[o130,s10]            1 
+cover[o130,s12]            1 
+cover[o107,s12]            1 
+cover[o107,s13]            1 
+cover[o107,s14]            1 
+cover[o42,s1]            1 
+cover[o42,s2]            1 
+cover[o42,s3]            1 
+cover[o31,s1]            1 
+cover[o31,s2]            1 
+cover[o31,s5]            1 
+cover[o19,s3]            1 
+cover[o19,s6]            1 
+cover[o19,s7]            1 
+cover[o22,s1]            1 
+cover[o22,s2]            1 
+cover[o187,s1]            1 
+cover[o187,s2]            1 
+cover[o187,s5]            1 
+cover[o84,s16]            1 
+cover[o84,s17]            1 
+cover[o84,s19]            1 
+cover[o132,s9]            1 
+cover[o132,s10]            1 
+cover[o132,s11]            1 
+cover[o198,s1]            1 
+cover[o198,s2]            1 
+cover[o198,s3]            1 
+cover[o49,s13]            1 
+cover[o49,s15]            1 
+cover[o49,s16]            1 
+cover[o116,s9]            1 
+cover[o116,s12]            1 
+cover[o116,s13]            1 
+cover[o124,s9]            1 
+cover[o124,s12]            1 
+cover[o124,s13]            1 
+cover[o134,s9]            1 
+cover[o134,s10]            1 
+cover[o134,s11]            1 
+cover[o82,s18]            1 
+cover[o82,s19]            1 
+cover[o82,s20]            1 
+cover[o220,s1]            1 
+cover[o220,s2]            1 
+cover[o220,s5]            1 
+cover[o207,s3]            1 
+cover[o207,s4]            1 
+cover[o207,s5]            1 
+cover[o43,s2]            1 
+cover[o43,s3]            1 
+cover[o43,s4]            1 
+cover[o192,s1]            1 
+cover[o192,s2]            1 
+cover[o192,s5]            1 
+cover[o174,s2]            1 
+cover[o174,s3]            1 
+cover[o174,s4]            1 
+cover[o78,s14]            1 
+cover[o78,s16]            1 
+cover[o78,s17]            1 
+select[s8,i]            1 
+select[s16,i]            1 
+select[s4,i]            1 
+select[s17,i]            1 
+select[s20,i]            1 
+deploy[o178,s4,i]          157 
+deploy[o178,s8,i]          157 
+deploy[o178,s16,i]          157 
+deploy[o178,s17,i]          157 
+deploy[o178,s20,i]          157 
+deploy[o172,s4,i]            7 
+deploy[o172,s8,i]            7 
+deploy[o172,s16,i]            7 
+deploy[o172,s17,i]            7 
+deploy[o172,s20,i]            7 
+deploy[o94,s4,i]            7 
+deploy[o94,s8,i]            7 
+deploy[o94,s16,i]            7 
+deploy[o94,s17,i]            7 
+deploy[o94,s20,i]            7 
+deploy[o148,s4,i]            7 
+deploy[o148,s8,i]            7 
+deploy[o148,s16,i]            7 
+deploy[o148,s17,i]            7 
+deploy[o148,s20,i]            7 
+deploy[o108,s4,i]           37 
+deploy[o108,s8,i]           37 
+deploy[o108,s16,i]           37 
+deploy[o108,s17,i]           37 
+deploy[o108,s20,i]           37 
+deploy[o41,s4,i]          157 
+deploy[o41,s8,i]          157 
+deploy[o41,s16,i]          157 
+deploy[o41,s17,i]          157 
+deploy[o41,s20,i]          157 
+deploy[o185,s4,i]          157 
+deploy[o185,s8,i]          157 
+deploy[o185,s16,i]          157 
+deploy[o185,s17,i]          157 
+deploy[o185,s20,i]          157 
+deploy[o97,s4,i]            7 
+deploy[o97,s8,i]            7 
+deploy[o97,s16,i]            7 
+deploy[o97,s17,i]            7 
+deploy[o97,s20,i]            7 
+deploy[o106,s4,i]            7 
+deploy[o106,s8,i]            7 
+deploy[o106,s16,i]            7 
+deploy[o106,s17,i]            7 
+deploy[o106,s20,i]            7 
+deploy[o175,s4,i]           37 
+deploy[o175,s8,i]           37 
+deploy[o175,s16,i]           37 
+deploy[o175,s17,i]           37 
+deploy[o175,s20,i]           37 
+deploy[o28,s4,i]           37 
+deploy[o28,s8,i]           37 
+deploy[o28,s16,i]           37 
+deploy[o28,s17,i]           37 
+deploy[o28,s20,i]           37 
+deploy[o27,s4,i]           37 
+deploy[o27,s8,i]           37 
+deploy[o27,s16,i]           37 
+deploy[o27,s17,i]           37 
+deploy[o27,s20,i]           37 
+deploy[o9,s4,i]           37 
+deploy[o9,s8,i]           37 
+deploy[o9,s16,i]           37 
+deploy[o9,s17,i]           37 
+deploy[o9,s20,i]           37 
+deploy[o139,s4,i]           37 
+deploy[o139,s8,i]           37 
+deploy[o139,s16,i]           37 
+deploy[o139,s17,i]           37 
+deploy[o139,s20,i]           37 
+deploy[o104,s4,i]            7 
+deploy[o104,s8,i]            7 
+deploy[o104,s16,i]            7 
+deploy[o104,s17,i]            7 
+deploy[o104,s20,i]            7 
+deploy[o91,s4,i]            7 
+deploy[o91,s8,i]            7 
+deploy[o91,s16,i]            7 
+deploy[o91,s17,i]            7 
+deploy[o91,s20,i]            7 
+deploy[o138,s4,i]          157 
+deploy[o138,s8,i]          157 
+deploy[o138,s16,i]          157 
+deploy[o138,s17,i]          157 
+deploy[o138,s20,i]          157 
+deploy[o183,s4,i]            7 
+deploy[o183,s8,i]            7 
+deploy[o183,s16,i]            7 
+deploy[o183,s17,i]            7 
+deploy[o183,s20,i]            7 
+deploy[o11,s4,i]          157 
+deploy[o11,s8,i]          157 
+deploy[o11,s16,i]          157 
+deploy[o11,s17,i]          157 
+deploy[o11,s20,i]          157 
+deploy[o181,s4,i]          157 
+deploy[o181,s8,i]          157 
+deploy[o181,s16,i]          157 
+deploy[o181,s17,i]          157 
+deploy[o181,s20,i]          157 
+deploy[o159,s4,i]           37 
+deploy[o159,s8,i]           37 
+deploy[o159,s16,i]           37 
+deploy[o159,s17,i]           37 
+deploy[o159,s20,i]           37 
+deploy[o48,s4,i]            7 
+deploy[o48,s8,i]            7 
+deploy[o48,s16,i]            7 
+deploy[o48,s17,i]            7 
+deploy[o48,s20,i]            7 
+deploy[o129,s4,i]          157 
+deploy[o129,s8,i]          157 
+deploy[o129,s16,i]          157 
+deploy[o129,s17,i]          157 
+deploy[o129,s20,i]          157 
+deploy[o107,s4,i]           37 
+deploy[o107,s8,i]           37 
+deploy[o107,s16,i]           37 
+deploy[o107,s17,i]           37 
+deploy[o107,s20,i]           37 
+deploy[o22,s4,i]          157 
+deploy[o22,s8,i]          157 
+deploy[o22,s16,i]          157 
+deploy[o22,s17,i]          157 
+deploy[o22,s20,i]          157 
+deploy[o187,s4,i]            7 
+deploy[o187,s8,i]            7 
+deploy[o187,s16,i]            7 
+deploy[o187,s17,i]            7 
+deploy[o187,s20,i]            7 
+deploy[o116,s4,i]           37 
+deploy[o116,s8,i]           37 
+deploy[o116,s16,i]           37 
+deploy[o116,s17,i]           37 
+deploy[o116,s20,i]           37 
+deploy[o82,s4,i]           37 
+deploy[o82,s8,i]           37 
+deploy[o82,s16,i]           37 
+deploy[o82,s17,i]           37 
+deploy[o82,s20,i]           37 
+deploy[o43,s4,i]          157 
+deploy[o43,s8,i]          157 
+deploy[o43,s16,i]          157 
+deploy[o43,s17,i]          157 
+deploy[o43,s20,i]          157 
+deploy[o78,s4,i]           37 
+deploy[o78,s8,i]           37 
+deploy[o78,s16,i]           37 
+deploy[o78,s17,i]           37 
+deploy[o78,s20,i]           37 

@@ -42,6 +42,7 @@ def generate_input_data(station_data, spill_data, input_parameters):
     Eff = {}
     for ii in range(len(s_r_comb)):
         Eff[(s_r_comb[ii])] = Eff_stacked_df[ii]
+    # ++ Effectiveness could be more related to oil spill itself
 
     #%% Availability of resources in a station
     Ava_df = input_parameters[['Station.1', 'm.2', 'c.2', 'i.2']]

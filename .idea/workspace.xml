@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/New folder/2model_development.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/New folder/3model_development.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1341).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1346).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1350).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1357).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1422).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1341).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1346).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1350).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1357).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1422).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 06,1350 100 spills 5 NumberSt_max 200Distance_max 30000%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 06,1357 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 06,1422 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cutpaste files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/model_moo.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.lp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/model_moo.sol" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preparation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_development.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/model_development.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensitivity_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/sensitivity_analysis.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="1" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2S7qN2nBFAhIwxARK5gg5IEHqp7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "H:/My Drive/PhD Tan 2023/Python Implementation of MIPs/MIP-Python-Lamoscad/New folder",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\My Drive\PhD Tan 2023\Python Implementation of MIPs\MIP-Python-Lamoscad\New folder" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="MIP-Python-Lamoscad" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="MIP-Python-Lamoscad" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="" />
+      <created>1688507925544</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688507925544</updated>
+      <workItem from="1688507954239" duration="4209000" />
+      <workItem from="1688520062393" duration="4505000" />
+      <workItem from="1688582602531" duration="8761000" />
+      <workItem from="1688606387151" duration="6343000" />
+      <workItem from="1688659025428" duration="1923000" />
+      <workItem from="1688661359653" duration="3312000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

@@ -139,7 +139,7 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
     plt.legend((spillC, spillUnC, st, stUns),
                ('Oil Spill covered', 'Oil Spill uncovered', 'Stations selected',
                 'Stations not selected', 'Centroid - selected Stations'),
-               # loc='upper left',
+               loc='lower left',
                ncol=1, handlelength=5, borderpad=.5, markerscale=.4,
                fontsize=14
                )

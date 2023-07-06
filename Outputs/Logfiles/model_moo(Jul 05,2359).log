@@ -1,0 +1,214 @@
+
+Gurobi 10.0.2 (win64) logging started Wed Jul  5 23:59:09 2023
+
+Set parameter LogFile to value "Outputs/Logfiles/model_moo(Jul 05,2359).log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (win64)
+
+CPU model: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 18102 rows, 8060 columns and 32060 nonzeros
+Model fingerprint: 0x045ecd3b
+Variable types: 6000 continuous, 2060 integer (2060 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+05]
+  Objective range  [3e-03, 1e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+00, 2e+07]
+Warning: PoolSearchMode != 0 is not supported for multi-objective optimization.
+         Reset PoolSearchMode to zero.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 10001 rows and 4000 columns
+Presolve time: 0.15s
+Presolved: 8101 rows and 4060 columns
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 2000 rows and 2000 columns
+Presolve time: 0.08s
+Presolved: 6101 rows, 2060 columns, 14060 nonzeros
+Variable types: 0 continuous, 2060 integer (2060 binary)
+Found heuristic solution: objective -94.4822385
+
+Root relaxation: objective -1.574704e+02, 3947 iterations, 0.23 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -157.47040    0  103  -94.48224 -157.47040  66.7%     -    0s
+     0     0 -157.34953    0  102  -94.48224 -157.34953  66.5%     -    0s
+     0     0 -157.23229    0  102  -94.48224 -157.23229  66.4%     -    0s
+     0     0 -157.16851    0  206  -94.48224 -157.16851  66.3%     -    0s
+     0     0 -157.03712    0  102  -94.48224 -157.03712  66.2%     -    1s
+H    0     0                     -94.4822594 -157.03712  66.2%     -    1s
+     0     0 -157.03712    0  102  -94.48226 -157.03712  66.2%     -    1s
+     0     0 -156.95875    0  102  -94.48226 -156.95875  66.1%     -    1s
+     0     0 -156.95604    0  307  -94.48226 -156.95604  66.1%     -    1s
+     0     0 -156.91012    0  102  -94.48226 -156.91012  66.1%     -    1s
+     0     0 -156.90793    0  102  -94.48226 -156.90793  66.1%     -    1s
+     0     0 -156.90793    0  102  -94.48226 -156.90793  66.1%     -    1s
+     0     2 -156.90793    0  102  -94.48226 -156.90793  66.1%     -    2s
+
+Cutting planes:
+  Gomory: 368
+  Zero half: 2
+  Mod-K: 1
+
+Explored 11 nodes (5088 simplex iterations) in 2.47 seconds (1.49 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: -94.4823 -94.4822 
+No other solutions better than -94.4823
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -9.448225944478e+01, best bound -9.448225944478e+01, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 200000
+
+Presolve removed 4700 rows and 2927 columns
+Presolve time: 0.20s
+Presolved: 3402 rows, 1133 columns, 8833 nonzeros
+Variable types: 0 continuous, 1133 integer (1133 binary)
+Found heuristic solution: objective 120000.00000
+
+Root relaxation: objective 2.999701e+04, 1504 iterations, 0.07 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 29997.0063    0  103 120000.000 29997.0063  75.0%     -    2s
+H    0     0                    30000.000000 29997.0063  0.01%     -    2s
+     0     0 29997.0063    0  103 30000.0000 29997.0063  0.01%     -    2s
+
+Explored 1 nodes (1504 simplex iterations) in 2.86 seconds (1.61 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 30000 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.000000000000e+04, best bound 3.000000000000e+04, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 2.91 seconds (1.61 work units), solution count 3
+
+
+    Variable            X 
+-------------------------
+cover[o74,s7]            1 
+cover[o98,s7]            1 
+cover[o53,s7]            1 
+cover[o178,s7]            1 
+cover[o203,s7]            1 
+cover[o127,s7]            1 
+cover[o172,s7]            1 
+cover[o51,s7]            1 
+cover[o7,s7]            1 
+cover[o30,s7]            1 
+cover[o221,s7]            1 
+cover[o64,s7]            1 
+cover[o25,s7]            1 
+cover[o94,s7]            1 
+cover[o119,s7]            1 
+cover[o148,s7]            1 
+cover[o208,s7]            1 
+cover[o86,s7]            1 
+cover[o93,s7]            1 
+cover[o108,s7]            1 
+cover[o131,s7]            1 
+cover[o6,s7]            1 
+cover[o10,s7]            1 
+cover[o41,s7]            1 
+cover[o144,s7]            1 
+cover[o169,s7]            1 
+cover[o185,s7]            1 
+cover[o87,s7]            1 
+cover[o168,s7]            1 
+cover[o24,s7]            1 
+cover[o190,s7]            1 
+cover[o97,s7]            1 
+cover[o162,s7]            1 
+cover[o106,s7]            1 
+cover[o157,s7]            1 
+cover[o175,s7]            1 
+cover[o136,s7]            1 
+cover[o145,s7]            1 
+cover[o3,s7]            1 
+cover[o28,s7]            1 
+cover[o45,s7]            1 
+cover[o27,s7]            1 
+cover[o219,s7]            1 
+cover[o9,s7]            1 
+cover[o212,s7]            1 
+cover[o139,s7]            1 
+cover[o214,s7]            1 
+cover[o113,s7]            1 
+cover[o160,s7]            1 
+cover[o191,s7]            1 
+cover[o104,s7]            1 
+cover[o184,s7]            1 
+cover[o37,s7]            1 
+cover[o165,s7]            1 
+cover[o83,s7]            1 
+cover[o114,s7]            1 
+cover[o155,s7]            1 
+cover[o91,s7]            1 
+cover[o138,s7]            1 
+cover[o183,s7]            1 
+cover[o11,s7]            1 
+cover[o181,s7]            1 
+cover[o159,s7]            1 
+cover[o48,s7]            1 
+cover[o129,s7]            1 
+cover[o158,s7]            1 
+cover[o117,s7]            1 
+cover[o153,s7]            1 
+cover[o101,s7]            1 
+cover[o44,s7]            1 
+cover[o109,s7]            1 
+cover[o59,s7]            1 
+cover[o121,s7]            1 
+cover[o13,s7]            1 
+cover[o128,s7]            1 
+cover[o90,s7]            1 
+cover[o79,s7]            1 
+cover[o161,s7]            1 
+cover[o163,s7]            1 
+cover[o130,s7]            1 
+cover[o107,s7]            1 
+cover[o42,s7]            1 
+cover[o31,s7]            1 
+cover[o19,s7]            1 
+cover[o22,s7]            1 
+cover[o187,s7]            1 
+cover[o84,s7]            1 
+cover[o132,s7]            1 
+cover[o198,s7]            1 
+cover[o49,s7]            1 
+cover[o116,s7]            1 
+cover[o124,s7]            1 
+cover[o134,s7]            1 
+cover[o82,s7]            1 
+cover[o220,s7]            1 
+cover[o207,s7]            1 
+cover[o43,s7]            1 
+cover[o192,s7]            1 
+cover[o174,s7]            1 
+cover[o78,s7]            1 
+select[s7,m]            1 
+select[s7,c]            1 
+select[s7,i]            1 

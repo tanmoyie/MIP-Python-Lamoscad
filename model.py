@@ -1,6 +1,7 @@
 """ Optimization model: maximize effectiveness and minimize cost: MIP
 
 Outline:
+
 1. Define Decision variables
 2. Add Constraints
 3. Add objective functions
@@ -9,11 +10,10 @@ Outline:
 6. Write log file
 7. Get some variables out of the model for further analysis
 
-Note: This version of the model's output would be problematic as we didn't add response time.
-So model can select even distance facilities to cover instead of picking nearby ones.
+Note:
 
 Developer: Tanmoy Das
-Date: Feb 10, 2023
+Date: July 05, 2023
 """
 
 # %% Data
@@ -29,9 +29,10 @@ import math
 
 
 # %% Model 2: MIP-2
-def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, SizeSpill, SizeSpill_n, \
+def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, SizeSpill, SizeSpill_n,
           Demand, Sensitivity_R, Sensitivity_n, Eff, Effectiveness_n, Availability, NumberStMax, Distance, Distance_n,
-          DistanceMax, Cf_s, Cu_sor):
+          DistanceMax, Cf_s, Cu_sor, Budget,
+          BigM, MaxF):
     """
     :param Stations:
     :param OilSpills:
@@ -53,15 +54,12 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     :param Cu_sor:
     :return:
     """
-    import gurobipy as gp
-    from gurobipy import GRB
-    from datetime import datetime, date
 
     import gurobipy as gp
     from gurobipy import GRB
     from datetime import datetime, date
 
-    # Decision variable
+    # ---------------------------------------- Set & Index -------------------------------------------------------------
     os_pair = {(o, s): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
                for o in OilSpills
                for s in Stations
@@ -71,14 +69,14 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     os_pair = tuple(os_pair.keys())
 
     # sr_pair (based on unique statoins in pair_os )
-    st_o = list(set([item[1] for item in os_pair]))  # .unique()
+    st_o = list(set([item[1] for item in os_pair]))
     sr_pair = []
     for s in st_o:
         for r in ResourcesD:
             sr_pair.append((s, r))
     sr_pair = tuple(sr_pair)
 
-    o_s = list(set([item[0] for item in os_pair]))  # .unique()
+    o_s = list(set([item[0] for item in os_pair]))
     or_pair = []
     for o in o_s:
         for r in ResourcesD:
@@ -105,52 +103,54 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
 
     print('--------------MIP-moo--------')
     model = gp.Model("MIP-moo")
-    # Decision variable
-    cover = model.addVars(os_pair, vtype=GRB.BINARY, name='cover')  # OilSpills,  +++
-    # percentage of each spill covered (then, this individual percentage can be summed.
+    # ---------------------------------------- Decision variable -------------------------------------------------------
+    cover = model.addVars(os_pair, vtype=GRB.BINARY, name='cover')  # OilSpills
     select = model.addVars(st_o, ResourcesD, vtype=GRB.BINARY, name='select')
     deploy = model.addVars(osr_pair, vtype=GRB.CONTINUOUS, lb=0, name='deploy')
-    # Availability = 10000  # ++
-    # Constraints
-    C_open_facility = model.addConstrs((deploy[o, s, r] <= Availability[s, r] * select[s, r]
-                                        for o, s, r in osr_pair),
-                                       name='C_open_facility')
+
+    model.update()
+    model.write(f'Outputs/model_interim.lp')
+    #%% ----------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------ Constraints -----------------------------------------------------
+
+    # ---------------------------------------- Coverage constraints (cover) --------------------------------------------
+    """
+    # C10: facility must be open to cover oil spill
+    C_open_facility_to_cover = model.addConstrs((cover[o, s] <= select[s, r]
+                                                 for o, s, r in osr_pair), name='C_open_facility_to_cover')
+    """
+    # C15: Each oil spill should be covered by only one station (rethink formulation later)
+    C_facility_to_each_spill = model.addConstrs((cover.sum(o, '*') <= MaxF
+                                                  for o in OilSpills), name='C_facility_to_each_spill')
+
+    # ---------------------------------------- Facility constraints (select ) ------------------------------------------
+    # C14: max number of facilities to be open
     C_max_facility = model.addConstr((gp.quicksum(select[s, r]
-                                                  for s, r in sr_pair) <= NumberStMax),
-                                     name='C_max_facility')  # +++
+                                                  for s, r in sr_pair) <= NumberStMax), name='C_max_facility')
+    """
+    # C25: Cost of building facility does not exceed budget
+    C_budget = model.addConstr(select.prod(Cf_s) <= Budget, name="C_budget") # m.addConstr(build.prod(cost) <= budget, name="budget")
+    """
+    # ---------------------------------------- Deploy constraints (deploy) ---------------------------------------------
+    # C10: resource capacity constaint & deploy only when facility is open
+    C_resource_capacity = model.addConstrs((deploy[o, s, r] <= BigM * Availability[s, r] * select[s, r]
+                                        for o, s, r in osr_pair), name='C_open_facility')
+    # C16: deploy less than demand
     C_deploy_demand = model.addConstrs((deploy[o, s, r] <= Demand[o, r]
-                                        for o, s, r in osr_pair),
-                                       name='C_deploy_demand')
-    """
-    C_deploy_demand = model.addConstrs((gp.quicksum(deploy[o, s, r] for s in Stations)
-                                        <= Demand[o, r] for o in OilSpills for r in ResourcesD
-                                        if custom_func.compute_distance(tuple(coordinates_spill[1][o]), tuple(coordinates_st[1][s])) < DistanceMax),
-                                       name='C_deploy_demand')
+                                        for o, s, r in osr_pair), name='C_deploy_demand')
 
-
-    C_facility_to_each_spill = model.addConstrs((gp.quicksum(cover[o, s]  for s in Stations) == 1
-                                                for o in OilSpills
-                                                if custom_func.compute_distance(tuple(coordinates_spill[1][o]), tuple(coordinates_st[1][s])) < DistanceMax)
-                                                , name='C_facility_to_each_spill')
-    """
-    C_facility_to_each_spill2 = model.addConstrs((cover.sum(o, '*') <= 3
-                                                  for o in OilSpills)
-                                                 , name='C_facility_to_each_spill')
-
-    # %% Objective function
+    #%% ----------------------------------------------------------------------------------------------------------------
+    # ----------------------------------------------- Objective function -----------------------------------------------
     model.ModelSense = GRB.MINIMIZE
-    objective_1_re = gp.quicksum((SizeSpill_n[o] + Sensitivity_n[o] - Distance_n[o, s]) * cover[o, s]
-                                 for o, s in os_pair) \
-                     - gp.quicksum(Distance_n[o, s] * deploy[o, s, r]
-                                   for o, s, r in osr_pair)  \
-                     + gp.quicksum(Effectiveness_n[s, r] * deploy[o, s, r]
-                                   for o, s, r in osr_pair)
+    objective_1_re = gp.quicksum((SizeSpill_n[o] + Sensitivity_n[o]) * cover[o, s] for o, s in os_pair) \
+                    - gp.quicksum(Distance_n[o, s]  * cover[o, s] for o, s in os_pair) \
+                    + gp.quicksum(Effectiveness_n[s, r] * deploy[o, s, r] for o, s, r in osr_pair)
     objective_2_cost = gp.quicksum(select[s, r] * Cf_s[s] for s, r in sr_pair)
 
-    model.setObjectiveN(objective_1_re, index=0, priority=3, weight=-1, name='objective_re_1')  # weight=1
-    # model.setObjectiveN(obj2_time, index=0, priority=2, weight=1, name='objective_1_time')  # weight=1
-    model.setObjectiveN(objective_2_cost, index=1, priority=1, weight=1, name='objective_cost_2')
+    # \                    + slack_sensi
 
+    model.setObjectiveN(objective_1_re, index=0, priority=2, weight=-1, name='objective_re_1')
+    model.setObjectiveN(objective_2_cost, index=1, priority=1, weight=1, name='objective_cost_2')
 
     # %% Model parameters
     # Organizing model
@@ -159,7 +159,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     # Limit the search space by setting a gap for the worst possible solution that will be accepted
     model.setParam(GRB.Param.PoolGap, 0.80)
     # do a systematic search for the k-best solutions
-    model.setParam(GRB.Param.PoolSearchMode, 2)
+    # model.setParam(GRB.Param.PoolSearchMode, 2)
     today = date.today()
     now = datetime.now()
     date_time = str(date.today().strftime("%b %d,") + datetime.now().strftime("%H%M"))
