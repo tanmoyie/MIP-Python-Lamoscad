@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/New folder/2model_development.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/New folder/3model_development.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1341).log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1346).log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1350).log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1357).log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1422).log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1341).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1346).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1350).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1357).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1422).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 06,1350 100 spills 5 NumberSt_max 200Distance_max 30000%coverage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 06,1357 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 06,1422 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cutpaste files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/model_interim.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_interim.lp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/model_moo.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.lp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/model_moo.sol" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preparation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model_development.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/model_development.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensitivity_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/sensitivity_analysis.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +118,7 @@
       <workItem from="1688582602531" duration="8761000" />
       <workItem from="1688606387151" duration="6343000" />
       <workItem from="1688659025428" duration="1923000" />
-      <workItem from="1688661359653" duration="3312000" />
+      <workItem from="1688661359653" duration="5567000" />
     </task>
     <servers />
   </component>

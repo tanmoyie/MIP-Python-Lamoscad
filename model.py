@@ -102,26 +102,29 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     osr_pair = tuple(osr_pair.keys())
 
     print('--------------MIP-moo--------')
-    model = gp.Model("MIP-moo")
+    model = gp.Model("MIP-moo-LAMOSCAD")
     # ---------------------------------------- Decision variable -------------------------------------------------------
     cover = model.addVars(os_pair, vtype=GRB.BINARY, name='cover')  # OilSpills
     select = model.addVars(st_o, ResourcesD, vtype=GRB.BINARY, name='select')
     deploy = model.addVars(osr_pair, vtype=GRB.CONTINUOUS, lb=0, name='deploy')
 
-    model.update()
-    model.write(f'Outputs/model_interim.lp')
+    #model.update()
+    #model.write(f'Outputs/model_interim.lp')
+
     #%% ----------------------------------------------------------------------------------------------------------------
     # ------------------------------------------------ Constraints -----------------------------------------------------
 
     # ---------------------------------------- Coverage constraints (cover) --------------------------------------------
-    """
+
     # C10: facility must be open to cover oil spill
     C_open_facility_to_cover = model.addConstrs((cover[o, s] <= select[s, r]
                                                  for o, s, r in osr_pair), name='C_open_facility_to_cover')
-    """
+    C_assign_deploy_to_cover = model.addConstrs((cover[o, s] <= deploy[o, s, r]
+                                                 for o, s, r in osr_pair), name='C_open_facility_to_cover')
+
     # C15: Each oil spill should be covered by only one station (rethink formulation later)
     C_facility_to_each_spill = model.addConstrs((cover.sum(o, '*') <= MaxF
-                                                  for o in OilSpills), name='C_facility_to_each_spill')
+                                                  for o, s in os_pair), name='C_facility_to_each_spill')
 
     # ---------------------------------------- Facility constraints (select ) ------------------------------------------
     # C14: max number of facilities to be open
@@ -214,6 +217,10 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     values = model.getAttr('X', mvars)
 
     # def extract_ones_DV(model, cover, select, amount, spill_data):
+
+    cover_series = pd.Series(model.getAttr('X', cover))
+    cover_1s = cover_series[cover_series > 0.5]
+
     select_series = pd.Series(model.getAttr('X', select))
     select_1s = select_series[select_series > 0.5]
     print('\nselect_1s\n', select_1s)
@@ -296,4 +303,4 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     print(f'Mean Response Time: {ResponseTimeM}')
 
     return model, select, deploy, mvars, names, values, \
-        spill_df, station_df, select_1s, deploy_1s, ResponseTimeM, coverage_percentage, assignment
+        spill_df, station_df, cover_1s, select_1s, deploy_1s, ResponseTimeM, coverage_percentage, assignment
