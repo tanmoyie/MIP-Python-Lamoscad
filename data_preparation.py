@@ -73,11 +73,8 @@ def generate_input_data(station_data, spill_data, input_parameters):
         Cf_s[ii] = Cf_data.loc[Cf_data['Station_cf'] == ii, 'Cf_setup ($)'].iloc[0]  # Cf_data[ii]
 
     # deploying mcr Distance*1 , deploying cdu Distance*2, deploying isb , Distance*3
-    Cu_sor = {}
-    for ii in Distance:
-        si, oi = ii
-        Cu_sor[oi, si, 'm'] = Distance[ii] * 1
-        Cu_sor[oi, si, 'c'] = Distance[ii] * 2
-        Cu_sor[oi, si, 'i'] = Distance[ii] * 3
+    CostU = {}
+    for key in Eff:
+        CostU[key] = Eff[key] * 121
 
-    return Stations, OilSpills, ResourcesD, Demand, Availability, Eff, Distance, TimeR, Cf_s, Cu_sor
+    return Stations, OilSpills, ResourcesD, Demand, Availability, Eff, Distance, TimeR, Cf_s, CostU

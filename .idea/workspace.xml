@@ -5,12 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/0902model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0902model_development.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fig5a model_development.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/New folder/MaxFO4_model_development.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,0047).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,0103).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,0103).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 10,0104 100 spills 4 NumberSt_max 10Distance_max 21%coverage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/model_interim.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_interim.lp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Fig 3b Sensitivity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Fig3b Sensitivity &amp; population.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Fig4a current facilities &amp; cache.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 04,2306).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 05,2359).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1308).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1312).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1318).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1320).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1329).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1341).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1346).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1350).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1357).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1422).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1439).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1518).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 04,2306).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 05,2359).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1308).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1312).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1320).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1329).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1341).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1346).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1350).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1357).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1422).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1439).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1518).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/map_st_SN_route.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/model_interim.lp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/model_moo.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.lp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/model_moo.sol" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 04,2315 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1350 100 spills 5 NumberSt_max 200Distance_max 30000%coverage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1357 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1422 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1439 100 spills 5 NumberSt_max 200Distance_max 0%coverage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1519 100 spills 5 NumberSt_max 200Distance_max 0%coverage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preparation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploratory_data_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/exploratory_data_analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model_development.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/model_development.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old source codes/data_preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/old source codes/data_preparation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old source codes/try_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/old source codes/try_model.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +82,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2S7qN2nBFAhIwxARK5gg5IEHqp7" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,23 +93,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "H:/My Drive/PhD Tan 2023/Python Implementation of MIPs/MIP-Python-Lamoscad/New folder",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/My Drive/PhD Tan 2023/Python Implementation of MIPs/MIP-Python-Lamoscad&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\My Drive\PhD Tan 2023\Python Implementation of MIPs\MIP-Python-Lamoscad" />
       <recent name="H:\My Drive\PhD Tan 2023\Python Implementation of MIPs\MIP-Python-Lamoscad\New folder" />
     </key>
   </component>
@@ -118,7 +173,19 @@
       <workItem from="1688582602531" duration="8761000" />
       <workItem from="1688606387151" duration="6343000" />
       <workItem from="1688659025428" duration="1923000" />
-      <workItem from="1688661359653" duration="5567000" />
+      <workItem from="1688661359653" duration="8717000" />
+      <workItem from="1688672699485" duration="3260000" />
+      <workItem from="1688678193705" duration="2505000" />
+      <workItem from="1688695030007" duration="4283000" />
+      <workItem from="1688741058122" duration="1792000" />
+      <workItem from="1688778777408" duration="2659000" />
+      <workItem from="1688784350378" duration="8479000" />
+      <workItem from="1688874352358" duration="8255000" />
+      <workItem from="1688918987905" duration="971000" />
+      <workItem from="1688936483404" duration="590000" />
+      <workItem from="1688949350579" duration="1774000" />
+      <workItem from="1688952411771" duration="3501000" />
+      <workItem from="1688960080274" duration="3110000" />
     </task>
     <servers />
   </component>

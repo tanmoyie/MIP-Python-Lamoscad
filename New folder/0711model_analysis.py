@@ -119,28 +119,27 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
 
     st = plt.scatter(data=station_df[station_df['Station no.'].isin(selected_supply_stations)],
                      x='St_Longitude', y='St_Latitude',
-                     marker=shape, alpha=alpha_val, s=400,
+                     marker=shape, alpha=alpha_val, s=300,
                      edgecolors='black',
-                     zorder = 2,
+                     zorder = 4,
                      c=station_color)
 
     # Showing station number as text
-    data_st_selected = station_df[station_df['Station no.'].isin(select_1s.reset_index().rename({'index':'StationNo'}, axis=1).StationNo)].reset_index()
-    #
+    data_st_selected = station_df[station_df['Station no.'].isin(select_1s.reset_index().level_0)].reset_index()
     for i in range(len(selected_supply_stations)):
-        plt.text(x=data_st_selected.St_Longitude[i]-1.2 , y=data_st_selected.St_Latitude[i]-0.25, #+ 2.5 - .25++
+        plt.text(x=data_st_selected.St_Longitude[i] , y=data_st_selected.St_Latitude[i] , #+ 2.5 - .25
                  s=data_st_selected.loc[:, 'Station no.'][i],
-                 zorder = 4, fontdict=dict(color='red', size=10))
+                 fontdict=dict(color='red', size=12))
 
     # Small purple squares to show non-selected stations
     stUns = plt.scatter(data=station_df[~station_df['Station no.'].isin(select_1s.index.tolist())],
                         x='St_Longitude', y='St_Latitude', marker='s', alpha=.25, c='blue')
     # legends of all shapes in this figure
     plt.legend((spillC, spillUnC, st, stUns),
-               ('Oil Spill covered', 'Oil Spill not covered', 'Station selected',
-                'Station not selected'),
-               loc='lower center',
-               ncol=1, handlelength=5, borderpad=.1, markerscale=.4,
+               ('Oil Spill covered', 'Oil Spill not covered', 'Stations selected',
+                'Stations not selected'),
+               loc='lower left',
+               ncol=1, handlelength=5, borderpad=.5, markerscale=.4,
                fontsize=14
                )
     # plt.xticks([])

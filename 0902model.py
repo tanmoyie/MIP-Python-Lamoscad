@@ -31,7 +31,7 @@ import math
 # %% Model 2: MIP-2
 def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, SizeSpill, SizeSpill_n,
           Demand, Sensitivity_R, Sensitivity_n, Eff, Effectiveness_n, Availability, NumberStMax, Distance, Distance_n,
-          W, QuantityMin, DistanceMax, Cf_s, CostU, Budget,
+          W, QuantityMin, DistanceMax, Cf_s, Cu_sor, Budget,
           BigM, MaxFO):
     """
     :param Stations:
@@ -42,30 +42,23 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     :param SizeSpill:
     :param SizeSpill_n:
     :param Demand:
-    :param Sensitivity_R:
+    :param Sensitivity:
     :param Sensitivity_n:
     :param Eff:
-    :param Effectiveness_n:
     :param Availability:
     :param NumberStMax:
     :param Distance:
     :param Distance_n:
-    :param W:
-    :param QuantityMin:
     :param DistanceMax:
     :param Cf_s:
-    :param CostU:
-    :param Budget:
-    :param BigM:
-    :param MaxFO:
+    :param Cu_sor:
     :return:
     """
 
     import gurobipy as gp
     from gurobipy import GRB
     from datetime import datetime, date
-
-    w1, w2, w3, w4, w5, w6 = W[0], W[1], W[2], W[3], W[4], W[5]
+    w1, w2, w3, w4 = W[0], W[1], W[2], W[3]
 
     # ---------------------------------------- Set & Index -------------------------------------------------------------
     os_pair = {(o, s): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
@@ -148,11 +141,11 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     # ---------------------------------------- Deploy constraints (deploy) ---------------------------------------------
     # C10: resource capacity constaint & deploy only when facility is open
     C_resource_capacity = model.addConstrs((deploy.sum('*', s, r) <= BigM * Availability[s, r] * select[s]  #
-                                            for s, r in sr_pair), name='C_open_facility')  # need improvement++ infeasibility
+                                            for o, s, r in osr_pair), name='C_open_facility')  # need improvement++ infeasibility
     # m.addConstrs( (transport.sum('*', p) <= capacity[p] * open[p] for p in plants), "Capacity")
 
     # C16: deploy less than demand
-    C_deploy_demand = model.addConstrs((deploy[o, s, r] <= Demand[o, r]
+    C_deploy_demand = model.addConstrs((deploy[o, s, r] == Demand[o, r]
                                         for o, s, r in osr_pair), name='C_deploy_demand')
     # m.addConstrs( (transport.sum(w) == demand[w] for w in warehouses), "Demand")
 
@@ -161,14 +154,16 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     # %% ----------------------------------------------------------------------------------------------------------------
     # ----------------------------------------------- Objective function -----------------------------------------------
     model.ModelSense = GRB.MINIMIZE
-    objective_1 = gp.quicksum((w1 * SizeSpill_n[o] + 100*w2 * Sensitivity_n[o] - w3 * Distance_n[o, s]) * cover[o, s]
-                              for o, s in os_pair)
+    objective_1_re = gp.quicksum((w1 * SizeSpill_n[o] + w2 * Sensitivity_n[o]) * cover[o, s] for o, s in os_pair) \
+                     - gp.quicksum(w3 * Distance_n[o, s] * cover[o, s] for o, s in os_pair)
 
-    objective_2 = gp.quicksum(10**-6*w4 * select[s] * Cf_s[s] for s in Stations) \
-                        + gp.quicksum( (10**-2*w5 * CostU[s,r] - 10 * w6 * Effectiveness_n[s, r]) * deploy[o, s, r] for o, s, r in osr_pair)
+    objective_2_cost = gp.quicksum(10**-6 * w4 * select[s] * Cf_s[s] for s in Stations) \
+                        - gp.quicksum(10 * w4 * Effectiveness_n[s, r] * deploy[o, s, r] for o, s, r in osr_pair)
+    # w1 w2 ++
+    # \                    + slack_sensi
 
-    model.setObjectiveN(objective_1, index=0, priority=2, weight=-1, name='objective_re_1')
-    model.setObjectiveN(objective_2, index=1, priority=1, weight=1, name='objective_cost_2')
+    model.setObjectiveN(objective_1_re, index=0, priority=2, weight=-1, name='objective_re_1')
+    model.setObjectiveN(objective_2_cost, index=1, priority=1, weight=1, name='objective_cost_2')
 
     # %% Model parameters
     # Organizing model
@@ -305,7 +300,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
 
     # Outputs from the model +++
     # Calculate Coverage # chance later ++
-    coverage_percentage = int(100 * len(cover_1s)/ len(OilSpills))  # / len(cover_series)
+    coverage_percentage = int(100 * len(cover_1s))  # / len(cover_series)
     # Calculate total distance travelled
     DistanceTravelled = []
     for i in range(len(assignment)):
