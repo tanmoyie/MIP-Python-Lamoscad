@@ -5,63 +5,106 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/0902model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/0902model_development.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fig5a model_development.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/New folder/MaxFO4_model_development.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,0047).log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,0103).log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,0103).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Outputs/proposed Jul 10,0104 100 spills 4 NumberSt_max 10Distance_max 21%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Inputs/data_200_oil_spills.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1311).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1312).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1315).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1323).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1351).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1354).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1409).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1917).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1929).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1945).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,1947).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2009).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2010).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2021).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2022).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2039).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2040).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2049).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2118).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2119).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2129).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 10,2130).log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1311).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1312).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1315).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1323).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1351).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1354).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1409).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1917).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1929).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1945).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,1947).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2009).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2010).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2021).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2022).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2039).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2040).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2049).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2118).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2119).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2129).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 10,2130).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/barplot_compare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/barplot_compareHatch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/current (Jul 10,1315) 100 spills 6 NumberSt_max 10Distance_max 53%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/current (Jul 10,1323) 100 spills 6 NumberSt_max 10Distance_max 53%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/current (Jul 10,1331) 100 spills 6 NumberSt_max 10Distance_max 53%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/current (Jul 10,1409) 100 spills 6 NumberSt_max 10Distance_max 53%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/map_st_SN_route.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1351) 100 spills 5 NumberSt_max 10Distance_max 83%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1354) 100 spills 5 NumberSt_max 10Distance_max 83%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1410) 100 spills 5 NumberSt_max 10Distance_max 83%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1924) 100 spills 4 NumberSt_max 10Distance_max 78%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1925) 100 spills 4 NumberSt_max 10Distance_max 78%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1930) 100 spills 8 NumberSt_max 10Distance_max 99%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1947) 100 spills 4 NumberSt_max 10Distance_max 78%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,1947) 100 spills 8 NumberSt_max 10Distance_max 99%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2009) 100 spills 4 NumberSt_max 10Distance_max 78%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2010) 100 spills 8 NumberSt_max 10Distance_max 99%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2022) 100 spills 4 NumberSt_max 10Distance_max 78%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2022) 100 spills 8 NumberSt_max 10Distance_max 99%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2040) 100 spills 4 NumberSt_max 10Distance_max 78%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2040) 100 spills 8 NumberSt_max 10Distance_max 99%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2049) 100 spills 4 NumberSt_max 10Distance_max 78%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/proposed (Jul 10,2049) 100 spills 8 NumberSt_max 10Distance_max 99%coverage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/resource_allocation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/resource_allocation.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Outputs/spill points.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/current_vs_proposed_2.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_200_oil_spills.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exploratory_data_analysis_0.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initial_model_development_1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old source codes/cut_paste.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensitivity_analysis_and_model_validation_3.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Fig 3b Sensitivity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Fig3b Sensitivity &amp; population.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Fig4a current facilities &amp; cache.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 04,2306).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 05,2359).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1308).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1312).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1318).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1320).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1329).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1341).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1346).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1350).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1357).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1422).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1439).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo(Jul 06,1518).log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 04,2306).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 05,2359).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1308).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1312).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1320).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1329).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1341).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1346).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1350).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1357).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1422).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1439).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Structure, outputs &amp; python code of model (Jul 06,1518).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/map_st_SN_route.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/model_interim.lp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0902model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/0902model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fig5a model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/0711model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/0711model_analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/0711model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/0800model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/0800model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/2model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/3model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/MaxFO4_model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/model10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New folder/model3.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/model_moo.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.lp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/model_moo.sol" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/model_moo.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 04,2315 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1350 100 spills 5 NumberSt_max 200Distance_max 30000%coverage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1357 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1422 100 spills 5 NumberSt_max 200Distance_max 29900%coverage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1439 100 spills 5 NumberSt_max 200Distance_max 0%coverage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/proposed Jul 06,1519 100 spills 5 NumberSt_max 200Distance_max 0%coverage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preparation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exploratory_data_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/exploratory_data_analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.docx" beforeDir="false" afterPath="$PROJECT_DIR$/README.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cutpaste files.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutpaste_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploratory_data_analysis.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_development.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/model_development.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old source codes/data_preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/old source codes/data_preparation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old source codes/try_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/old source codes/try_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensitivity_analysis.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +119,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -185,7 +229,10 @@
       <workItem from="1688936483404" duration="590000" />
       <workItem from="1688949350579" duration="1774000" />
       <workItem from="1688952411771" duration="3501000" />
-      <workItem from="1688960080274" duration="3110000" />
+      <workItem from="1688960080274" duration="4622000" />
+      <workItem from="1688994487175" duration="2971000" />
+      <workItem from="1689002185220" duration="12566000" />
+      <workItem from="1689025586450" duration="12510000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,4 @@
+------------------------------- Model Structure ----------------------------------
 \ Model MIP-moo-LAMOSCAD
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Minimize multi-objectives
@@ -2222,7 +2223,7 @@ Subject To
    + select[s14] + select[s6] + select[s2] + select[s20] + select[s15]
    + select[s11] + select[s7] + select[s18] + select[s13] + select[s1]
    + select[s10] + select[s9] + select[s12] + select[s4] + select[s17]
-   + select[s8] <= 5
+   + select[s8] <= 6
  C_budget: 1e+07 select[s5] + 5e+06 select[s19] + 9e+06 select[s3]
    + 9e+06 select[s16] + 4e+06 select[s14] + 7e+06 select[s6]
    + 3e+06 select[s2] + 5e+06 select[s20] + 8e+06 select[s15]
@@ -3795,3 +3796,2071 @@ Binaries
  select[s1] select[s10] select[s9] select[s12] select[s4] select[s17]
  select[s8]
 End
+
+------------------------------- Model Outputs ----------------------------------
+# Solution for model MIP-moo-LAMOSCAD
+# Objective value = 1.1491286980585605e+03
+cover[o74,s13] 1
+cover[o74,s14] 0
+cover[o74,s15] 0
+cover[o74,s16] 0
+cover[o74,s17] 0
+cover[o74,s19] 0
+cover[o98,s13] 1
+cover[o98,s15] 0
+cover[o98,s16] 0
+cover[o98,s17] 0
+cover[o98,s18] 0
+cover[o53,s7] 0
+cover[o53,s8] 0
+cover[o53,s10] 1
+cover[o53,s11] 0
+cover[o178,s2] 1
+cover[o203,s18] 0
+cover[o203,s19] 1
+cover[o203,s20] 0
+cover[o127,s12] 0
+cover[o127,s13] 1
+cover[o127,s14] 0
+cover[o127,s15] 0
+cover[o127,s16] 0
+cover[o127,s17] 0
+cover[o172,s2] 1
+cover[o172,s3] 0
+cover[o51,s12] 0
+cover[o51,s13] 1
+cover[o51,s14] 0
+cover[o51,s15] 0
+cover[o51,s16] 0
+cover[o7,s15] 0
+cover[o7,s16] 0
+cover[o7,s18] 0
+cover[o7,s19] 1
+cover[o7,s20] 0
+cover[o30,s1] 1
+cover[o221,s1] 1
+cover[o64,s7] 0
+cover[o64,s8] 0
+cover[o64,s10] 1
+cover[o64,s11] 0
+cover[o64,s14] 0
+cover[o25,s1] 1
+cover[o94,s18] 0
+cover[o94,s19] 1
+cover[o94,s20] 0
+cover[o119,s9] 0
+cover[o119,s12] 0
+cover[o119,s13] 1
+cover[o148,s3] 1
+cover[o148,s4] 0
+cover[o148,s5] 0
+cover[o148,s6] 0
+cover[o148,s7] 0
+cover[o208,s3] 1
+cover[o208,s4] 0
+cover[o208,s5] 0
+cover[o86,s18] 0
+cover[o86,s19] 1
+cover[o86,s20] 0
+cover[o93,s18] 0
+cover[o93,s19] 1
+cover[o93,s20] 0
+cover[o108,s9] 0
+cover[o108,s12] 0
+cover[o108,s13] 1
+cover[o131,s6] 0
+cover[o131,s7] 0
+cover[o131,s8] 0
+cover[o131,s9] 0
+cover[o131,s10] 1
+cover[o131,s11] 0
+cover[o131,s12] 0
+cover[o6,s18] 0
+cover[o6,s19] 1
+cover[o6,s20] 0
+cover[o10,s15] 0
+cover[o10,s16] 0
+cover[o10,s18] 0
+cover[o10,s19] 1
+cover[o10,s20] 0
+cover[o41,s2] 1
+cover[o41,s3] 0
+cover[o144,s3] 1
+cover[o144,s4] 0
+cover[o144,s6] 0
+cover[o144,s7] 0
+cover[o169,s1] 0
+cover[o169,s2] 1
+cover[o185,s1] 1
+cover[o87,s19] 1
+cover[o87,s20] 0
+cover[o168,s2] 1
+cover[o168,s3] 0
+cover[o24,s1] 1
+cover[o24,s2] 0
+cover[o190,s7] 0
+cover[o190,s8] 0
+cover[o190,s10] 1
+cover[o190,s11] 0
+cover[o190,s14] 0
+cover[o97,s12] 0
+cover[o97,s13] 1
+cover[o97,s15] 0
+cover[o97,s16] 0
+cover[o97,s17] 0
+cover[o162,s2] 1
+cover[o162,s3] 0
+cover[o162,s4] 0
+cover[o162,s5] 0
+cover[o106,s13] 1
+cover[o106,s15] 0
+cover[o106,s16] 0
+cover[o106,s17] 0
+cover[o106,s18] 0
+cover[o157,s2] 0
+cover[o157,s3] 1
+cover[o157,s4] 0
+cover[o157,s5] 0
+cover[o157,s6] 0
+cover[o175,s2] 1
+cover[o136,s6] 0
+cover[o136,s7] 0
+cover[o136,s8] 0
+cover[o136,s9] 0
+cover[o136,s10] 1
+cover[o136,s11] 0
+cover[o136,s12] 0
+cover[o145,s3] 1
+cover[o145,s4] 0
+cover[o145,s6] 0
+cover[o145,s7] 0
+cover[o3,s7] 0
+cover[o3,s8] 0
+cover[o3,s10] 1
+cover[o3,s11] 0
+cover[o28,s1] 1
+cover[o45,s8] 0
+cover[o45,s10] 1
+cover[o45,s11] 0
+cover[o45,s14] 0
+cover[o27,s1] 1
+cover[o219,s1] 1
+cover[o9,s12] 0
+cover[o9,s13] 1
+cover[o9,s15] 0
+cover[o9,s16] 0
+cover[o212,s3] 1
+cover[o212,s4] 0
+cover[o212,s5] 0
+cover[o212,s7] 0
+cover[o139,s6] 0
+cover[o139,s7] 0
+cover[o139,s8] 0
+cover[o139,s9] 0
+cover[o139,s10] 1
+cover[o139,s11] 0
+cover[o139,s12] 0
+cover[o214,s3] 1
+cover[o214,s4] 0
+cover[o214,s5] 0
+cover[o214,s6] 0
+cover[o214,s7] 0
+cover[o113,s12] 0
+cover[o113,s13] 1
+cover[o160,s2] 0
+cover[o160,s3] 1
+cover[o160,s4] 0
+cover[o160,s5] 0
+cover[o191,s7] 0
+cover[o191,s8] 0
+cover[o191,s10] 1
+cover[o191,s11] 0
+cover[o191,s14] 0
+cover[o104,s12] 0
+cover[o104,s13] 1
+cover[o104,s15] 0
+cover[o104,s16] 0
+cover[o184,s1] 1
+cover[o37,s1] 0
+cover[o37,s2] 1
+cover[o165,s2] 1
+cover[o83,s16] 0
+cover[o83,s17] 0
+cover[o83,s18] 0
+cover[o83,s19] 1
+cover[o83,s20] 0
+cover[o114,s12] 0
+cover[o114,s13] 1
+cover[o155,s2] 0
+cover[o155,s3] 1
+cover[o155,s4] 0
+cover[o155,s5] 0
+cover[o155,s6] 0
+cover[o91,s18] 0
+cover[o91,s19] 1
+cover[o91,s20] 0
+cover[o138,s6] 0
+cover[o138,s7] 0
+cover[o138,s8] 0
+cover[o138,s9] 0
+cover[o138,s10] 1
+cover[o138,s11] 0
+cover[o183,s1] 1
+cover[o11,s12] 0
+cover[o11,s13] 1
+cover[o11,s14] 0
+cover[o11,s15] 0
+cover[o11,s16] 0
+cover[o181,s1] 1
+cover[o159,s2] 1
+cover[o159,s3] 0
+cover[o159,s4] 0
+cover[o159,s5] 0
+cover[o48,s12] 0
+cover[o48,s13] 1
+cover[o48,s14] 0
+cover[o129,s12] 0
+cover[o129,s13] 1
+cover[o129,s14] 0
+cover[o129,s15] 0
+cover[o129,s16] 0
+cover[o129,s17] 0
+cover[o158,s2] 1
+cover[o158,s3] 0
+cover[o158,s4] 0
+cover[o158,s5] 0
+cover[o117,s9] 0
+cover[o117,s12] 0
+cover[o117,s13] 1
+cover[o153,s2] 0
+cover[o153,s3] 1
+cover[o153,s4] 0
+cover[o153,s5] 0
+cover[o153,s6] 0
+cover[o101,s12] 0
+cover[o101,s13] 1
+cover[o101,s14] 0
+cover[o44,s14] 0
+cover[o44,s15] 0
+cover[o44,s16] 0
+cover[o44,s17] 0
+cover[o44,s18] 0
+cover[o44,s19] 1
+cover[o109,s13] 1
+cover[o109,s15] 0
+cover[o109,s16] 0
+cover[o109,s18] 0
+cover[o59,s7] 0
+cover[o59,s8] 0
+cover[o59,s10] 1
+cover[o59,s11] 0
+cover[o59,s14] 0
+cover[o121,s9] 0
+cover[o121,s12] 0
+cover[o121,s13] 1
+cover[o13,s6] 0
+cover[o13,s7] 0
+cover[o13,s8] 0
+cover[o13,s9] 0
+cover[o13,s10] 1
+cover[o13,s11] 0
+cover[o13,s12] 0
+cover[o128,s12] 0
+cover[o128,s13] 1
+cover[o128,s14] 0
+cover[o128,s15] 0
+cover[o128,s16] 0
+cover[o128,s17] 0
+cover[o90,s19] 1
+cover[o90,s20] 0
+cover[o79,s14] 0
+cover[o79,s15] 0
+cover[o79,s16] 0
+cover[o79,s17] 0
+cover[o79,s18] 0
+cover[o79,s19] 1
+cover[o161,s2] 0
+cover[o161,s3] 1
+cover[o161,s4] 0
+cover[o161,s5] 0
+cover[o163,s2] 0
+cover[o163,s3] 1
+cover[o163,s4] 0
+cover[o163,s5] 0
+cover[o130,s6] 0
+cover[o130,s7] 0
+cover[o130,s8] 0
+cover[o130,s9] 0
+cover[o130,s10] 1
+cover[o130,s11] 0
+cover[o130,s12] 0
+cover[o107,s12] 0
+cover[o107,s13] 1
+cover[o107,s14] 0
+cover[o107,s15] 0
+cover[o42,s2] 1
+cover[o19,s3] 1
+cover[o19,s6] 0
+cover[o19,s7] 0
+cover[o22,s1] 1
+cover[o187,s1] 1
+cover[o84,s15] 0
+cover[o84,s16] 0
+cover[o84,s17] 0
+cover[o84,s18] 0
+cover[o84,s19] 1
+cover[o84,s20] 0
+cover[o132,s6] 0
+cover[o132,s7] 0
+cover[o132,s8] 0
+cover[o132,s9] 0
+cover[o132,s10] 1
+cover[o132,s11] 0
+cover[o132,s12] 0
+cover[o198,s1] 1
+cover[o49,s13] 1
+cover[o49,s15] 0
+cover[o49,s16] 0
+cover[o49,s17] 0
+cover[o49,s18] 0
+cover[o116,s12] 0
+cover[o116,s13] 1
+cover[o124,s9] 0
+cover[o124,s12] 0
+cover[o124,s13] 1
+cover[o134,s6] 0
+cover[o134,s7] 0
+cover[o134,s8] 0
+cover[o134,s9] 0
+cover[o134,s10] 1
+cover[o134,s11] 0
+cover[o134,s12] 0
+cover[o82,s16] 0
+cover[o82,s17] 0
+cover[o82,s18] 0
+cover[o82,s19] 1
+cover[o82,s20] 0
+cover[o220,s1] 1
+cover[o207,s3] 1
+cover[o207,s4] 0
+cover[o207,s5] 0
+cover[o43,s2] 1
+cover[o43,s3] 0
+cover[o192,s1] 1
+cover[o174,s2] 1
+cover[o174,s3] 0
+cover[o78,s14] 0
+cover[o78,s15] 0
+cover[o78,s16] 0
+cover[o78,s17] 0
+cover[o78,s19] 1
+select[s5] 0
+select[s19] 1
+select[s3] 1
+select[s16] 0
+select[s14] 0
+select[s6] 0
+select[s2] 1
+select[s20] 0
+select[s15] 0
+select[s11] 0
+select[s7] 0
+select[s18] 0
+select[s13] 1
+select[s1] 1
+select[s10] 1
+select[s9] 0
+select[s12] 0
+select[s4] 0
+select[s17] 0
+select[s8] 0
+deploy[o74,s13,m] 0
+deploy[o74,s13,c] 0
+deploy[o74,s13,i] 0
+deploy[o74,s14,m] 0
+deploy[o74,s14,c] 0
+deploy[o74,s14,i] 0
+deploy[o74,s15,m] 0
+deploy[o74,s15,c] 0
+deploy[o74,s15,i] 0
+deploy[o74,s16,m] 0
+deploy[o74,s16,c] 0
+deploy[o74,s16,i] 0
+deploy[o74,s17,m] 0
+deploy[o74,s17,c] 0
+deploy[o74,s17,i] 0
+deploy[o74,s19,m] 0
+deploy[o74,s19,c] 31
+deploy[o74,s19,i] 0
+deploy[o98,s13,m] 0
+deploy[o98,s13,c] 0
+deploy[o98,s13,i] 0
+deploy[o98,s15,m] 0
+deploy[o98,s15,c] 0
+deploy[o98,s15,i] 0
+deploy[o98,s16,m] 0
+deploy[o98,s16,c] 0
+deploy[o98,s16,i] 0
+deploy[o98,s17,m] 0
+deploy[o98,s17,c] 0
+deploy[o98,s17,i] 0
+deploy[o98,s18,m] 0
+deploy[o98,s18,c] 0
+deploy[o98,s18,i] 0
+deploy[o53,s7,m] 0
+deploy[o53,s7,c] 0
+deploy[o53,s7,i] 0
+deploy[o53,s8,m] 0
+deploy[o53,s8,c] 0
+deploy[o53,s8,i] 0
+deploy[o53,s10,m] 0
+deploy[o53,s10,c] 110
+deploy[o53,s10,i] 0
+deploy[o53,s11,m] 0
+deploy[o53,s11,c] 0
+deploy[o53,s11,i] 0
+deploy[o178,s2,m] 0
+deploy[o178,s2,c] 0
+deploy[o178,s2,i] 0
+deploy[o203,s18,m] 0
+deploy[o203,s18,c] 0
+deploy[o203,s18,i] 0
+deploy[o203,s19,m] 0
+deploy[o203,s19,c] 5
+deploy[o203,s19,i] 0
+deploy[o203,s20,m] 0
+deploy[o203,s20,c] 0
+deploy[o203,s20,i] 0
+deploy[o127,s12,m] 0
+deploy[o127,s12,c] 0
+deploy[o127,s12,i] 0
+deploy[o127,s13,m] 0
+deploy[o127,s13,c] 0
+deploy[o127,s13,i] 0
+deploy[o127,s14,m] 0
+deploy[o127,s14,c] 0
+deploy[o127,s14,i] 0
+deploy[o127,s15,m] 0
+deploy[o127,s15,c] 0
+deploy[o127,s15,i] 0
+deploy[o127,s16,m] 0
+deploy[o127,s16,c] 0
+deploy[o127,s16,i] 0
+deploy[o127,s17,m] 0
+deploy[o127,s17,c] 0
+deploy[o127,s17,i] 0
+deploy[o172,s2,m] 0
+deploy[o172,s2,c] 0
+deploy[o172,s2,i] 0
+deploy[o172,s3,m] 0
+deploy[o172,s3,c] 0
+deploy[o172,s3,i] 7
+deploy[o51,s12,m] 0
+deploy[o51,s12,c] 0
+deploy[o51,s12,i] 0
+deploy[o51,s13,m] 0
+deploy[o51,s13,c] 0
+deploy[o51,s13,i] 37
+deploy[o51,s14,m] 0
+deploy[o51,s14,c] 0
+deploy[o51,s14,i] 0
+deploy[o51,s15,m] 0
+deploy[o51,s15,c] 0
+deploy[o51,s15,i] 0
+deploy[o51,s16,m] 0
+deploy[o51,s16,c] 0
+deploy[o51,s16,i] 0
+deploy[o7,s15,m] 0
+deploy[o7,s15,c] 0
+deploy[o7,s15,i] 0
+deploy[o7,s16,m] 0
+deploy[o7,s16,c] 0
+deploy[o7,s16,i] 0
+deploy[o7,s18,m] 0
+deploy[o7,s18,c] 0
+deploy[o7,s18,i] 0
+deploy[o7,s19,m] 0
+deploy[o7,s19,c] 0
+deploy[o7,s19,i] 37
+deploy[o7,s20,m] 0
+deploy[o7,s20,c] 0
+deploy[o7,s20,i] 0
+deploy[o30,s1,m] 0
+deploy[o30,s1,c] 0
+deploy[o30,s1,i] 0
+deploy[o221,s1,m] 0
+deploy[o221,s1,c] 0
+deploy[o221,s1,i] 0
+deploy[o64,s7,m] 0
+deploy[o64,s7,c] 0
+deploy[o64,s7,i] 0
+deploy[o64,s8,m] 0
+deploy[o64,s8,c] 0
+deploy[o64,s8,i] 0
+deploy[o64,s10,m] 0
+deploy[o64,s10,c] 0
+deploy[o64,s10,i] 37
+deploy[o64,s11,m] 0
+deploy[o64,s11,c] 0
+deploy[o64,s11,i] 0
+deploy[o64,s14,m] 0
+deploy[o64,s14,c] 0
+deploy[o64,s14,i] 0
+deploy[o25,s1,m] 0
+deploy[o25,s1,c] 0
+deploy[o25,s1,i] 37
+deploy[o94,s18,m] 0
+deploy[o94,s18,c] 0
+deploy[o94,s18,i] 0
+deploy[o94,s19,m] 0
+deploy[o94,s19,c] 0
+deploy[o94,s19,i] 7
+deploy[o94,s20,m] 0
+deploy[o94,s20,c] 0
+deploy[o94,s20,i] 0
+deploy[o119,s9,m] 0
+deploy[o119,s9,c] 0
+deploy[o119,s9,i] 0
+deploy[o119,s12,m] 0
+deploy[o119,s12,c] 0
+deploy[o119,s12,i] 0
+deploy[o119,s13,m] 0
+deploy[o119,s13,c] 0
+deploy[o119,s13,i] 0
+deploy[o148,s3,m] 2
+deploy[o148,s3,c] 0
+deploy[o148,s3,i] 0
+deploy[o148,s4,m] 0
+deploy[o148,s4,c] 0
+deploy[o148,s4,i] 0
+deploy[o148,s5,m] 0
+deploy[o148,s5,c] 0
+deploy[o148,s5,i] 0
+deploy[o148,s6,m] 0
+deploy[o148,s6,c] 0
+deploy[o148,s6,i] 0
+deploy[o148,s7,m] 0
+deploy[o148,s7,c] 0
+deploy[o148,s7,i] 0
+deploy[o208,s3,m] 0
+deploy[o208,s3,c] 110
+deploy[o208,s3,i] 0
+deploy[o208,s4,m] 0
+deploy[o208,s4,c] 0
+deploy[o208,s4,i] 0
+deploy[o208,s5,m] 0
+deploy[o208,s5,c] 0
+deploy[o208,s5,i] 0
+deploy[o86,s18,m] 0
+deploy[o86,s18,c] 0
+deploy[o86,s18,i] 0
+deploy[o86,s19,m] 0
+deploy[o86,s19,c] 110
+deploy[o86,s19,i] 0
+deploy[o86,s20,m] 0
+deploy[o86,s20,c] 0
+deploy[o86,s20,i] 0
+deploy[o93,s18,m] 0
+deploy[o93,s18,c] 0
+deploy[o93,s18,i] 0
+deploy[o93,s19,m] 0
+deploy[o93,s19,c] 5
+deploy[o93,s19,i] 0
+deploy[o93,s20,m] 0
+deploy[o93,s20,c] 0
+deploy[o93,s20,i] 0
+deploy[o108,s9,m] 0
+deploy[o108,s9,c] 0
+deploy[o108,s9,i] 0
+deploy[o108,s12,m] 0
+deploy[o108,s12,c] 0
+deploy[o108,s12,i] 0
+deploy[o108,s13,m] 0
+deploy[o108,s13,c] 0
+deploy[o108,s13,i] 0
+deploy[o131,s6,m] 0
+deploy[o131,s6,c] 0
+deploy[o131,s6,i] 0
+deploy[o131,s7,m] 0
+deploy[o131,s7,c] 0
+deploy[o131,s7,i] 0
+deploy[o131,s8,m] 0
+deploy[o131,s8,c] 0
+deploy[o131,s8,i] 0
+deploy[o131,s9,m] 0
+deploy[o131,s9,c] 0
+deploy[o131,s9,i] 0
+deploy[o131,s10,m] 0
+deploy[o131,s10,c] 0
+deploy[o131,s10,i] 7
+deploy[o131,s11,m] 0
+deploy[o131,s11,c] 0
+deploy[o131,s11,i] 0
+deploy[o131,s12,m] 0
+deploy[o131,s12,c] 0
+deploy[o131,s12,i] 0
+deploy[o6,s18,m] 0
+deploy[o6,s18,c] 0
+deploy[o6,s18,i] 0
+deploy[o6,s19,m] 100
+deploy[o6,s19,c] 0
+deploy[o6,s19,i] 0
+deploy[o6,s20,m] 0
+deploy[o6,s20,c] 0
+deploy[o6,s20,i] 0
+deploy[o10,s15,m] 0
+deploy[o10,s15,c] 0
+deploy[o10,s15,i] 0
+deploy[o10,s16,m] 0
+deploy[o10,s16,c] 0
+deploy[o10,s16,i] 0
+deploy[o10,s18,m] 0
+deploy[o10,s18,c] 0
+deploy[o10,s18,i] 0
+deploy[o10,s19,m] 100
+deploy[o10,s19,c] 0
+deploy[o10,s19,i] 0
+deploy[o10,s20,m] 0
+deploy[o10,s20,c] 0
+deploy[o10,s20,i] 0
+deploy[o41,s2,m] 100
+deploy[o41,s2,c] 0
+deploy[o41,s2,i] 0
+deploy[o41,s3,m] 100
+deploy[o41,s3,c] 0
+deploy[o41,s3,i] 0
+deploy[o144,s3,m] 0
+deploy[o144,s3,c] 0
+deploy[o144,s3,i] 157
+deploy[o144,s4,m] 0
+deploy[o144,s4,c] 0
+deploy[o144,s4,i] 0
+deploy[o144,s6,m] 0
+deploy[o144,s6,c] 0
+deploy[o144,s6,i] 0
+deploy[o144,s7,m] 0
+deploy[o144,s7,c] 0
+deploy[o144,s7,i] 0
+deploy[o169,s1,m] 0
+deploy[o169,s1,c] 31
+deploy[o169,s1,i] 0
+deploy[o169,s2,m] 0
+deploy[o169,s2,c] 31
+deploy[o169,s2,i] 0
+deploy[o185,s1,m] 0
+deploy[o185,s1,c] 110
+deploy[o185,s1,i] 0
+deploy[o87,s19,m] 100
+deploy[o87,s19,c] 0
+deploy[o87,s19,i] 0
+deploy[o87,s20,m] 0
+deploy[o87,s20,c] 0
+deploy[o87,s20,i] 0
+deploy[o168,s2,m] 20
+deploy[o168,s2,c] 0
+deploy[o168,s2,i] 0
+deploy[o168,s3,m] 20
+deploy[o168,s3,c] 0
+deploy[o168,s3,i] 0
+deploy[o24,s1,m] 0
+deploy[o24,s1,c] 0
+deploy[o24,s1,i] 0
+deploy[o24,s2,m] 2
+deploy[o24,s2,c] 0
+deploy[o24,s2,i] 0
+deploy[o190,s7,m] 0
+deploy[o190,s7,c] 0
+deploy[o190,s7,i] 0
+deploy[o190,s8,m] 0
+deploy[o190,s8,c] 0
+deploy[o190,s8,i] 0
+deploy[o190,s10,m] 0
+deploy[o190,s10,c] 0
+deploy[o190,s10,i] 37
+deploy[o190,s11,m] 0
+deploy[o190,s11,c] 0
+deploy[o190,s11,i] 0
+deploy[o190,s14,m] 0
+deploy[o190,s14,c] 0
+deploy[o190,s14,i] 0
+deploy[o97,s12,m] 0
+deploy[o97,s12,c] 0
+deploy[o97,s12,i] 0
+deploy[o97,s13,m] 0
+deploy[o97,s13,c] 0
+deploy[o97,s13,i] 7
+deploy[o97,s15,m] 0
+deploy[o97,s15,c] 0
+deploy[o97,s15,i] 0
+deploy[o97,s16,m] 0
+deploy[o97,s16,c] 0
+deploy[o97,s16,i] 0
+deploy[o97,s17,m] 0
+deploy[o97,s17,c] 0
+deploy[o97,s17,i] 0
+deploy[o162,s2,m] 2
+deploy[o162,s2,c] 0
+deploy[o162,s2,i] 0
+deploy[o162,s3,m] 2
+deploy[o162,s3,c] 0
+deploy[o162,s3,i] 0
+deploy[o162,s4,m] 0
+deploy[o162,s4,c] 0
+deploy[o162,s4,i] 0
+deploy[o162,s5,m] 0
+deploy[o162,s5,c] 0
+deploy[o162,s5,i] 0
+deploy[o106,s13,m] 0
+deploy[o106,s13,c] 0
+deploy[o106,s13,i] 0
+deploy[o106,s15,m] 0
+deploy[o106,s15,c] 0
+deploy[o106,s15,i] 0
+deploy[o106,s16,m] 0
+deploy[o106,s16,c] 0
+deploy[o106,s16,i] 0
+deploy[o106,s17,m] 0
+deploy[o106,s17,c] 0
+deploy[o106,s17,i] 0
+deploy[o106,s18,m] 0
+deploy[o106,s18,c] 0
+deploy[o106,s18,i] 0
+deploy[o157,s2,m] 2
+deploy[o157,s2,c] 0
+deploy[o157,s2,i] 0
+deploy[o157,s3,m] 2
+deploy[o157,s3,c] 0
+deploy[o157,s3,i] 0
+deploy[o157,s4,m] 0
+deploy[o157,s4,c] 0
+deploy[o157,s4,i] 0
+deploy[o157,s5,m] 0
+deploy[o157,s5,c] 0
+deploy[o157,s5,i] 0
+deploy[o157,s6,m] 0
+deploy[o157,s6,c] 0
+deploy[o157,s6,i] 0
+deploy[o175,s2,m] 0
+deploy[o175,s2,c] 31
+deploy[o175,s2,i] 0
+deploy[o136,s6,m] 0
+deploy[o136,s6,c] 0
+deploy[o136,s6,i] 0
+deploy[o136,s7,m] 0
+deploy[o136,s7,c] 0
+deploy[o136,s7,i] 0
+deploy[o136,s8,m] 0
+deploy[o136,s8,c] 0
+deploy[o136,s8,i] 0
+deploy[o136,s9,m] 0
+deploy[o136,s9,c] 0
+deploy[o136,s9,i] 0
+deploy[o136,s10,m] 0
+deploy[o136,s10,c] 0
+deploy[o136,s10,i] 157
+deploy[o136,s11,m] 0
+deploy[o136,s11,c] 0
+deploy[o136,s11,i] 0
+deploy[o136,s12,m] 0
+deploy[o136,s12,c] 0
+deploy[o136,s12,i] 0
+deploy[o145,s3,m] 0
+deploy[o145,s3,c] 0
+deploy[o145,s3,i] 37
+deploy[o145,s4,m] 0
+deploy[o145,s4,c] 0
+deploy[o145,s4,i] 0
+deploy[o145,s6,m] 0
+deploy[o145,s6,c] 0
+deploy[o145,s6,i] 0
+deploy[o145,s7,m] 0
+deploy[o145,s7,c] 0
+deploy[o145,s7,i] 0
+deploy[o3,s7,m] 0
+deploy[o3,s7,c] 0
+deploy[o3,s7,i] 0
+deploy[o3,s8,m] 0
+deploy[o3,s8,c] 0
+deploy[o3,s8,i] 0
+deploy[o3,s10,m] 0
+deploy[o3,s10,c] 0
+deploy[o3,s10,i] 37
+deploy[o3,s11,m] 0
+deploy[o3,s11,c] 0
+deploy[o3,s11,i] 0
+deploy[o28,s1,m] 0
+deploy[o28,s1,c] 0
+deploy[o28,s1,i] 0
+deploy[o45,s8,m] 0
+deploy[o45,s8,c] 0
+deploy[o45,s8,i] 0
+deploy[o45,s10,m] 0
+deploy[o45,s10,c] 31
+deploy[o45,s10,i] 0
+deploy[o45,s11,m] 0
+deploy[o45,s11,c] 0
+deploy[o45,s11,i] 0
+deploy[o45,s14,m] 0
+deploy[o45,s14,c] 0
+deploy[o45,s14,i] 0
+deploy[o27,s1,m] 0
+deploy[o27,s1,c] 31
+deploy[o27,s1,i] 0
+deploy[o219,s1,m] 0
+deploy[o219,s1,c] 0
+deploy[o219,s1,i] 0
+deploy[o9,s12,m] 0
+deploy[o9,s12,c] 0
+deploy[o9,s12,i] 0
+deploy[o9,s13,m] 0
+deploy[o9,s13,c] 0
+deploy[o9,s13,i] 37
+deploy[o9,s15,m] 0
+deploy[o9,s15,c] 0
+deploy[o9,s15,i] 0
+deploy[o9,s16,m] 0
+deploy[o9,s16,c] 0
+deploy[o9,s16,i] 0
+deploy[o212,s3,m] 0
+deploy[o212,s3,c] 5
+deploy[o212,s3,i] 0
+deploy[o212,s4,m] 0
+deploy[o212,s4,c] 0
+deploy[o212,s4,i] 0
+deploy[o212,s5,m] 0
+deploy[o212,s5,c] 0
+deploy[o212,s5,i] 0
+deploy[o212,s7,m] 0
+deploy[o212,s7,c] 0
+deploy[o212,s7,i] 0
+deploy[o139,s6,m] 0
+deploy[o139,s6,c] 0
+deploy[o139,s6,i] 0
+deploy[o139,s7,m] 0
+deploy[o139,s7,c] 0
+deploy[o139,s7,i] 0
+deploy[o139,s8,m] 0
+deploy[o139,s8,c] 0
+deploy[o139,s8,i] 0
+deploy[o139,s9,m] 0
+deploy[o139,s9,c] 0
+deploy[o139,s9,i] 0
+deploy[o139,s10,m] 0
+deploy[o139,s10,c] 0
+deploy[o139,s10,i] 37
+deploy[o139,s11,m] 0
+deploy[o139,s11,c] 0
+deploy[o139,s11,i] 0
+deploy[o139,s12,m] 0
+deploy[o139,s12,c] 0
+deploy[o139,s12,i] 0
+deploy[o214,s3,m] 20
+deploy[o214,s3,c] 0
+deploy[o214,s3,i] 0
+deploy[o214,s4,m] 0
+deploy[o214,s4,c] 0
+deploy[o214,s4,i] 0
+deploy[o214,s5,m] 0
+deploy[o214,s5,c] 0
+deploy[o214,s5,i] 0
+deploy[o214,s6,m] 0
+deploy[o214,s6,c] 0
+deploy[o214,s6,i] 0
+deploy[o214,s7,m] 0
+deploy[o214,s7,c] 0
+deploy[o214,s7,i] 0
+deploy[o113,s12,m] 0
+deploy[o113,s12,c] 0
+deploy[o113,s12,i] 0
+deploy[o113,s13,m] 0
+deploy[o113,s13,c] 0
+deploy[o113,s13,i] 0
+deploy[o160,s2,m] 20
+deploy[o160,s2,c] 0
+deploy[o160,s2,i] 0
+deploy[o160,s3,m] 20
+deploy[o160,s3,c] 0
+deploy[o160,s3,i] 0
+deploy[o160,s4,m] 0
+deploy[o160,s4,c] 0
+deploy[o160,s4,i] 0
+deploy[o160,s5,m] 0
+deploy[o160,s5,c] 0
+deploy[o160,s5,i] 0
+deploy[o191,s7,m] 0
+deploy[o191,s7,c] 0
+deploy[o191,s7,i] 0
+deploy[o191,s8,m] 0
+deploy[o191,s8,c] 0
+deploy[o191,s8,i] 0
+deploy[o191,s10,m] 0
+deploy[o191,s10,c] 0
+deploy[o191,s10,i] 0
+deploy[o191,s11,m] 0
+deploy[o191,s11,c] 0
+deploy[o191,s11,i] 0
+deploy[o191,s14,m] 0
+deploy[o191,s14,c] 0
+deploy[o191,s14,i] 0
+deploy[o104,s12,m] 0
+deploy[o104,s12,c] 0
+deploy[o104,s12,i] 0
+deploy[o104,s13,m] 0
+deploy[o104,s13,c] 0
+deploy[o104,s13,i] 7
+deploy[o104,s15,m] 0
+deploy[o104,s15,c] 0
+deploy[o104,s15,i] 0
+deploy[o104,s16,m] 0
+deploy[o104,s16,c] 0
+deploy[o104,s16,i] 0
+deploy[o184,s1,m] 0
+deploy[o184,s1,c] 31
+deploy[o184,s1,i] 0
+deploy[o37,s1,m] 0
+deploy[o37,s1,c] 0
+deploy[o37,s1,i] 0
+deploy[o37,s2,m] 2
+deploy[o37,s2,c] 0
+deploy[o37,s2,i] 0
+deploy[o165,s2,m] 0
+deploy[o165,s2,c] 0
+deploy[o165,s2,i] 0
+deploy[o83,s16,m] 0
+deploy[o83,s16,c] 0
+deploy[o83,s16,i] 0
+deploy[o83,s17,m] 0
+deploy[o83,s17,c] 0
+deploy[o83,s17,i] 0
+deploy[o83,s18,m] 0
+deploy[o83,s18,c] 0
+deploy[o83,s18,i] 0
+deploy[o83,s19,m] 20
+deploy[o83,s19,c] 0
+deploy[o83,s19,i] 0
+deploy[o83,s20,m] 0
+deploy[o83,s20,c] 0
+deploy[o83,s20,i] 0
+deploy[o114,s12,m] 0
+deploy[o114,s12,c] 0
+deploy[o114,s12,i] 0
+deploy[o114,s13,m] 100
+deploy[o114,s13,c] 0
+deploy[o114,s13,i] 0
+deploy[o155,s2,m] 0
+deploy[o155,s2,c] 0
+deploy[o155,s2,i] 0
+deploy[o155,s3,m] 0
+deploy[o155,s3,c] 0
+deploy[o155,s3,i] 7
+deploy[o155,s4,m] 0
+deploy[o155,s4,c] 0
+deploy[o155,s4,i] 0
+deploy[o155,s5,m] 0
+deploy[o155,s5,c] 0
+deploy[o155,s5,i] 0
+deploy[o155,s6,m] 0
+deploy[o155,s6,c] 0
+deploy[o155,s6,i] 0
+deploy[o91,s18,m] 0
+deploy[o91,s18,c] 0
+deploy[o91,s18,i] 0
+deploy[o91,s19,m] 2
+deploy[o91,s19,c] 0
+deploy[o91,s19,i] 0
+deploy[o91,s20,m] 0
+deploy[o91,s20,c] 0
+deploy[o91,s20,i] 0
+deploy[o138,s6,m] 0
+deploy[o138,s6,c] 0
+deploy[o138,s6,i] 0
+deploy[o138,s7,m] 0
+deploy[o138,s7,c] 0
+deploy[o138,s7,i] 0
+deploy[o138,s8,m] 0
+deploy[o138,s8,c] 0
+deploy[o138,s8,i] 0
+deploy[o138,s9,m] 0
+deploy[o138,s9,c] 0
+deploy[o138,s9,i] 0
+deploy[o138,s10,m] 0
+deploy[o138,s10,c] 0
+deploy[o138,s10,i] 0
+deploy[o138,s11,m] 0
+deploy[o138,s11,c] 0
+deploy[o138,s11,i] 0
+deploy[o183,s1,m] 0
+deploy[o183,s1,c] 0
+deploy[o183,s1,i] 7
+deploy[o11,s12,m] 0
+deploy[o11,s12,c] 0
+deploy[o11,s12,i] 0
+deploy[o11,s13,m] 100
+deploy[o11,s13,c] 0
+deploy[o11,s13,i] 0
+deploy[o11,s14,m] 0
+deploy[o11,s14,c] 0
+deploy[o11,s14,i] 0
+deploy[o11,s15,m] 0
+deploy[o11,s15,c] 0
+deploy[o11,s15,i] 0
+deploy[o11,s16,m] 0
+deploy[o11,s16,c] 0
+deploy[o11,s16,i] 0
+deploy[o181,s1,m] 0
+deploy[o181,s1,c] 110
+deploy[o181,s1,i] 0
+deploy[o159,s2,m] 0
+deploy[o159,s2,c] 31
+deploy[o159,s2,i] 0
+deploy[o159,s3,m] 0
+deploy[o159,s3,c] 31
+deploy[o159,s3,i] 0
+deploy[o159,s4,m] 0
+deploy[o159,s4,c] 0
+deploy[o159,s4,i] 0
+deploy[o159,s5,m] 0
+deploy[o159,s5,c] 0
+deploy[o159,s5,i] 0
+deploy[o48,s12,m] 0
+deploy[o48,s12,c] 0
+deploy[o48,s12,i] 0
+deploy[o48,s13,m] 2
+deploy[o48,s13,c] 0
+deploy[o48,s13,i] 0
+deploy[o48,s14,m] 0
+deploy[o48,s14,c] 0
+deploy[o48,s14,i] 0
+deploy[o129,s12,m] 0
+deploy[o129,s12,c] 0
+deploy[o129,s12,i] 0
+deploy[o129,s13,m] 0
+deploy[o129,s13,c] 0
+deploy[o129,s13,i] 0
+deploy[o129,s14,m] 0
+deploy[o129,s14,c] 0
+deploy[o129,s14,i] 0
+deploy[o129,s15,m] 0
+deploy[o129,s15,c] 0
+deploy[o129,s15,i] 0
+deploy[o129,s16,m] 0
+deploy[o129,s16,c] 0
+deploy[o129,s16,i] 0
+deploy[o129,s17,m] 0
+deploy[o129,s17,c] 0
+deploy[o129,s17,i] 0
+deploy[o158,s2,m] 0
+deploy[o158,s2,c] 0
+deploy[o158,s2,i] 0
+deploy[o158,s3,m] 0
+deploy[o158,s3,c] 0
+deploy[o158,s3,i] 157
+deploy[o158,s4,m] 0
+deploy[o158,s4,c] 0
+deploy[o158,s4,i] 0
+deploy[o158,s5,m] 0
+deploy[o158,s5,c] 0
+deploy[o158,s5,i] 0
+deploy[o117,s9,m] 0
+deploy[o117,s9,c] 0
+deploy[o117,s9,i] 0
+deploy[o117,s12,m] 0
+deploy[o117,s12,c] 0
+deploy[o117,s12,i] 0
+deploy[o117,s13,m] 0
+deploy[o117,s13,c] 0
+deploy[o117,s13,i] 37
+deploy[o153,s2,m] 2
+deploy[o153,s2,c] 0
+deploy[o153,s2,i] 0
+deploy[o153,s3,m] 2
+deploy[o153,s3,c] 0
+deploy[o153,s3,i] 0
+deploy[o153,s4,m] 0
+deploy[o153,s4,c] 0
+deploy[o153,s4,i] 0
+deploy[o153,s5,m] 0
+deploy[o153,s5,c] 0
+deploy[o153,s5,i] 0
+deploy[o153,s6,m] 0
+deploy[o153,s6,c] 0
+deploy[o153,s6,i] 0
+deploy[o101,s12,m] 0
+deploy[o101,s12,c] 0
+deploy[o101,s12,i] 0
+deploy[o101,s13,m] 0
+deploy[o101,s13,c] 0
+deploy[o101,s13,i] 0
+deploy[o101,s14,m] 0
+deploy[o101,s14,c] 0
+deploy[o101,s14,i] 0
+deploy[o44,s14,m] 0
+deploy[o44,s14,c] 0
+deploy[o44,s14,i] 0
+deploy[o44,s15,m] 0
+deploy[o44,s15,c] 0
+deploy[o44,s15,i] 0
+deploy[o44,s16,m] 0
+deploy[o44,s16,c] 0
+deploy[o44,s16,i] 0
+deploy[o44,s17,m] 0
+deploy[o44,s17,c] 0
+deploy[o44,s17,i] 0
+deploy[o44,s18,m] 0
+deploy[o44,s18,c] 0
+deploy[o44,s18,i] 0
+deploy[o44,s19,m] 0
+deploy[o44,s19,c] 0
+deploy[o44,s19,i] 37
+deploy[o109,s13,m] 0
+deploy[o109,s13,c] 0
+deploy[o109,s13,i] 7
+deploy[o109,s15,m] 0
+deploy[o109,s15,c] 0
+deploy[o109,s15,i] 0
+deploy[o109,s16,m] 0
+deploy[o109,s16,c] 0
+deploy[o109,s16,i] 0
+deploy[o109,s18,m] 0
+deploy[o109,s18,c] 0
+deploy[o109,s18,i] 0
+deploy[o59,s7,m] 0
+deploy[o59,s7,c] 0
+deploy[o59,s7,i] 0
+deploy[o59,s8,m] 0
+deploy[o59,s8,c] 0
+deploy[o59,s8,i] 0
+deploy[o59,s10,m] 0
+deploy[o59,s10,c] 0
+deploy[o59,s10,i] 0
+deploy[o59,s11,m] 0
+deploy[o59,s11,c] 0
+deploy[o59,s11,i] 0
+deploy[o59,s14,m] 0
+deploy[o59,s14,c] 0
+deploy[o59,s14,i] 0
+deploy[o121,s9,m] 0
+deploy[o121,s9,c] 0
+deploy[o121,s9,i] 0
+deploy[o121,s12,m] 0
+deploy[o121,s12,c] 0
+deploy[o121,s12,i] 0
+deploy[o121,s13,m] 0
+deploy[o121,s13,c] 0
+deploy[o121,s13,i] 157
+deploy[o13,s6,m] 0
+deploy[o13,s6,c] 0
+deploy[o13,s6,i] 0
+deploy[o13,s7,m] 0
+deploy[o13,s7,c] 0
+deploy[o13,s7,i] 0
+deploy[o13,s8,m] 0
+deploy[o13,s8,c] 0
+deploy[o13,s8,i] 0
+deploy[o13,s9,m] 0
+deploy[o13,s9,c] 0
+deploy[o13,s9,i] 0
+deploy[o13,s10,m] 0
+deploy[o13,s10,c] 5
+deploy[o13,s10,i] 0
+deploy[o13,s11,m] 0
+deploy[o13,s11,c] 0
+deploy[o13,s11,i] 0
+deploy[o13,s12,m] 0
+deploy[o13,s12,c] 0
+deploy[o13,s12,i] 0
+deploy[o128,s12,m] 0
+deploy[o128,s12,c] 0
+deploy[o128,s12,i] 0
+deploy[o128,s13,m] 2
+deploy[o128,s13,c] 0
+deploy[o128,s13,i] 0
+deploy[o128,s14,m] 0
+deploy[o128,s14,c] 0
+deploy[o128,s14,i] 0
+deploy[o128,s15,m] 0
+deploy[o128,s15,c] 0
+deploy[o128,s15,i] 0
+deploy[o128,s16,m] 0
+deploy[o128,s16,c] 0
+deploy[o128,s16,i] 0
+deploy[o128,s17,m] 0
+deploy[o128,s17,c] 0
+deploy[o128,s17,i] 0
+deploy[o90,s19,m] 20
+deploy[o90,s19,c] 0
+deploy[o90,s19,i] 0
+deploy[o90,s20,m] 0
+deploy[o90,s20,c] 0
+deploy[o90,s20,i] 0
+deploy[o79,s14,m] 0
+deploy[o79,s14,c] 0
+deploy[o79,s14,i] 0
+deploy[o79,s15,m] 0
+deploy[o79,s15,c] 0
+deploy[o79,s15,i] 0
+deploy[o79,s16,m] 0
+deploy[o79,s16,c] 0
+deploy[o79,s16,i] 0
+deploy[o79,s17,m] 0
+deploy[o79,s17,c] 0
+deploy[o79,s17,i] 0
+deploy[o79,s18,m] 0
+deploy[o79,s18,c] 0
+deploy[o79,s18,i] 0
+deploy[o79,s19,m] 0
+deploy[o79,s19,c] 110
+deploy[o79,s19,i] 0
+deploy[o161,s2,m] 0
+deploy[o161,s2,c] 31
+deploy[o161,s2,i] 0
+deploy[o161,s3,m] 0
+deploy[o161,s3,c] 31
+deploy[o161,s3,i] 0
+deploy[o161,s4,m] 0
+deploy[o161,s4,c] 0
+deploy[o161,s4,i] 0
+deploy[o161,s5,m] 0
+deploy[o161,s5,c] 0
+deploy[o161,s5,i] 0
+deploy[o163,s2,m] 0
+deploy[o163,s2,c] 110
+deploy[o163,s2,i] 0
+deploy[o163,s3,m] 0
+deploy[o163,s3,c] 110
+deploy[o163,s3,i] 0
+deploy[o163,s4,m] 0
+deploy[o163,s4,c] 0
+deploy[o163,s4,i] 0
+deploy[o163,s5,m] 0
+deploy[o163,s5,c] 0
+deploy[o163,s5,i] 0
+deploy[o130,s6,m] 0
+deploy[o130,s6,c] 0
+deploy[o130,s6,i] 0
+deploy[o130,s7,m] 0
+deploy[o130,s7,c] 0
+deploy[o130,s7,i] 0
+deploy[o130,s8,m] 0
+deploy[o130,s8,c] 0
+deploy[o130,s8,i] 0
+deploy[o130,s9,m] 0
+deploy[o130,s9,c] 0
+deploy[o130,s9,i] 0
+deploy[o130,s10,m] 0
+deploy[o130,s10,c] 0
+deploy[o130,s10,i] 7
+deploy[o130,s11,m] 0
+deploy[o130,s11,c] 0
+deploy[o130,s11,i] 0
+deploy[o130,s12,m] 0
+deploy[o130,s12,c] 0
+deploy[o130,s12,i] 0
+deploy[o107,s12,m] 0
+deploy[o107,s12,c] 0
+deploy[o107,s12,i] 0
+deploy[o107,s13,m] 0
+deploy[o107,s13,c] 0
+deploy[o107,s13,i] 0
+deploy[o107,s14,m] 0
+deploy[o107,s14,c] 0
+deploy[o107,s14,i] 0
+deploy[o107,s15,m] 0
+deploy[o107,s15,c] 0
+deploy[o107,s15,i] 0
+deploy[o42,s2,m] 0
+deploy[o42,s2,c] 31
+deploy[o42,s2,i] 0
+deploy[o19,s3,m] 2
+deploy[o19,s3,c] 0
+deploy[o19,s3,i] 0
+deploy[o19,s6,m] 0
+deploy[o19,s6,c] 0
+deploy[o19,s6,i] 0
+deploy[o19,s7,m] 0
+deploy[o19,s7,c] 0
+deploy[o19,s7,i] 0
+deploy[o22,s1,m] 0
+deploy[o22,s1,c] 110
+deploy[o22,s1,i] 0
+deploy[o187,s1,m] 0
+deploy[o187,s1,c] 0
+deploy[o187,s1,i] 7
+deploy[o84,s15,m] 0
+deploy[o84,s15,c] 0
+deploy[o84,s15,i] 0
+deploy[o84,s16,m] 0
+deploy[o84,s16,c] 0
+deploy[o84,s16,i] 0
+deploy[o84,s17,m] 0
+deploy[o84,s17,c] 0
+deploy[o84,s17,i] 0
+deploy[o84,s18,m] 0
+deploy[o84,s18,c] 0
+deploy[o84,s18,i] 0
+deploy[o84,s19,m] 0
+deploy[o84,s19,c] 31
+deploy[o84,s19,i] 0
+deploy[o84,s20,m] 0
+deploy[o84,s20,c] 0
+deploy[o84,s20,i] 0
+deploy[o132,s6,m] 0
+deploy[o132,s6,c] 0
+deploy[o132,s6,i] 0
+deploy[o132,s7,m] 0
+deploy[o132,s7,c] 0
+deploy[o132,s7,i] 0
+deploy[o132,s8,m] 0
+deploy[o132,s8,c] 0
+deploy[o132,s8,i] 0
+deploy[o132,s9,m] 0
+deploy[o132,s9,c] 0
+deploy[o132,s9,i] 0
+deploy[o132,s10,m] 0
+deploy[o132,s10,c] 0
+deploy[o132,s10,i] 0
+deploy[o132,s11,m] 0
+deploy[o132,s11,c] 0
+deploy[o132,s11,i] 0
+deploy[o132,s12,m] 0
+deploy[o132,s12,c] 0
+deploy[o132,s12,i] 0
+deploy[o198,s1,m] 0
+deploy[o198,s1,c] 0
+deploy[o198,s1,i] 7
+deploy[o49,s13,m] 0
+deploy[o49,s13,c] 0
+deploy[o49,s13,i] 0
+deploy[o49,s15,m] 0
+deploy[o49,s15,c] 0
+deploy[o49,s15,i] 0
+deploy[o49,s16,m] 0
+deploy[o49,s16,c] 0
+deploy[o49,s16,i] 0
+deploy[o49,s17,m] 0
+deploy[o49,s17,c] 0
+deploy[o49,s17,i] 0
+deploy[o49,s18,m] 0
+deploy[o49,s18,c] 0
+deploy[o49,s18,i] 0
+deploy[o116,s12,m] 0
+deploy[o116,s12,c] 0
+deploy[o116,s12,i] 0
+deploy[o116,s13,m] 0
+deploy[o116,s13,c] 0
+deploy[o116,s13,i] 0
+deploy[o124,s9,m] 0
+deploy[o124,s9,c] 0
+deploy[o124,s9,i] 0
+deploy[o124,s12,m] 0
+deploy[o124,s12,c] 0
+deploy[o124,s12,i] 0
+deploy[o124,s13,m] 0
+deploy[o124,s13,c] 0
+deploy[o124,s13,i] 157
+deploy[o134,s6,m] 0
+deploy[o134,s6,c] 0
+deploy[o134,s6,i] 0
+deploy[o134,s7,m] 0
+deploy[o134,s7,c] 0
+deploy[o134,s7,i] 0
+deploy[o134,s8,m] 0
+deploy[o134,s8,c] 0
+deploy[o134,s8,i] 0
+deploy[o134,s9,m] 0
+deploy[o134,s9,c] 0
+deploy[o134,s9,i] 0
+deploy[o134,s10,m] 0
+deploy[o134,s10,c] 0
+deploy[o134,s10,i] 157
+deploy[o134,s11,m] 0
+deploy[o134,s11,c] 0
+deploy[o134,s11,i] 0
+deploy[o134,s12,m] 0
+deploy[o134,s12,c] 0
+deploy[o134,s12,i] 0
+deploy[o82,s16,m] 0
+deploy[o82,s16,c] 0
+deploy[o82,s16,i] 0
+deploy[o82,s17,m] 0
+deploy[o82,s17,c] 0
+deploy[o82,s17,i] 0
+deploy[o82,s18,m] 0
+deploy[o82,s18,c] 0
+deploy[o82,s18,i] 0
+deploy[o82,s19,m] 0
+deploy[o82,s19,c] 31
+deploy[o82,s19,i] 0
+deploy[o82,s20,m] 0
+deploy[o82,s20,c] 0
+deploy[o82,s20,i] 0
+deploy[o220,s1,m] 0
+deploy[o220,s1,c] 0
+deploy[o220,s1,i] 37
+deploy[o207,s3,m] 0
+deploy[o207,s3,c] 5
+deploy[o207,s3,i] 0
+deploy[o207,s4,m] 0
+deploy[o207,s4,c] 0
+deploy[o207,s4,i] 0
+deploy[o207,s5,m] 0
+deploy[o207,s5,c] 0
+deploy[o207,s5,i] 0
+deploy[o43,s2,m] 0
+deploy[o43,s2,c] 110
+deploy[o43,s2,i] 0
+deploy[o43,s3,m] 0
+deploy[o43,s3,c] 110
+deploy[o43,s3,i] 0
+deploy[o192,s1,m] 0
+deploy[o192,s1,c] 0
+deploy[o192,s1,i] 7
+deploy[o174,s2,m] 0
+deploy[o174,s2,c] 110
+deploy[o174,s2,i] 0
+deploy[o174,s3,m] 0
+deploy[o174,s3,c] 110
+deploy[o174,s3,i] 0
+deploy[o78,s14,m] 0
+deploy[o78,s14,c] 0
+deploy[o78,s14,i] 0
+deploy[o78,s15,m] 0
+deploy[o78,s15,c] 0
+deploy[o78,s15,i] 0
+deploy[o78,s16,m] 0
+deploy[o78,s16,c] 0
+deploy[o78,s16,i] 0
+deploy[o78,s17,m] 0
+deploy[o78,s17,c] 0
+deploy[o78,s17,i] 0
+deploy[o78,s19,m] 20
+deploy[o78,s19,c] 0
+deploy[o78,s19,i] 0
+
+------------------------------- Model logfile ----------------------------------
+
+Gurobi 10.0.2 (win64) logging started Mon Jul 10 22:06:16 2023
+
+Set parameter LogFile to value "Outputs/Logfiles/model_moo(Jul 10,2206).log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (win64)
+
+CPU model: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 1832 rows, 1436 columns and 4534 nonzeros
+Model fingerprint: 0xca47e963
+Variable types: 1062 continuous, 374 integer (374 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [1e-02, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 1337 rows and 708 columns
+Presolve time: 0.01s
+Presolved: 495 rows and 728 columns
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 79 rows and 373 columns
+Presolve time: 0.02s
+Presolved: 416 rows, 355 columns, 1025 nonzeros
+Variable types: 0 continuous, 355 integer (355 binary)
+Found heuristic solution: objective -898.2854178
+
+Root relaxation: objective -1.149129e+03, 180 iterations, 0.02 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -1149.128698 -1149.1287  0.00%     -    0s
+
+Explored 1 nodes (180 simplex iterations) in 0.13 seconds (0.01 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: -1149.13 -898.285 
+No other solutions better than -1149.13
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.149128698059e+03, best bound -1.149128698059e+03, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 900
+
+Presolve removed 140 rows and 422 columns
+Presolve time: 0.02s
+Presolved: 356 rows, 306 columns, 1171 nonzeros
+Found heuristic solution: objective -3571.644972
+Variable types: 0 continuous, 306 integer (306 binary)
+
+Root relaxation: objective -3.641274e+03, 448 iterations, 0.02 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0      -3571.6450 -3571.6450  0.00%     -    0s
+
+Explored 1 nodes (448 simplex iterations) in 0.24 seconds (0.02 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -3571.64 
+No other solutions better than -3571.64
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.571644972222e+03, best bound -3.571644972222e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.28 seconds (0.02 work units), solution count 3
+
+
+    Variable            X 
+-------------------------
+cover[o74,s13]            1 
+cover[o98,s13]            1 
+cover[o53,s10]            1 
+cover[o178,s2]            1 
+cover[o203,s19]            1 
+cover[o127,s13]            1 
+cover[o172,s2]            1 
+cover[o51,s13]            1 
+cover[o7,s19]            1 
+cover[o30,s1]            1 
+cover[o221,s1]            1 
+cover[o64,s10]            1 
+cover[o25,s1]            1 
+cover[o94,s19]            1 
+cover[o119,s13]            1 
+cover[o148,s3]            1 
+cover[o208,s3]            1 
+cover[o86,s19]            1 
+cover[o93,s19]            1 
+cover[o108,s13]            1 
+cover[o131,s10]            1 
+cover[o6,s19]            1 
+cover[o10,s19]            1 
+cover[o41,s2]            1 
+cover[o144,s3]            1 
+cover[o169,s2]            1 
+cover[o185,s1]            1 
+cover[o87,s19]            1 
+cover[o168,s2]            1 
+cover[o24,s1]            1 
+cover[o190,s10]            1 
+cover[o97,s13]            1 
+cover[o162,s2]            1 
+cover[o106,s13]            1 
+cover[o157,s3]            1 
+cover[o175,s2]            1 
+cover[o136,s10]            1 
+cover[o145,s3]            1 
+cover[o3,s10]            1 
+cover[o28,s1]            1 
+cover[o45,s10]            1 
+cover[o27,s1]            1 
+cover[o219,s1]            1 
+cover[o9,s13]            1 
+cover[o212,s3]            1 
+cover[o139,s10]            1 
+cover[o214,s3]            1 
+cover[o113,s13]            1 
+cover[o160,s3]            1 
+cover[o191,s10]            1 
+cover[o104,s13]            1 
+cover[o184,s1]            1 
+cover[o37,s2]            1 
+cover[o165,s2]            1 
+cover[o83,s19]            1 
+cover[o114,s13]            1 
+cover[o155,s3]            1 
+cover[o91,s19]            1 
+cover[o138,s10]            1 
+cover[o183,s1]            1 
+cover[o11,s13]            1 
+cover[o181,s1]            1 
+cover[o159,s2]            1 
+cover[o48,s13]            1 
+cover[o129,s13]            1 
+cover[o158,s2]            1 
+cover[o117,s13]            1 
+cover[o153,s3]            1 
+cover[o101,s13]            1 
+cover[o44,s19]            1 
+cover[o109,s13]            1 
+cover[o59,s10]            1 
+cover[o121,s13]            1 
+cover[o13,s10]            1 
+cover[o128,s13]            1 
+cover[o90,s19]            1 
+cover[o79,s19]            1 
+cover[o161,s3]            1 
+cover[o163,s3]            1 
+cover[o130,s10]            1 
+cover[o107,s13]            1 
+cover[o42,s2]            1 
+cover[o19,s3]            1 
+cover[o22,s1]            1 
+cover[o187,s1]            1 
+cover[o84,s19]            1 
+cover[o132,s10]            1 
+cover[o198,s1]            1 
+cover[o49,s13]            1 
+cover[o116,s13]            1 
+cover[o124,s13]            1 
+cover[o134,s10]            1 
+cover[o82,s19]            1 
+cover[o220,s1]            1 
+cover[o207,s3]            1 
+cover[o43,s2]            1 
+cover[o192,s1]            1 
+cover[o174,s2]            1 
+cover[o78,s19]            1 
+ select[s19]            1 
+  select[s3]            1 
+  select[s2]            1 
+ select[s13]            1 
+  select[s1]            1 
+ select[s10]            1 
+deploy[o74,s19,c]           31 
+deploy[o53,s10,c]          110 
+deploy[o203,s19,c]            5 
+deploy[o172,s3,i]            7 
+deploy[o51,s13,i]           37 
+deploy[o7,s19,i]           37 
+deploy[o64,s10,i]           37 
+deploy[o25,s1,i]           37 
+deploy[o94,s19,i]            7 
+deploy[o148,s3,m]            2 
+deploy[o208,s3,c]          110 
+deploy[o86,s19,c]          110 
+deploy[o93,s19,c]            5 
+deploy[o131,s10,i]            7 
+deploy[o6,s19,m]          100 
+deploy[o10,s19,m]          100 
+deploy[o41,s2,m]          100 
+deploy[o41,s3,m]          100 
+deploy[o144,s3,i]          157 
+deploy[o169,s1,c]           31 
+deploy[o169,s2,c]           31 
+deploy[o185,s1,c]          110 
+deploy[o87,s19,m]          100 
+deploy[o168,s2,m]           20 
+deploy[o168,s3,m]           20 
+deploy[o24,s2,m]            2 
+deploy[o190,s10,i]           37 
+deploy[o97,s13,i]            7 
+deploy[o162,s2,m]            2 
+deploy[o162,s3,m]            2 
+deploy[o157,s2,m]            2 
+deploy[o157,s3,m]            2 
+deploy[o175,s2,c]           31 
+deploy[o136,s10,i]          157 
+deploy[o145,s3,i]           37 
+deploy[o3,s10,i]           37 
+deploy[o45,s10,c]           31 
+deploy[o27,s1,c]           31 
+deploy[o9,s13,i]           37 
+deploy[o212,s3,c]            5 
+deploy[o139,s10,i]           37 
+deploy[o214,s3,m]           20 
+deploy[o160,s2,m]           20 
+deploy[o160,s3,m]           20 
+deploy[o104,s13,i]            7 
+deploy[o184,s1,c]           31 
+deploy[o37,s2,m]            2 
+deploy[o83,s19,m]           20 
+deploy[o114,s13,m]          100 
+deploy[o155,s3,i]            7 
+deploy[o91,s19,m]            2 
+deploy[o183,s1,i]            7 
+deploy[o11,s13,m]          100 
+deploy[o181,s1,c]          110 
+deploy[o159,s2,c]           31 
+deploy[o159,s3,c]           31 
+deploy[o48,s13,m]            2 
+deploy[o158,s3,i]          157 
+deploy[o117,s13,i]           37 
+deploy[o153,s2,m]            2 
+deploy[o153,s3,m]            2 
+deploy[o44,s19,i]           37 
+deploy[o109,s13,i]            7 
+deploy[o121,s13,i]          157 
+deploy[o13,s10,c]            5 
+deploy[o128,s13,m]            2 
+deploy[o90,s19,m]           20 
+deploy[o79,s19,c]          110 
+deploy[o161,s2,c]           31 
+deploy[o161,s3,c]           31 
+deploy[o163,s2,c]          110 
+deploy[o163,s3,c]          110 
+deploy[o130,s10,i]            7 
+deploy[o42,s2,c]           31 
+deploy[o19,s3,m]            2 
+deploy[o22,s1,c]          110 
+deploy[o187,s1,i]            7 
+deploy[o84,s19,c]           31 
+deploy[o198,s1,i]            7 
+deploy[o124,s13,i]          157 
+deploy[o134,s10,i]          157 
+deploy[o82,s19,c]           31 
+deploy[o220,s1,i]           37 
+deploy[o207,s3,c]            5 
+deploy[o43,s2,c]          110 
+deploy[o43,s3,c]          110 
+deploy[o192,s1,i]            7 
+deploy[o174,s2,c]          110 
+deploy[o174,s3,c]          110 
+deploy[o78,s19,m]           20 
+
+------------------------------- Python Code ------------------------------------
+""" Optimization model: maximize effectiveness and minimize cost: MIP
+
+Outline:
+
+1. Define Decision variables
+2. Add Constraints
+3. Add objective functions
+4. Set some gurobi parameters, & write the model
+5. Solve the model
+6. Write log file
+7. Get some variables out of the model for further analysis
+
+Note:
+
+Developer: Tanmoy Das
+Date: July 05, 2023
+"""
+
+# %% Data
+# data processing libraries
+import pandas as pd
+from datetime import datetime, date
+# optimization
+import gurobipy as gp
+from gurobipy import GRB
+# import custom functions or classes
+import custom_func
+import math
+
+
+# %% Model 2: MIP-2
+def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, SizeSpill, SizeSpill_n,
+          Demand, Sensitivity_R, Sensitivity_n, Eff, Effectiveness_n, Availability, NumberStMax, Distance, Distance_n,
+          W, QuantityMin, DistanceMax, Cf_s, CostU, Budget,
+          BigM, MaxFO):
+    """
+    :param Stations:
+    :param OilSpills:
+    :param ResourcesD:
+    :param coordinates_st:
+    :param coordinates_spill:
+    :param SizeSpill:
+    :param SizeSpill_n:
+    :param Demand:
+    :param Sensitivity_R:
+    :param Sensitivity_n:
+    :param Eff:
+    :param Effectiveness_n:
+    :param Availability:
+    :param NumberStMax:
+    :param Distance:
+    :param Distance_n:
+    :param W:
+    :param QuantityMin:
+    :param DistanceMax:
+    :param Cf_s:
+    :param CostU:
+    :param Budget:
+    :param BigM:
+    :param MaxFO:
+    :return:
+    """
+
+    import gurobipy as gp
+    from gurobipy import GRB
+    from datetime import datetime, date
+
+    w1, w2, w3, w4, w5, w6 = W[0], W[1], W[2], W[3], W[4], W[5]
+
+    # ---------------------------------------- Set & Index -------------------------------------------------------------
+    os_pair = {(o, s): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
+               for o in OilSpills
+               for s in Stations
+               if
+               custom_func.compute_distance(tuple(coordinates_spill[1][o]), tuple(coordinates_st[1][s])) < DistanceMax}
+    os_pair = tuple(os_pair.keys())
+
+    # sr_pair (based on unique stations in pair_os )
+    st_o = list(set([item[1] for item in os_pair]))
+    o_st = list(set([item[0] for item in os_pair])) # unique oil spills
+
+    sr_pair = []
+    for s in st_o:
+        for r in ResourcesD:
+            sr_pair.append((s, r))
+    sr_pair = tuple(sr_pair)
+
+    osr_pair = {(o, s, r): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
+                for o in OilSpills
+                for s in Stations
+                for r in ResourcesD
+                if
+                custom_func.compute_distance(tuple(coordinates_spill[1][o]), tuple(coordinates_st[1][s])) < DistanceMax}
+    osr_pair = tuple(osr_pair.keys())
+
+    print('--------------MIP-moo--------')
+    model = gp.Model("MIP-moo-LAMOSCAD")
+    # ---------------------------------------- Decision variable -------------------------------------------------------
+    cover = model.addVars(os_pair, vtype=GRB.BINARY, name='cover')  # OilSpills
+    select = model.addVars(st_o, vtype=GRB.BINARY, name='select')
+    deploy = model.addVars(osr_pair, vtype=GRB.CONTINUOUS, lb=0,
+                           name='deploy')  # QuantityMin Minimum quantity constraint ++
+
+    print('cover'); print(cover); print(''); print('select'); print(select); print(''); print('deploy'); print(deploy)
+
+    # %% ----------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------ Constraints -----------------------------------------------------
+
+    # ---------------------------------------- Coverage constraints (cover) --------------------------------------------
+
+    # C10: facility must be open to cover oil spill
+    C_open_facility_to_cover = model.addConstrs((cover[o, s] <= select[s]
+                                                 for o, s in os_pair), name='C_open_facility_to_cover')
+
+    # C15: Each oil spill should be covered by only one station (rethink formulation later)
+    C_few_facility_per_spill = model.addConstrs((cover.sum(o, '*') <= MaxFO
+                                               for o, s in os_pair), name='C_few_facility_per_spill')  # ++partly solved
+
+    # ---------------------------------------- Facility constraints (select ) ------------------------------------------
+    # C11: max number of facilities to be open
+    C_max_facility = model.addConstr((gp.quicksum(select[s]
+                                                  for s in Stations) <= NumberStMax),
+                                     name='C_max_facility')  # SFS style ++
+
+    # C12: Cost of building facility does not exceed budget
+    C_budget = model.addConstr(select.prod(Cf_s) <= Budget,
+                               name="C_budget")  # m.addConstr(build.prod(cost) <= budget, name="budget")
+
+    """
+    # C14: Hudson
+    # Ref Fig3a Canadian Arctic s8, s10 s11, s14
+    C_HudsonFacility = model.addConstr((gp.quicksum(select[s]
+                                                  for s in ['s8', 's10', 's11', 's14', 's17', 's19']) >= 1),
+                                     name='C_HudsonFacility')
+    # C15: Up North  s9, s12, s13, s15, s16, s18, s20
+    C_UpNorthFacility = model.addConstr((gp.quicksum(select[s]
+                                                  for s in ['s9', 's12', 's13', 's15', 's16', 's18', 's20']) <= 1),
+                                     name='C_UpNorthFacility')
+    """
+    # ---------------------------------------- Deploy constraints (deploy) ---------------------------------------------
+    # C15: resource capacity constaint & deploy only when facility is open
+    C_resource_capacity = model.addConstrs((deploy.sum('*', s, r) <= BigM * Availability[s, r] * select[s]  #
+                                            for s, r in sr_pair), name='C_open_facility')  # need improvement++ infeasibility
+
+    # C16: deploy less than demand
+    C_deploy_demand = model.addConstrs((deploy[o, s, r] <= Demand[o, r]
+                                        for o, s, r in osr_pair), name='C_deploy_demand')
+
+    # C20: usage limit
+
+    # %% ----------------------------------------------------------------------------------------------------------------
+    # ----------------------------------------------- Objective function -----------------------------------------------
+    model.ModelSense = GRB.MINIMIZE
+    objective_1 = gp.quicksum((w1 * SizeSpill_n[o] + 100*w2 * Sensitivity_n[o] - w3 * Distance_n[o, s]) * cover[o, s]
+                              for o, s in os_pair)
+
+    objective_2 = gp.quicksum(10**-4*w4 * select[s] * Cf_s[s] for s in Stations) \
+                        + gp.quicksum( (10**-2*w5 * CostU[s,r] - 10 * w6 * Effectiveness_n[s, r]) * deploy[o, s, r] for o, s, r in osr_pair)
+
+    model.setObjectiveN(objective_1, index=0, priority=2, weight=-1, name='objective_re_1')
+    model.setObjectiveN(objective_2, index=1, priority=1, weight=1, name='objective_cost_2')
+
+    # %% Model parameters
+    # Organizing model
+    # Limit how many solutions to collect
+    model.setParam(GRB.Param.PoolSolutions, 1024)
+    # Limit the search space by setting a gap for the worst possible solution that will be accepted
+    model.setParam(GRB.Param.PoolGap, 0.80)
+    # do a systematic search for the k-best solutions
+    # model.setParam(GRB.Param.PoolSearchMode, 2)
+    today = date.today()
+    now = datetime.now()
+    date_time = str(date.today().strftime("%b %d,") + datetime.now().strftime("%H%M"))
+    filename = 'model (' + date_time + ')'
+
+    # Write the model
+    model.write(f'Outputs/model_moo.lp')
+    model.Params.LogFile = f"Outputs/Logfiles/model_moo({date_time}).log"  # write the log file
+
+    # %% Solve the model
+    model.optimize()
+    # Debugging model
+    # model.computeIIS()
+    model.write('Outputs/model_moo.sol')
+
+    # %% Query number of multiple objectives, and number of solutions
+    x = model.getVars()
+    select_series = pd.Series(model.getAttr('X', select))
+    deploy_series = pd.Series(model.getAttr('X', deploy))
+    select_series[select_series > 0.5]
+    deploy_series[deploy_series > 0.5]
+    nSolutions = model.SolCount
+    nObjectives = model.NumObj
+    print('Problem has', nObjectives, 'objectives')
+    print('Gurobi found', nSolutions, 'solutions')
+    solutions = []
+    for s in range(nSolutions):
+        # Set which solution we will query from now on
+        model.params.SolutionNumber = s
+
+        # Print objective value of this solution in each objective
+        print('Solution', s, ':', end='')
+        for o in range(nObjectives):
+            # Set which objective we will query
+            model.params.ObjNumber = o
+            # Query the o-th objective value
+            print(' ', round(model.ObjNVal, 2), end=' ')
+            # query the full vector of the o-th solution
+            solutions.append(model.getAttr('Xn', x))
+        print()
+
+    for j in range(len(x)):
+        if x[j].Xn > 0:
+            print(x[j].VarName, x[j].Xn, end=' ')
+            print(' ')
+
+    # %% Output the result
+    # Obtain model results & carry them outside the model scope
+    model.printAttr('X')
+    mvars = model.getVars()  # these values are NOT accessible outside the model scope
+    names = model.getAttr('VarName', mvars)
+    values = model.getAttr('X', mvars)  # X Xn https://www.gurobi.com/documentation/9.5/refman/working_with_multiple_obje.html
+
+
+    objValues = []
+    nSolutions = model.SolCount
+    nObjectives = model.NumObj
+    for s in range(nSolutions):
+        # Set which solution we will query from now on
+        model.params.SolutionNumber = s
+
+        # Print objective value of this solution in each objective
+        print('Solution', s, ':', end='')
+        for o in range(nObjectives):
+            model.params.ObjNumber = o
+            # Query the o-th objective value
+            print(' ', model.ObjNVal, end='')
+            objValues.append(model.ObjNVal)
+        # print first three variables in the solution
+        n = min(len(x), 4)
+        for j in range(n):
+            print(x[j].VarName, x[j].Xn, end='')
+        print('')
+
+        # query the full vector of the o-th solution
+
+
+    cover_series = pd.Series(model.getAttr('X', cover))
+    cover_1s = cover_series[cover_series > 0.5]
+
+    select_series = pd.Series(model.getAttr('X', select))
+    select_1s = select_series[select_series > 0.5]
+    print('\nselect_1s\n', select_1s)
+    deploy_series = pd.Series(model.getAttr('X', deploy))
+    deploy_1s = deploy_series[deploy_series > 0.5]
+    print('\ndeploy_1s\n', deploy_1s)
+    cover_series = pd.Series(model.getAttr('X', cover))
+    cover_1s = cover_series[cover_series > 0.5]
+    print('\ncover_1s\n', cover_1s)
+
+    # Saving the file
+    modelStructure_output_code = python_code = logfile = model_structure = outputs = inputs = ""
+    # Reading data from files
+    with open('Outputs/model_moo.lp') as fp:
+        model_structure = fp.read()
+    with open('Outputs/model_moo.sol') as fp:
+        outputs = fp.read()
+    with open(f'Outputs/Logfiles/model_moo({date_time}).log') as fp:
+        logfile = fp.read()
+    with open('model.py') as fp:
+        python_code = fp.read()
+    # Merging 2 files
+    # To add the data of file2
+    # from next line
+    modelStructure_output_code += "------------------------------- Model Structure ----------------------------------\n"
+    modelStructure_output_code += model_structure
+    modelStructure_output_code += "\n------------------------------- Model Outputs ----------------------------------\n"
+    modelStructure_output_code += outputs
+    modelStructure_output_code += "\n------------------------------- Model logfile ----------------------------------\n"
+    modelStructure_output_code += logfile
+    modelStructure_output_code += "\n------------------------------- Python Code ------------------------------------\n"
+    modelStructure_output_code += python_code
+
+    with open(f'Outputs/Structure, outputs & python code of {filename}.txt', 'w') as fp:
+        fp.write(modelStructure_output_code)
+
+    # Extract assignment variables
+    sol_y = pd.Series(model.getAttr('X', deploy))
+    sol_y.name = 'Assignments'
+    sol_y.index.names = ['Spill #', 'Station no.', 'Resource type']
+    assignment4 = sol_y[sol_y > 0.5].to_frame()
+    assignment_name = assignment4.reset_index()
+    print('assignment_name', assignment_name)
+
+    # %%
+    # organize data # need to clean this section ++
+    spill_df = pd.DataFrame(coordinates_spill[1]).T.reset_index()
+    spill_df.columns = ['Spill #', 'Spill_Latitude', 'Spill_Longitude']
+    spill_df['Resource needed'] = pd.DataFrame(SizeSpill)  # ++ update with spill size later
+    spill_df['Sensitivity'] = Sensitivity_R  # ++
+
+    station_df = pd.DataFrame(coordinates_st[1]).T.reset_index()
+    station_df.columns = ['Station no.', 'St_Latitude', 'St_Longitude']
+
+    assignment2 = pd.merge(assignment_name[['Spill #', 'Station no.']],
+                           station_df[['Station no.', 'St_Latitude', 'St_Longitude']])
+
+    assignment3 = pd.merge(assignment2, spill_df[['Spill #', 'Spill_Latitude', 'Spill_Longitude']])
+    deploy_reset = deploy_1s.reset_index()
+    deploy_reset.columns = ['Spill #', 'Station no.', 'Resource Type', 'Quantity deployed']
+    assignment = pd.merge(assignment3, deploy_reset)
+
+    assignment['Distance'] = [math.sqrt((assignment.loc[i]['St_Latitude'] - assignment.loc[i]['Spill_Latitude']) ** 2 \
+                                        + (assignment.loc[i]['St_Longitude'] - assignment.loc[i][
+        'Spill_Longitude']) ** 2)
+                              for i in assignment.index]
+
+    # Outputs from the model +++
+    # Calculate Coverage # chance later ++
+    coverage_percentage = int(100 * len(cover_1s)/ len(OilSpills))  # / len(cover_series)
+    # Calculate total distance travelled
+    DistanceTravelled = []
+    for i in range(len(assignment)):
+        st_coord = (assignment[['St_Latitude', 'St_Longitude']]).iloc[i, :].values
+        sp_coord = (assignment[['Spill_Latitude', 'Spill_Longitude']]).iloc[i, :].values
+        aaa = DistanceTravelled.append(custom_func.compute_distance(st_coord, sp_coord))
+
+    DistanceTravelled = sum(DistanceTravelled)*80  # 80 for convering GIS data into kilometer
+    ResponseTimeM = round((DistanceTravelled / 60) / len(assignment), 2)
+    print(f'Coverage Percentage: {coverage_percentage}%')
+    print(f'Mean Response Time: {ResponseTimeM}')
+
+    return model, select, deploy, mvars, names, values, objValues, \
+        spill_df, station_df, cover_1s, select_1s, deploy_1s, ResponseTimeM, coverage_percentage, assignment

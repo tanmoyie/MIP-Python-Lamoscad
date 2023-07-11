@@ -219,31 +219,9 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     model.printAttr('X')
     mvars = model.getVars()  # these values are NOT accessible outside the model scope
     names = model.getAttr('VarName', mvars)
-    values = model.getAttr('X', mvars)  # X Xn https://www.gurobi.com/documentation/9.5/refman/working_with_multiple_obje.html
+    values = model.getAttr('X', mvars)
 
-
-    objValues = []
-    nSolutions = model.SolCount
-    nObjectives = model.NumObj
-    for s in range(nSolutions):
-        # Set which solution we will query from now on
-        model.params.SolutionNumber = s
-
-        # Print objective value of this solution in each objective
-        print('Solution', s, ':', end='')
-        for o in range(nObjectives):
-            model.params.ObjNumber = o
-            # Query the o-th objective value
-            print(' ', model.ObjNVal, end='')
-            objValues.append(model.ObjNVal)
-        # print first three variables in the solution
-        n = min(len(x), 4)
-        for j in range(n):
-            print(x[j].VarName, x[j].Xn, end='')
-        print('')
-
-        # query the full vector of the o-th solution
-
+    # def extract_ones_DV(model, cover, select, amount, spill_data):
 
     cover_series = pd.Series(model.getAttr('X', cover))
     cover_1s = cover_series[cover_series > 0.5]
@@ -325,10 +303,10 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
         sp_coord = (assignment[['Spill_Latitude', 'Spill_Longitude']]).iloc[i, :].values
         aaa = DistanceTravelled.append(custom_func.compute_distance(st_coord, sp_coord))
 
-    DistanceTravelled = sum(DistanceTravelled)*80  # 80 for convering GIS data into kilometer
-    ResponseTimeM = round((DistanceTravelled / 60) / len(assignment), 2)
+    DistanceTravelled = sum(DistanceTravelled)
+    ResponseTimeM = int((DistanceTravelled / 60) / len(OilSpills))
     print(f'Coverage Percentage: {coverage_percentage}%')
     print(f'Mean Response Time: {ResponseTimeM}')
 
-    return model, select, deploy, mvars, names, values, objValues, \
+    return model, select, deploy, mvars, names, values, \
         spill_df, station_df, cover_1s, select_1s, deploy_1s, ResponseTimeM, coverage_percentage, assignment

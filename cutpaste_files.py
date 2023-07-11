@@ -13,3 +13,13 @@ C_facility_to_each_spill = model.addConstrs((gp.quicksum(cover[o, s]  for s in S
 m.addConstrs((gp.quicksum(build[t] for t in sites if r in coverage[t]) >= is_covered[r]
                   for r in regions), name="Build2cover")
 # https://colab.research.google.com/github/Gurobi/modeling-examples/blob/master/cell_tower_coverage/cell_tower_gcl.ipynb#scrollTo=wb16M1Mlza-3
+
+# m.addConstrs( (transport.sum('*', p) <= capacity[p] * open[p] for p in plants), "Capacity")
+# m.addConstrs( (transport.sum(w) == demand[w] for w in warehouses), "Demand")
+
+    C_DebtsSettledOnce = model.addConstrs((gp.quicksum(cover[o, s]
+                                                       for s in st_o)
+                                           <= MaxFO for o in o_st),
+                                          name='C_few_facility_per_spill')  # think from SFS model prototype++
+
+
