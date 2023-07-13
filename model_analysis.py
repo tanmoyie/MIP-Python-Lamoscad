@@ -39,10 +39,11 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
     if current_vs_proposed == 'current':
         station_color = 'green'
         shape = '^'
-        alpha_val = .9
+        alpha_val = 1
         facility_size = 700
         legend_y_position = 0.50
-        facility_text_color = 'yellow'
+        facility_text_color = 'green'
+        st_name = ['$s_{tu}$', '$s_{ha}$', '$s_{ch}$', '$s_{iq}$']
     else:
         station_color = 'yellow'
         shape = 's'
@@ -52,7 +53,7 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
         facility_text_color = 'red'
 
 
-    fig, ax = plt.subplots(figsize=(10,10))  #++
+    fig, ax = plt.subplots(figsize=(6,6))  #++
     # Load geometric file for map
     ArcticMap = gpd.read_file("Inputs/ArcGIS_data/ArcticShapefile2/ArcticShapefile2.shp")
     ArcticMap = ArcticMap.to_crs(epsg=4326)  # 3857
@@ -76,7 +77,7 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
         for r in range(d1.shape[0]):
             new_list.append([(d1.Spill_Longitude[r], d1.Spill_Latitude[r]), (d1.St_Longitude[r], d1.St_Latitude[r])])
         lc = mc.LineCollection(new_list, colors=f'C{ust + 1}',
-                               alpha=.4, linewidths=2)  # 'Resource Type' alpha = (ust/len(unique_stations)), colors=ust,
+                               alpha=.4, linewidths=3)  # 'Resource Type' alpha = (ust/len(unique_stations)), colors=ust,
         ax.add_collection(lc)
 
 
@@ -119,10 +120,8 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
     else:
         spillUnC = 0
 
-    # Stations related nodes and edges
     # Square showing selected stations
     selected_supply_stations = list(deploy_1s.reset_index().level_1.unique())
-
     st = plt.scatter(data=station_df[station_df['Station no.'].isin(selected_supply_stations)],
                      x='St_Longitude', y='St_Latitude',
                      marker=shape, alpha=alpha_val, s=facility_size,
@@ -133,11 +132,20 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
     # Showing station number as text
     data_st_selected = station_df[station_df['Station no.'].isin(select_1s.reset_index().rename({'index':'StationNo'}, axis=1).StationNo)].reset_index()
     #
-    for i in range(len(selected_supply_stations)):
-        plt.text(x=data_st_selected.St_Longitude[i]-1.2 , y=data_st_selected.St_Latitude[i]-legend_y_position, #+ 2.5 - .25++
-                 s=data_st_selected.loc[:, 'Station no.'][i],
-                 zorder = 4, fontdict=dict(color=facility_text_color, size=10))
 
+
+    # Showing station number as text for current stations
+    if current_vs_proposed == 'current':
+        # s_tu, s_ha
+        for i in range(len(selected_supply_stations)):
+            plt.text(data_st_selected.St_Longitude[i]-2, y=data_st_selected.St_Latitude[i]-legend_y_position, #-3
+                     s=st_name[i], fontdict=dict(color='white', size=12))
+    else:
+        for i in range(len(selected_supply_stations)):
+            plt.text(x=data_st_selected.St_Longitude[i] - 1.1, y=data_st_selected.St_Latitude[i] - legend_y_position,
+                     # + 2.5 - .25++
+                     s=data_st_selected.loc[:, 'Station no.'][i],
+                     zorder=4, fontdict=dict(color=facility_text_color, size=10))
     # Small purple squares to show non-selected stations
     stUns = plt.scatter(data=station_df[~station_df['Station no.'].isin(select_1s.index.tolist())],
                         x='St_Longitude', y='St_Latitude', marker='s', alpha=.25, c='blue')
@@ -145,16 +153,17 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
     plt.legend((spillC, spillUnC, st, stUns),
                ('Oil Spill covered', 'Oil Spill not covered', 'Station selected',
                 'Station not selected'),
-               loc='lower center',
+               loc='lower left',
                ncol=1, handlelength=5, borderpad=.1, markerscale=.4,
                fontsize=14
                )
-    # plt.xticks([])
-    # plt.yticks([])
-    # plt.xlabel('Longitude')
-    # plt.ylabel('Latitude')
+    #plt.xticks([])
+    #plt.yticks([])
+    ax.set_xlim([-141, -60])
+    ax.set_ylim([51, 84])
+    plt.tight_layout()
     plt.axis('off')
-    #plt.show() #++
+    plt.show() #++
     #print(f'\nDistance_max {DistanceMax}, NumberSt_max {NumberStMax}, '
     #      f'num_spills {len(spill_df)}'
     #      f'\nOutputs: Coverage {coverage_percentage}% ResponseTimeT {ResponseTimeT}')
@@ -162,6 +171,6 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
 
     fig.savefig(
         f'Outputs/{current_vs_proposed} ({date_time}) {len(spill_df)} spills {NumberStMax} NumberSt_max {DistanceMax}Distance_max {coverage_percentage}%coverage.png'
-        , transparent=True,  dpi=600, bbox_inches='tight')
+        , transparent=False,  dpi=500)  #  , bbox_inches='tight'
 
     return assignment_line

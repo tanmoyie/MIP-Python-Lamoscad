@@ -78,7 +78,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     # sr_pair (based on unique stations in pair_os )
     st_o = list(set([item[1] for item in os_pair]))
     o_st = list(set([item[0] for item in os_pair])) # unique oil spills
-
+    print('len of OilSpills: ', len(OilSpills))
     sr_pair = []
     for s in st_o:
         for r in ResourcesD:
@@ -101,7 +101,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     deploy = model.addVars(osr_pair, vtype=GRB.CONTINUOUS, lb=0,
                            name='deploy')  # QuantityMin Minimum quantity constraint ++
 
-    print('cover'); print(cover); print(''); print('select'); print(select); print(''); print('deploy'); print(deploy)
+    # print('cover'); print(cover); print(''); print('select'); print(select); print(''); print('deploy'); print(deploy)
 
     # %% ----------------------------------------------------------------------------------------------------------------
     # ------------------------------------------------ Constraints -----------------------------------------------------
@@ -119,7 +119,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     # ---------------------------------------- Facility constraints (select ) ------------------------------------------
     # C11: max number of facilities to be open
     C_max_facility = model.addConstr((gp.quicksum(select[s]
-                                                  for s in Stations) <= NumberStMax),
+                                                  for s in st_o) <= NumberStMax),
                                      name='C_max_facility')  # SFS style ++
 
     # C12: Cost of building facility does not exceed budget
@@ -154,7 +154,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     objective_1 = gp.quicksum((w1 * SizeSpill_n[o] + 100*w2 * Sensitivity_n[o] - w3 * Distance_n[o, s]) * cover[o, s]
                               for o, s in os_pair)
 
-    objective_2 = gp.quicksum(10**-4*w4 * select[s] * Cf_s[s] for s in Stations) \
+    objective_2 = gp.quicksum(10**-4*w4 * select[s] * Cf_s[s] for s in st_o) \
                         + gp.quicksum( (10**-2*w5 * CostU[s,r] - 10 * w6 * Effectiveness_n[s, r]) * deploy[o, s, r] for o, s, r in osr_pair)
 
     model.setObjectiveN(objective_1, index=0, priority=2, weight=-1, name='objective_re_1')
@@ -174,21 +174,21 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     filename = 'model (' + date_time + ')'
 
     # Write the model
-    model.write(f'Outputs/model_moo.lp')
+    model.write(f'Outputs/Logfiles/model_moo.lp')
     model.Params.LogFile = f"Outputs/Logfiles/model_moo({date_time}).log"  # write the log file
 
     # %% Solve the model
     model.optimize()
     # Debugging model
     # model.computeIIS()
-    model.write('Outputs/model_moo.sol')
+    model.write('Outputs/Logfiles/model_moo.sol')
 
     # %% Query number of multiple objectives, and number of solutions
     x = model.getVars()
     select_series = pd.Series(model.getAttr('X', select))
     deploy_series = pd.Series(model.getAttr('X', deploy))
-    select_series[select_series > 0.5]
-    deploy_series[deploy_series > 0.5]
+    # select_series[select_series > 0.5]  # +++
+    # deploy_series[deploy_series > 0.5]
     nSolutions = model.SolCount
     nObjectives = model.NumObj
     print('Problem has', nObjectives, 'objectives')
@@ -221,49 +221,35 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     names = model.getAttr('VarName', mvars)
     values = model.getAttr('X', mvars)  # X Xn https://www.gurobi.com/documentation/9.5/refman/working_with_multiple_obje.html
 
-
     objValues = []
     nSolutions = model.SolCount
     nObjectives = model.NumObj
     for s in range(nSolutions):
         # Set which solution we will query from now on
         model.params.SolutionNumber = s
-
-        # Print objective value of this solution in each objective
         print('Solution', s, ':', end='')
         for o in range(nObjectives):
             model.params.ObjNumber = o
-            # Query the o-th objective value
-            print(' ', model.ObjNVal, end='')
             objValues.append(model.ObjNVal)
-        # print first three variables in the solution
-        n = min(len(x), 4)
-        for j in range(n):
-            print(x[j].VarName, x[j].Xn, end='')
-        print('')
-
-        # query the full vector of the o-th solution
-
-
     cover_series = pd.Series(model.getAttr('X', cover))
     cover_1s = cover_series[cover_series > 0.5]
 
     select_series = pd.Series(model.getAttr('X', select))
     select_1s = select_series[select_series > 0.5]
-    print('\nselect_1s\n', select_1s)
+    # print('\nselect_1s\n', select_1s)
     deploy_series = pd.Series(model.getAttr('X', deploy))
     deploy_1s = deploy_series[deploy_series > 0.5]
-    print('\ndeploy_1s\n', deploy_1s)
+    # print('\ndeploy_1s\n', deploy_1s)
     cover_series = pd.Series(model.getAttr('X', cover))
     cover_1s = cover_series[cover_series > 0.5]
-    print('\ncover_1s\n', cover_1s)
+    # print('\ncover_1s\n', cover_1s)
 
     # Saving the file
     modelStructure_output_code = python_code = logfile = model_structure = outputs = inputs = ""
     # Reading data from files
-    with open('Outputs/model_moo.lp') as fp:
+    with open('Outputs/Logfiles/model_moo.lp') as fp:
         model_structure = fp.read()
-    with open('Outputs/model_moo.sol') as fp:
+    with open('Outputs/Logfiles/model_moo.sol') as fp:
         outputs = fp.read()
     with open(f'Outputs/Logfiles/model_moo({date_time}).log') as fp:
         logfile = fp.read()
@@ -281,7 +267,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     modelStructure_output_code += "\n------------------------------- Python Code ------------------------------------\n"
     modelStructure_output_code += python_code
 
-    with open(f'Outputs/Structure, outputs & python code of {filename}.txt', 'w') as fp:
+    with open(f'Outputs/Logfiles/Structure, outputs & python code of {filename}.txt', 'w') as fp:
         fp.write(modelStructure_output_code)
 
     # Extract assignment variables
@@ -326,7 +312,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
         aaa = DistanceTravelled.append(custom_func.compute_distance(st_coord, sp_coord))
 
     DistanceTravelled = sum(DistanceTravelled)*80  # 80 for convering GIS data into kilometer
-    ResponseTimeM = round((DistanceTravelled / 60) / len(assignment), 2)
+    ResponseTimeM = round((DistanceTravelled / 60) / len(assignment), 2)  # len() +++ OilSpills
     print(f'Coverage Percentage: {coverage_percentage}%')
     print(f'Mean Response Time: {ResponseTimeM}')
 
