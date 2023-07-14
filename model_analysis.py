@@ -150,17 +150,26 @@ def draw_network_diagram(DistanceMax, NumberStMax, Sensitivity_R, spill_df, stat
     stUns = plt.scatter(data=station_df[~station_df['Station no.'].isin(select_1s.index.tolist())],
                         x='St_Longitude', y='St_Latitude', marker='s', alpha=.25, c='blue')
     # legends of all shapes in this figure
-    plt.legend((spillC, spillUnC, st, stUns),
+    legend_handle = plt.legend((spillC, spillUnC, st, stUns),
                ('Oil Spill covered', 'Oil Spill not covered', 'Station selected',
                 'Station not selected'),
-               loc='lower left',
-               ncol=1, handlelength=5, borderpad=.1, markerscale=.4,
-               fontsize=14
-               )
+               loc='lower left', ncol=1, handlelength=5, borderpad=.1, markerscale=.4,
+               fontsize=12)
+    """loc='lower left',
+               ncol=1, handlelength=5, borderpad=.05, markerscale=.4,
+               fontsize=14,
+               # handletextpad=0.1              
+    """
+    legend_handle.legendHandles[0]._sizes = [30] # same size marker in legend box
+    legend_handle.legendHandles[1]._sizes = [30]
+    legend_handle.legendHandles[2]._sizes = [30]
+    legend_handle.legendHandles[3]._sizes = [30]
+
     #plt.xticks([])
     #plt.yticks([])
     ax.set_xlim([-141, -60])
     ax.set_ylim([51, 84])
+
     plt.tight_layout()
     plt.axis('off')
     plt.show() #++
