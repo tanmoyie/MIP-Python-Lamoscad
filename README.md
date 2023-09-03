@@ -14,5 +14,6 @@ Strategic planning of oil spill in Arctic
 2. 
 
 
-![image](https://user-images.githubusercontent.com/19787712/224211821-bf044d95-3f1e-4fa7-8010-3ee4b1c19459.png)
+![image](https://github.com/tanmoyie/MIP-Python-Lamoscad/assets/19787712/42ad9c38-8b20-4777-b25e-f1395352efe5)
+
 Figure 1: Optimization model as Decision Support Tool and its development workflow (will revise soon); S stands for Section
