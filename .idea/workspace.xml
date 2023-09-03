@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023 - Copy.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_mclp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Fig8a PCP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/Fig8a PCP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Fig8b PCP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/Fig8b PCP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Fig8c PCP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/Fig8c PCP.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.lp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.sol" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/resource_allocation_model3_vs_model4b.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/resource_allocation_model3_vs_model4b.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.docx" beforeDir="false" afterPath="$PROJECT_DIR$/README.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/current_vs_proposed_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/current_vs_proposed_2.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/initial_model_development_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/initial_model_development_1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sensitivity_analysis_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/sensitivity_analysis_3.ipynb" afterDir="false" />
@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -60,7 +60,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -158,6 +158,17 @@
       <workItem from="1689298044471" duration="825000" />
       <workItem from="1689331756575" duration="6265000" />
       <workItem from="1689361928039" duration="4675000" />
+      <workItem from="1689515705292" duration="20000" />
+      <workItem from="1689537162135" duration="287000" />
+      <workItem from="1689542846104" duration="5000" />
+      <workItem from="1692222291214" duration="3258000" />
+      <workItem from="1692229070447" duration="7360000" />
+      <workItem from="1692396106339" duration="445000" />
+      <workItem from="1692396996212" duration="43000" />
+      <workItem from="1692401610459" duration="193000" />
+      <workItem from="1692401932201" duration="2593000" />
+      <workItem from="1692409424841" duration="1660000" />
+      <workItem from="1693499930255" duration="1246000" />
     </task>
     <servers />
   </component>
