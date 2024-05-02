@@ -1,30 +1,31 @@
 # Facility location optimization
 
 ### Facility Location Problem
-FLP
-├── requirement.txt         Dependencies
-├── README.md               Project README
-├── data                    
-│   ├── GIS data            GIS data
-│   ├── raw                 Raw files
-│   ├── processed           Cleaned and processed data
-├── models                  
-│   └── model_p.lp          Trained models binary file
-│   ├── ...
-├── plots                   Figures in the paper
-│   ├── ...
-│   ├── Fig5a.png
-└── src                     Source files
-    ├── ...
-    ├── model.py
-    └── eda.py
+    FLP
+    ├── requirement.txt         Dependencies
+    ├── README.md               Project README
+    ├── data                    
+    │   ├── GIS data            GIS data
+    │   ├── raw                 Raw files
+    │   ├── processed           Cleaned and processed data
+    ├── models                  
+    │   └── model_p.lp          Trained models binary file
+    │   ├── ...
+    ├── plots                   Figures in the paper
+    │   ├── ...
+    │   ├── Fig5a.png
+    └── src                     Source files
+        ├── ...
+        ├── model.py
+        └── eda.py
 
     
 
 ### Requirement
+++
 
 ### Installation
-
+++
 
 ### STAR
 1. Situation: Strategic planning of oil spill in Arctic
