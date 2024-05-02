@@ -5,16 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Inputs/data_oil_spill_resource_allocation_Arctic_2023 - Copy.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_mclp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/README.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/current_vs_proposed_2.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/custom_func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_preparation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/eda.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exploratory_data_analysis_0.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/initial_model_development_1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model_mclp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model_mclp.py.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model_w.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/requirement_lamoscad.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sensitivity_analysis_3.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/temp-plot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weights values.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.lp" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.sol" beforeDir="false" afterPath="$PROJECT_DIR$/Outputs/Logfiles/model_moo.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.docx" beforeDir="false" afterPath="$PROJECT_DIR$/README.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/current_vs_proposed_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/current_vs_proposed_2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial_model_development_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/initial_model_development_1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensitivity_analysis_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/sensitivity_analysis_3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/current_vs_proposed_2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_func.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_preparation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eda.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploratory_data_analysis_0.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/initial_model_development_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_mclp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_mclp.py.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_w.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirement_lamoscad.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensitivity_analysis_3.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weights values.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +57,26 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2S7qN2nBFAhIwxARK5gg5IEHqp7" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,17 +88,20 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
     &quot;database.data.extractors.current.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/My Drive/PhD Tan 2023/Python Implementation of MIPs/MIP-Python-Lamoscad&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tanmoydas/Documents/GitHub/MIP-Python-Lamoscad&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -73,6 +114,7 @@
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="MIP-Python-Lamoscad" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -95,6 +137,7 @@
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="MIP-Python-Lamoscad" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -115,6 +158,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -169,6 +219,15 @@
       <workItem from="1692401932201" duration="2593000" />
       <workItem from="1692409424841" duration="1660000" />
       <workItem from="1693499930255" duration="1246000" />
+      <workItem from="1714583345349" duration="55000" />
+      <workItem from="1714583831080" duration="186000" />
+      <workItem from="1714584047126" duration="112000" />
+      <workItem from="1714585029630" duration="61000" />
+      <workItem from="1714585099821" duration="1059000" />
+      <workItem from="1714686784477" duration="13000" />
+      <workItem from="1714686856793" duration="106000" />
+      <workItem from="1714686993118" duration="64000" />
+      <workItem from="1714687081407" duration="133000" />
     </task>
     <servers />
   </component>
@@ -177,5 +236,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/initial_model_development_1_ipynb$main.coverage" NAME="main Coverage Results" MODIFIED="1714584076605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

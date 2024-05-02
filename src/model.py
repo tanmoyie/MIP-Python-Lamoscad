@@ -61,8 +61,6 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     :return:
     """
 
-    import gurobipy as gp
-    from gurobipy import GRB
     from datetime import datetime, date
 
     w1, w2, w3, w4, w5, w6 = W[0], W[1], W[2], W[3], W[4], W[5]
