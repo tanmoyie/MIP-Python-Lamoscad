@@ -5,40 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="762ba920-cbfd-4706-927a-6183a1e2a310" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/README.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/current_vs_proposed_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/custom_func.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_preparation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/eda.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exploratory_data_analysis_0.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/initial_model_development_1.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model_mclp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model_mclp.py.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model_w.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requirement_lamoscad.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensitivity_analysis_3.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/temp-plot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weights values.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/current_vs_proposed_2.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_func.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preparation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eda.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exploratory_data_analysis_0.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial_model_development_1.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_analysis.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_mclp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_mclp.py.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_w.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirement_lamoscad.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensitivity_analysis_3.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weights values.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current_vs_proposed_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/current_vs_proposed_2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/initial_model_development_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/initial_model_development_1.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +70,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -228,6 +197,8 @@
       <workItem from="1714686856793" duration="106000" />
       <workItem from="1714686993118" duration="64000" />
       <workItem from="1714687081407" duration="133000" />
+      <workItem from="1714689465251" duration="91000" />
+      <workItem from="1714689578489" duration="633000" />
     </task>
     <servers />
   </component>
