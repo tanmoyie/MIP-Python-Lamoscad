@@ -198,12 +198,11 @@ class Model:
                 print(' ', round(model.ObjNVal, 2), end=' ')
                 # query the full vector of the o-th solution
                 solutions.append(model.getAttr('Xn', x))
-            print()
 
 
         # %% Output the result
         # Obtain model results & carry them outside the model scope
-        model.printAttr('X')
+        # model.printAttr('X')
         mvars = model.getVars()  # these values are NOT accessible outside the model scope
         names = model.getAttr('VarName', mvars)
         values = model.getAttr('X', mvars)
