@@ -61,7 +61,7 @@ class Model:
 
         w1, w2, w3, w4, w5, w6 = W[0], W[1], W[2], W[3], W[4], W[5]
 
-        # ---------------------------------------- Set & Index -------------------------------------------------------------
+        # ---------------------------------------- Set & Index ---------------------------------------------------------
         os_pair = {(o, s): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
                    for o in OilSpills
                    for s in Stations
@@ -72,7 +72,6 @@ class Model:
         # sr_pair (based on unique stations in pair_os )
         st_o = list(set([item[1] for item in os_pair]))
         o_st = list(set([item[0] for item in os_pair])) # unique oil spills
-        print('len of OilSpills: ', len(OilSpills))
         sr_pair = []
         for s in st_o:
             for r in ResourcesD:
@@ -89,18 +88,16 @@ class Model:
 
         print('--------------MIP-moo--------')
         model = gp.Model("MIP-moo-LAMOSCAD")
-        # ---------------------------------------- Decision variable -------------------------------------------------------
+        # ---------------------------------------- Decision variable ---------------------------------------------------
         cover = model.addVars(os_pair, vtype=GRB.BINARY, name='cover')  # OilSpills
         select = model.addVars(st_o, vtype=GRB.BINARY, name='select')
         deploy = model.addVars(osr_pair, vtype=GRB.CONTINUOUS, lb=0,
                                name='deploy')  # QuantityMin Minimum quantity constraint ++
 
-        # print('cover'); print(cover); print(''); print('select'); print(select); print(''); print('deploy'); print(deploy)
+        # %% -----------------------------------------------------------------------------------------------------------
+        # ------------------------------------------------ Constraints -------------------------------------------------
 
-        # %% ----------------------------------------------------------------------------------------------------------------
-        # ------------------------------------------------ Constraints -----------------------------------------------------
-
-        # ---------------------------------------- Coverage constraints (cover) --------------------------------------------
+        # ---------------------------------------- Coverage constraints (cover) ----------------------------------------
 
         # C10: facility must be open to cover oil spill
         C_open_facility_to_cover = model.addConstrs((cover[o, s] <= select[s]
@@ -110,7 +107,7 @@ class Model:
         C_few_facility_per_spill = model.addConstrs((cover.sum(o, '*') <= MaxFO
                                                    for o, s in os_pair), name='C_few_facility_per_spill')  # ++partly solved
 
-        # ---------------------------------------- Facility constraints (select ) ------------------------------------------
+        # ---------------------------------------- Facility constraints (select ) --------------------------------------
         # C11: max number of facilities to be open
         C_max_facility = model.addConstr((gp.quicksum(select[s]
                                                       for s in st_o) <= NumberStMax),
@@ -131,10 +128,10 @@ class Model:
                                                       for s in ['s9', 's12', 's13', 's15', 's16', 's18', 's20']) <= 1),
                                          name='C_UpNorthFacility')
         """
-        # ---------------------------------------- Deploy constraints (deploy) ---------------------------------------------
+        # ---------------------------------------- Deploy constraints (deploy) -----------------------------------------
         # C15: resource capacity constaint & deploy only when facility is open
         C_resource_capacity = model.addConstrs((deploy.sum('*', s, r) <= BigM * Availability[s, r] * select[s]  #
-                                                for s, r in sr_pair), name='C_open_facility')  # need improvement++ infeasibility
+                                                for s, r in sr_pair), name='C_open_facility')
 
         # C16: deploy less than demand
         C_deploy_demand = model.addConstrs((deploy[o, s, r] <= Demand[o, r]
@@ -142,8 +139,8 @@ class Model:
 
         # C20: usage limit
 
-        # %% ----------------------------------------------------------------------------------------------------------------
-        # ----------------------------------------------- Objective function -----------------------------------------------
+        # %% -----------------------------------------------------------------------------------------------------------
+        # ----------------------------------------------- Objective function -------------------------------------------
         model.ModelSense = GRB.MINIMIZE
         objective_1 = gp.quicksum((w1 * SizeSpill_n[o] + 100*w2 * Sensitivity_n[o] - w3 * Distance_n[o, s]) * cover[o, s]
                                   for o, s in os_pair)
@@ -203,17 +200,14 @@ class Model:
                 solutions.append(model.getAttr('Xn', x))
             print()
 
-        for j in range(len(x)):
-            if x[j].Xn > 0:
-                print(x[j].VarName, x[j].Xn, end=' ')
-                print(' ')
 
         # %% Output the result
         # Obtain model results & carry them outside the model scope
         model.printAttr('X')
         mvars = model.getVars()  # these values are NOT accessible outside the model scope
         names = model.getAttr('VarName', mvars)
-        values = model.getAttr('X', mvars)  # X Xn https://www.gurobi.com/documentation/9.5/refman/working_with_multiple_obje.html
+        values = model.getAttr('X', mvars)
+        # X Xn https://www.gurobi.com/documentation/9.5/refman/working_with_multiple_obje.html
 
         objValues = []
         nSolutions = model.SolCount
@@ -230,13 +224,10 @@ class Model:
 
         select_series = pd.Series(model.getAttr('X', select))
         select_1s = select_series[select_series > 0.5]
-        # print('\nselect_1s\n', select_1s)
         deploy_series = pd.Series(model.getAttr('X', deploy))
         deploy_1s = deploy_series[deploy_series > 0.5]
-        # print('\ndeploy_1s\n', deploy_1s)
         cover_series = pd.Series(model.getAttr('X', cover))
         cover_1s = cover_series[cover_series > 0.5]
-        # print('\ncover_1s\n', cover_1s)
 
         # Saving the file
         modelStructure_output_code = python_code = logfile = model_structure = outputs = inputs = ""
@@ -252,13 +243,13 @@ class Model:
         # Merging 2 files
         # To add the data of file2
         # from next line
-        modelStructure_output_code += "------------------------------- Model Structure ----------------------------------\n"
+        modelStructure_output_code += "------------------------------- Model Structure ------------------------------\n"
         modelStructure_output_code += model_structure
-        modelStructure_output_code += "\n------------------------------- Model Outputs ----------------------------------\n"
+        modelStructure_output_code += "\n------------------------------- Model Outputs ------------------------------\n"
         modelStructure_output_code += outputs
-        modelStructure_output_code += "\n------------------------------- Model logfile ----------------------------------\n"
+        modelStructure_output_code += "\n------------------------------- Model logfile ------------------------------\n"
         modelStructure_output_code += logfile
-        modelStructure_output_code += "\n------------------------------- Python Code ------------------------------------\n"
+        modelStructure_output_code += "\n------------------------------- Python Code --------------------------------\n"
         modelStructure_output_code += python_code
 
         with open(f'../models/Structure, outputs & python code of {filename}.txt', 'w') as fp:
@@ -270,7 +261,7 @@ class Model:
         sol_y.index.names = ['Spill #', 'Station no.', 'Resource type']
         assignment4 = sol_y[sol_y > 0.5].to_frame()
         assignment_name = assignment4.reset_index()
-        print('assignment_name', assignment_name)
+        # print('assignment_name', assignment_name)
 
         # %%
         # organize data # need to clean this section ++
