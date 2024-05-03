@@ -177,7 +177,6 @@ class ModelMCLP:
 
         # %% Output the result
         # Obtain model results & carry them outside the model scope
-        model.printAttr('X')
         mvars = model.getVars()  # these values are NOT accessible outside the model scope
         names = model.getAttr('VarName', mvars)
         values = model.getAttr('X',
