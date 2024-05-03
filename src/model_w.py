@@ -175,7 +175,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
 
     # Write the model
     model.write(f'Outputs/model_moo.lp')
-    model.Params.LogFile = f"Outputs/Logfiles/model_moo({date_time}).log"  # write the log file
+    model.Params.LogFile = f"Outputs/model_moo({date_time}).log"  # write the log file
 
     # %% Solve the model
     model.optimize()

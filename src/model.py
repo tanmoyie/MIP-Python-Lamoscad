@@ -1,7 +1,5 @@
-""" Optimization model: maximize effectiveness and minimize cost: MIP
-
+""" Optimization model: maximize demand and minimize cost: MIP
 Outline:
-
 1. Define Decision variables
 2. Add Constraints
 3. Add objective functions
@@ -10,11 +8,8 @@ Outline:
 6. Write log file
 7. Get some variables out of the model for further analysis
 
-Note:
-
 Developer: Tanmoy Das
-Date: July 05, 2023
-"""
+Date: July 05, 2023 (revise May 2024) """
 
 # %% Data
 # data processing libraries
@@ -172,14 +167,14 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     filename = 'model (' + date_time + ')'
 
     # Write the model
-    model.write(f'Outputs/Logfiles/model_moo.lp')
-    model.Params.LogFile = f"Outputs/Logfiles/model_moo({date_time}).log"  # write the log file
+    model.write(f'../models/model_moo.lp')
+    model.Params.LogFile = f"../models/model_moo({date_time}).log"  # write the log file
 
     # %% Solve the model
     model.optimize()
     # Debugging model
     # model.computeIIS()
-    model.write('Outputs/Logfiles/model_moo.sol')
+    model.write('../models/model_moo.sol')
 
     # %% Query number of multiple objectives, and number of solutions
     x = model.getVars()
@@ -245,11 +240,11 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     # Saving the file
     modelStructure_output_code = python_code = logfile = model_structure = outputs = inputs = ""
     # Reading data from files
-    with open('Outputs/Logfiles/model_moo.lp') as fp:
+    with open('../models/model_moo.lp') as fp:
         model_structure = fp.read()
-    with open('Outputs/Logfiles/model_moo.sol') as fp:
+    with open('../models/model_moo.sol') as fp:
         outputs = fp.read()
-    with open(f'Outputs/Logfiles/model_moo({date_time}).log') as fp:
+    with open(f'../models/model_moo({date_time}).log') as fp:
         logfile = fp.read()
     with open('model.py') as fp:
         python_code = fp.read()
@@ -265,7 +260,7 @@ def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, Si
     modelStructure_output_code += "\n------------------------------- Python Code ------------------------------------\n"
     modelStructure_output_code += python_code
 
-    with open(f'Outputs/Logfiles/Structure, outputs & python code of {filename}.txt', 'w') as fp:
+    with open(f'../models/Structure, outputs & python code of {filename}.txt', 'w') as fp:
         fp.write(modelStructure_output_code)
 
     # Extract assignment variables
