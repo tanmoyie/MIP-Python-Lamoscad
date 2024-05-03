@@ -1,6 +1,6 @@
 # Facility location optimization
 
-### Facility Location Problem
+### Directory
     FLP
     ├── requirement.txt         Dependencies
     ├── README.md               Project README
@@ -17,7 +17,7 @@
     └── src                     Source files
         ├── ...
         ├── model.py
-        └── eda.py
+        └── draw_network.py
 
     
 
