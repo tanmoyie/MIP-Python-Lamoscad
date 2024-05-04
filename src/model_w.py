@@ -170,7 +170,7 @@ class ModelW:
         # model.setParam(GRB.Param.PoolSearchMode, 2)
         today = date.today()
         now = datetime.now()
-        date_time = str(date.today().strftime("%b %d,") + datetime.now().strftime("%H%M"))
+        date_time = str(date.today().strftime("%b %d"))
         filename = 'model (' + date_time + ')'
 
         # Write the model

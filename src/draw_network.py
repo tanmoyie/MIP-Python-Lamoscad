@@ -1,13 +1,7 @@
-"""
-File Name: model_analysis.py
-
-Outline: Data visualization
-1. Draw Network diagram
-2.
+""" Draw Network diagram
 
 Developer: Tanmoy Das
-Date: March 2023
-"""
+Date: March 2023 """
 
 # import libraries
 import pandas as pd
@@ -169,21 +163,15 @@ class DrawNetworkDiagram:
         legend_handle.legendHandles[2]._sizes = [30]
         legend_handle.legendHandles[3]._sizes = [30]
 
-        # plt.xticks([])
-        # plt.yticks([])
         ax.set_xlim([-141, -60])
         ax.set_ylim([51, 84])
 
         plt.tight_layout()
         plt.axis('off')
         plt.show()  # ++
-        # print(f'\nDistance_max {DistanceMax}, NumberSt_max {NumberStMax}, '
-        #      f'num_spills {len(spill_df)}'
-        #      f'\nOutputs: Coverage {coverage_percentage}% ResponseTimeT {ResponseTimeT}')
-        date_time = str(date.today().strftime("%b %d,") + datetime.now().strftime("%H%M"))
 
         fig.savefig(
-            f'../plots/{current_vs_proposed} ({date_time}) {len(spill_df)} spills {NumberStMax} NumberSt_max {DistanceMax}Distance_max {coverage_percentage}%coverage.png'
+            f'../plots/{current_vs_proposed} {len(spill_df)}Spills {NumberStMax}nS {DistanceMax}Distance_max {coverage_percentage}%coverage.png'
             , transparent=False, dpi=500)  # , bbox_inches='tight'
 
         return assignment_line
