@@ -56,6 +56,7 @@ class ModelD:
         from datetime import datetime, date
 
         w1, w2, w3, w4, w5, w6 = W[0], W[1], W[2], W[3], W[4], W[5]
+        # slack_nH ++
 
         # ---------------------------------------- Set & Index ---------------------------------------------------------
         os_pair = {(o, s): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
@@ -89,31 +90,31 @@ class ModelD:
         select = model.addVars(st_o, vtype=GRB.BINARY, name='select')
         deploy = model.addVars(osr_pair, vtype=GRB.CONTINUOUS, lb=0,
                                name='deploy')  # QuantityMin Minimum quantity constraint ++
+        slack_nH = model.addVars(osr_pair, vtype=GRB.INTEGER, name='slack_nH')
+
 
         # %% -----------------------------------------------------------------------------------------------------------
         # ------------------------------------------------ Constraints -------------------------------------------------
         # Facility related constraint : Xs (Master problem)
         # ---------------------------------------- Facility constraints (select ) --------------------------------------
-        # C11: max number of facilities to be open
-        C_max_facility = model.addConstr((gp.quicksum(select[s]
+        # C: max number of facilities to be open
+        C3_max_facility = model.addConstr((gp.quicksum(select[s]
                                                       for s in st_o) <= NumberStMax),
                                          name='C_max_facility')  # SFS style ++
 
-        # C12: Cost of building facility does not exceed budget
+        # C: Cost of building facility does not exceed budget
         C_budget = model.addConstr(select.prod(Cf_s) <= Budget,
                                    name="C_budget")  # m.addConstr(build.prod(cost) <= budget, name="budget")
 
-        """
         # C14: Hudson
         # Ref Fig3a Canadian Arctic s8, s10 s11, s14
         C_HudsonFacility = model.addConstr((gp.quicksum(select[s]
-                                                      for s in ['s8', 's10', 's11', 's14', 's17', 's19']) >= 1),
+                                                      for s in ['s8', 's10', 's11', 's14', 's17', 's19']) - slack_nH >= 1),
                                          name='C_HudsonFacility')
         # C15: Up North  s9, s12, s13, s15, s16, s18, s20
         C_UpNorthFacility = model.addConstr((gp.quicksum(select[s]
                                                       for s in ['s9', 's12', 's13', 's15', 's16', 's18', 's20']) <= 1),
                                          name='C_UpNorthFacility')
-        """
         # ---------------------------------------- Coverage constraints (cover) ----------------------------------------
 
         # C10: facility must be open to cover oil spill
