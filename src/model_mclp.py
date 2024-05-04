@@ -143,14 +143,14 @@ class ModelMCLP:
         filename = 'model (' + date_time + ')'
 
         # Write the model
-        model.write(f'Outputs/model_moo.lp')
-        model.Params.LogFile = f"Outputs/model_moo({date_time}).log"  # write the log file
+        model.write(f'../models/model_moo.lp')
+        model.Params.LogFile = f"../models/model_moo({date_time}).log"  # write the log file
 
         # %% Solve the model
         model.optimize()
         # Debugging model
         # model.computeIIS()
-        model.write('Outputs/model_moo.sol')
+        model.write('../models/model_moo.sol')
 
         # %% Query number of multiple objectives, and number of solutions
         x = model.getVars()
@@ -170,11 +170,12 @@ class ModelMCLP:
             # Print objective value of this solution in each objective
             print('Solution', s, ':', end='')
 
+        """
         for j in range(len(x)):
             if x[j].Xn > 0:
                 print(x[j].VarName, x[j].Xn, end=' ')
                 print(' ')
-
+        """
         # %% Output the result
         # Obtain model results & carry them outside the model scope
         mvars = model.getVars()  # these values are NOT accessible outside the model scope
@@ -195,24 +196,21 @@ class ModelMCLP:
 
         select_series = pd.Series(model.getAttr('X', select))
         select_1s = select_series[select_series > 0.5]
-        # print('\nselect_1s\n', select_1s)
         deploy_series = pd.Series(model.getAttr('X', deploy))
         deploy_1s = deploy_series[deploy_series > 0.5]
-        # print('\ndeploy_1s\n', deploy_1s)
         cover_series = pd.Series(model.getAttr('X', cover))
         cover_1s = cover_series[cover_series > 0.5]
-        # print('\ncover_1s\n', cover_1s)
 
         # Saving the file
         modelStructure_output_code = python_code = logfile = model_structure = outputs = inputs = ""
         # Reading data from files
-        with open('Outputs/model_moo.lp') as fp:
+        with open('../models/model_moo.lp') as fp:
             model_structure = fp.read()
-        with open('Outputs/model_moo.sol') as fp:
+        with open('../models/model_moo.sol') as fp:
             outputs = fp.read()
-        with open(f'Outputs/model_moo({date_time}).log') as fp:
+        with open(f'../models/model_moo({date_time}).log') as fp:
             logfile = fp.read()
-        with open('model.py') as fp:
+        with open('model_mclp.py') as fp:
             python_code = fp.read()
         # Merging 2 files
         # To add the data of file2
@@ -226,7 +224,7 @@ class ModelMCLP:
         modelStructure_output_code += "\n------------------------------- Python Code ------------------------------------\n"
         modelStructure_output_code += python_code
 
-        with open(f'Outputs/Structure, outputs & python code of {filename}.txt', 'w') as fp:
+        with open(f'../models/Structure, outputs & python code of {filename}.txt', 'w') as fp:
             fp.write(modelStructure_output_code)
 
         # Extract assignment variables

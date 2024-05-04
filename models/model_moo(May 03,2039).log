@@ -1,0 +1,228 @@
+
+Gurobi 11.0.1 (mac64[arm]) logging started Fri May  3 20:39:28 2024
+
+Set parameter LogFile to value "../models/model_moo(May 03,2039).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 489 rows, 384 columns and 897 nonzeros
+Model fingerprint: 0x620043f0
+Variable types: 285 continuous, 99 integer (99 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+23]
+  Objective range  [2e-02, 3e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 372 rows and 204 columns
+Presolve time: 0.00s
+Presolved: 117 rows, 180 columns, 305 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Found heuristic solution: objective -963.8521968
+Presolve removed 117 rows and 180 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: -963.915 -963.852 
+No other solutions better than -963.915
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -9.639153545192e+02, best bound -9.639153545192e+02, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 1.25
+
+Presolve removed 118 rows and 180 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -6992.76 
+No other solutions better than -6992.76
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -6.992757388889e+03, best bound -6.992757388889e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.02 seconds (0.00 work units), solution count 3
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Fri May  3 20:39:30 2024
+
+Set parameter LogFile to value "../models/model_moo(May 03,2039).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 489 rows, 384 columns and 897 nonzeros
+Model fingerprint: 0x620043f0
+Variable types: 285 continuous, 99 integer (99 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+23]
+  Objective range  [2e-02, 3e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 372 rows and 204 columns
+Presolve time: 0.00s
+Presolved: 117 rows, 180 columns, 305 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Found heuristic solution: objective -963.8521968
+Presolve removed 117 rows and 180 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: -963.915 -963.852 
+No other solutions better than -963.915
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -9.639153545192e+02, best bound -9.639153545192e+02, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 1.25
+
+Presolve removed 118 rows and 180 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -6992.76 
+No other solutions better than -6992.76
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -6.992757388889e+03, best bound -6.992757388889e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.01 seconds (0.00 work units), solution count 3
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Fri May  3 20:39:32 2024
+
+Set parameter LogFile to value "../models/model_moo(May 03,2039).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 545 rows, 426 columns and 1033 nonzeros
+Model fingerprint: 0xd6b912c7
+Variable types: 315 continuous, 111 integer (111 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [2e-02, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 406 rows and 210 columns
+Presolve time: 0.00s
+Presolved: 139 rows, 216 columns, 376 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 108 rows and 193 columns
+Presolve time: 0.00s
+Presolved: 31 rows, 23 columns, 63 nonzeros
+Found heuristic solution: objective -1031.084130
+Variable types: 0 continuous, 23 integer (23 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -1031.08 
+No other solutions better than -1031.08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.031084130484e+03, best bound -1.031084130484e+03, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 140 rows and 216 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -2991 
+No other solutions better than -2991
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.990996111111e+03, best bound -2.990996111111e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.02 seconds (0.00 work units), solution count 2
+
