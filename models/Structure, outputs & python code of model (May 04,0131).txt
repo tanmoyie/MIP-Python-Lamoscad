@@ -1,3 +1,4 @@
+------------------------------- Model Structure ------------------------------
 \ Model MIP-moo-LAMOSCAD
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Minimize multi-objectives
@@ -1019,3 +1020,1291 @@ Binaries
  cover[o16,s19] cover[o198,s1] cover[o163,s5] cover[o20,s5] select[s19]
  select[s11] select[s12] select[s8] select[s5] select[s1]
 End
+
+------------------------------- Model Outputs ------------------------------
+# Solution for model MIP-moo-LAMOSCAD
+# Objective value = 1.0404343760991133e+03
+cover[o21,s5] 1
+cover[o8,s12] 1
+cover[o67,s8] 0
+cover[o67,s11] 1
+cover[o94,s19] 1
+cover[o108,s12] 1
+cover[o52,s11] 0
+cover[o52,s12] 1
+cover[o135,s8] 0
+cover[o135,s11] 1
+cover[o135,s12] 0
+cover[o193,s5] 1
+cover[o101,s12] 1
+cover[o133,s8] 0
+cover[o133,s11] 1
+cover[o133,s12] 0
+cover[o129,s12] 1
+cover[o1,s8] 0
+cover[o1,s11] 1
+cover[o162,s5] 1
+cover[o25,s1] 1
+cover[o136,s8] 0
+cover[o136,s11] 1
+cover[o136,s12] 0
+cover[o118,s12] 1
+cover[o122,s12] 1
+cover[o9,s12] 1
+cover[o68,s8] 0
+cover[o68,s11] 1
+cover[o203,s19] 1
+cover[o187,s1] 1
+cover[o149,s5] 1
+cover[o58,s8] 0
+cover[o58,s11] 1
+cover[o51,s12] 1
+cover[o127,s12] 1
+cover[o202,s19] 1
+cover[o4,s19] 1
+cover[o15,s19] 1
+cover[o212,s5] 1
+cover[o205,s5] 1
+cover[o12,s12] 1
+cover[o91,s19] 1
+cover[o30,s1] 1
+cover[o69,s11] 1
+cover[o148,s5] 1
+cover[o130,s8] 0
+cover[o130,s11] 0
+cover[o130,s12] 1
+cover[o128,s12] 1
+cover[o64,s8] 0
+cover[o64,s11] 1
+cover[o82,s19] 1
+cover[o105,s12] 1
+cover[o207,s5] 1
+cover[o78,s19] 1
+cover[o18,s5] 1
+cover[o102,s12] 1
+cover[o132,s8] 0
+cover[o132,s11] 1
+cover[o132,s12] 0
+cover[o183,s1] 1
+cover[o208,s5] 1
+cover[o123,s12] 1
+cover[o159,s5] 1
+cover[o37,s1] 1
+cover[o85,s19] 1
+cover[o75,s19] 1
+cover[o26,s1] 1
+cover[o103,s12] 1
+cover[o213,s5] 1
+cover[o134,s8] 0
+cover[o134,s11] 1
+cover[o134,s12] 0
+cover[o14,s8] 0
+cover[o14,s11] 1
+cover[o131,s8] 0
+cover[o131,s11] 1
+cover[o131,s12] 0
+cover[o223,s1] 1
+cover[o139,s8] 0
+cover[o139,s11] 1
+cover[o139,s12] 0
+cover[o24,s1] 1
+cover[o211,s5] 1
+cover[o53,s8] 0
+cover[o53,s11] 1
+cover[o22,s1] 1
+cover[o210,s5] 1
+cover[o66,s8] 0
+cover[o66,s11] 1
+cover[o116,s12] 1
+cover[o114,s12] 1
+cover[o29,s1] 1
+cover[o215,s5] 1
+cover[o79,s19] 1
+cover[o218,s5] 1
+cover[o151,s5] 1
+cover[o126,s12] 1
+cover[o158,s5] 1
+cover[o182,s1] 1
+cover[o192,s1] 1
+cover[o16,s19] 1
+cover[o198,s1] 1
+cover[o163,s5] 1
+cover[o20,s5] 1
+select[s19] 1
+select[s11] 1
+select[s12] 1
+select[s8] 0
+select[s5] 1
+select[s1] 1
+deploy[o21,s5,m] 0
+deploy[o21,s5,c] 0
+deploy[o21,s5,i] 0
+deploy[o8,s12,m] 0
+deploy[o8,s12,c] 31
+deploy[o8,s12,i] 0
+deploy[o67,s8,m] 0
+deploy[o67,s8,c] 0
+deploy[o67,s8,i] 0
+deploy[o67,s11,m] 0
+deploy[o67,s11,c] 110
+deploy[o67,s11,i] 0
+deploy[o94,s19,m] 0
+deploy[o94,s19,c] 110
+deploy[o94,s19,i] 0
+deploy[o108,s12,m] 0
+deploy[o108,s12,c] 5
+deploy[o108,s12,i] 0
+deploy[o52,s11,m] 2
+deploy[o52,s11,c] 0
+deploy[o52,s11,i] 0
+deploy[o52,s12,m] 2
+deploy[o52,s12,c] 0
+deploy[o52,s12,i] 0
+deploy[o135,s8,m] 0
+deploy[o135,s8,c] 0
+deploy[o135,s8,i] 0
+deploy[o135,s11,m] 2
+deploy[o135,s11,c] 0
+deploy[o135,s11,i] 0
+deploy[o135,s12,m] 2
+deploy[o135,s12,c] 0
+deploy[o135,s12,i] 0
+deploy[o193,s5,m] 0
+deploy[o193,s5,c] 0
+deploy[o193,s5,i] 37
+deploy[o101,s12,m] 20
+deploy[o101,s12,c] 0
+deploy[o101,s12,i] 0
+deploy[o133,s8,m] 0
+deploy[o133,s8,c] 0
+deploy[o133,s8,i] 0
+deploy[o133,s11,m] 0
+deploy[o133,s11,c] 0
+deploy[o133,s11,i] 157
+deploy[o133,s12,m] 0
+deploy[o133,s12,c] 0
+deploy[o133,s12,i] 157
+deploy[o129,s12,m] 100
+deploy[o129,s12,c] 0
+deploy[o129,s12,i] 0
+deploy[o1,s8,m] 0
+deploy[o1,s8,c] 0
+deploy[o1,s8,i] 0
+deploy[o1,s11,m] 20
+deploy[o1,s11,c] 0
+deploy[o1,s11,i] 0
+deploy[o162,s5,m] 0
+deploy[o162,s5,c] 0
+deploy[o162,s5,i] 0
+deploy[o25,s1,m] 100
+deploy[o25,s1,c] 0
+deploy[o25,s1,i] 0
+deploy[o136,s8,m] 0
+deploy[o136,s8,c] 0
+deploy[o136,s8,i] 0
+deploy[o136,s11,m] 0
+deploy[o136,s11,c] 5
+deploy[o136,s11,i] 0
+deploy[o136,s12,m] 0
+deploy[o136,s12,c] 5
+deploy[o136,s12,i] 0
+deploy[o118,s12,m] 0
+deploy[o118,s12,c] 110
+deploy[o118,s12,i] 0
+deploy[o122,s12,m] 0
+deploy[o122,s12,c] 31
+deploy[o122,s12,i] 0
+deploy[o9,s12,m] 0
+deploy[o9,s12,c] 0
+deploy[o9,s12,i] 7
+deploy[o68,s8,m] 0
+deploy[o68,s8,c] 0
+deploy[o68,s8,i] 0
+deploy[o68,s11,m] 100
+deploy[o68,s11,c] 0
+deploy[o68,s11,i] 0
+deploy[o203,s19,m] 0
+deploy[o203,s19,c] 110
+deploy[o203,s19,i] 0
+deploy[o187,s1,m] 100
+deploy[o187,s1,c] 0
+deploy[o187,s1,i] 0
+deploy[o149,s5,m] 0
+deploy[o149,s5,c] 110
+deploy[o149,s5,i] 0
+deploy[o58,s8,m] 0
+deploy[o58,s8,c] 0
+deploy[o58,s8,i] 0
+deploy[o58,s11,m] 0
+deploy[o58,s11,c] 0
+deploy[o58,s11,i] 37
+deploy[o51,s12,m] 0
+deploy[o51,s12,c] 0
+deploy[o51,s12,i] 157
+deploy[o127,s12,m] 0
+deploy[o127,s12,c] 0
+deploy[o127,s12,i] 157
+deploy[o202,s19,m] 20
+deploy[o202,s19,c] 0
+deploy[o202,s19,i] 0
+deploy[o4,s19,m] 0
+deploy[o4,s19,c] 0
+deploy[o4,s19,i] 0
+deploy[o15,s19,m] 0
+deploy[o15,s19,c] 5
+deploy[o15,s19,i] 0
+deploy[o212,s5,m] 0
+deploy[o212,s5,c] 0
+deploy[o212,s5,i] 7
+deploy[o205,s5,m] 0
+deploy[o205,s5,c] 0
+deploy[o205,s5,i] 0
+deploy[o12,s12,m] 2
+deploy[o12,s12,c] 0
+deploy[o12,s12,i] 0
+deploy[o91,s19,m] 20
+deploy[o91,s19,c] 0
+deploy[o91,s19,i] 0
+deploy[o30,s1,m] 0
+deploy[o30,s1,c] 0
+deploy[o30,s1,i] 157
+deploy[o69,s11,m] 20
+deploy[o69,s11,c] 0
+deploy[o69,s11,i] 0
+deploy[o148,s5,m] 0
+deploy[o148,s5,c] 0
+deploy[o148,s5,i] 0
+deploy[o130,s8,m] 0
+deploy[o130,s8,c] 0
+deploy[o130,s8,i] 0
+deploy[o130,s11,m] 0
+deploy[o130,s11,c] 31
+deploy[o130,s11,i] 0
+deploy[o130,s12,m] 0
+deploy[o130,s12,c] 31
+deploy[o130,s12,i] 0
+deploy[o128,s12,m] 20
+deploy[o128,s12,c] 0
+deploy[o128,s12,i] 0
+deploy[o64,s8,m] 0
+deploy[o64,s8,c] 0
+deploy[o64,s8,i] 0
+deploy[o64,s11,m] 0
+deploy[o64,s11,c] 5
+deploy[o64,s11,i] 0
+deploy[o82,s19,m] 20
+deploy[o82,s19,c] 0
+deploy[o82,s19,i] 0
+deploy[o105,s12,m] 2
+deploy[o105,s12,c] 0
+deploy[o105,s12,i] 0
+deploy[o207,s5,m] 0
+deploy[o207,s5,c] 0
+deploy[o207,s5,i] 0
+deploy[o78,s19,m] 0
+deploy[o78,s19,c] 0
+deploy[o78,s19,i] 0
+deploy[o18,s5,m] 0
+deploy[o18,s5,c] 0
+deploy[o18,s5,i] 37
+deploy[o102,s12,m] 0
+deploy[o102,s12,c] 0
+deploy[o102,s12,i] 7
+deploy[o132,s8,m] 0
+deploy[o132,s8,c] 0
+deploy[o132,s8,i] 0
+deploy[o132,s11,m] 0
+deploy[o132,s11,c] 0
+deploy[o132,s11,i] 37
+deploy[o132,s12,m] 0
+deploy[o132,s12,c] 0
+deploy[o132,s12,i] 37
+deploy[o183,s1,m] 0
+deploy[o183,s1,c] 0
+deploy[o183,s1,i] 7
+deploy[o208,s5,m] 0
+deploy[o208,s5,c] 0
+deploy[o208,s5,i] 0
+deploy[o123,s12,m] 0
+deploy[o123,s12,c] 5
+deploy[o123,s12,i] 0
+deploy[o159,s5,m] 0
+deploy[o159,s5,c] 110
+deploy[o159,s5,i] 0
+deploy[o37,s1,m] 0
+deploy[o37,s1,c] 5
+deploy[o37,s1,i] 0
+deploy[o85,s19,m] 100
+deploy[o85,s19,c] 0
+deploy[o85,s19,i] 0
+deploy[o75,s19,m] 100
+deploy[o75,s19,c] 0
+deploy[o75,s19,i] 0
+deploy[o26,s1,m] 0
+deploy[o26,s1,c] 0
+deploy[o26,s1,i] 37
+deploy[o103,s12,m] 0
+deploy[o103,s12,c] 5
+deploy[o103,s12,i] 0
+deploy[o213,s5,m] 0
+deploy[o213,s5,c] 110
+deploy[o213,s5,i] 0
+deploy[o134,s8,m] 0
+deploy[o134,s8,c] 0
+deploy[o134,s8,i] 0
+deploy[o134,s11,m] 20
+deploy[o134,s11,c] 0
+deploy[o134,s11,i] 0
+deploy[o134,s12,m] 20
+deploy[o134,s12,c] 0
+deploy[o134,s12,i] 0
+deploy[o14,s8,m] 0
+deploy[o14,s8,c] 0
+deploy[o14,s8,i] 0
+deploy[o14,s11,m] 0
+deploy[o14,s11,c] 5
+deploy[o14,s11,i] 0
+deploy[o131,s8,m] 0
+deploy[o131,s8,c] 0
+deploy[o131,s8,i] 0
+deploy[o131,s11,m] 0
+deploy[o131,s11,c] 31
+deploy[o131,s11,i] 0
+deploy[o131,s12,m] 0
+deploy[o131,s12,c] 31
+deploy[o131,s12,i] 0
+deploy[o223,s1,m] 0
+deploy[o223,s1,c] 5
+deploy[o223,s1,i] 0
+deploy[o139,s8,m] 0
+deploy[o139,s8,c] 0
+deploy[o139,s8,i] 0
+deploy[o139,s11,m] 0
+deploy[o139,s11,c] 0
+deploy[o139,s11,i] 157
+deploy[o139,s12,m] 0
+deploy[o139,s12,c] 0
+deploy[o139,s12,i] 157
+deploy[o24,s1,m] 2
+deploy[o24,s1,c] 0
+deploy[o24,s1,i] 0
+deploy[o211,s5,m] 0
+deploy[o211,s5,c] 5
+deploy[o211,s5,i] 0
+deploy[o53,s8,m] 0
+deploy[o53,s8,c] 0
+deploy[o53,s8,i] 0
+deploy[o53,s11,m] 20
+deploy[o53,s11,c] 0
+deploy[o53,s11,i] 0
+deploy[o22,s1,m] 100
+deploy[o22,s1,c] 0
+deploy[o22,s1,i] 0
+deploy[o210,s5,m] 0
+deploy[o210,s5,c] 0
+deploy[o210,s5,i] 37
+deploy[o66,s8,m] 0
+deploy[o66,s8,c] 0
+deploy[o66,s8,i] 0
+deploy[o66,s11,m] 0
+deploy[o66,s11,c] 31
+deploy[o66,s11,i] 0
+deploy[o116,s12,m] 20
+deploy[o116,s12,c] 0
+deploy[o116,s12,i] 0
+deploy[o114,s12,m] 0
+deploy[o114,s12,c] 0
+deploy[o114,s12,i] 7
+deploy[o29,s1,m] 0
+deploy[o29,s1,c] 0
+deploy[o29,s1,i] 37
+deploy[o215,s5,m] 0
+deploy[o215,s5,c] 0
+deploy[o215,s5,i] 0
+deploy[o79,s19,m] 0
+deploy[o79,s19,c] 110
+deploy[o79,s19,i] 0
+deploy[o218,s5,m] 0
+deploy[o218,s5,c] 0
+deploy[o218,s5,i] 37
+deploy[o151,s5,m] 0
+deploy[o151,s5,c] 0
+deploy[o151,s5,i] 0
+deploy[o126,s12,m] 100
+deploy[o126,s12,c] 0
+deploy[o126,s12,i] 0
+deploy[o158,s5,m] 0
+deploy[o158,s5,c] 31
+deploy[o158,s5,i] 0
+deploy[o182,s1,m] 20
+deploy[o182,s1,c] 0
+deploy[o182,s1,i] 0
+deploy[o192,s1,m] 2
+deploy[o192,s1,c] 0
+deploy[o192,s1,i] 0
+deploy[o16,s19,m] 0
+deploy[o16,s19,c] 0
+deploy[o16,s19,i] 0
+deploy[o198,s1,m] 0
+deploy[o198,s1,c] 5
+deploy[o198,s1,i] 0
+deploy[o163,s5,m] 0
+deploy[o163,s5,c] 0
+deploy[o163,s5,i] 157
+deploy[o20,s5,m] 0
+deploy[o20,s5,c] 31
+deploy[o20,s5,i] 0
+
+------------------------------- Model logfile ------------------------------
+
+Gurobi 11.0.1 (mac64[arm]) logging started Sat May  4 01:31:02 2024
+
+Set parameter LogFile to value "../models/model_moo(May 04,0131).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 475 rows, 370 columns and 883 nonzeros
+Model fingerprint: 0xb41154ec
+Variable types: 273 continuous, 97 integer (97 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [3e-02, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 354 rows and 182 columns
+Presolve time: 0.00s
+Presolved: 121 rows, 188 columns, 322 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 96 rows and 169 columns
+Presolve time: 0.00s
+Presolved: 25 rows, 19 columns, 51 nonzeros
+Found heuristic solution: objective -1030.080611
+Variable types: 0 continuous, 19 integer (19 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -1030.08 
+No other solutions better than -1030.08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.030080610622e+03, best bound -1.030080610622e+03, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 122 rows and 188 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -3065.66 
+No other solutions better than -3065.66
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.065658916667e+03, best bound -3.065658916667e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.02 seconds (0.00 work units), solution count 2
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Sat May  4 01:31:09 2024
+
+Set parameter LogFile to value "../models/model_moo(May 04,0131).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 505 rows, 394 columns and 947 nonzeros
+Model fingerprint: 0x82ac47b1
+Variable types: 291 continuous, 103 integer (103 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [1e-03, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 373 rows and 194 columns
+Presolve time: 0.00s
+Presolved: 132 rows, 200 columns, 350 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 92 rows and 171 columns
+Presolve time: 0.00s
+Presolved: 40 rows, 29 columns, 81 nonzeros
+Found heuristic solution: objective -857.3974810
+Variable types: 0 continuous, 29 integer (29 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -857.397 
+No other solutions better than -857.397
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -8.573974809737e+02, best bound -8.573974809737e+02, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 133 rows and 200 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -3614.75 
+No other solutions better than -3614.75
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.614749527778e+03, best bound -3.614749527778e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.02 seconds (0.00 work units), solution count 2
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Sat May  4 01:31:15 2024
+
+Set parameter LogFile to value "../models/model_moo(May 04,0131).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 495 rows, 386 columns and 931 nonzeros
+Model fingerprint: 0xd669c55f
+Variable types: 285 continuous, 101 integer (101 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [3e-02, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 366 rows and 190 columns
+Presolve time: 0.00s
+Presolved: 129 rows, 196 columns, 343 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 92 rows and 169 columns
+Presolve time: 0.00s
+Presolved: 37 rows, 27 columns, 75 nonzeros
+Found heuristic solution: objective -964.4438155
+Variable types: 0 continuous, 27 integer (27 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -964.444 
+No other solutions better than -964.444
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -9.644438154837e+02, best bound -9.644438154837e+02, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 130 rows and 196 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -2670.78 
+No other solutions better than -2670.78
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.670781777778e+03, best bound -2.670781777778e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.01 seconds (0.00 work units), solution count 2
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Sat May  4 01:31:22 2024
+
+Set parameter LogFile to value "../models/model_moo(May 04,0131).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 550 rows, 430 columns and 1046 nonzeros
+Model fingerprint: 0x51f1c3d3
+Variable types: 318 continuous, 112 integer (112 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [3e-02, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 405 rows and 212 columns
+Presolve time: 0.00s
+Presolved: 145 rows, 218 columns, 388 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 90 rows and 179 columns
+Presolve time: 0.00s
+Presolved: 55 rows, 39 columns, 111 nonzeros
+Found heuristic solution: objective -1014.304253
+Variable types: 0 continuous, 39 integer (39 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -1014.3 
+No other solutions better than -1014.3
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.014304252784e+03, best bound -1.014304252784e+03, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 146 rows and 218 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -3846.34 
+No other solutions better than -3846.34
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.846336944444e+03, best bound -3.846336944444e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.01 seconds (0.00 work units), solution count 2
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Sat May  4 01:31:28 2024
+
+Set parameter LogFile to value "../models/model_moo(May 04,0131).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 515 rows, 402 columns and 969 nonzeros
+Model fingerprint: 0x88cfe005
+Variable types: 297 continuous, 105 integer (105 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [1e-03, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 379 rows and 198 columns
+Presolve time: 0.00s
+Presolved: 136 rows, 204 columns, 360 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 87 rows and 169 columns
+Presolve time: 0.00s
+Presolved: 49 rows, 35 columns, 99 nonzeros
+Found heuristic solution: objective -957.4264645
+Variable types: 0 continuous, 35 integer (35 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -957.426 
+No other solutions better than -957.426
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -9.574264645494e+02, best bound -9.574264645494e+02, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 137 rows and 204 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -4142.84 
+No other solutions better than -4142.84
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.142844055556e+03, best bound -4.142844055556e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.01 seconds (0.00 work units), solution count 2
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Sat May  4 01:31:35 2024
+
+Set parameter LogFile to value "../models/model_moo(May 04,0131).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 570 rows, 446 columns and 1092 nonzeros
+Model fingerprint: 0xd4015a1b
+Variable types: 330 continuous, 116 integer (116 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [3e-02, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 419 rows and 220 columns
+Presolve time: 0.00s
+Presolved: 151 rows, 226 columns, 405 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 102 rows and 191 columns
+Presolve time: 0.00s
+Presolved: 49 rows, 35 columns, 99 nonzeros
+Found heuristic solution: objective -1057.697751
+Variable types: 0 continuous, 35 integer (35 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -1057.7 
+No other solutions better than -1057.7
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.057697751451e+03, best bound -1.057697751451e+03, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 152 rows and 226 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -3962.52 
+No other solutions better than -3962.52
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.962523444444e+03, best bound -3.962523444444e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.01 seconds (0.00 work units), solution count 2
+
+
+Gurobi 11.0.1 (mac64[arm]) logging started Sat May  4 01:31:42 2024
+
+Set parameter LogFile to value "../models/model_moo(May 04,0131).log"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (mac64[arm] - Darwin 23.2.0 23C71)
+
+CPU model: Apple M2
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 550 rows, 430 columns and 1050 nonzeros
+Model fingerprint: 0x45d2bd24
+Variable types: 318 continuous, 112 integer (112 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+25]
+  Objective range  [3e-02, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+12]
+Warning: Model contains large matrix coefficient range
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization with 2 objectives ... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve ...
+---------------------------------------------------------------------------
+
+Presolve removed 408 rows and 212 columns
+Presolve time: 0.00s
+Presolved: 142 rows, 218 columns, 384 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (objective_re_1) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+Presolve removed 114 rows and 197 columns
+Presolve time: 0.00s
+Presolved: 28 rows, 21 columns, 57 nonzeros
+Found heuristic solution: objective -1040.434376
+Variable types: 0 continuous, 21 integer (21 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds (0.00 work units)
+
+Explored 1 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: -1040.43 
+No other solutions better than -1040.43
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.040434376099e+03, best bound -1.040434376099e+03, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (objective_cost_2) ...
+---------------------------------------------------------------------------
+
+
+Loaded user MIP start with objective 750
+
+Presolve removed 143 rows and 218 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: -4026.42 
+No other solutions better than -4026.42
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.026422000000e+03, best bound -4.026422000000e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.01 seconds (0.00 work units), solution count 2
+
+
+------------------------------- Python Code --------------------------------
+""" Optimization model: maximize demand and minimize cost: MIP
+Outline:
+1. Define Decision variables
+2. Add Constraints
+3. Add objective functions
+4. Set some gurobi parameters, & write the model
+5. Solve the model
+6. Write log file
+7. Get some variables out of the model for further analysis
+
+Developer: Tanmoy Das
+Date: July 05, 2023 (revise May 2024) """
+
+# %% Data
+# data processing libraries
+import pandas as pd
+from datetime import datetime, date
+# optimization
+import gurobipy as gp
+from gurobipy import GRB
+# import custom functions or classes
+import custom_func
+import math
+
+
+# %% Model 2: MIP-2
+class Model:
+    def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, SizeSpill, SizeSpill_n,
+              Demand, Sensitivity_R, Sensitivity_n, Eff, Effectiveness_n, Availability, NumberStMax, Distance, Distance_n,
+              W, QuantityMin, DistanceMax, Cf_s, CostU, Budget,
+              BigM, MaxFO):
+        """
+        :param Stations:
+        :param OilSpills:
+        :param ResourcesD:
+        :param coordinates_st:
+        :param coordinates_spill:
+        :param SizeSpill:
+        :param SizeSpill_n:
+        :param Demand:
+        :param Sensitivity_R:
+        :param Sensitivity_n:
+        :param Eff:
+        :param Effectiveness_n:
+        :param Availability:
+        :param NumberStMax:
+        :param Distance:
+        :param Distance_n:
+        :param W:
+        :param QuantityMin:
+        :param DistanceMax:
+        :param Cf_s:
+        :param CostU:
+        :param Budget:
+        :param BigM:
+        :param MaxFO:
+        :return:
+        """
+
+        from datetime import datetime, date
+
+        w1, w2, w3, w4, w5, w6 = W[0], W[1], W[2], W[3], W[4], W[5]
+
+        # ---------------------------------------- Set & Index ---------------------------------------------------------
+        os_pair = {(o, s): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
+                   for o in OilSpills
+                   for s in Stations
+                   if
+                   custom_func.compute_distance(tuple(coordinates_spill[1][o]), tuple(coordinates_st[1][s])) < DistanceMax}
+        os_pair = tuple(os_pair.keys())
+
+        # sr_pair (based on unique stations in pair_os )
+        st_o = list(set([item[1] for item in os_pair]))
+        o_st = list(set([item[0] for item in os_pair])) # unique oil spills
+        sr_pair = []
+        for s in st_o:
+            for r in ResourcesD:
+                sr_pair.append((s, r))
+        sr_pair = tuple(sr_pair)
+
+        osr_pair = {(o, s, r): custom_func.compute_distance(coordinates_spill[1][o], coordinates_st[1][s])
+                    for o in OilSpills
+                    for s in Stations
+                    for r in ResourcesD
+                    if
+                    custom_func.compute_distance(tuple(coordinates_spill[1][o]), tuple(coordinates_st[1][s])) < DistanceMax}
+        osr_pair = tuple(osr_pair.keys())
+
+        print('--------------MIP-moo--------')
+        model = gp.Model("MIP-moo-LAMOSCAD")
+        # ---------------------------------------- Decision variable ---------------------------------------------------
+        cover = model.addVars(os_pair, vtype=GRB.BINARY, name='cover')  # OilSpills
+        select = model.addVars(st_o, vtype=GRB.BINARY, name='select')
+        deploy = model.addVars(osr_pair, vtype=GRB.CONTINUOUS, lb=0,
+                               name='deploy')  # QuantityMin Minimum quantity constraint ++
+
+        # %% -----------------------------------------------------------------------------------------------------------
+        # ------------------------------------------------ Constraints -------------------------------------------------
+
+        # ---------------------------------------- Coverage constraints (cover) ----------------------------------------
+
+        # C10: facility must be open to cover oil spill
+        C_open_facility_to_cover = model.addConstrs((cover[o, s] <= select[s]
+                                                     for o, s in os_pair), name='C_open_facility_to_cover')
+
+        # C15: Each oil spill should be covered by only one station (rethink formulation later)
+        C_few_facility_per_spill = model.addConstrs((cover.sum(o, '*') <= MaxFO
+                                                   for o, s in os_pair), name='C_few_facility_per_spill')  # ++partly solved
+
+        # ---------------------------------------- Facility constraints (select ) --------------------------------------
+        # C11: max number of facilities to be open
+        C_max_facility = model.addConstr((gp.quicksum(select[s]
+                                                      for s in st_o) <= NumberStMax),
+                                         name='C_max_facility')  # SFS style ++
+
+        # C12: Cost of building facility does not exceed budget
+        C_budget = model.addConstr(select.prod(Cf_s) <= Budget,
+                                   name="C_budget")  # m.addConstr(build.prod(cost) <= budget, name="budget")
+
+        """
+        # C14: Hudson
+        # Ref Fig3a Canadian Arctic s8, s10 s11, s14
+        C_HudsonFacility = model.addConstr((gp.quicksum(select[s]
+                                                      for s in ['s8', 's10', 's11', 's14', 's17', 's19']) >= 1),
+                                         name='C_HudsonFacility')
+        # C15: Up North  s9, s12, s13, s15, s16, s18, s20
+        C_UpNorthFacility = model.addConstr((gp.quicksum(select[s]
+                                                      for s in ['s9', 's12', 's13', 's15', 's16', 's18', 's20']) <= 1),
+                                         name='C_UpNorthFacility')
+        """
+        # ---------------------------------------- Deploy constraints (deploy) -----------------------------------------
+        # C15: resource capacity constaint & deploy only when facility is open
+        C_resource_capacity = model.addConstrs((deploy.sum('*', s, r) <= BigM * Availability[s, r] * select[s]  #
+                                                for s, r in sr_pair), name='C_open_facility')
+
+        # C16: deploy less than demand
+        C_deploy_demand = model.addConstrs((deploy[o, s, r] <= Demand[o, r]
+                                            for o, s, r in osr_pair), name='C_deploy_demand')
+
+        # C20: usage limit
+
+        # %% -----------------------------------------------------------------------------------------------------------
+        # ----------------------------------------------- Objective function -------------------------------------------
+        model.ModelSense = GRB.MINIMIZE
+        objective_1 = gp.quicksum((w1 * SizeSpill_n[o] + 100*w2 * Sensitivity_n[o] - w3 * Distance_n[o, s]) * cover[o, s]
+                                  for o, s in os_pair)
+
+        objective_2 = gp.quicksum(10**-4*w4 * select[s] * Cf_s[s] for s in st_o) \
+                            + gp.quicksum( (10**-2*w5 * CostU[s,r] - 10 * w6 * Effectiveness_n[s, r]) * deploy[o, s, r] for o, s, r in osr_pair)
+
+        model.setObjectiveN(objective_1, index=0, priority=2, weight=-1, name='objective_re_1')
+        model.setObjectiveN(objective_2, index=1, priority=1, weight=1, name='objective_cost_2')
+
+        # %% Model parameters
+        # Organizing model
+        # Limit how many solutions to collect
+        model.setParam(GRB.Param.PoolSolutions, 1024)
+        # Limit the search space by setting a gap for the worst possible solution that will be accepted
+        model.setParam(GRB.Param.PoolGap, 0.80)
+        # do a systematic search for the k-best solutions
+        # model.setParam(GRB.Param.PoolSearchMode, 2)
+        today = date.today()
+        now = datetime.now()
+        date_time = str(date.today().strftime("%b %d,") + datetime.now().strftime("%H%M"))
+        filename = 'model (' + date_time + ')'
+
+        # Write the model
+        model.write(f'../models/model_moo.lp')
+        model.Params.LogFile = f"../models/model_moo({date_time}).log"  # write the log file
+
+        # %% Solve the model
+        model.optimize()
+        # Debugging model
+        # model.computeIIS()
+        model.write('../models/model_moo.sol')
+
+        # %% Query number of multiple objectives, and number of solutions
+        x = model.getVars()
+        select_series = pd.Series(model.getAttr('X', select))
+        deploy_series = pd.Series(model.getAttr('X', deploy))
+        # select_series[select_series > 0.5]  # +++
+        # deploy_series[deploy_series > 0.5]
+        nSolutions = model.SolCount
+        nObjectives = model.NumObj
+        print('Problem has', nObjectives, 'objectives')
+        print('Gurobi found', nSolutions, 'solutions')
+        solutions = []
+        for s in range(nSolutions):
+            # Set which solution we will query from now on
+            model.params.SolutionNumber = s
+
+            # Print objective value of this solution in each objective
+            print('Solution', s, ':', end='')
+            for o in range(nObjectives):
+                # Set which objective we will query
+                model.params.ObjNumber = o
+                # Query the o-th objective value
+                print(' ', round(model.ObjNVal, 2), end=' ')
+                # query the full vector of the o-th solution
+                solutions.append(model.getAttr('Xn', x))
+
+
+        # %% Output the result
+        # Obtain model results & carry them outside the model scope
+        # model.printAttr('X')
+        mvars = model.getVars()  # these values are NOT accessible outside the model scope
+        names = model.getAttr('VarName', mvars)
+        values = model.getAttr('X', mvars)
+        # X Xn https://www.gurobi.com/documentation/9.5/refman/working_with_multiple_obje.html
+
+        objValues = []
+        nSolutions = model.SolCount
+        nObjectives = model.NumObj
+        for s in range(nSolutions):
+            # Set which solution we will query from now on
+            model.params.SolutionNumber = s
+            print('Solution', s, ':', end='')
+            for o in range(nObjectives):
+                model.params.ObjNumber = o
+                objValues.append(model.ObjNVal)
+        cover_series = pd.Series(model.getAttr('X', cover))
+        cover_1s = cover_series[cover_series > 0.5]
+
+        select_series = pd.Series(model.getAttr('X', select))
+        select_1s = select_series[select_series > 0.5]
+        deploy_series = pd.Series(model.getAttr('X', deploy))
+        deploy_1s = deploy_series[deploy_series > 0.5]
+        cover_series = pd.Series(model.getAttr('X', cover))
+        cover_1s = cover_series[cover_series > 0.5]
+
+        # Saving the file
+        modelStructure_output_code = python_code = logfile = model_structure = outputs = inputs = ""
+        # Reading data from files
+        with open('../models/model_moo.lp') as fp:
+            model_structure = fp.read()
+        with open('../models/model_moo.sol') as fp:
+            outputs = fp.read()
+        with open(f'../models/model_moo({date_time}).log') as fp:
+            logfile = fp.read()
+        with open('model.py') as fp:
+            python_code = fp.read()
+        # Merging 2 files
+        # To add the data of file2
+        # from next line
+        modelStructure_output_code += "------------------------------- Model Structure ------------------------------\n"
+        modelStructure_output_code += model_structure
+        modelStructure_output_code += "\n------------------------------- Model Outputs ------------------------------\n"
+        modelStructure_output_code += outputs
+        modelStructure_output_code += "\n------------------------------- Model logfile ------------------------------\n"
+        modelStructure_output_code += logfile
+        modelStructure_output_code += "\n------------------------------- Python Code --------------------------------\n"
+        modelStructure_output_code += python_code
+
+        with open(f'../models/Structure, outputs & python code of {filename}.txt', 'w') as fp:
+            fp.write(modelStructure_output_code)
+
+        # Extract assignment variables
+        sol_y = pd.Series(model.getAttr('X', deploy))
+        sol_y.name = 'Assignments'
+        sol_y.index.names = ['Spill #', 'Station no.', 'Resource type']
+        assignment4 = sol_y[sol_y > 0.5].to_frame()
+        assignment_name = assignment4.reset_index()
+        # print('assignment_name', assignment_name)
+
+        # %%
+        # organize data # need to clean this section ++
+        spill_df = pd.DataFrame(coordinates_spill[1]).T.reset_index()
+        spill_df.columns = ['Spill #', 'Spill_Latitude', 'Spill_Longitude']
+        spill_df['Resource needed'] = pd.DataFrame(SizeSpill)  # ++ update with spill size later
+        spill_df['Sensitivity'] = Sensitivity_R  # ++
+
+        station_df = pd.DataFrame(coordinates_st[1]).T.reset_index()
+        station_df.columns = ['Station no.', 'St_Latitude', 'St_Longitude']
+
+        assignment2 = pd.merge(assignment_name[['Spill #', 'Station no.']],
+                               station_df[['Station no.', 'St_Latitude', 'St_Longitude']])
+
+        assignment3 = pd.merge(assignment2, spill_df[['Spill #', 'Spill_Latitude', 'Spill_Longitude']])
+        deploy_reset = deploy_1s.reset_index()
+        deploy_reset.columns = ['Spill #', 'Station no.', 'Resource Type', 'Quantity deployed']
+        assignment = pd.merge(assignment3, deploy_reset)
+
+        assignment['Distance'] = [math.sqrt((assignment.loc[i]['St_Latitude'] - assignment.loc[i]['Spill_Latitude']) ** 2 \
+                                            + (assignment.loc[i]['St_Longitude'] - assignment.loc[i][
+            'Spill_Longitude']) ** 2)
+                                  for i in assignment.index]
+
+        # Outputs from the model +++
+        # Calculate Coverage # chance later ++
+        coverage_percentage = int(100 * len(cover_1s)/ len(OilSpills))  # / len(cover_series)
+        # Calculate total distance travelled
+        DistanceTravelled = []
+        for i in range(len(assignment)):
+            st_coord = (assignment[['St_Latitude', 'St_Longitude']]).iloc[i, :].values
+            sp_coord = (assignment[['Spill_Latitude', 'Spill_Longitude']]).iloc[i, :].values
+            aaa = DistanceTravelled.append(custom_func.compute_distance(st_coord, sp_coord))
+
+        DistanceTravelled = sum(DistanceTravelled)*80  # 80 for convering GIS data into kilometer
+        ResponseTimeM = round((DistanceTravelled / 60) / len(assignment), 2)  # len() +++ OilSpills
+        print(f'Coverage Percentage: {coverage_percentage}%')
+        print(f'Mean Response Time: {ResponseTimeM}')
+
+        return model, select, deploy, mvars, names, values, objValues, \
+            spill_df, station_df, cover_1s, select_1s, deploy_1s, ResponseTimeM, coverage_percentage, assignment

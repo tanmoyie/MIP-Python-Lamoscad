@@ -174,14 +174,14 @@ class ModelW:
         filename = 'model (' + date_time + ')'
 
         # Write the model
-        model.write(f'Outputs/model_moo.lp')
-        model.Params.LogFile = f"Outputs/model_moo({date_time}).log"  # write the log file
+        model.write(f'../models/model_moo.lp')
+        model.Params.LogFile = f"../models/model_moo({date_time}).log"  # write the log file
 
         # %% Solve the model
         model.optimize()
         # Debugging model
         # model.computeIIS()
-        model.write('Outputs/model_moo.sol')
+        model.write('../models/model_moo.sol')
 
         # %% Query number of multiple objectives, and number of solutions
         x = model.getVars()
