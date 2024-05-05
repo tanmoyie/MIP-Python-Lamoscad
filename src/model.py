@@ -88,6 +88,7 @@ class Model:
 
         print('--------------MIP-moo--------')
         model = gp.Model("MIP-moo-LAMOSCAD")
+        model.Params.LogToConsole = 0  # to suppress all log outputs including model structure
         # ---------------------------------------- Decision variable ---------------------------------------------------
         cover = model.addVars(os_pair, vtype=GRB.BINARY, name='cover')  # OilSpills
         select = model.addVars(st_o, vtype=GRB.BINARY, name='select')

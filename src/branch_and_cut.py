@@ -4,9 +4,9 @@ from gurobipy import *
 
 
 class BranchAndCut(object):
-    def __init__(self, roll_length, orders):
-        self.roll_length = roll_length
-        self.orders = orders
+    def __init__(self, param1, param2):
+        self.param1 = param1
+        self.param2 = param2
 
     def branch_and_cut(self):
         pass

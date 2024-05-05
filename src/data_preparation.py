@@ -91,6 +91,14 @@ class DataPreparation:
 
         return Stations, OilSpills, ResourcesD, Demand, Availability, Eff, Distance, TimeR, Cf_s, CostU
 
+
+    def compute_penalty(Stations, OilSpills, ResourcesD):
+        sor_comb = [(s, o, r) for s in Stations for o in OilSpills for r in ResourcesD]
+        penalty_sor = {}
+        for i in range(len(sor_comb)):
+            penalty_sor[(sor_comb[i])] = 1
+        return penalty_sor
+
     def create_data_weight_pcp(self):
         spill_data = pd.read_excel('../data/processed/data_100_oil_spills.xlsx', sheet_name='spills', header=0).copy()
         potential_station_data = pd.read_excel('../data/raw/data_oil_spill_resource_allocation_Arctic_2023.xlsx',
