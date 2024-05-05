@@ -4,4 +4,6 @@ shapely~=2.0.1
 geopandas~=0.14.2
 folium~=0.14.0
 numpy~=1.26.4
+matplotlib~=3.8.4
+seaborn~=0.12.2
 # in PyCharm -- Menu bar -> Tools -> Sync Python Requirements
