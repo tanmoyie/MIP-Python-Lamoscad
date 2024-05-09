@@ -13,14 +13,14 @@ class BranchAndCut(object):
 
     def solveMasterProblem(self, relaxed=True):
         """ X_s is the binary decision variable to open facility or not """
-        model = Model('Column Generation MP')
+        model = Model('Bender Decomposition MP')
         model.Params.OutputFlag = 0
 
 
     def solveSubploblem(self, duals):
-        model = Model('Column Generation Sub-problem')
+        model = Model('Bender Decomposition Sub-problem')
         model.Params.OutputFlag = 0
         var_dict = {}
 
 if __name__ == '__main__':
-    pass # ++
+    pass
