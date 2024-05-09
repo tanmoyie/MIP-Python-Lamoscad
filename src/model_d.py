@@ -51,7 +51,7 @@ class ModelD:
         self.Budget = Budget
         self.BigM = BigM
         self.MaxFO = MaxFO
-        # self.W = ++  fix self definition ++
+
 
     def solve(Stations, OilSpills, ResourcesD, coordinates_st, coordinates_spill, SizeSpill, SizeSpill_n,
               Demand, Sensitivity_R, Sensitivity_n, Eff, Effectiveness_n, pn_sor, Availability, NumberStMax, Distance,
