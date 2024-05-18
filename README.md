@@ -20,12 +20,8 @@
         └── draw_network.py
 
     
-
-### Requirement
-++
-
 ### Installation
-++
+Install required packages (inclduing gurobipy~=11.0.1) from requirement.txt file
 
 ### STAR
 1. Situation: Strategic planning of oil spill in Arctic
