@@ -1,9 +1,9 @@
 
 # LAMOSCAD Optimization Project ✈️⚙️
 
-This repository contains optimization models and algorithms developed for the **LAMOSCAD** (Large-scale Arctic Maritime Oil Spill Cleanup and Allocation Decision) project.
+This repository contains optimization models and algorithms developed for the **LAMOSCAD** (Location Allocation Modeling to Optimize Spill Coverage and Cost in the Canadian Arctic) project.
 
-The models are designed to solve complex **vehicle routing**, **resource allocation**, and **emergency response optimization** problems using tools such as **Gurobi**, **Python**, and **Geospatial Data**.
+The models are designed to solve complex **facility location**, **resource allocation**, and **emergency response optimization** problems using tools such as **Gurobi**, **Python**, and **Geospatial Data**.
 
 ---
 
@@ -45,7 +45,6 @@ lamoscad-optimization-project/
 
 ## 🚀 Key Features
 
-- Large-scale optimization models for oil spill response
 - Gurobi-powered mathematical programming
 - Modular & reusable codebase (easy to extend)
 - Configurable parameters via YAML files
@@ -83,7 +82,6 @@ pip install -r requirements.txt
 
 ## 📄 How to Run
 
-- **Notebooks**: Explore and run Jupyter notebooks inside `notebooks/`.
 - **Scripts**: Execute optimization models from `scripts/`:
 ```bash
 python scripts/run_large_scale.py
@@ -103,16 +101,15 @@ This project is based on research in operations research and optimization for ma
 
 - Gurobi Academic License  
 - Python Open Source Libraries  
-- Texas State University Research Team
+- MARS team at Dalhousie University 
 
 ---
 
 ## 📧 Contact
 
 For questions or collaborations, please contact:
-**[Your Name]** — *Operations Research Postdoctoral Researcher*  
-Email: your_email@example.com  
-GitHub: [your_username](https://github.com/your_username)
+**[Tanmoy Das]** — *Operations Research Scientist*  
+GitHub: [tanmoiyie](https://github.com/tanmoyie)
 
 ---
 
