@@ -1,0 +1,49 @@
+general:
+  M: 1000
+  gamma: 1
+  weights: [2.5, 2.5, 0.25, 0.0025, 0.25, 0.25, 0.25, 0.25]
+  nQ: 0
+  DistanceMax: 10
+  NumberStMax: 5
+  nS: 1
+  nH: 1
+  nUN: 1
+
+L_p_or_values:
+  c_i: 1200
+  m: inf
+
+assets:
+  vehicles:
+    - helicopter
+    - ship
+    - icebreaker
+
+  resources:
+    - MCR
+    - CDU
+    - ISB
+
+  Q_vr:
+    ship:
+      m: 100
+      c: 1500
+      i: 1200
+    helicopter:
+      m: 10
+      c: 150
+      i: 120
+    icebreaker:
+      m: 1
+      c: 1
+      i: 1
+
+  c_v:
+    helicopter: 40
+    ship: 2
+    icebreaker: 20
+
+  n_vs_values:
+    helicopter: 20
+    ship: 100 # 10
+    icebreaker: 20 # 2

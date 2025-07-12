@@ -1,0 +1,2450 @@
+\ Model Oil Spill Response Optimization_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize multi-objectives
+  objective_1: Priority=3 Weight=-1 AbsTol=1e-06 RelTol=0
+  
+  objective_2: Priority=2 Weight=1 AbsTol=1e-06 RelTol=0
+   0.75 z_sor[s6,o1,helicopter] + 0.75 z_sor[s6,o1,ship]
+   + 0.75 z_sor[s6,o1,icebreaker] + 0.75 z_sor[s6,o2,helicopter]
+   + 0.75 z_sor[s6,o2,ship] + 0.75 z_sor[s6,o2,icebreaker]
+   + 0.75 z_sor[s6,o3,helicopter] + 0.75 z_sor[s6,o3,ship]
+   + 0.75 z_sor[s6,o3,icebreaker] + 0.75 z_sor[s6,o4,helicopter]
+   + 0.75 z_sor[s6,o4,ship] + 0.75 z_sor[s6,o4,icebreaker]
+   + 0.75 z_sor[s6,o5,helicopter] + 0.75 z_sor[s6,o5,ship]
+   + 0.75 z_sor[s6,o5,icebreaker] + 0.75 z_sor[s6,o6,helicopter]
+   + 0.75 z_sor[s6,o6,ship] + 0.75 z_sor[s6,o6,icebreaker]
+   + 0.75 z_sor[s6,o7,helicopter] + 0.75 z_sor[s6,o7,ship]
+   + 0.75 z_sor[s6,o7,icebreaker] + 0.75 z_sor[s6,o8,helicopter]
+   + 0.75 z_sor[s6,o8,ship] + 0.75 z_sor[s6,o8,icebreaker]
+   + 0.75 z_sor[s6,o9,helicopter] + 0.75 z_sor[s6,o9,ship]
+   + 0.75 z_sor[s6,o9,icebreaker] + 0.75 z_sor[s6,o10,helicopter]
+   + 0.75 z_sor[s6,o10,ship] + 0.75 z_sor[s6,o10,icebreaker]
+   + 0.75 z_sor[s6,o11,helicopter] + 0.75 z_sor[s6,o11,ship]
+   + 0.75 z_sor[s6,o11,icebreaker] + 0.75 z_sor[s6,o12,helicopter]
+   + 0.75 z_sor[s6,o12,ship] + 0.75 z_sor[s6,o12,icebreaker]
+   + 0.75 z_sor[s6,o13,helicopter] + 0.75 z_sor[s6,o13,ship]
+   + 0.75 z_sor[s6,o13,icebreaker] + 0.75 z_sor[s6,o14,helicopter]
+   + 0.75 z_sor[s6,o14,ship] + 0.75 z_sor[s6,o14,icebreaker]
+   + 0.75 z_sor[s6,o15,helicopter] + 0.75 z_sor[s6,o15,ship]
+   + 0.75 z_sor[s6,o15,icebreaker] + 0.75 z_sor[s6,o16,helicopter]
+   + 0.75 z_sor[s6,o16,ship] + 0.75 z_sor[s6,o16,icebreaker]
+   + 0.75 z_sor[s6,o17,helicopter] + 0.75 z_sor[s6,o17,ship]
+   + 0.75 z_sor[s6,o17,icebreaker] + 0.75 z_sor[s6,o18,helicopter]
+   + 0.75 z_sor[s6,o18,ship] + 0.75 z_sor[s6,o18,icebreaker]
+   + 0.75 z_sor[s6,o19,helicopter] + 0.75 z_sor[s6,o19,ship]
+   + 0.75 z_sor[s6,o19,icebreaker] + 0.75 z_sor[s6,o20,helicopter]
+   + 0.75 z_sor[s6,o20,ship] + 0.75 z_sor[s6,o20,icebreaker]
+   + 0.75 z_sor[s6,o21,helicopter] + 0.75 z_sor[s6,o21,ship]
+   + 0.75 z_sor[s6,o21,icebreaker] + 0.75 z_sor[s6,o22,helicopter]
+   + 0.75 z_sor[s6,o22,ship] + 0.75 z_sor[s6,o22,icebreaker]
+   + 0.75 z_sor[s6,o23,helicopter] + 0.75 z_sor[s6,o23,ship]
+   + 0.75 z_sor[s6,o23,icebreaker] + 0.75 z_sor[s6,o24,helicopter]
+   + 0.75 z_sor[s6,o24,ship] + 0.75 z_sor[s6,o24,icebreaker]
+   + 0.75 z_sor[s6,o25,helicopter] + 0.75 z_sor[s6,o25,ship]
+   + 0.75 z_sor[s6,o25,icebreaker] + 0.75 z_sor[s6,o26,helicopter]
+   + 0.75 z_sor[s6,o26,ship] + 0.75 z_sor[s6,o26,icebreaker]
+   + 0.75 z_sor[s6,o27,helicopter] + 0.75 z_sor[s6,o27,ship]
+   + 0.75 z_sor[s6,o27,icebreaker] + 0.75 z_sor[s6,o28,helicopter]
+   + 0.75 z_sor[s6,o28,ship] + 0.75 z_sor[s6,o28,icebreaker]
+   + 0.75 z_sor[s6,o29,helicopter] + 0.75 z_sor[s6,o29,ship]
+   + 0.75 z_sor[s6,o29,icebreaker] + 0.75 z_sor[s6,o30,helicopter]
+   + 0.75 z_sor[s6,o30,ship] + 0.75 z_sor[s6,o30,icebreaker]
+   + 0.75 z_sor[s6,o31,helicopter] + 0.75 z_sor[s6,o31,ship]
+   + 0.75 z_sor[s6,o31,icebreaker] + 0.75 z_sor[s6,o32,helicopter]
+   + 0.75 z_sor[s6,o32,ship] + 0.75 z_sor[s6,o32,icebreaker]
+   + 0.75 z_sor[s6,o33,helicopter] + 0.75 z_sor[s6,o33,ship]
+   + 0.75 z_sor[s6,o33,icebreaker] + 0.75 z_sor[s6,o34,helicopter]
+   + 0.75 z_sor[s6,o34,ship] + 0.75 z_sor[s6,o34,icebreaker]
+   + 0.75 z_sor[s6,o35,helicopter] + 0.75 z_sor[s6,o35,ship]
+   + 0.75 z_sor[s6,o35,icebreaker] + 0.75 z_sor[s6,o36,helicopter]
+   + 0.75 z_sor[s6,o36,ship] + 0.75 z_sor[s6,o36,icebreaker]
+   + 0.75 z_sor[s6,o37,helicopter] + 0.75 z_sor[s6,o37,ship]
+   + 0.75 z_sor[s6,o37,icebreaker] + 0.75 z_sor[s6,o38,helicopter]
+   + 0.75 z_sor[s6,o38,ship] + 0.75 z_sor[s6,o38,icebreaker]
+   + 0.75 z_sor[s6,o39,helicopter] + 0.75 z_sor[s6,o39,ship]
+   + 0.75 z_sor[s6,o39,icebreaker] + 0.75 z_sor[s6,o40,helicopter]
+   + 0.75 z_sor[s6,o40,ship] + 0.75 z_sor[s6,o40,icebreaker]
+   + 0.75 z_sor[s6,o41,helicopter] + 0.75 z_sor[s6,o41,ship]
+   + 0.75 z_sor[s6,o41,icebreaker] + 0.75 z_sor[s6,o42,helicopter]
+   + 0.75 z_sor[s6,o42,ship] + 0.75 z_sor[s6,o42,icebreaker]
+   + 0.75 z_sor[s6,o43,helicopter] + 0.75 z_sor[s6,o43,ship]
+   + 0.75 z_sor[s6,o43,icebreaker] + 0.75 z_sor[s6,o44,helicopter]
+   + 0.75 z_sor[s6,o44,ship] + 0.75 z_sor[s6,o44,icebreaker]
+   + 0.75 z_sor[s6,o45,helicopter] + 0.75 z_sor[s6,o45,ship]
+   + 0.75 z_sor[s6,o45,icebreaker] + 0.75 z_sor[s6,o46,helicopter]
+   + 0.75 z_sor[s6,o46,ship] + 0.75 z_sor[s6,o46,icebreaker]
+   + 0.75 z_sor[s6,o47,helicopter] + 0.75 z_sor[s6,o47,ship]
+   + 0.75 z_sor[s6,o47,icebreaker] + 0.75 z_sor[s6,o48,helicopter]
+   + 0.75 z_sor[s6,o48,ship] + 0.75 z_sor[s6,o48,icebreaker]
+   + 0.75 z_sor[s6,o49,helicopter] + 0.75 z_sor[s6,o49,ship]
+   + 0.75 z_sor[s6,o49,icebreaker] + 0.75 z_sor[s6,o50,helicopter]
+   + 0.75 z_sor[s6,o50,ship] + 0.75 z_sor[s6,o50,icebreaker]
+   + 0.75 z_sor[s6,o51,helicopter] + 0.75 z_sor[s6,o51,ship]
+   + 0.75 z_sor[s6,o51,icebreaker] + 0.75 z_sor[s6,o52,helicopter]
+   + 0.75 z_sor[s6,o52,ship] + 0.75 z_sor[s6,o52,icebreaker]
+   + 0.75 z_sor[s6,o53,helicopter] + 0.75 z_sor[s6,o53,ship]
+   + 0.75 z_sor[s6,o53,icebreaker] + 0.75 z_sor[s6,o54,helicopter]
+   + 0.75 z_sor[s6,o54,ship] + 0.75 z_sor[s6,o54,icebreaker]
+   + 0.75 z_sor[s6,o55,helicopter] + 0.75 z_sor[s6,o55,ship]
+   + 0.75 z_sor[s6,o55,icebreaker] + 0.75 z_sor[s6,o56,helicopter]
+   + 0.75 z_sor[s6,o56,ship] + 0.75 z_sor[s6,o56,icebreaker]
+   + 0.75 z_sor[s6,o57,helicopter] + 0.75 z_sor[s6,o57,ship]
+   + 0.75 z_sor[s6,o57,icebreaker] + 0.75 z_sor[s6,o58,helicopter]
+   + 0.75 z_sor[s6,o58,ship] + 0.75 z_sor[s6,o58,icebreaker]
+   + 0.75 z_sor[s6,o59,helicopter] + 0.75 z_sor[s6,o59,ship]
+   + 0.75 z_sor[s6,o59,icebreaker] + 0.75 z_sor[s6,o60,helicopter]
+   + 0.75 z_sor[s6,o60,ship] + 0.75 z_sor[s6,o60,icebreaker]
+   + 0.75 z_sor[s6,o61,helicopter] + 0.75 z_sor[s6,o61,ship]
+   + 0.75 z_sor[s6,o61,icebreaker] + 0.75 z_sor[s6,o62,helicopter]
+   + 0.75 z_sor[s6,o62,ship] + 0.75 z_sor[s6,o62,icebreaker]
+   + 0.75 z_sor[s6,o63,helicopter] + 0.75 z_sor[s6,o63,ship]
+   + 0.75 z_sor[s6,o63,icebreaker] + 0.75 z_sor[s6,o64,helicopter]
+   + 0.75 z_sor[s6,o64,ship] + 0.75 z_sor[s6,o64,icebreaker]
+   + 0.75 z_sor[s6,o65,helicopter] + 0.75 z_sor[s6,o65,ship]
+   + 0.75 z_sor[s6,o65,icebreaker] + 0.75 z_sor[s6,o66,helicopter]
+   + 0.75 z_sor[s6,o66,ship] + 0.75 z_sor[s6,o66,icebreaker]
+   + 0.75 z_sor[s6,o67,helicopter] + 0.75 z_sor[s6,o67,ship]
+   + 0.75 z_sor[s6,o67,icebreaker] + 0.75 z_sor[s6,o68,helicopter]
+   + 0.75 z_sor[s6,o68,ship] + 0.75 z_sor[s6,o68,icebreaker]
+   + 0.75 z_sor[s6,o69,helicopter] + 0.75 z_sor[s6,o69,ship]
+   + 0.75 z_sor[s6,o69,icebreaker] + 0.75 z_sor[s6,o70,helicopter]
+   + 0.75 z_sor[s6,o70,ship] + 0.75 z_sor[s6,o70,icebreaker]
+   + 0.75 z_sor[s6,o71,helicopter] + 0.75 z_sor[s6,o71,ship]
+   + 0.75 z_sor[s6,o71,icebreaker] + 0.75 z_sor[s6,o72,helicopter]
+   + 0.75 z_sor[s6,o72,ship] + 0.75 z_sor[s6,o72,icebreaker]
+   + 0.75 z_sor[s6,o73,helicopter] + 0.75 z_sor[s6,o73,ship]
+   + 0.75 z_sor[s6,o73,icebreaker] + 0.75 z_sor[s6,o74,helicopter]
+   + 0.75 z_sor[s6,o74,ship] + 0.75 z_sor[s6,o74,icebreaker]
+   + 0.75 z_sor[s6,o75,helicopter] + 0.75 z_sor[s6,o75,ship]
+   + 0.75 z_sor[s6,o75,icebreaker] + 0.75 z_sor[s6,o76,helicopter]
+   + 0.75 z_sor[s6,o76,ship] + 0.75 z_sor[s6,o76,icebreaker]
+   + 0.75 z_sor[s6,o77,helicopter] + 0.75 z_sor[s6,o77,ship]
+   + 0.75 z_sor[s6,o77,icebreaker] + 0.75 z_sor[s6,o78,helicopter]
+   + 0.75 z_sor[s6,o78,ship] + 0.75 z_sor[s6,o78,icebreaker]
+   + 0.75 z_sor[s6,o79,helicopter] + 0.75 z_sor[s6,o79,ship]
+   + 0.75 z_sor[s6,o79,icebreaker] + 0.75 z_sor[s6,o80,helicopter]
+   + 0.75 z_sor[s6,o80,ship] + 0.75 z_sor[s6,o80,icebreaker]
+   + 0.75 z_sor[s6,o81,helicopter] + 0.75 z_sor[s6,o81,ship]
+   + 0.75 z_sor[s6,o81,icebreaker] + 0.75 z_sor[s6,o82,helicopter]
+   + 0.75 z_sor[s6,o82,ship] + 0.75 z_sor[s6,o82,icebreaker]
+   + 0.75 z_sor[s6,o83,helicopter] + 0.75 z_sor[s6,o83,ship]
+   + 0.75 z_sor[s6,o83,icebreaker] + 0.75 z_sor[s6,o84,helicopter]
+   + 0.75 z_sor[s6,o84,ship] + 0.75 z_sor[s6,o84,icebreaker]
+   + 0.75 z_sor[s6,o85,helicopter] + 0.75 z_sor[s6,o85,ship]
+   + 0.75 z_sor[s6,o85,icebreaker] + 0.75 z_sor[s6,o86,helicopter]
+   + 0.75 z_sor[s6,o86,ship] + 0.75 z_sor[s6,o86,icebreaker]
+   + 0.75 z_sor[s6,o87,helicopter] + 0.75 z_sor[s6,o87,ship]
+   + 0.75 z_sor[s6,o87,icebreaker] + 0.75 z_sor[s6,o88,helicopter]
+   + 0.75 z_sor[s6,o88,ship] + 0.75 z_sor[s6,o88,icebreaker]
+   + 0.75 z_sor[s6,o89,helicopter] + 0.75 z_sor[s6,o89,ship]
+   + 0.75 z_sor[s6,o89,icebreaker] + 0.75 z_sor[s6,o90,helicopter]
+   + 0.75 z_sor[s6,o90,ship] + 0.75 z_sor[s6,o90,icebreaker]
+   + 0.75 z_sor[s6,o91,helicopter] + 0.75 z_sor[s6,o91,ship]
+   + 0.75 z_sor[s6,o91,icebreaker] + 0.75 z_sor[s6,o92,helicopter]
+   + 0.75 z_sor[s6,o92,ship] + 0.75 z_sor[s6,o92,icebreaker]
+   + 0.75 z_sor[s6,o93,helicopter] + 0.75 z_sor[s6,o93,ship]
+   + 0.75 z_sor[s6,o93,icebreaker] + 0.75 z_sor[s6,o94,helicopter]
+   + 0.75 z_sor[s6,o94,ship] + 0.75 z_sor[s6,o94,icebreaker]
+   + 0.75 z_sor[s6,o95,helicopter] + 0.75 z_sor[s6,o95,ship]
+   + 0.75 z_sor[s6,o95,icebreaker] + 0.75 z_sor[s6,o96,helicopter]
+   + 0.75 z_sor[s6,o96,ship] + 0.75 z_sor[s6,o96,icebreaker]
+   + 0.75 z_sor[s6,o97,helicopter] + 0.75 z_sor[s6,o97,ship]
+   + 0.75 z_sor[s6,o97,icebreaker] + 0.75 z_sor[s6,o98,helicopter]
+   + 0.75 z_sor[s6,o98,ship] + 0.75 z_sor[s6,o98,icebreaker]
+   + 0.75 z_sor[s6,o99,helicopter] + 0.75 z_sor[s6,o99,ship]
+   + 0.75 z_sor[s6,o99,icebreaker] + 0.75 z_sor[s6,o100,helicopter]
+   + 0.75 z_sor[s6,o100,ship] + 0.75 z_sor[s6,o100,icebreaker]
+   + 0.75 z_sor[s9,o1,helicopter] + 0.75 z_sor[s9,o1,ship]
+   + 0.75 z_sor[s9,o1,icebreaker] + 0.75 z_sor[s9,o2,helicopter]
+   + 0.75 z_sor[s9,o2,ship] + 0.75 z_sor[s9,o2,icebreaker]
+   + 0.75 z_sor[s9,o3,helicopter] + 0.75 z_sor[s9,o3,ship]
+   + 0.75 z_sor[s9,o3,icebreaker] + 0.75 z_sor[s9,o4,helicopter]
+   + 0.75 z_sor[s9,o4,ship] + 0.75 z_sor[s9,o4,icebreaker]
+   + 0.75 z_sor[s9,o5,helicopter] + 0.75 z_sor[s9,o5,ship]
+   + 0.75 z_sor[s9,o5,icebreaker] + 0.75 z_sor[s9,o6,helicopter]
+   + 0.75 z_sor[s9,o6,ship] + 0.75 z_sor[s9,o6,icebreaker]
+   + 0.75 z_sor[s9,o7,helicopter] + 0.75 z_sor[s9,o7,ship]
+   + 0.75 z_sor[s9,o7,icebreaker] + 0.75 z_sor[s9,o8,helicopter]
+   + 0.75 z_sor[s9,o8,ship] + 0.75 z_sor[s9,o8,icebreaker]
+   + 0.75 z_sor[s9,o9,helicopter] + 0.75 z_sor[s9,o9,ship]
+   + 0.75 z_sor[s9,o9,icebreaker] + 0.75 z_sor[s9,o10,helicopter]
+   + 0.75 z_sor[s9,o10,ship] + 0.75 z_sor[s9,o10,icebreaker]
+   + 0.75 z_sor[s9,o11,helicopter] + 0.75 z_sor[s9,o11,ship]
+   + 0.75 z_sor[s9,o11,icebreaker] + 0.75 z_sor[s9,o12,helicopter]
+   + 0.75 z_sor[s9,o12,ship] + 0.75 z_sor[s9,o12,icebreaker]
+   + 0.75 z_sor[s9,o13,helicopter] + 0.75 z_sor[s9,o13,ship]
+   + 0.75 z_sor[s9,o13,icebreaker] + 0.75 z_sor[s9,o14,helicopter]
+   + 0.75 z_sor[s9,o14,ship] + 0.75 z_sor[s9,o14,icebreaker]
+   + 0.75 z_sor[s9,o15,helicopter] + 0.75 z_sor[s9,o15,ship]
+   + 0.75 z_sor[s9,o15,icebreaker] + 0.75 z_sor[s9,o16,helicopter]
+   + 0.75 z_sor[s9,o16,ship] + 0.75 z_sor[s9,o16,icebreaker]
+   + 0.75 z_sor[s9,o17,helicopter] + 0.75 z_sor[s9,o17,ship]
+   + 0.75 z_sor[s9,o17,icebreaker] + 0.75 z_sor[s9,o18,helicopter]
+   + 0.75 z_sor[s9,o18,ship] + 0.75 z_sor[s9,o18,icebreaker]
+   + 0.75 z_sor[s9,o19,helicopter] + 0.75 z_sor[s9,o19,ship]
+   + 0.75 z_sor[s9,o19,icebreaker] + 0.75 z_sor[s9,o20,helicopter]
+   + 0.75 z_sor[s9,o20,ship] + 0.75 z_sor[s9,o20,icebreaker]
+   + 0.75 z_sor[s9,o21,helicopter] + 0.75 z_sor[s9,o21,ship]
+   + 0.75 z_sor[s9,o21,icebreaker] + 0.75 z_sor[s9,o22,helicopter]
+   + 0.75 z_sor[s9,o22,ship] + 0.75 z_sor[s9,o22,icebreaker]
+   + 0.75 z_sor[s9,o23,helicopter] + 0.75 z_sor[s9,o23,ship]
+   + 0.75 z_sor[s9,o23,icebreaker] + 0.75 z_sor[s9,o24,helicopter]
+   + 0.75 z_sor[s9,o24,ship] + 0.75 z_sor[s9,o24,icebreaker]
+   + 0.75 z_sor[s9,o25,helicopter] + 0.75 z_sor[s9,o25,ship]
+   + 0.75 z_sor[s9,o25,icebreaker] + 0.75 z_sor[s9,o26,helicopter]
+   + 0.75 z_sor[s9,o26,ship] + 0.75 z_sor[s9,o26,icebreaker]
+   + 0.75 z_sor[s9,o27,helicopter] + 0.75 z_sor[s9,o27,ship]
+   + 0.75 z_sor[s9,o27,icebreaker] + 0.75 z_sor[s9,o28,helicopter]
+   + 0.75 z_sor[s9,o28,ship] + 0.75 z_sor[s9,o28,icebreaker]
+   + 0.75 z_sor[s9,o29,helicopter] + 0.75 z_sor[s9,o29,ship]
+   + 0.75 z_sor[s9,o29,icebreaker] + 0.75 z_sor[s9,o30,helicopter]
+   + 0.75 z_sor[s9,o30,ship] + 0.75 z_sor[s9,o30,icebreaker]
+   + 0.75 z_sor[s9,o31,helicopter] + 0.75 z_sor[s9,o31,ship]
+   + 0.75 z_sor[s9,o31,icebreaker] + 0.75 z_sor[s9,o32,helicopter]
+   + 0.75 z_sor[s9,o32,ship] + 0.75 z_sor[s9,o32,icebreaker]
+   + 0.75 z_sor[s9,o33,helicopter] + 0.75 z_sor[s9,o33,ship]
+   + 0.75 z_sor[s9,o33,icebreaker] + 0.75 z_sor[s9,o34,helicopter]
+   + 0.75 z_sor[s9,o34,ship] + 0.75 z_sor[s9,o34,icebreaker]
+   + 0.75 z_sor[s9,o35,helicopter] + 0.75 z_sor[s9,o35,ship]
+   + 0.75 z_sor[s9,o35,icebreaker] + 0.75 z_sor[s9,o36,helicopter]
+   + 0.75 z_sor[s9,o36,ship] + 0.75 z_sor[s9,o36,icebreaker]
+   + 0.75 z_sor[s9,o37,helicopter] + 0.75 z_sor[s9,o37,ship]
+   + 0.75 z_sor[s9,o37,icebreaker] + 0.75 z_sor[s9,o38,helicopter]
+   + 0.75 z_sor[s9,o38,ship] + 0.75 z_sor[s9,o38,icebreaker]
+   + 0.75 z_sor[s9,o39,helicopter] + 0.75 z_sor[s9,o39,ship]
+   + 0.75 z_sor[s9,o39,icebreaker] + 0.75 z_sor[s9,o40,helicopter]
+   + 0.75 z_sor[s9,o40,ship] + 0.75 z_sor[s9,o40,icebreaker]
+   + 0.75 z_sor[s9,o41,helicopter] + 0.75 z_sor[s9,o41,ship]
+   + 0.75 z_sor[s9,o41,icebreaker] + 0.75 z_sor[s9,o42,helicopter]
+   + 0.75 z_sor[s9,o42,ship] + 0.75 z_sor[s9,o42,icebreaker]
+   + 0.75 z_sor[s9,o43,helicopter] + 0.75 z_sor[s9,o43,ship]
+   + 0.75 z_sor[s9,o43,icebreaker] + 0.75 z_sor[s9,o44,helicopter]
+   + 0.75 z_sor[s9,o44,ship] + 0.75 z_sor[s9,o44,icebreaker]
+   + 0.75 z_sor[s9,o45,helicopter] + 0.75 z_sor[s9,o45,ship]
+   + 0.75 z_sor[s9,o45,icebreaker] + 0.75 z_sor[s9,o46,helicopter]
+   + 0.75 z_sor[s9,o46,ship] + 0.75 z_sor[s9,o46,icebreaker]
+   + 0.75 z_sor[s9,o47,helicopter] + 0.75 z_sor[s9,o47,ship]
+   + 0.75 z_sor[s9,o47,icebreaker] + 0.75 z_sor[s9,o48,helicopter]
+   + 0.75 z_sor[s9,o48,ship] + 0.75 z_sor[s9,o48,icebreaker]
+   + 0.75 z_sor[s9,o49,helicopter] + 0.75 z_sor[s9,o49,ship]
+   + 0.75 z_sor[s9,o49,icebreaker] + 0.75 z_sor[s9,o50,helicopter]
+   + 0.75 z_sor[s9,o50,ship] + 0.75 z_sor[s9,o50,icebreaker]
+   + 0.75 z_sor[s9,o51,helicopter] + 0.75 z_sor[s9,o51,ship]
+   + 0.75 z_sor[s9,o51,icebreaker] + 0.75 z_sor[s9,o52,helicopter]
+   + 0.75 z_sor[s9,o52,ship] + 0.75 z_sor[s9,o52,icebreaker]
+   + 0.75 z_sor[s9,o53,helicopter] + 0.75 z_sor[s9,o53,ship]
+   + 0.75 z_sor[s9,o53,icebreaker] + 0.75 z_sor[s9,o54,helicopter]
+   + 0.75 z_sor[s9,o54,ship] + 0.75 z_sor[s9,o54,icebreaker]
+   + 0.75 z_sor[s9,o55,helicopter] + 0.75 z_sor[s9,o55,ship]
+   + 0.75 z_sor[s9,o55,icebreaker] + 0.75 z_sor[s9,o56,helicopter]
+   + 0.75 z_sor[s9,o56,ship] + 0.75 z_sor[s9,o56,icebreaker]
+   + 0.75 z_sor[s9,o57,helicopter] + 0.75 z_sor[s9,o57,ship]
+   + 0.75 z_sor[s9,o57,icebreaker] + 0.75 z_sor[s9,o58,helicopter]
+   + 0.75 z_sor[s9,o58,ship] + 0.75 z_sor[s9,o58,icebreaker]
+   + 0.75 z_sor[s9,o59,helicopter] + 0.75 z_sor[s9,o59,ship]
+   + 0.75 z_sor[s9,o59,icebreaker] + 0.75 z_sor[s9,o60,helicopter]
+   + 0.75 z_sor[s9,o60,ship] + 0.75 z_sor[s9,o60,icebreaker]
+   + 0.75 z_sor[s9,o61,helicopter] + 0.75 z_sor[s9,o61,ship]
+   + 0.75 z_sor[s9,o61,icebreaker] + 0.75 z_sor[s9,o62,helicopter]
+   + 0.75 z_sor[s9,o62,ship] + 0.75 z_sor[s9,o62,icebreaker]
+   + 0.75 z_sor[s9,o63,helicopter] + 0.75 z_sor[s9,o63,ship]
+   + 0.75 z_sor[s9,o63,icebreaker] + 0.75 z_sor[s9,o64,helicopter]
+   + 0.75 z_sor[s9,o64,ship] + 0.75 z_sor[s9,o64,icebreaker]
+   + 0.75 z_sor[s9,o65,helicopter] + 0.75 z_sor[s9,o65,ship]
+   + 0.75 z_sor[s9,o65,icebreaker] + 0.75 z_sor[s9,o66,helicopter]
+   + 0.75 z_sor[s9,o66,ship] + 0.75 z_sor[s9,o66,icebreaker]
+   + 0.75 z_sor[s9,o67,helicopter] + 0.75 z_sor[s9,o67,ship]
+   + 0.75 z_sor[s9,o67,icebreaker] + 0.75 z_sor[s9,o68,helicopter]
+   + 0.75 z_sor[s9,o68,ship] + 0.75 z_sor[s9,o68,icebreaker]
+   + 0.75 z_sor[s9,o69,helicopter] + 0.75 z_sor[s9,o69,ship]
+   + 0.75 z_sor[s9,o69,icebreaker] + 0.75 z_sor[s9,o70,helicopter]
+   + 0.75 z_sor[s9,o70,ship] + 0.75 z_sor[s9,o70,icebreaker]
+   + 0.75 z_sor[s9,o71,helicopter] + 0.75 z_sor[s9,o71,ship]
+   + 0.75 z_sor[s9,o71,icebreaker] + 0.75 z_sor[s9,o72,helicopter]
+   + 0.75 z_sor[s9,o72,ship] + 0.75 z_sor[s9,o72,icebreaker]
+   + 0.75 z_sor[s9,o73,helicopter] + 0.75 z_sor[s9,o73,ship]
+   + 0.75 z_sor[s9,o73,icebreaker] + 0.75 z_sor[s9,o74,helicopter]
+   + 0.75 z_sor[s9,o74,ship] + 0.75 z_sor[s9,o74,icebreaker]
+   + 0.75 z_sor[s9,o75,helicopter] + 0.75 z_sor[s9,o75,ship]
+   + 0.75 z_sor[s9,o75,icebreaker] + 0.75 z_sor[s9,o76,helicopter]
+   + 0.75 z_sor[s9,o76,ship] + 0.75 z_sor[s9,o76,icebreaker]
+   + 0.75 z_sor[s9,o77,helicopter] + 0.75 z_sor[s9,o77,ship]
+   + 0.75 z_sor[s9,o77,icebreaker] + 0.75 z_sor[s9,o78,helicopter]
+   + 0.75 z_sor[s9,o78,ship] + 0.75 z_sor[s9,o78,icebreaker]
+   + 0.75 z_sor[s9,o79,helicopter] + 0.75 z_sor[s9,o79,ship]
+   + 0.75 z_sor[s9,o79,icebreaker] + 0.75 z_sor[s9,o80,helicopter]
+   + 0.75 z_sor[s9,o80,ship] + 0.75 z_sor[s9,o80,icebreaker]
+   + 0.75 z_sor[s9,o81,helicopter] + 0.75 z_sor[s9,o81,ship]
+   + 0.75 z_sor[s9,o81,icebreaker] + 0.75 z_sor[s9,o82,helicopter]
+   + 0.75 z_sor[s9,o82,ship] + 0.75 z_sor[s9,o82,icebreaker]
+   + 0.75 z_sor[s9,o83,helicopter] + 0.75 z_sor[s9,o83,ship]
+   + 0.75 z_sor[s9,o83,icebreaker] + 0.75 z_sor[s9,o84,helicopter]
+   + 0.75 z_sor[s9,o84,ship] + 0.75 z_sor[s9,o84,icebreaker]
+   + 0.75 z_sor[s9,o85,helicopter] + 0.75 z_sor[s9,o85,ship]
+   + 0.75 z_sor[s9,o85,icebreaker] + 0.75 z_sor[s9,o86,helicopter]
+   + 0.75 z_sor[s9,o86,ship] + 0.75 z_sor[s9,o86,icebreaker]
+   + 0.75 z_sor[s9,o87,helicopter] + 0.75 z_sor[s9,o87,ship]
+   + 0.75 z_sor[s9,o87,icebreaker] + 0.75 z_sor[s9,o88,helicopter]
+   + 0.75 z_sor[s9,o88,ship] + 0.75 z_sor[s9,o88,icebreaker]
+   + 0.75 z_sor[s9,o89,helicopter] + 0.75 z_sor[s9,o89,ship]
+   + 0.75 z_sor[s9,o89,icebreaker] + 0.75 z_sor[s9,o90,helicopter]
+   + 0.75 z_sor[s9,o90,ship] + 0.75 z_sor[s9,o90,icebreaker]
+   + 0.75 z_sor[s9,o91,helicopter] + 0.75 z_sor[s9,o91,ship]
+   + 0.75 z_sor[s9,o91,icebreaker] + 0.75 z_sor[s9,o92,helicopter]
+   + 0.75 z_sor[s9,o92,ship] + 0.75 z_sor[s9,o92,icebreaker]
+   + 0.75 z_sor[s9,o93,helicopter] + 0.75 z_sor[s9,o93,ship]
+   + 0.75 z_sor[s9,o93,icebreaker] + 0.75 z_sor[s9,o94,helicopter]
+   + 0.75 z_sor[s9,o94,ship] + 0.75 z_sor[s9,o94,icebreaker]
+   + 0.75 z_sor[s9,o95,helicopter] + 0.75 z_sor[s9,o95,ship]
+   + 0.75 z_sor[s9,o95,icebreaker] + 0.75 z_sor[s9,o96,helicopter]
+   + 0.75 z_sor[s9,o96,ship] + 0.75 z_sor[s9,o96,icebreaker]
+   + 0.75 z_sor[s9,o97,helicopter] + 0.75 z_sor[s9,o97,ship]
+   + 0.75 z_sor[s9,o97,icebreaker] + 0.75 z_sor[s9,o98,helicopter]
+   + 0.75 z_sor[s9,o98,ship] + 0.75 z_sor[s9,o98,icebreaker]
+   + 0.75 z_sor[s9,o99,helicopter] + 0.75 z_sor[s9,o99,ship]
+   + 0.75 z_sor[s9,o99,icebreaker] + 0.75 z_sor[s9,o100,helicopter]
+   + 0.75 z_sor[s9,o100,ship] + 0.75 z_sor[s9,o100,icebreaker]
+   + 0.75 z_sor[s200,o1,helicopter] + 0.75 z_sor[s200,o1,ship]
+   + 0.75 z_sor[s200,o1,icebreaker] + 0.75 z_sor[s200,o2,helicopter]
+   + 0.75 z_sor[s200,o2,ship] + 0.75 z_sor[s200,o2,icebreaker]
+   + 0.75 z_sor[s200,o3,helicopter] + 0.75 z_sor[s200,o3,ship]
+   + 0.75 z_sor[s200,o3,icebreaker] + 0.75 z_sor[s200,o4,helicopter]
+   + 0.75 z_sor[s200,o4,ship] + 0.75 z_sor[s200,o4,icebreaker]
+   + 0.75 z_sor[s200,o5,helicopter] + 0.75 z_sor[s200,o5,ship]
+   + 0.75 z_sor[s200,o5,icebreaker] + 0.75 z_sor[s200,o6,helicopter]
+   + 0.75 z_sor[s200,o6,ship] + 0.75 z_sor[s200,o6,icebreaker]
+   + 0.75 z_sor[s200,o7,helicopter] + 0.75 z_sor[s200,o7,ship]
+   + 0.75 z_sor[s200,o7,icebreaker] + 0.75 z_sor[s200,o8,helicopter]
+   + 0.75 z_sor[s200,o8,ship] + 0.75 z_sor[s200,o8,icebreaker]
+   + 0.75 z_sor[s200,o9,helicopter] + 0.75 z_sor[s200,o9,ship]
+   + 0.75 z_sor[s200,o9,icebreaker] + 0.75 z_sor[s200,o10,helicopter]
+   + 0.75 z_sor[s200,o10,ship] + 0.75 z_sor[s200,o10,icebreaker]
+   + 0.75 z_sor[s200,o11,helicopter] + 0.75 z_sor[s200,o11,ship]
+   + 0.75 z_sor[s200,o11,icebreaker] + 0.75 z_sor[s200,o12,helicopter]
+   + 0.75 z_sor[s200,o12,ship] + 0.75 z_sor[s200,o12,icebreaker]
+   + 0.75 z_sor[s200,o13,helicopter] + 0.75 z_sor[s200,o13,ship]
+   + 0.75 z_sor[s200,o13,icebreaker] + 0.75 z_sor[s200,o14,helicopter]
+   + 0.75 z_sor[s200,o14,ship] + 0.75 z_sor[s200,o14,icebreaker]
+   + 0.75 z_sor[s200,o15,helicopter] + 0.75 z_sor[s200,o15,ship]
+   + 0.75 z_sor[s200,o15,icebreaker] + 0.75 z_sor[s200,o16,helicopter]
+   + 0.75 z_sor[s200,o16,ship] + 0.75 z_sor[s200,o16,icebreaker]
+   + 0.75 z_sor[s200,o17,helicopter] + 0.75 z_sor[s200,o17,ship]
+   + 0.75 z_sor[s200,o17,icebreaker] + 0.75 z_sor[s200,o18,helicopter]
+   + 0.75 z_sor[s200,o18,ship] + 0.75 z_sor[s200,o18,icebreaker]
+   + 0.75 z_sor[s200,o19,helicopter] + 0.75 z_sor[s200,o19,ship]
+   + 0.75 z_sor[s200,o19,icebreaker] + 0.75 z_sor[s200,o20,helicopter]
+   + 0.75 z_sor[s200,o20,ship] + 0.75 z_sor[s200,o20,icebreaker]
+   + 0.75 z_sor[s200,o21,helicopter] + 0.75 z_sor[s200,o21,ship]
+   + 0.75 z_sor[s200,o21,icebreaker] + 0.75 z_sor[s200,o22,helicopter]
+   + 0.75 z_sor[s200,o22,ship] + 0.75 z_sor[s200,o22,icebreaker]
+   + 0.75 z_sor[s200,o23,helicopter] + 0.75 z_sor[s200,o23,ship]
+   + 0.75 z_sor[s200,o23,icebreaker] + 0.75 z_sor[s200,o24,helicopter]
+   + 0.75 z_sor[s200,o24,ship] + 0.75 z_sor[s200,o24,icebreaker]
+   + 0.75 z_sor[s200,o25,helicopter] + 0.75 z_sor[s200,o25,ship]
+   + 0.75 z_sor[s200,o25,icebreaker] + 0.75 z_sor[s200,o26,helicopter]
+   + 0.75 z_sor[s200,o26,ship] + 0.75 z_sor[s200,o26,icebreaker]
+   + 0.75 z_sor[s200,o27,helicopter] + 0.75 z_sor[s200,o27,ship]
+   + 0.75 z_sor[s200,o27,icebreaker] + 0.75 z_sor[s200,o28,helicopter]
+   + 0.75 z_sor[s200,o28,ship] + 0.75 z_sor[s200,o28,icebreaker]
+   + 0.75 z_sor[s200,o29,helicopter] + 0.75 z_sor[s200,o29,ship]
+   + 0.75 z_sor[s200,o29,icebreaker] + 0.75 z_sor[s200,o30,helicopter]
+   + 0.75 z_sor[s200,o30,ship] + 0.75 z_sor[s200,o30,icebreaker]
+   + 0.75 z_sor[s200,o31,helicopter] + 0.75 z_sor[s200,o31,ship]
+   + 0.75 z_sor[s200,o31,icebreaker] + 0.75 z_sor[s200,o32,helicopter]
+   + 0.75 z_sor[s200,o32,ship] + 0.75 z_sor[s200,o32,icebreaker]
+   + 0.75 z_sor[s200,o33,helicopter] + 0.75 z_sor[s200,o33,ship]
+   + 0.75 z_sor[s200,o33,icebreaker] + 0.75 z_sor[s200,o34,helicopter]
+   + 0.75 z_sor[s200,o34,ship] + 0.75 z_sor[s200,o34,icebreaker]
+   + 0.75 z_sor[s200,o35,helicopter] + 0.75 z_sor[s200,o35,ship]
+   + 0.75 z_sor[s200,o35,icebreaker] + 0.75 z_sor[s200,o36,helicopter]
+   + 0.75 z_sor[s200,o36,ship] + 0.75 z_sor[s200,o36,icebreaker]
+   + 0.75 z_sor[s200,o37,helicopter] + 0.75 z_sor[s200,o37,ship]
+   + 0.75 z_sor[s200,o37,icebreaker] + 0.75 z_sor[s200,o38,helicopter]
+   + 0.75 z_sor[s200,o38,ship] + 0.75 z_sor[s200,o38,icebreaker]
+   + 0.75 z_sor[s200,o39,helicopter] + 0.75 z_sor[s200,o39,ship]
+   + 0.75 z_sor[s200,o39,icebreaker] + 0.75 z_sor[s200,o40,helicopter]
+   + 0.75 z_sor[s200,o40,ship] + 0.75 z_sor[s200,o40,icebreaker]
+   + 0.75 z_sor[s200,o41,helicopter] + 0.75 z_sor[s200,o41,ship]
+   + 0.75 z_sor[s200,o41,icebreaker] + 0.75 z_sor[s200,o42,helicopter]
+   + 0.75 z_sor[s200,o42,ship] + 0.75 z_sor[s200,o42,icebreaker]
+   + 0.75 z_sor[s200,o43,helicopter] + 0.75 z_sor[s200,o43,ship]
+   + 0.75 z_sor[s200,o43,icebreaker] + 0.75 z_sor[s200,o44,helicopter]
+   + 0.75 z_sor[s200,o44,ship] + 0.75 z_sor[s200,o44,icebreaker]
+   + 0.75 z_sor[s200,o45,helicopter] + 0.75 z_sor[s200,o45,ship]
+   + 0.75 z_sor[s200,o45,icebreaker] + 0.75 z_sor[s200,o46,helicopter]
+   + 0.75 z_sor[s200,o46,ship] + 0.75 z_sor[s200,o46,icebreaker]
+   + 0.75 z_sor[s200,o47,helicopter] + 0.75 z_sor[s200,o47,ship]
+   + 0.75 z_sor[s200,o47,icebreaker] + 0.75 z_sor[s200,o48,helicopter]
+   + 0.75 z_sor[s200,o48,ship] + 0.75 z_sor[s200,o48,icebreaker]
+   + 0.75 z_sor[s200,o49,helicopter] + 0.75 z_sor[s200,o49,ship]
+   + 0.75 z_sor[s200,o49,icebreaker] + 0.75 z_sor[s200,o50,helicopter]
+   + 0.75 z_sor[s200,o50,ship] + 0.75 z_sor[s200,o50,icebreaker]
+   + 0.75 z_sor[s200,o51,helicopter] + 0.75 z_sor[s200,o51,ship]
+   + 0.75 z_sor[s200,o51,icebreaker] + 0.75 z_sor[s200,o52,helicopter]
+   + 0.75 z_sor[s200,o52,ship] + 0.75 z_sor[s200,o52,icebreaker]
+   + 0.75 z_sor[s200,o53,helicopter] + 0.75 z_sor[s200,o53,ship]
+   + 0.75 z_sor[s200,o53,icebreaker] + 0.75 z_sor[s200,o54,helicopter]
+   + 0.75 z_sor[s200,o54,ship] + 0.75 z_sor[s200,o54,icebreaker]
+   + 0.75 z_sor[s200,o55,helicopter] + 0.75 z_sor[s200,o55,ship]
+   + 0.75 z_sor[s200,o55,icebreaker] + 0.75 z_sor[s200,o56,helicopter]
+   + 0.75 z_sor[s200,o56,ship] + 0.75 z_sor[s200,o56,icebreaker]
+   + 0.75 z_sor[s200,o57,helicopter] + 0.75 z_sor[s200,o57,ship]
+   + 0.75 z_sor[s200,o57,icebreaker] + 0.75 z_sor[s200,o58,helicopter]
+   + 0.75 z_sor[s200,o58,ship] + 0.75 z_sor[s200,o58,icebreaker]
+   + 0.75 z_sor[s200,o59,helicopter] + 0.75 z_sor[s200,o59,ship]
+   + 0.75 z_sor[s200,o59,icebreaker] + 0.75 z_sor[s200,o60,helicopter]
+   + 0.75 z_sor[s200,o60,ship] + 0.75 z_sor[s200,o60,icebreaker]
+   + 0.75 z_sor[s200,o61,helicopter] + 0.75 z_sor[s200,o61,ship]
+   + 0.75 z_sor[s200,o61,icebreaker] + 0.75 z_sor[s200,o62,helicopter]
+   + 0.75 z_sor[s200,o62,ship] + 0.75 z_sor[s200,o62,icebreaker]
+   + 0.75 z_sor[s200,o63,helicopter] + 0.75 z_sor[s200,o63,ship]
+   + 0.75 z_sor[s200,o63,icebreaker] + 0.75 z_sor[s200,o64,helicopter]
+   + 0.75 z_sor[s200,o64,ship] + 0.75 z_sor[s200,o64,icebreaker]
+   + 0.75 z_sor[s200,o65,helicopter] + 0.75 z_sor[s200,o65,ship]
+   + 0.75 z_sor[s200,o65,icebreaker] + 0.75 z_sor[s200,o66,helicopter]
+   + 0.75 z_sor[s200,o66,ship] + 0.75 z_sor[s200,o66,icebreaker]
+   + 0.75 z_sor[s200,o67,helicopter] + 0.75 z_sor[s200,o67,ship]
+   + 0.75 z_sor[s200,o67,icebreaker] + 0.75 z_sor[s200,o68,helicopter]
+   + 0.75 z_sor[s200,o68,ship] + 0.75 z_sor[s200,o68,icebreaker]
+   + 0.75 z_sor[s200,o69,helicopter] + 0.75 z_sor[s200,o69,ship]
+   + 0.75 z_sor[s200,o69,icebreaker] + 0.75 z_sor[s200,o70,helicopter]
+   + 0.75 z_sor[s200,o70,ship] + 0.75 z_sor[s200,o70,icebreaker]
+   + 0.75 z_sor[s200,o71,helicopter] + 0.75 z_sor[s200,o71,ship]
+   + 0.75 z_sor[s200,o71,icebreaker] + 0.75 z_sor[s200,o72,helicopter]
+   + 0.75 z_sor[s200,o72,ship] + 0.75 z_sor[s200,o72,icebreaker]
+   + 0.75 z_sor[s200,o73,helicopter] + 0.75 z_sor[s200,o73,ship]
+   + 0.75 z_sor[s200,o73,icebreaker] + 0.75 z_sor[s200,o74,helicopter]
+   + 0.75 z_sor[s200,o74,ship] + 0.75 z_sor[s200,o74,icebreaker]
+   + 0.75 z_sor[s200,o75,helicopter] + 0.75 z_sor[s200,o75,ship]
+   + 0.75 z_sor[s200,o75,icebreaker] + 0.75 z_sor[s200,o76,helicopter]
+   + 0.75 z_sor[s200,o76,ship] + 0.75 z_sor[s200,o76,icebreaker]
+   + 0.75 z_sor[s200,o77,helicopter] + 0.75 z_sor[s200,o77,ship]
+   + 0.75 z_sor[s200,o77,icebreaker] + 0.75 z_sor[s200,o78,helicopter]
+   + 0.75 z_sor[s200,o78,ship] + 0.75 z_sor[s200,o78,icebreaker]
+   + 0.75 z_sor[s200,o79,helicopter] + 0.75 z_sor[s200,o79,ship]
+   + 0.75 z_sor[s200,o79,icebreaker] + 0.75 z_sor[s200,o80,helicopter]
+   + 0.75 z_sor[s200,o80,ship] + 0.75 z_sor[s200,o80,icebreaker]
+   + 0.75 z_sor[s200,o81,helicopter] + 0.75 z_sor[s200,o81,ship]
+   + 0.75 z_sor[s200,o81,icebreaker] + 0.75 z_sor[s200,o82,helicopter]
+   + 0.75 z_sor[s200,o82,ship] + 0.75 z_sor[s200,o82,icebreaker]
+   + 0.75 z_sor[s200,o83,helicopter] + 0.75 z_sor[s200,o83,ship]
+   + 0.75 z_sor[s200,o83,icebreaker] + 0.75 z_sor[s200,o84,helicopter]
+   + 0.75 z_sor[s200,o84,ship] + 0.75 z_sor[s200,o84,icebreaker]
+   + 0.75 z_sor[s200,o85,helicopter] + 0.75 z_sor[s200,o85,ship]
+   + 0.75 z_sor[s200,o85,icebreaker] + 0.75 z_sor[s200,o86,helicopter]
+   + 0.75 z_sor[s200,o86,ship] + 0.75 z_sor[s200,o86,icebreaker]
+   + 0.75 z_sor[s200,o87,helicopter] + 0.75 z_sor[s200,o87,ship]
+   + 0.75 z_sor[s200,o87,icebreaker] + 0.75 z_sor[s200,o88,helicopter]
+   + 0.75 z_sor[s200,o88,ship] + 0.75 z_sor[s200,o88,icebreaker]
+   + 0.75 z_sor[s200,o89,helicopter] + 0.75 z_sor[s200,o89,ship]
+   + 0.75 z_sor[s200,o89,icebreaker] + 0.75 z_sor[s200,o90,helicopter]
+   + 0.75 z_sor[s200,o90,ship] + 0.75 z_sor[s200,o90,icebreaker]
+   + 0.75 z_sor[s200,o91,helicopter] + 0.75 z_sor[s200,o91,ship]
+   + 0.75 z_sor[s200,o91,icebreaker] + 0.75 z_sor[s200,o92,helicopter]
+   + 0.75 z_sor[s200,o92,ship] + 0.75 z_sor[s200,o92,icebreaker]
+   + 0.75 z_sor[s200,o93,helicopter] + 0.75 z_sor[s200,o93,ship]
+   + 0.75 z_sor[s200,o93,icebreaker] + 0.75 z_sor[s200,o94,helicopter]
+   + 0.75 z_sor[s200,o94,ship] + 0.75 z_sor[s200,o94,icebreaker]
+   + 0.75 z_sor[s200,o95,helicopter] + 0.75 z_sor[s200,o95,ship]
+   + 0.75 z_sor[s200,o95,icebreaker] + 0.75 z_sor[s200,o96,helicopter]
+   + 0.75 z_sor[s200,o96,ship] + 0.75 z_sor[s200,o96,icebreaker]
+   + 0.75 z_sor[s200,o97,helicopter] + 0.75 z_sor[s200,o97,ship]
+   + 0.75 z_sor[s200,o97,icebreaker] + 0.75 z_sor[s200,o98,helicopter]
+   + 0.75 z_sor[s200,o98,ship] + 0.75 z_sor[s200,o98,icebreaker]
+   + 0.75 z_sor[s200,o99,helicopter] + 0.75 z_sor[s200,o99,ship]
+   + 0.75 z_sor[s200,o99,icebreaker] + 0.75 z_sor[s200,o100,helicopter]
+   + 0.75 z_sor[s200,o100,ship] + 0.75 z_sor[s200,o100,icebreaker]
+   + 0.75 z_sor[s300,o1,helicopter] + 0.75 z_sor[s300,o1,ship]
+   + 0.75 z_sor[s300,o1,icebreaker] + 0.75 z_sor[s300,o2,helicopter]
+   + 0.75 z_sor[s300,o2,ship] + 0.75 z_sor[s300,o2,icebreaker]
+   + 0.75 z_sor[s300,o3,helicopter] + 0.75 z_sor[s300,o3,ship]
+   + 0.75 z_sor[s300,o3,icebreaker] + 0.75 z_sor[s300,o4,helicopter]
+   + 0.75 z_sor[s300,o4,ship] + 0.75 z_sor[s300,o4,icebreaker]
+   + 0.75 z_sor[s300,o5,helicopter] + 0.75 z_sor[s300,o5,ship]
+   + 0.75 z_sor[s300,o5,icebreaker] + 0.75 z_sor[s300,o6,helicopter]
+   + 0.75 z_sor[s300,o6,ship] + 0.75 z_sor[s300,o6,icebreaker]
+   + 0.75 z_sor[s300,o7,helicopter] + 0.75 z_sor[s300,o7,ship]
+   + 0.75 z_sor[s300,o7,icebreaker] + 0.75 z_sor[s300,o8,helicopter]
+   + 0.75 z_sor[s300,o8,ship] + 0.75 z_sor[s300,o8,icebreaker]
+   + 0.75 z_sor[s300,o9,helicopter] + 0.75 z_sor[s300,o9,ship]
+   + 0.75 z_sor[s300,o9,icebreaker] + 0.75 z_sor[s300,o10,helicopter]
+   + 0.75 z_sor[s300,o10,ship] + 0.75 z_sor[s300,o10,icebreaker]
+   + 0.75 z_sor[s300,o11,helicopter] + 0.75 z_sor[s300,o11,ship]
+   + 0.75 z_sor[s300,o11,icebreaker] + 0.75 z_sor[s300,o12,helicopter]
+   + 0.75 z_sor[s300,o12,ship] + 0.75 z_sor[s300,o12,icebreaker]
+   + 0.75 z_sor[s300,o13,helicopter] + 0.75 z_sor[s300,o13,ship]
+   + 0.75 z_sor[s300,o13,icebreaker] + 0.75 z_sor[s300,o14,helicopter]
+   + 0.75 z_sor[s300,o14,ship] + 0.75 z_sor[s300,o14,icebreaker]
+   + 0.75 z_sor[s300,o15,helicopter] + 0.75 z_sor[s300,o15,ship]
+   + 0.75 z_sor[s300,o15,icebreaker] + 0.75 z_sor[s300,o16,helicopter]
+   + 0.75 z_sor[s300,o16,ship] + 0.75 z_sor[s300,o16,icebreaker]
+   + 0.75 z_sor[s300,o17,helicopter] + 0.75 z_sor[s300,o17,ship]
+   + 0.75 z_sor[s300,o17,icebreaker] + 0.75 z_sor[s300,o18,helicopter]
+   + 0.75 z_sor[s300,o18,ship] + 0.75 z_sor[s300,o18,icebreaker]
+   + 0.75 z_sor[s300,o19,helicopter] + 0.75 z_sor[s300,o19,ship]
+   + 0.75 z_sor[s300,o19,icebreaker] + 0.75 z_sor[s300,o20,helicopter]
+   + 0.75 z_sor[s300,o20,ship] + 0.75 z_sor[s300,o20,icebreaker]
+   + 0.75 z_sor[s300,o21,helicopter] + 0.75 z_sor[s300,o21,ship]
+   + 0.75 z_sor[s300,o21,icebreaker] + 0.75 z_sor[s300,o22,helicopter]
+   + 0.75 z_sor[s300,o22,ship] + 0.75 z_sor[s300,o22,icebreaker]
+   + 0.75 z_sor[s300,o23,helicopter] + 0.75 z_sor[s300,o23,ship]
+   + 0.75 z_sor[s300,o23,icebreaker] + 0.75 z_sor[s300,o24,helicopter]
+   + 0.75 z_sor[s300,o24,ship] + 0.75 z_sor[s300,o24,icebreaker]
+   + 0.75 z_sor[s300,o25,helicopter] + 0.75 z_sor[s300,o25,ship]
+   + 0.75 z_sor[s300,o25,icebreaker] + 0.75 z_sor[s300,o26,helicopter]
+   + 0.75 z_sor[s300,o26,ship] + 0.75 z_sor[s300,o26,icebreaker]
+   + 0.75 z_sor[s300,o27,helicopter] + 0.75 z_sor[s300,o27,ship]
+   + 0.75 z_sor[s300,o27,icebreaker] + 0.75 z_sor[s300,o28,helicopter]
+   + 0.75 z_sor[s300,o28,ship] + 0.75 z_sor[s300,o28,icebreaker]
+   + 0.75 z_sor[s300,o29,helicopter] + 0.75 z_sor[s300,o29,ship]
+   + 0.75 z_sor[s300,o29,icebreaker] + 0.75 z_sor[s300,o30,helicopter]
+   + 0.75 z_sor[s300,o30,ship] + 0.75 z_sor[s300,o30,icebreaker]
+   + 0.75 z_sor[s300,o31,helicopter] + 0.75 z_sor[s300,o31,ship]
+   + 0.75 z_sor[s300,o31,icebreaker] + 0.75 z_sor[s300,o32,helicopter]
+   + 0.75 z_sor[s300,o32,ship] + 0.75 z_sor[s300,o32,icebreaker]
+   + 0.75 z_sor[s300,o33,helicopter] + 0.75 z_sor[s300,o33,ship]
+   + 0.75 z_sor[s300,o33,icebreaker] + 0.75 z_sor[s300,o34,helicopter]
+   + 0.75 z_sor[s300,o34,ship] + 0.75 z_sor[s300,o34,icebreaker]
+   + 0.75 z_sor[s300,o35,helicopter] + 0.75 z_sor[s300,o35,ship]
+   + 0.75 z_sor[s300,o35,icebreaker] + 0.75 z_sor[s300,o36,helicopter]
+   + 0.75 z_sor[s300,o36,ship] + 0.75 z_sor[s300,o36,icebreaker]
+   + 0.75 z_sor[s300,o37,helicopter] + 0.75 z_sor[s300,o37,ship]
+   + 0.75 z_sor[s300,o37,icebreaker] + 0.75 z_sor[s300,o38,helicopter]
+   + 0.75 z_sor[s300,o38,ship] + 0.75 z_sor[s300,o38,icebreaker]
+   + 0.75 z_sor[s300,o39,helicopter] + 0.75 z_sor[s300,o39,ship]
+   + 0.75 z_sor[s300,o39,icebreaker] + 0.75 z_sor[s300,o40,helicopter]
+   + 0.75 z_sor[s300,o40,ship] + 0.75 z_sor[s300,o40,icebreaker]
+   + 0.75 z_sor[s300,o41,helicopter] + 0.75 z_sor[s300,o41,ship]
+   + 0.75 z_sor[s300,o41,icebreaker] + 0.75 z_sor[s300,o42,helicopter]
+   + 0.75 z_sor[s300,o42,ship] + 0.75 z_sor[s300,o42,icebreaker]
+   + 0.75 z_sor[s300,o43,helicopter] + 0.75 z_sor[s300,o43,ship]
+   + 0.75 z_sor[s300,o43,icebreaker] + 0.75 z_sor[s300,o44,helicopter]
+   + 0.75 z_sor[s300,o44,ship] + 0.75 z_sor[s300,o44,icebreaker]
+   + 0.75 z_sor[s300,o45,helicopter] + 0.75 z_sor[s300,o45,ship]
+   + 0.75 z_sor[s300,o45,icebreaker] + 0.75 z_sor[s300,o46,helicopter]
+   + 0.75 z_sor[s300,o46,ship] + 0.75 z_sor[s300,o46,icebreaker]
+   + 0.75 z_sor[s300,o47,helicopter] + 0.75 z_sor[s300,o47,ship]
+   + 0.75 z_sor[s300,o47,icebreaker] + 0.75 z_sor[s300,o48,helicopter]
+   + 0.75 z_sor[s300,o48,ship] + 0.75 z_sor[s300,o48,icebreaker]
+   + 0.75 z_sor[s300,o49,helicopter] + 0.75 z_sor[s300,o49,ship]
+   + 0.75 z_sor[s300,o49,icebreaker] + 0.75 z_sor[s300,o50,helicopter]
+   + 0.75 z_sor[s300,o50,ship] + 0.75 z_sor[s300,o50,icebreaker]
+   + 0.75 z_sor[s300,o51,helicopter] + 0.75 z_sor[s300,o51,ship]
+   + 0.75 z_sor[s300,o51,icebreaker] + 0.75 z_sor[s300,o52,helicopter]
+   + 0.75 z_sor[s300,o52,ship] + 0.75 z_sor[s300,o52,icebreaker]
+   + 0.75 z_sor[s300,o53,helicopter] + 0.75 z_sor[s300,o53,ship]
+   + 0.75 z_sor[s300,o53,icebreaker] + 0.75 z_sor[s300,o54,helicopter]
+   + 0.75 z_sor[s300,o54,ship] + 0.75 z_sor[s300,o54,icebreaker]
+   + 0.75 z_sor[s300,o55,helicopter] + 0.75 z_sor[s300,o55,ship]
+   + 0.75 z_sor[s300,o55,icebreaker] + 0.75 z_sor[s300,o56,helicopter]
+   + 0.75 z_sor[s300,o56,ship] + 0.75 z_sor[s300,o56,icebreaker]
+   + 0.75 z_sor[s300,o57,helicopter] + 0.75 z_sor[s300,o57,ship]
+   + 0.75 z_sor[s300,o57,icebreaker] + 0.75 z_sor[s300,o58,helicopter]
+   + 0.75 z_sor[s300,o58,ship] + 0.75 z_sor[s300,o58,icebreaker]
+   + 0.75 z_sor[s300,o59,helicopter] + 0.75 z_sor[s300,o59,ship]
+   + 0.75 z_sor[s300,o59,icebreaker] + 0.75 z_sor[s300,o60,helicopter]
+   + 0.75 z_sor[s300,o60,ship] + 0.75 z_sor[s300,o60,icebreaker]
+   + 0.75 z_sor[s300,o61,helicopter] + 0.75 z_sor[s300,o61,ship]
+   + 0.75 z_sor[s300,o61,icebreaker] + 0.75 z_sor[s300,o62,helicopter]
+   + 0.75 z_sor[s300,o62,ship] + 0.75 z_sor[s300,o62,icebreaker]
+   + 0.75 z_sor[s300,o63,helicopter] + 0.75 z_sor[s300,o63,ship]
+   + 0.75 z_sor[s300,o63,icebreaker] + 0.75 z_sor[s300,o64,helicopter]
+   + 0.75 z_sor[s300,o64,ship] + 0.75 z_sor[s300,o64,icebreaker]
+   + 0.75 z_sor[s300,o65,helicopter] + 0.75 z_sor[s300,o65,ship]
+   + 0.75 z_sor[s300,o65,icebreaker] + 0.75 z_sor[s300,o66,helicopter]
+   + 0.75 z_sor[s300,o66,ship] + 0.75 z_sor[s300,o66,icebreaker]
+   + 0.75 z_sor[s300,o67,helicopter] + 0.75 z_sor[s300,o67,ship]
+   + 0.75 z_sor[s300,o67,icebreaker] + 0.75 z_sor[s300,o68,helicopter]
+   + 0.75 z_sor[s300,o68,ship] + 0.75 z_sor[s300,o68,icebreaker]
+   + 0.75 z_sor[s300,o69,helicopter] + 0.75 z_sor[s300,o69,ship]
+   + 0.75 z_sor[s300,o69,icebreaker] + 0.75 z_sor[s300,o70,helicopter]
+   + 0.75 z_sor[s300,o70,ship] + 0.75 z_sor[s300,o70,icebreaker]
+   + 0.75 z_sor[s300,o71,helicopter] + 0.75 z_sor[s300,o71,ship]
+   + 0.75 z_sor[s300,o71,icebreaker] + 0.75 z_sor[s300,o72,helicopter]
+   + 0.75 z_sor[s300,o72,ship] + 0.75 z_sor[s300,o72,icebreaker]
+   + 0.75 z_sor[s300,o73,helicopter] + 0.75 z_sor[s300,o73,ship]
+   + 0.75 z_sor[s300,o73,icebreaker] + 0.75 z_sor[s300,o74,helicopter]
+   + 0.75 z_sor[s300,o74,ship] + 0.75 z_sor[s300,o74,icebreaker]
+   + 0.75 z_sor[s300,o75,helicopter] + 0.75 z_sor[s300,o75,ship]
+   + 0.75 z_sor[s300,o75,icebreaker] + 0.75 z_sor[s300,o76,helicopter]
+   + 0.75 z_sor[s300,o76,ship] + 0.75 z_sor[s300,o76,icebreaker]
+   + 0.75 z_sor[s300,o77,helicopter] + 0.75 z_sor[s300,o77,ship]
+   + 0.75 z_sor[s300,o77,icebreaker] + 0.75 z_sor[s300,o78,helicopter]
+   + 0.75 z_sor[s300,o78,ship] + 0.75 z_sor[s300,o78,icebreaker]
+   + 0.75 z_sor[s300,o79,helicopter] + 0.75 z_sor[s300,o79,ship]
+   + 0.75 z_sor[s300,o79,icebreaker] + 0.75 z_sor[s300,o80,helicopter]
+   + 0.75 z_sor[s300,o80,ship] + 0.75 z_sor[s300,o80,icebreaker]
+   + 0.75 z_sor[s300,o81,helicopter] + 0.75 z_sor[s300,o81,ship]
+   + 0.75 z_sor[s300,o81,icebreaker] + 0.75 z_sor[s300,o82,helicopter]
+   + 0.75 z_sor[s300,o82,ship] + 0.75 z_sor[s300,o82,icebreaker]
+   + 0.75 z_sor[s300,o83,helicopter] + 0.75 z_sor[s300,o83,ship]
+   + 0.75 z_sor[s300,o83,icebreaker] + 0.75 z_sor[s300,o84,helicopter]
+   + 0.75 z_sor[s300,o84,ship] + 0.75 z_sor[s300,o84,icebreaker]
+   + 0.75 z_sor[s300,o85,helicopter] + 0.75 z_sor[s300,o85,ship]
+   + 0.75 z_sor[s300,o85,icebreaker] + 0.75 z_sor[s300,o86,helicopter]
+   + 0.75 z_sor[s300,o86,ship] + 0.75 z_sor[s300,o86,icebreaker]
+   + 0.75 z_sor[s300,o87,helicopter] + 0.75 z_sor[s300,o87,ship]
+   + 0.75 z_sor[s300,o87,icebreaker] + 0.75 z_sor[s300,o88,helicopter]
+   + 0.75 z_sor[s300,o88,ship] + 0.75 z_sor[s300,o88,icebreaker]
+   + 0.75 z_sor[s300,o89,helicopter] + 0.75 z_sor[s300,o89,ship]
+   + 0.75 z_sor[s300,o89,icebreaker] + 0.75 z_sor[s300,o90,helicopter]
+   + 0.75 z_sor[s300,o90,ship] + 0.75 z_sor[s300,o90,icebreaker]
+   + 0.75 z_sor[s300,o91,helicopter] + 0.75 z_sor[s300,o91,ship]
+   + 0.75 z_sor[s300,o91,icebreaker] + 0.75 z_sor[s300,o92,helicopter]
+   + 0.75 z_sor[s300,o92,ship] + 0.75 z_sor[s300,o92,icebreaker]
+   + 0.75 z_sor[s300,o93,helicopter] + 0.75 z_sor[s300,o93,ship]
+   + 0.75 z_sor[s300,o93,icebreaker] + 0.75 z_sor[s300,o94,helicopter]
+   + 0.75 z_sor[s300,o94,ship] + 0.75 z_sor[s300,o94,icebreaker]
+   + 0.75 z_sor[s300,o95,helicopter] + 0.75 z_sor[s300,o95,ship]
+   + 0.75 z_sor[s300,o95,icebreaker] + 0.75 z_sor[s300,o96,helicopter]
+   + 0.75 z_sor[s300,o96,ship] + 0.75 z_sor[s300,o96,icebreaker]
+   + 0.75 z_sor[s300,o97,helicopter] + 0.75 z_sor[s300,o97,ship]
+   + 0.75 z_sor[s300,o97,icebreaker] + 0.75 z_sor[s300,o98,helicopter]
+   + 0.75 z_sor[s300,o98,ship] + 0.75 z_sor[s300,o98,icebreaker]
+   + 0.75 z_sor[s300,o99,helicopter] + 0.75 z_sor[s300,o99,ship]
+   + 0.75 z_sor[s300,o99,icebreaker] + 0.75 z_sor[s300,o100,helicopter]
+   + 0.75 z_sor[s300,o100,ship] + 0.75 z_sor[s300,o100,icebreaker]
+   + 183831.8600000001 Constant1
+Subject To
+ c15_vessel_capacity_o1: z_sor[s6,o1,helicopter] + z_sor[s9,o1,helicopter]
+   + z_sor[s200,o1,helicopter] + z_sor[s300,o1,helicopter] >= 4
+ c15_vessel_capacity_o2: z_sor[s6,o2,ship] + z_sor[s9,o2,ship]
+   + z_sor[s200,o2,ship] + z_sor[s300,o2,ship] >= 2
+ c15_vessel_capacity_o2: z_sor[s6,o2,icebreaker] + z_sor[s9,o2,icebreaker]
+   + z_sor[s200,o2,icebreaker] + z_sor[s300,o2,icebreaker] >= 1
+ c15_vessel_capacity_o3: z_sor[s6,o3,helicopter] + z_sor[s9,o3,helicopter]
+   + z_sor[s200,o3,helicopter] + z_sor[s300,o3,helicopter] >= 2
+ c15_vessel_capacity_o4: z_sor[s6,o4,ship] + z_sor[s9,o4,ship]
+   + z_sor[s200,o4,ship] + z_sor[s300,o4,ship] >= 2
+ c15_vessel_capacity_o4: z_sor[s6,o4,icebreaker] + z_sor[s9,o4,icebreaker]
+   + z_sor[s200,o4,icebreaker] + z_sor[s300,o4,icebreaker] >= 1
+ c15_vessel_capacity_o5: z_sor[s6,o5,helicopter] + z_sor[s9,o5,helicopter]
+   + z_sor[s200,o5,helicopter] + z_sor[s300,o5,helicopter] >= 4
+ c15_vessel_capacity_o6: z_sor[s6,o6,ship] + z_sor[s9,o6,ship]
+   + z_sor[s200,o6,ship] + z_sor[s300,o6,ship] >= 2
+ c15_vessel_capacity_o6: z_sor[s6,o6,icebreaker] + z_sor[s9,o6,icebreaker]
+   + z_sor[s200,o6,icebreaker] + z_sor[s300,o6,icebreaker] >= 1
+ c15_vessel_capacity_o7: z_sor[s6,o7,ship] + z_sor[s9,o7,ship]
+   + z_sor[s200,o7,ship] + z_sor[s300,o7,ship] >= 2
+ c15_vessel_capacity_o7: z_sor[s6,o7,icebreaker] + z_sor[s9,o7,icebreaker]
+   + z_sor[s200,o7,icebreaker] + z_sor[s300,o7,icebreaker] >= 1
+ c15_vessel_capacity_o8: z_sor[s6,o8,ship] + z_sor[s9,o8,ship]
+   + z_sor[s200,o8,ship] + z_sor[s300,o8,ship] >= 2
+ c15_vessel_capacity_o8: z_sor[s6,o8,icebreaker] + z_sor[s9,o8,icebreaker]
+   + z_sor[s200,o8,icebreaker] + z_sor[s300,o8,icebreaker] >= 1
+ c15_vessel_capacity_o10: z_sor[s6,o10,ship] + z_sor[s9,o10,ship]
+   + z_sor[s200,o10,ship] + z_sor[s300,o10,ship] >= 2
+ c15_vessel_capacity_o10: z_sor[s6,o10,icebreaker]
+   + z_sor[s9,o10,icebreaker] + z_sor[s200,o10,icebreaker]
+   + z_sor[s300,o10,icebreaker] >= 1
+ c15_vessel_capacity_o11: z_sor[s6,o11,helicopter]
+   + z_sor[s9,o11,helicopter] + z_sor[s200,o11,helicopter]
+   + z_sor[s300,o11,helicopter] >= 4
+ c15_vessel_capacity_o12: z_sor[s6,o12,helicopter]
+   + z_sor[s9,o12,helicopter] + z_sor[s200,o12,helicopter]
+   + z_sor[s300,o12,helicopter] >= 4
+ c15_vessel_capacity_o13: z_sor[s6,o13,ship] + z_sor[s9,o13,ship]
+   + z_sor[s200,o13,ship] + z_sor[s300,o13,ship] >= 2
+ c15_vessel_capacity_o13: z_sor[s6,o13,icebreaker]
+   + z_sor[s9,o13,icebreaker] + z_sor[s200,o13,icebreaker]
+   + z_sor[s300,o13,icebreaker] >= 1
+ c15_vessel_capacity_o14: z_sor[s6,o14,helicopter]
+   + z_sor[s9,o14,helicopter] + z_sor[s200,o14,helicopter]
+   + z_sor[s300,o14,helicopter] >= 4
+ c15_vessel_capacity_o16: z_sor[s6,o16,helicopter]
+   + z_sor[s9,o16,helicopter] + z_sor[s200,o16,helicopter]
+   + z_sor[s300,o16,helicopter] >= 4
+ c15_vessel_capacity_o17: z_sor[s6,o17,helicopter]
+   + z_sor[s9,o17,helicopter] + z_sor[s200,o17,helicopter]
+   + z_sor[s300,o17,helicopter] >= 4
+ c15_vessel_capacity_o18: z_sor[s6,o18,ship] + z_sor[s9,o18,ship]
+   + z_sor[s200,o18,ship] + z_sor[s300,o18,ship] >= 2
+ c15_vessel_capacity_o18: z_sor[s6,o18,icebreaker]
+   + z_sor[s9,o18,icebreaker] + z_sor[s200,o18,icebreaker]
+   + z_sor[s300,o18,icebreaker] >= 1
+ c15_vessel_capacity_o19: z_sor[s6,o19,ship] + z_sor[s9,o19,ship]
+   + z_sor[s200,o19,ship] + z_sor[s300,o19,ship] >= 2
+ c15_vessel_capacity_o19: z_sor[s6,o19,icebreaker]
+   + z_sor[s9,o19,icebreaker] + z_sor[s200,o19,icebreaker]
+   + z_sor[s300,o19,icebreaker] >= 1
+ c15_vessel_capacity_o22: z_sor[s6,o22,helicopter]
+   + z_sor[s9,o22,helicopter] + z_sor[s200,o22,helicopter]
+   + z_sor[s300,o22,helicopter] >= 2
+ c15_vessel_capacity_o24: z_sor[s6,o24,helicopter]
+   + z_sor[s9,o24,helicopter] + z_sor[s200,o24,helicopter]
+   + z_sor[s300,o24,helicopter] >= 4
+ c15_vessel_capacity_o25: z_sor[s6,o25,ship] + z_sor[s9,o25,ship]
+   + z_sor[s200,o25,ship] + z_sor[s300,o25,ship] >= 2
+ c15_vessel_capacity_o25: z_sor[s6,o25,icebreaker]
+   + z_sor[s9,o25,icebreaker] + z_sor[s200,o25,icebreaker]
+   + z_sor[s300,o25,icebreaker] >= 1
+ c15_vessel_capacity_o26: z_sor[s6,o26,helicopter]
+   + z_sor[s9,o26,helicopter] + z_sor[s200,o26,helicopter]
+   + z_sor[s300,o26,helicopter] >= 4
+ c15_vessel_capacity_o27: z_sor[s6,o27,ship] + z_sor[s9,o27,ship]
+   + z_sor[s200,o27,ship] + z_sor[s300,o27,ship] >= 1
+ c15_vessel_capacity_o27: z_sor[s6,o27,icebreaker]
+   + z_sor[s9,o27,icebreaker] + z_sor[s200,o27,icebreaker]
+   + z_sor[s300,o27,icebreaker] >= 1
+ c15_vessel_capacity_o28: z_sor[s6,o28,helicopter]
+   + z_sor[s9,o28,helicopter] + z_sor[s200,o28,helicopter]
+   + z_sor[s300,o28,helicopter] >= 4
+ c15_vessel_capacity_o29: z_sor[s6,o29,helicopter]
+   + z_sor[s9,o29,helicopter] + z_sor[s200,o29,helicopter]
+   + z_sor[s300,o29,helicopter] >= 2
+ c15_vessel_capacity_o30: z_sor[s6,o30,helicopter]
+   + z_sor[s9,o30,helicopter] + z_sor[s200,o30,helicopter]
+   + z_sor[s300,o30,helicopter] >= 4
+ c15_vessel_capacity_o31: z_sor[s6,o31,helicopter]
+   + z_sor[s9,o31,helicopter] + z_sor[s200,o31,helicopter]
+   + z_sor[s300,o31,helicopter] >= 4
+ c15_vessel_capacity_o32: z_sor[s6,o32,ship] + z_sor[s9,o32,ship]
+   + z_sor[s200,o32,ship] + z_sor[s300,o32,ship] >= 2
+ c15_vessel_capacity_o32: z_sor[s6,o32,icebreaker]
+   + z_sor[s9,o32,icebreaker] + z_sor[s200,o32,icebreaker]
+   + z_sor[s300,o32,icebreaker] >= 1
+ c15_vessel_capacity_o33: z_sor[s6,o33,helicopter]
+   + z_sor[s9,o33,helicopter] + z_sor[s200,o33,helicopter]
+   + z_sor[s300,o33,helicopter] >= 2
+ c15_vessel_capacity_o34: z_sor[s6,o34,ship] + z_sor[s9,o34,ship]
+   + z_sor[s200,o34,ship] + z_sor[s300,o34,ship] >= 2
+ c15_vessel_capacity_o34: z_sor[s6,o34,icebreaker]
+   + z_sor[s9,o34,icebreaker] + z_sor[s200,o34,icebreaker]
+   + z_sor[s300,o34,icebreaker] >= 1
+ c15_vessel_capacity_o35: z_sor[s6,o35,ship] + z_sor[s9,o35,ship]
+   + z_sor[s200,o35,ship] + z_sor[s300,o35,ship] >= 2
+ c15_vessel_capacity_o35: z_sor[s6,o35,icebreaker]
+   + z_sor[s9,o35,icebreaker] + z_sor[s200,o35,icebreaker]
+   + z_sor[s300,o35,icebreaker] >= 1
+ c15_vessel_capacity_o36: z_sor[s6,o36,helicopter]
+   + z_sor[s9,o36,helicopter] + z_sor[s200,o36,helicopter]
+   + z_sor[s300,o36,helicopter] >= 4
+ c15_vessel_capacity_o37: z_sor[s6,o37,ship] + z_sor[s9,o37,ship]
+   + z_sor[s200,o37,ship] + z_sor[s300,o37,ship] >= 1
+ c15_vessel_capacity_o37: z_sor[s6,o37,icebreaker]
+   + z_sor[s9,o37,icebreaker] + z_sor[s200,o37,icebreaker]
+   + z_sor[s300,o37,icebreaker] >= 1
+ c15_vessel_capacity_o39: z_sor[s6,o39,helicopter]
+   + z_sor[s9,o39,helicopter] + z_sor[s200,o39,helicopter]
+   + z_sor[s300,o39,helicopter] >= 4
+ c15_vessel_capacity_o41: z_sor[s6,o41,helicopter]
+   + z_sor[s9,o41,helicopter] + z_sor[s200,o41,helicopter]
+   + z_sor[s300,o41,helicopter] >= 4
+ c15_vessel_capacity_o42: z_sor[s6,o42,helicopter]
+   + z_sor[s9,o42,helicopter] + z_sor[s200,o42,helicopter]
+   + z_sor[s300,o42,helicopter] >= 4
+ c15_vessel_capacity_o44: z_sor[s6,o44,ship] + z_sor[s9,o44,ship]
+   + z_sor[s200,o44,ship] + z_sor[s300,o44,ship] >= 2
+ c15_vessel_capacity_o44: z_sor[s6,o44,icebreaker]
+   + z_sor[s9,o44,icebreaker] + z_sor[s200,o44,icebreaker]
+   + z_sor[s300,o44,icebreaker] >= 1
+ c15_vessel_capacity_o45: z_sor[s6,o45,helicopter]
+   + z_sor[s9,o45,helicopter] + z_sor[s200,o45,helicopter]
+   + z_sor[s300,o45,helicopter] >= 4
+ c15_vessel_capacity_o46: z_sor[s6,o46,ship] + z_sor[s9,o46,ship]
+   + z_sor[s200,o46,ship] + z_sor[s300,o46,ship] >= 2
+ c15_vessel_capacity_o46: z_sor[s6,o46,icebreaker]
+   + z_sor[s9,o46,icebreaker] + z_sor[s200,o46,icebreaker]
+   + z_sor[s300,o46,icebreaker] >= 1
+ c15_vessel_capacity_o48: z_sor[s6,o48,helicopter]
+   + z_sor[s9,o48,helicopter] + z_sor[s200,o48,helicopter]
+   + z_sor[s300,o48,helicopter] >= 4
+ c15_vessel_capacity_o50: z_sor[s6,o50,helicopter]
+   + z_sor[s9,o50,helicopter] + z_sor[s200,o50,helicopter]
+   + z_sor[s300,o50,helicopter] >= 4
+ c15_vessel_capacity_o51: z_sor[s6,o51,helicopter]
+   + z_sor[s9,o51,helicopter] + z_sor[s200,o51,helicopter]
+   + z_sor[s300,o51,helicopter] >= 4
+ c15_vessel_capacity_o53: z_sor[s6,o53,helicopter]
+   + z_sor[s9,o53,helicopter] + z_sor[s200,o53,helicopter]
+   + z_sor[s300,o53,helicopter] >= 4
+ c15_vessel_capacity_o55: z_sor[s6,o55,ship] + z_sor[s9,o55,ship]
+   + z_sor[s200,o55,ship] + z_sor[s300,o55,ship] >= 2
+ c15_vessel_capacity_o55: z_sor[s6,o55,icebreaker]
+   + z_sor[s9,o55,icebreaker] + z_sor[s200,o55,icebreaker]
+   + z_sor[s300,o55,icebreaker] >= 1
+ c15_vessel_capacity_o56: z_sor[s6,o56,ship] + z_sor[s9,o56,ship]
+   + z_sor[s200,o56,ship] + z_sor[s300,o56,ship] >= 2
+ c15_vessel_capacity_o56: z_sor[s6,o56,icebreaker]
+   + z_sor[s9,o56,icebreaker] + z_sor[s200,o56,icebreaker]
+   + z_sor[s300,o56,icebreaker] >= 1
+ c15_vessel_capacity_o57: z_sor[s6,o57,ship] + z_sor[s9,o57,ship]
+   + z_sor[s200,o57,ship] + z_sor[s300,o57,ship] >= 2
+ c15_vessel_capacity_o57: z_sor[s6,o57,icebreaker]
+   + z_sor[s9,o57,icebreaker] + z_sor[s200,o57,icebreaker]
+   + z_sor[s300,o57,icebreaker] >= 1
+ c15_vessel_capacity_o58: z_sor[s6,o58,helicopter]
+   + z_sor[s9,o58,helicopter] + z_sor[s200,o58,helicopter]
+   + z_sor[s300,o58,helicopter] >= 4
+ c15_vessel_capacity_o59: z_sor[s6,o59,ship] + z_sor[s9,o59,ship]
+   + z_sor[s200,o59,ship] + z_sor[s300,o59,ship] >= 1
+ c15_vessel_capacity_o59: z_sor[s6,o59,icebreaker]
+   + z_sor[s9,o59,icebreaker] + z_sor[s200,o59,icebreaker]
+   + z_sor[s300,o59,icebreaker] >= 1
+ c15_vessel_capacity_o60: z_sor[s6,o60,ship] + z_sor[s9,o60,ship]
+   + z_sor[s200,o60,ship] + z_sor[s300,o60,ship] >= 2
+ c15_vessel_capacity_o60: z_sor[s6,o60,icebreaker]
+   + z_sor[s9,o60,icebreaker] + z_sor[s200,o60,icebreaker]
+   + z_sor[s300,o60,icebreaker] >= 1
+ c15_vessel_capacity_o62: z_sor[s6,o62,ship] + z_sor[s9,o62,ship]
+   + z_sor[s200,o62,ship] + z_sor[s300,o62,ship] >= 2
+ c15_vessel_capacity_o62: z_sor[s6,o62,icebreaker]
+   + z_sor[s9,o62,icebreaker] + z_sor[s200,o62,icebreaker]
+   + z_sor[s300,o62,icebreaker] >= 1
+ c15_vessel_capacity_o63: z_sor[s6,o63,helicopter]
+   + z_sor[s9,o63,helicopter] + z_sor[s200,o63,helicopter]
+   + z_sor[s300,o63,helicopter] >= 2
+ c15_vessel_capacity_o64: z_sor[s6,o64,ship] + z_sor[s9,o64,ship]
+   + z_sor[s200,o64,ship] + z_sor[s300,o64,ship] >= 1
+ c15_vessel_capacity_o64: z_sor[s6,o64,icebreaker]
+   + z_sor[s9,o64,icebreaker] + z_sor[s200,o64,icebreaker]
+   + z_sor[s300,o64,icebreaker] >= 1
+ c15_vessel_capacity_o65: z_sor[s6,o65,helicopter]
+   + z_sor[s9,o65,helicopter] + z_sor[s200,o65,helicopter]
+   + z_sor[s300,o65,helicopter] >= 4
+ c15_vessel_capacity_o66: z_sor[s6,o66,helicopter]
+   + z_sor[s9,o66,helicopter] + z_sor[s200,o66,helicopter]
+   + z_sor[s300,o66,helicopter] >= 4
+ c15_vessel_capacity_o67: z_sor[s6,o67,ship] + z_sor[s9,o67,ship]
+   + z_sor[s200,o67,ship] + z_sor[s300,o67,ship] >= 2
+ c15_vessel_capacity_o67: z_sor[s6,o67,icebreaker]
+   + z_sor[s9,o67,icebreaker] + z_sor[s200,o67,icebreaker]
+   + z_sor[s300,o67,icebreaker] >= 1
+ c15_vessel_capacity_o68: z_sor[s6,o68,helicopter]
+   + z_sor[s9,o68,helicopter] + z_sor[s200,o68,helicopter]
+   + z_sor[s300,o68,helicopter] >= 4
+ c15_vessel_capacity_o69: z_sor[s6,o69,helicopter]
+   + z_sor[s9,o69,helicopter] + z_sor[s200,o69,helicopter]
+   + z_sor[s300,o69,helicopter] >= 4
+ c15_vessel_capacity_o70: z_sor[s6,o70,helicopter]
+   + z_sor[s9,o70,helicopter] + z_sor[s200,o70,helicopter]
+   + z_sor[s300,o70,helicopter] >= 4
+ c15_vessel_capacity_o71: z_sor[s6,o71,helicopter]
+   + z_sor[s9,o71,helicopter] + z_sor[s200,o71,helicopter]
+   + z_sor[s300,o71,helicopter] >= 4
+ c15_vessel_capacity_o72: z_sor[s6,o72,helicopter]
+   + z_sor[s9,o72,helicopter] + z_sor[s200,o72,helicopter]
+   + z_sor[s300,o72,helicopter] >= 4
+ c15_vessel_capacity_o73: z_sor[s6,o73,ship] + z_sor[s9,o73,ship]
+   + z_sor[s200,o73,ship] + z_sor[s300,o73,ship] >= 1
+ c15_vessel_capacity_o73: z_sor[s6,o73,icebreaker]
+   + z_sor[s9,o73,icebreaker] + z_sor[s200,o73,icebreaker]
+   + z_sor[s300,o73,icebreaker] >= 1
+ c15_vessel_capacity_o74: z_sor[s6,o74,helicopter]
+   + z_sor[s9,o74,helicopter] + z_sor[s200,o74,helicopter]
+   + z_sor[s300,o74,helicopter] >= 4
+ c15_vessel_capacity_o75: z_sor[s6,o75,ship] + z_sor[s9,o75,ship]
+   + z_sor[s200,o75,ship] + z_sor[s300,o75,ship] >= 2
+ c15_vessel_capacity_o75: z_sor[s6,o75,icebreaker]
+   + z_sor[s9,o75,icebreaker] + z_sor[s200,o75,icebreaker]
+   + z_sor[s300,o75,icebreaker] >= 1
+ c15_vessel_capacity_o76: z_sor[s6,o76,helicopter]
+   + z_sor[s9,o76,helicopter] + z_sor[s200,o76,helicopter]
+   + z_sor[s300,o76,helicopter] >= 4
+ c15_vessel_capacity_o77: z_sor[s6,o77,helicopter]
+   + z_sor[s9,o77,helicopter] + z_sor[s200,o77,helicopter]
+   + z_sor[s300,o77,helicopter] >= 4
+ c15_vessel_capacity_o78: z_sor[s6,o78,helicopter]
+   + z_sor[s9,o78,helicopter] + z_sor[s200,o78,helicopter]
+   + z_sor[s300,o78,helicopter] >= 4
+ c15_vessel_capacity_o80: z_sor[s6,o80,helicopter]
+   + z_sor[s9,o80,helicopter] + z_sor[s200,o80,helicopter]
+   + z_sor[s300,o80,helicopter] >= 2
+ c15_vessel_capacity_o81: z_sor[s6,o81,helicopter]
+   + z_sor[s9,o81,helicopter] + z_sor[s200,o81,helicopter]
+   + z_sor[s300,o81,helicopter] >= 2
+ c15_vessel_capacity_o82: z_sor[s6,o82,ship] + z_sor[s9,o82,ship]
+   + z_sor[s200,o82,ship] + z_sor[s300,o82,ship] >= 2
+ c15_vessel_capacity_o82: z_sor[s6,o82,icebreaker]
+   + z_sor[s9,o82,icebreaker] + z_sor[s200,o82,icebreaker]
+   + z_sor[s300,o82,icebreaker] >= 1
+ c15_vessel_capacity_o83: z_sor[s6,o83,helicopter]
+   + z_sor[s9,o83,helicopter] + z_sor[s200,o83,helicopter]
+   + z_sor[s300,o83,helicopter] >= 4
+ c15_vessel_capacity_o84: z_sor[s6,o84,ship] + z_sor[s9,o84,ship]
+   + z_sor[s200,o84,ship] + z_sor[s300,o84,ship] >= 2
+ c15_vessel_capacity_o84: z_sor[s6,o84,icebreaker]
+   + z_sor[s9,o84,icebreaker] + z_sor[s200,o84,icebreaker]
+   + z_sor[s300,o84,icebreaker] >= 1
+ c15_vessel_capacity_o85: z_sor[s6,o85,helicopter]
+   + z_sor[s9,o85,helicopter] + z_sor[s200,o85,helicopter]
+   + z_sor[s300,o85,helicopter] >= 2
+ c15_vessel_capacity_o86: z_sor[s6,o86,helicopter]
+   + z_sor[s9,o86,helicopter] + z_sor[s200,o86,helicopter]
+   + z_sor[s300,o86,helicopter] >= 4
+ c15_vessel_capacity_o87: z_sor[s6,o87,helicopter]
+   + z_sor[s9,o87,helicopter] + z_sor[s200,o87,helicopter]
+   + z_sor[s300,o87,helicopter] >= 4
+ c15_vessel_capacity_o88: z_sor[s6,o88,ship] + z_sor[s9,o88,ship]
+   + z_sor[s200,o88,ship] + z_sor[s300,o88,ship] >= 2
+ c15_vessel_capacity_o88: z_sor[s6,o88,icebreaker]
+   + z_sor[s9,o88,icebreaker] + z_sor[s200,o88,icebreaker]
+   + z_sor[s300,o88,icebreaker] >= 1
+ c15_vessel_capacity_o91: z_sor[s6,o91,ship] + z_sor[s9,o91,ship]
+   + z_sor[s200,o91,ship] + z_sor[s300,o91,ship] >= 2
+ c15_vessel_capacity_o91: z_sor[s6,o91,icebreaker]
+   + z_sor[s9,o91,icebreaker] + z_sor[s200,o91,icebreaker]
+   + z_sor[s300,o91,icebreaker] >= 1
+ c15_vessel_capacity_o92: z_sor[s6,o92,ship] + z_sor[s9,o92,ship]
+   + z_sor[s200,o92,ship] + z_sor[s300,o92,ship] >= 2
+ c15_vessel_capacity_o92: z_sor[s6,o92,icebreaker]
+   + z_sor[s9,o92,icebreaker] + z_sor[s200,o92,icebreaker]
+   + z_sor[s300,o92,icebreaker] >= 1
+ c15_vessel_capacity_o93: z_sor[s6,o93,helicopter]
+   + z_sor[s9,o93,helicopter] + z_sor[s200,o93,helicopter]
+   + z_sor[s300,o93,helicopter] >= 4
+ c15_vessel_capacity_o94: z_sor[s6,o94,helicopter]
+   + z_sor[s9,o94,helicopter] + z_sor[s200,o94,helicopter]
+   + z_sor[s300,o94,helicopter] >= 4
+ c15_vessel_capacity_o96: z_sor[s6,o96,ship] + z_sor[s9,o96,ship]
+   + z_sor[s200,o96,ship] + z_sor[s300,o96,ship] >= 2
+ c15_vessel_capacity_o96: z_sor[s6,o96,icebreaker]
+   + z_sor[s9,o96,icebreaker] + z_sor[s200,o96,icebreaker]
+   + z_sor[s300,o96,icebreaker] >= 1
+ c15_vessel_capacity_o97: z_sor[s6,o97,helicopter]
+   + z_sor[s9,o97,helicopter] + z_sor[s200,o97,helicopter]
+   + z_sor[s300,o97,helicopter] >= 4
+ c15_vessel_capacity_o98: z_sor[s6,o98,helicopter]
+   + z_sor[s9,o98,helicopter] + z_sor[s200,o98,helicopter]
+   + z_sor[s300,o98,helicopter] >= 4
+ c15_vessel_capacity_o100: z_sor[s6,o100,ship] + z_sor[s9,o100,ship]
+   + z_sor[s200,o100,ship] + z_sor[s300,o100,ship] >= 2
+ c15_vessel_capacity_o100: z_sor[s6,o100,icebreaker]
+   + z_sor[s9,o100,icebreaker] + z_sor[s200,o100,icebreaker]
+   + z_sor[s300,o100,icebreaker] >= 1
+ c16_vessel_deployment_s6_o40: - y_os[o40,s6] + z_sor[s6,o40,helicopter]
+   + z_sor[s6,o40,ship] + z_sor[s6,o40,icebreaker] >= 0
+ c16_vessel_deployment_s6_o43: - y_os[o43,s6] + z_sor[s6,o43,helicopter]
+   + z_sor[s6,o43,ship] + z_sor[s6,o43,icebreaker] >= 0
+ c16_vessel_deployment_s6_o52: - y_os[o52,s6] + z_sor[s6,o52,helicopter]
+   + z_sor[s6,o52,ship] + z_sor[s6,o52,icebreaker] >= 0
+ c16_vessel_deployment_s6_o89: - y_os[o89,s6] + z_sor[s6,o89,helicopter]
+   + z_sor[s6,o89,ship] + z_sor[s6,o89,icebreaker] >= 0
+ c16_vessel_deployment_s6_o95: - y_os[o95,s6] + z_sor[s6,o95,helicopter]
+   + z_sor[s6,o95,ship] + z_sor[s6,o95,icebreaker] >= 0
+ c16_vessel_deployment_s9_o40: - y_os[o40,s9] + z_sor[s9,o40,helicopter]
+   + z_sor[s9,o40,ship] + z_sor[s9,o40,icebreaker] >= 0
+ c16_vessel_deployment_s9_o43: - y_os[o43,s9] + z_sor[s9,o43,helicopter]
+   + z_sor[s9,o43,ship] + z_sor[s9,o43,icebreaker] >= 0
+ c16_vessel_deployment_s9_o52: - y_os[o52,s9] + z_sor[s9,o52,helicopter]
+   + z_sor[s9,o52,ship] + z_sor[s9,o52,icebreaker] >= 0
+ c16_vessel_deployment_s9_o89: - y_os[o89,s9] + z_sor[s9,o89,helicopter]
+   + z_sor[s9,o89,ship] + z_sor[s9,o89,icebreaker] >= 0
+ c16_vessel_deployment_s200_o40: - y_os[o40,s200]
+   + z_sor[s200,o40,helicopter] + z_sor[s200,o40,ship]
+   + z_sor[s200,o40,icebreaker] >= 0
+ c16_vessel_deployment_s200_o89: - y_os[o89,s200]
+   + z_sor[s200,o89,helicopter] + z_sor[s200,o89,ship]
+   + z_sor[s200,o89,icebreaker] >= 0
+ c16_vessel_deployment_s200_o95: - y_os[o95,s200]
+   + z_sor[s200,o95,helicopter] + z_sor[s200,o95,ship]
+   + z_sor[s200,o95,icebreaker] >= 0
+ c16_vessel_deployment_s300_o43: - y_os[o43,s300]
+   + z_sor[s300,o43,helicopter] + z_sor[s300,o43,ship]
+   + z_sor[s300,o43,icebreaker] >= 0
+ c17_facility_vessel_capacity_s6: z_sor[s6,o1,helicopter]
+   + z_sor[s6,o1,ship] + z_sor[s6,o1,icebreaker] + z_sor[s6,o2,helicopter]
+   + z_sor[s6,o2,ship] + z_sor[s6,o2,icebreaker] + z_sor[s6,o3,helicopter]
+   + z_sor[s6,o3,ship] + z_sor[s6,o3,icebreaker] + z_sor[s6,o4,helicopter]
+   + z_sor[s6,o4,ship] + z_sor[s6,o4,icebreaker] + z_sor[s6,o5,helicopter]
+   + z_sor[s6,o5,ship] + z_sor[s6,o5,icebreaker] + z_sor[s6,o6,helicopter]
+   + z_sor[s6,o6,ship] + z_sor[s6,o6,icebreaker] + z_sor[s6,o7,helicopter]
+   + z_sor[s6,o7,ship] + z_sor[s6,o7,icebreaker] + z_sor[s6,o8,helicopter]
+   + z_sor[s6,o8,ship] + z_sor[s6,o8,icebreaker] + z_sor[s6,o9,helicopter]
+   + z_sor[s6,o9,ship] + z_sor[s6,o9,icebreaker] + z_sor[s6,o10,helicopter]
+   + z_sor[s6,o10,ship] + z_sor[s6,o10,icebreaker]
+   + z_sor[s6,o11,helicopter] + z_sor[s6,o11,ship]
+   + z_sor[s6,o11,icebreaker] + z_sor[s6,o12,helicopter]
+   + z_sor[s6,o12,ship] + z_sor[s6,o12,icebreaker]
+   + z_sor[s6,o13,helicopter] + z_sor[s6,o13,ship]
+   + z_sor[s6,o13,icebreaker] + z_sor[s6,o14,helicopter]
+   + z_sor[s6,o14,ship] + z_sor[s6,o14,icebreaker]
+   + z_sor[s6,o15,helicopter] + z_sor[s6,o15,ship]
+   + z_sor[s6,o15,icebreaker] + z_sor[s6,o16,helicopter]
+   + z_sor[s6,o16,ship] + z_sor[s6,o16,icebreaker]
+   + z_sor[s6,o17,helicopter] + z_sor[s6,o17,ship]
+   + z_sor[s6,o17,icebreaker] + z_sor[s6,o18,helicopter]
+   + z_sor[s6,o18,ship] + z_sor[s6,o18,icebreaker]
+   + z_sor[s6,o19,helicopter] + z_sor[s6,o19,ship]
+   + z_sor[s6,o19,icebreaker] + z_sor[s6,o20,helicopter]
+   + z_sor[s6,o20,ship] + z_sor[s6,o20,icebreaker]
+   + z_sor[s6,o21,helicopter] + z_sor[s6,o21,ship]
+   + z_sor[s6,o21,icebreaker] + z_sor[s6,o22,helicopter]
+   + z_sor[s6,o22,ship] + z_sor[s6,o22,icebreaker]
+   + z_sor[s6,o23,helicopter] + z_sor[s6,o23,ship]
+   + z_sor[s6,o23,icebreaker] + z_sor[s6,o24,helicopter]
+   + z_sor[s6,o24,ship] + z_sor[s6,o24,icebreaker]
+   + z_sor[s6,o25,helicopter] + z_sor[s6,o25,ship]
+   + z_sor[s6,o25,icebreaker] + z_sor[s6,o26,helicopter]
+   + z_sor[s6,o26,ship] + z_sor[s6,o26,icebreaker]
+   + z_sor[s6,o27,helicopter] + z_sor[s6,o27,ship]
+   + z_sor[s6,o27,icebreaker] + z_sor[s6,o28,helicopter]
+   + z_sor[s6,o28,ship] + z_sor[s6,o28,icebreaker]
+   + z_sor[s6,o29,helicopter] + z_sor[s6,o29,ship]
+   + z_sor[s6,o29,icebreaker] + z_sor[s6,o30,helicopter]
+   + z_sor[s6,o30,ship] + z_sor[s6,o30,icebreaker]
+   + z_sor[s6,o31,helicopter] + z_sor[s6,o31,ship]
+   + z_sor[s6,o31,icebreaker] + z_sor[s6,o32,helicopter]
+   + z_sor[s6,o32,ship] + z_sor[s6,o32,icebreaker]
+   + z_sor[s6,o33,helicopter] + z_sor[s6,o33,ship]
+   + z_sor[s6,o33,icebreaker] + z_sor[s6,o34,helicopter]
+   + z_sor[s6,o34,ship] + z_sor[s6,o34,icebreaker]
+   + z_sor[s6,o35,helicopter] + z_sor[s6,o35,ship]
+   + z_sor[s6,o35,icebreaker] + z_sor[s6,o36,helicopter]
+   + z_sor[s6,o36,ship] + z_sor[s6,o36,icebreaker]
+   + z_sor[s6,o37,helicopter] + z_sor[s6,o37,ship]
+   + z_sor[s6,o37,icebreaker] + z_sor[s6,o38,helicopter]
+   + z_sor[s6,o38,ship] + z_sor[s6,o38,icebreaker]
+   + z_sor[s6,o39,helicopter] + z_sor[s6,o39,ship]
+   + z_sor[s6,o39,icebreaker] + z_sor[s6,o40,helicopter]
+   + z_sor[s6,o40,ship] + z_sor[s6,o40,icebreaker]
+   + z_sor[s6,o41,helicopter] + z_sor[s6,o41,ship]
+   + z_sor[s6,o41,icebreaker] + z_sor[s6,o42,helicopter]
+   + z_sor[s6,o42,ship] + z_sor[s6,o42,icebreaker]
+   + z_sor[s6,o43,helicopter] + z_sor[s6,o43,ship]
+   + z_sor[s6,o43,icebreaker] + z_sor[s6,o44,helicopter]
+   + z_sor[s6,o44,ship] + z_sor[s6,o44,icebreaker]
+   + z_sor[s6,o45,helicopter] + z_sor[s6,o45,ship]
+   + z_sor[s6,o45,icebreaker] + z_sor[s6,o46,helicopter]
+   + z_sor[s6,o46,ship] + z_sor[s6,o46,icebreaker]
+   + z_sor[s6,o47,helicopter] + z_sor[s6,o47,ship]
+   + z_sor[s6,o47,icebreaker] + z_sor[s6,o48,helicopter]
+   + z_sor[s6,o48,ship] + z_sor[s6,o48,icebreaker]
+   + z_sor[s6,o49,helicopter] + z_sor[s6,o49,ship]
+   + z_sor[s6,o49,icebreaker] + z_sor[s6,o50,helicopter]
+   + z_sor[s6,o50,ship] + z_sor[s6,o50,icebreaker]
+   + z_sor[s6,o51,helicopter] + z_sor[s6,o51,ship]
+   + z_sor[s6,o51,icebreaker] + z_sor[s6,o52,helicopter]
+   + z_sor[s6,o52,ship] + z_sor[s6,o52,icebreaker]
+   + z_sor[s6,o53,helicopter] + z_sor[s6,o53,ship]
+   + z_sor[s6,o53,icebreaker] + z_sor[s6,o54,helicopter]
+   + z_sor[s6,o54,ship] + z_sor[s6,o54,icebreaker]
+   + z_sor[s6,o55,helicopter] + z_sor[s6,o55,ship]
+   + z_sor[s6,o55,icebreaker] + z_sor[s6,o56,helicopter]
+   + z_sor[s6,o56,ship] + z_sor[s6,o56,icebreaker]
+   + z_sor[s6,o57,helicopter] + z_sor[s6,o57,ship]
+   + z_sor[s6,o57,icebreaker] + z_sor[s6,o58,helicopter]
+   + z_sor[s6,o58,ship] + z_sor[s6,o58,icebreaker]
+   + z_sor[s6,o59,helicopter] + z_sor[s6,o59,ship]
+   + z_sor[s6,o59,icebreaker] + z_sor[s6,o60,helicopter]
+   + z_sor[s6,o60,ship] + z_sor[s6,o60,icebreaker]
+   + z_sor[s6,o61,helicopter] + z_sor[s6,o61,ship]
+   + z_sor[s6,o61,icebreaker] + z_sor[s6,o62,helicopter]
+   + z_sor[s6,o62,ship] + z_sor[s6,o62,icebreaker]
+   + z_sor[s6,o63,helicopter] + z_sor[s6,o63,ship]
+   + z_sor[s6,o63,icebreaker] + z_sor[s6,o64,helicopter]
+   + z_sor[s6,o64,ship] + z_sor[s6,o64,icebreaker]
+   + z_sor[s6,o65,helicopter] + z_sor[s6,o65,ship]
+   + z_sor[s6,o65,icebreaker] + z_sor[s6,o66,helicopter]
+   + z_sor[s6,o66,ship] + z_sor[s6,o66,icebreaker]
+   + z_sor[s6,o67,helicopter] + z_sor[s6,o67,ship]
+   + z_sor[s6,o67,icebreaker] + z_sor[s6,o68,helicopter]
+   + z_sor[s6,o68,ship] + z_sor[s6,o68,icebreaker]
+   + z_sor[s6,o69,helicopter] + z_sor[s6,o69,ship]
+   + z_sor[s6,o69,icebreaker] + z_sor[s6,o70,helicopter]
+   + z_sor[s6,o70,ship] + z_sor[s6,o70,icebreaker]
+   + z_sor[s6,o71,helicopter] + z_sor[s6,o71,ship]
+   + z_sor[s6,o71,icebreaker] + z_sor[s6,o72,helicopter]
+   + z_sor[s6,o72,ship] + z_sor[s6,o72,icebreaker]
+   + z_sor[s6,o73,helicopter] + z_sor[s6,o73,ship]
+   + z_sor[s6,o73,icebreaker] + z_sor[s6,o74,helicopter]
+   + z_sor[s6,o74,ship] + z_sor[s6,o74,icebreaker]
+   + z_sor[s6,o75,helicopter] + z_sor[s6,o75,ship]
+   + z_sor[s6,o75,icebreaker] + z_sor[s6,o76,helicopter]
+   + z_sor[s6,o76,ship] + z_sor[s6,o76,icebreaker]
+   + z_sor[s6,o77,helicopter] + z_sor[s6,o77,ship]
+   + z_sor[s6,o77,icebreaker] + z_sor[s6,o78,helicopter]
+   + z_sor[s6,o78,ship] + z_sor[s6,o78,icebreaker]
+   + z_sor[s6,o79,helicopter] + z_sor[s6,o79,ship]
+   + z_sor[s6,o79,icebreaker] + z_sor[s6,o80,helicopter]
+   + z_sor[s6,o80,ship] + z_sor[s6,o80,icebreaker]
+   + z_sor[s6,o81,helicopter] + z_sor[s6,o81,ship]
+   + z_sor[s6,o81,icebreaker] + z_sor[s6,o82,helicopter]
+   + z_sor[s6,o82,ship] + z_sor[s6,o82,icebreaker]
+   + z_sor[s6,o83,helicopter] + z_sor[s6,o83,ship]
+   + z_sor[s6,o83,icebreaker] + z_sor[s6,o84,helicopter]
+   + z_sor[s6,o84,ship] + z_sor[s6,o84,icebreaker]
+   + z_sor[s6,o85,helicopter] + z_sor[s6,o85,ship]
+   + z_sor[s6,o85,icebreaker] + z_sor[s6,o86,helicopter]
+   + z_sor[s6,o86,ship] + z_sor[s6,o86,icebreaker]
+   + z_sor[s6,o87,helicopter] + z_sor[s6,o87,ship]
+   + z_sor[s6,o87,icebreaker] + z_sor[s6,o88,helicopter]
+   + z_sor[s6,o88,ship] + z_sor[s6,o88,icebreaker]
+   + z_sor[s6,o89,helicopter] + z_sor[s6,o89,ship]
+   + z_sor[s6,o89,icebreaker] + z_sor[s6,o90,helicopter]
+   + z_sor[s6,o90,ship] + z_sor[s6,o90,icebreaker]
+   + z_sor[s6,o91,helicopter] + z_sor[s6,o91,ship]
+   + z_sor[s6,o91,icebreaker] + z_sor[s6,o92,helicopter]
+   + z_sor[s6,o92,ship] + z_sor[s6,o92,icebreaker]
+   + z_sor[s6,o93,helicopter] + z_sor[s6,o93,ship]
+   + z_sor[s6,o93,icebreaker] + z_sor[s6,o94,helicopter]
+   + z_sor[s6,o94,ship] + z_sor[s6,o94,icebreaker]
+   + z_sor[s6,o95,helicopter] + z_sor[s6,o95,ship]
+   + z_sor[s6,o95,icebreaker] + z_sor[s6,o96,helicopter]
+   + z_sor[s6,o96,ship] + z_sor[s6,o96,icebreaker]
+   + z_sor[s6,o97,helicopter] + z_sor[s6,o97,ship]
+   + z_sor[s6,o97,icebreaker] + z_sor[s6,o98,helicopter]
+   + z_sor[s6,o98,ship] + z_sor[s6,o98,icebreaker]
+   + z_sor[s6,o99,helicopter] + z_sor[s6,o99,ship]
+   + z_sor[s6,o99,icebreaker] + z_sor[s6,o100,helicopter]
+   + z_sor[s6,o100,ship] + z_sor[s6,o100,icebreaker] <= 32
+ c17_facility_vessel_capacity_s9: z_sor[s9,o1,helicopter]
+   + z_sor[s9,o1,ship] + z_sor[s9,o1,icebreaker] + z_sor[s9,o2,helicopter]
+   + z_sor[s9,o2,ship] + z_sor[s9,o2,icebreaker] + z_sor[s9,o3,helicopter]
+   + z_sor[s9,o3,ship] + z_sor[s9,o3,icebreaker] + z_sor[s9,o4,helicopter]
+   + z_sor[s9,o4,ship] + z_sor[s9,o4,icebreaker] + z_sor[s9,o5,helicopter]
+   + z_sor[s9,o5,ship] + z_sor[s9,o5,icebreaker] + z_sor[s9,o6,helicopter]
+   + z_sor[s9,o6,ship] + z_sor[s9,o6,icebreaker] + z_sor[s9,o7,helicopter]
+   + z_sor[s9,o7,ship] + z_sor[s9,o7,icebreaker] + z_sor[s9,o8,helicopter]
+   + z_sor[s9,o8,ship] + z_sor[s9,o8,icebreaker] + z_sor[s9,o9,helicopter]
+   + z_sor[s9,o9,ship] + z_sor[s9,o9,icebreaker] + z_sor[s9,o10,helicopter]
+   + z_sor[s9,o10,ship] + z_sor[s9,o10,icebreaker]
+   + z_sor[s9,o11,helicopter] + z_sor[s9,o11,ship]
+   + z_sor[s9,o11,icebreaker] + z_sor[s9,o12,helicopter]
+   + z_sor[s9,o12,ship] + z_sor[s9,o12,icebreaker]
+   + z_sor[s9,o13,helicopter] + z_sor[s9,o13,ship]
+   + z_sor[s9,o13,icebreaker] + z_sor[s9,o14,helicopter]
+   + z_sor[s9,o14,ship] + z_sor[s9,o14,icebreaker]
+   + z_sor[s9,o15,helicopter] + z_sor[s9,o15,ship]
+   + z_sor[s9,o15,icebreaker] + z_sor[s9,o16,helicopter]
+   + z_sor[s9,o16,ship] + z_sor[s9,o16,icebreaker]
+   + z_sor[s9,o17,helicopter] + z_sor[s9,o17,ship]
+   + z_sor[s9,o17,icebreaker] + z_sor[s9,o18,helicopter]
+   + z_sor[s9,o18,ship] + z_sor[s9,o18,icebreaker]
+   + z_sor[s9,o19,helicopter] + z_sor[s9,o19,ship]
+   + z_sor[s9,o19,icebreaker] + z_sor[s9,o20,helicopter]
+   + z_sor[s9,o20,ship] + z_sor[s9,o20,icebreaker]
+   + z_sor[s9,o21,helicopter] + z_sor[s9,o21,ship]
+   + z_sor[s9,o21,icebreaker] + z_sor[s9,o22,helicopter]
+   + z_sor[s9,o22,ship] + z_sor[s9,o22,icebreaker]
+   + z_sor[s9,o23,helicopter] + z_sor[s9,o23,ship]
+   + z_sor[s9,o23,icebreaker] + z_sor[s9,o24,helicopter]
+   + z_sor[s9,o24,ship] + z_sor[s9,o24,icebreaker]
+   + z_sor[s9,o25,helicopter] + z_sor[s9,o25,ship]
+   + z_sor[s9,o25,icebreaker] + z_sor[s9,o26,helicopter]
+   + z_sor[s9,o26,ship] + z_sor[s9,o26,icebreaker]
+   + z_sor[s9,o27,helicopter] + z_sor[s9,o27,ship]
+   + z_sor[s9,o27,icebreaker] + z_sor[s9,o28,helicopter]
+   + z_sor[s9,o28,ship] + z_sor[s9,o28,icebreaker]
+   + z_sor[s9,o29,helicopter] + z_sor[s9,o29,ship]
+   + z_sor[s9,o29,icebreaker] + z_sor[s9,o30,helicopter]
+   + z_sor[s9,o30,ship] + z_sor[s9,o30,icebreaker]
+   + z_sor[s9,o31,helicopter] + z_sor[s9,o31,ship]
+   + z_sor[s9,o31,icebreaker] + z_sor[s9,o32,helicopter]
+   + z_sor[s9,o32,ship] + z_sor[s9,o32,icebreaker]
+   + z_sor[s9,o33,helicopter] + z_sor[s9,o33,ship]
+   + z_sor[s9,o33,icebreaker] + z_sor[s9,o34,helicopter]
+   + z_sor[s9,o34,ship] + z_sor[s9,o34,icebreaker]
+   + z_sor[s9,o35,helicopter] + z_sor[s9,o35,ship]
+   + z_sor[s9,o35,icebreaker] + z_sor[s9,o36,helicopter]
+   + z_sor[s9,o36,ship] + z_sor[s9,o36,icebreaker]
+   + z_sor[s9,o37,helicopter] + z_sor[s9,o37,ship]
+   + z_sor[s9,o37,icebreaker] + z_sor[s9,o38,helicopter]
+   + z_sor[s9,o38,ship] + z_sor[s9,o38,icebreaker]
+   + z_sor[s9,o39,helicopter] + z_sor[s9,o39,ship]
+   + z_sor[s9,o39,icebreaker] + z_sor[s9,o40,helicopter]
+   + z_sor[s9,o40,ship] + z_sor[s9,o40,icebreaker]
+   + z_sor[s9,o41,helicopter] + z_sor[s9,o41,ship]
+   + z_sor[s9,o41,icebreaker] + z_sor[s9,o42,helicopter]
+   + z_sor[s9,o42,ship] + z_sor[s9,o42,icebreaker]
+   + z_sor[s9,o43,helicopter] + z_sor[s9,o43,ship]
+   + z_sor[s9,o43,icebreaker] + z_sor[s9,o44,helicopter]
+   + z_sor[s9,o44,ship] + z_sor[s9,o44,icebreaker]
+   + z_sor[s9,o45,helicopter] + z_sor[s9,o45,ship]
+   + z_sor[s9,o45,icebreaker] + z_sor[s9,o46,helicopter]
+   + z_sor[s9,o46,ship] + z_sor[s9,o46,icebreaker]
+   + z_sor[s9,o47,helicopter] + z_sor[s9,o47,ship]
+   + z_sor[s9,o47,icebreaker] + z_sor[s9,o48,helicopter]
+   + z_sor[s9,o48,ship] + z_sor[s9,o48,icebreaker]
+   + z_sor[s9,o49,helicopter] + z_sor[s9,o49,ship]
+   + z_sor[s9,o49,icebreaker] + z_sor[s9,o50,helicopter]
+   + z_sor[s9,o50,ship] + z_sor[s9,o50,icebreaker]
+   + z_sor[s9,o51,helicopter] + z_sor[s9,o51,ship]
+   + z_sor[s9,o51,icebreaker] + z_sor[s9,o52,helicopter]
+   + z_sor[s9,o52,ship] + z_sor[s9,o52,icebreaker]
+   + z_sor[s9,o53,helicopter] + z_sor[s9,o53,ship]
+   + z_sor[s9,o53,icebreaker] + z_sor[s9,o54,helicopter]
+   + z_sor[s9,o54,ship] + z_sor[s9,o54,icebreaker]
+   + z_sor[s9,o55,helicopter] + z_sor[s9,o55,ship]
+   + z_sor[s9,o55,icebreaker] + z_sor[s9,o56,helicopter]
+   + z_sor[s9,o56,ship] + z_sor[s9,o56,icebreaker]
+   + z_sor[s9,o57,helicopter] + z_sor[s9,o57,ship]
+   + z_sor[s9,o57,icebreaker] + z_sor[s9,o58,helicopter]
+   + z_sor[s9,o58,ship] + z_sor[s9,o58,icebreaker]
+   + z_sor[s9,o59,helicopter] + z_sor[s9,o59,ship]
+   + z_sor[s9,o59,icebreaker] + z_sor[s9,o60,helicopter]
+   + z_sor[s9,o60,ship] + z_sor[s9,o60,icebreaker]
+   + z_sor[s9,o61,helicopter] + z_sor[s9,o61,ship]
+   + z_sor[s9,o61,icebreaker] + z_sor[s9,o62,helicopter]
+   + z_sor[s9,o62,ship] + z_sor[s9,o62,icebreaker]
+   + z_sor[s9,o63,helicopter] + z_sor[s9,o63,ship]
+   + z_sor[s9,o63,icebreaker] + z_sor[s9,o64,helicopter]
+   + z_sor[s9,o64,ship] + z_sor[s9,o64,icebreaker]
+   + z_sor[s9,o65,helicopter] + z_sor[s9,o65,ship]
+   + z_sor[s9,o65,icebreaker] + z_sor[s9,o66,helicopter]
+   + z_sor[s9,o66,ship] + z_sor[s9,o66,icebreaker]
+   + z_sor[s9,o67,helicopter] + z_sor[s9,o67,ship]
+   + z_sor[s9,o67,icebreaker] + z_sor[s9,o68,helicopter]
+   + z_sor[s9,o68,ship] + z_sor[s9,o68,icebreaker]
+   + z_sor[s9,o69,helicopter] + z_sor[s9,o69,ship]
+   + z_sor[s9,o69,icebreaker] + z_sor[s9,o70,helicopter]
+   + z_sor[s9,o70,ship] + z_sor[s9,o70,icebreaker]
+   + z_sor[s9,o71,helicopter] + z_sor[s9,o71,ship]
+   + z_sor[s9,o71,icebreaker] + z_sor[s9,o72,helicopter]
+   + z_sor[s9,o72,ship] + z_sor[s9,o72,icebreaker]
+   + z_sor[s9,o73,helicopter] + z_sor[s9,o73,ship]
+   + z_sor[s9,o73,icebreaker] + z_sor[s9,o74,helicopter]
+   + z_sor[s9,o74,ship] + z_sor[s9,o74,icebreaker]
+   + z_sor[s9,o75,helicopter] + z_sor[s9,o75,ship]
+   + z_sor[s9,o75,icebreaker] + z_sor[s9,o76,helicopter]
+   + z_sor[s9,o76,ship] + z_sor[s9,o76,icebreaker]
+   + z_sor[s9,o77,helicopter] + z_sor[s9,o77,ship]
+   + z_sor[s9,o77,icebreaker] + z_sor[s9,o78,helicopter]
+   + z_sor[s9,o78,ship] + z_sor[s9,o78,icebreaker]
+   + z_sor[s9,o79,helicopter] + z_sor[s9,o79,ship]
+   + z_sor[s9,o79,icebreaker] + z_sor[s9,o80,helicopter]
+   + z_sor[s9,o80,ship] + z_sor[s9,o80,icebreaker]
+   + z_sor[s9,o81,helicopter] + z_sor[s9,o81,ship]
+   + z_sor[s9,o81,icebreaker] + z_sor[s9,o82,helicopter]
+   + z_sor[s9,o82,ship] + z_sor[s9,o82,icebreaker]
+   + z_sor[s9,o83,helicopter] + z_sor[s9,o83,ship]
+   + z_sor[s9,o83,icebreaker] + z_sor[s9,o84,helicopter]
+   + z_sor[s9,o84,ship] + z_sor[s9,o84,icebreaker]
+   + z_sor[s9,o85,helicopter] + z_sor[s9,o85,ship]
+   + z_sor[s9,o85,icebreaker] + z_sor[s9,o86,helicopter]
+   + z_sor[s9,o86,ship] + z_sor[s9,o86,icebreaker]
+   + z_sor[s9,o87,helicopter] + z_sor[s9,o87,ship]
+   + z_sor[s9,o87,icebreaker] + z_sor[s9,o88,helicopter]
+   + z_sor[s9,o88,ship] + z_sor[s9,o88,icebreaker]
+   + z_sor[s9,o89,helicopter] + z_sor[s9,o89,ship]
+   + z_sor[s9,o89,icebreaker] + z_sor[s9,o90,helicopter]
+   + z_sor[s9,o90,ship] + z_sor[s9,o90,icebreaker]
+   + z_sor[s9,o91,helicopter] + z_sor[s9,o91,ship]
+   + z_sor[s9,o91,icebreaker] + z_sor[s9,o92,helicopter]
+   + z_sor[s9,o92,ship] + z_sor[s9,o92,icebreaker]
+   + z_sor[s9,o93,helicopter] + z_sor[s9,o93,ship]
+   + z_sor[s9,o93,icebreaker] + z_sor[s9,o94,helicopter]
+   + z_sor[s9,o94,ship] + z_sor[s9,o94,icebreaker]
+   + z_sor[s9,o95,helicopter] + z_sor[s9,o95,ship]
+   + z_sor[s9,o95,icebreaker] + z_sor[s9,o96,helicopter]
+   + z_sor[s9,o96,ship] + z_sor[s9,o96,icebreaker]
+   + z_sor[s9,o97,helicopter] + z_sor[s9,o97,ship]
+   + z_sor[s9,o97,icebreaker] + z_sor[s9,o98,helicopter]
+   + z_sor[s9,o98,ship] + z_sor[s9,o98,icebreaker]
+   + z_sor[s9,o99,helicopter] + z_sor[s9,o99,ship]
+   + z_sor[s9,o99,icebreaker] + z_sor[s9,o100,helicopter]
+   + z_sor[s9,o100,ship] + z_sor[s9,o100,icebreaker] <= 32
+ c17_facility_vessel_capacity_s200: z_sor[s200,o1,helicopter]
+   + z_sor[s200,o1,ship] + z_sor[s200,o1,icebreaker]
+   + z_sor[s200,o2,helicopter] + z_sor[s200,o2,ship]
+   + z_sor[s200,o2,icebreaker] + z_sor[s200,o3,helicopter]
+   + z_sor[s200,o3,ship] + z_sor[s200,o3,icebreaker]
+   + z_sor[s200,o4,helicopter] + z_sor[s200,o4,ship]
+   + z_sor[s200,o4,icebreaker] + z_sor[s200,o5,helicopter]
+   + z_sor[s200,o5,ship] + z_sor[s200,o5,icebreaker]
+   + z_sor[s200,o6,helicopter] + z_sor[s200,o6,ship]
+   + z_sor[s200,o6,icebreaker] + z_sor[s200,o7,helicopter]
+   + z_sor[s200,o7,ship] + z_sor[s200,o7,icebreaker]
+   + z_sor[s200,o8,helicopter] + z_sor[s200,o8,ship]
+   + z_sor[s200,o8,icebreaker] + z_sor[s200,o9,helicopter]
+   + z_sor[s200,o9,ship] + z_sor[s200,o9,icebreaker]
+   + z_sor[s200,o10,helicopter] + z_sor[s200,o10,ship]
+   + z_sor[s200,o10,icebreaker] + z_sor[s200,o11,helicopter]
+   + z_sor[s200,o11,ship] + z_sor[s200,o11,icebreaker]
+   + z_sor[s200,o12,helicopter] + z_sor[s200,o12,ship]
+   + z_sor[s200,o12,icebreaker] + z_sor[s200,o13,helicopter]
+   + z_sor[s200,o13,ship] + z_sor[s200,o13,icebreaker]
+   + z_sor[s200,o14,helicopter] + z_sor[s200,o14,ship]
+   + z_sor[s200,o14,icebreaker] + z_sor[s200,o15,helicopter]
+   + z_sor[s200,o15,ship] + z_sor[s200,o15,icebreaker]
+   + z_sor[s200,o16,helicopter] + z_sor[s200,o16,ship]
+   + z_sor[s200,o16,icebreaker] + z_sor[s200,o17,helicopter]
+   + z_sor[s200,o17,ship] + z_sor[s200,o17,icebreaker]
+   + z_sor[s200,o18,helicopter] + z_sor[s200,o18,ship]
+   + z_sor[s200,o18,icebreaker] + z_sor[s200,o19,helicopter]
+   + z_sor[s200,o19,ship] + z_sor[s200,o19,icebreaker]
+   + z_sor[s200,o20,helicopter] + z_sor[s200,o20,ship]
+   + z_sor[s200,o20,icebreaker] + z_sor[s200,o21,helicopter]
+   + z_sor[s200,o21,ship] + z_sor[s200,o21,icebreaker]
+   + z_sor[s200,o22,helicopter] + z_sor[s200,o22,ship]
+   + z_sor[s200,o22,icebreaker] + z_sor[s200,o23,helicopter]
+   + z_sor[s200,o23,ship] + z_sor[s200,o23,icebreaker]
+   + z_sor[s200,o24,helicopter] + z_sor[s200,o24,ship]
+   + z_sor[s200,o24,icebreaker] + z_sor[s200,o25,helicopter]
+   + z_sor[s200,o25,ship] + z_sor[s200,o25,icebreaker]
+   + z_sor[s200,o26,helicopter] + z_sor[s200,o26,ship]
+   + z_sor[s200,o26,icebreaker] + z_sor[s200,o27,helicopter]
+   + z_sor[s200,o27,ship] + z_sor[s200,o27,icebreaker]
+   + z_sor[s200,o28,helicopter] + z_sor[s200,o28,ship]
+   + z_sor[s200,o28,icebreaker] + z_sor[s200,o29,helicopter]
+   + z_sor[s200,o29,ship] + z_sor[s200,o29,icebreaker]
+   + z_sor[s200,o30,helicopter] + z_sor[s200,o30,ship]
+   + z_sor[s200,o30,icebreaker] + z_sor[s200,o31,helicopter]
+   + z_sor[s200,o31,ship] + z_sor[s200,o31,icebreaker]
+   + z_sor[s200,o32,helicopter] + z_sor[s200,o32,ship]
+   + z_sor[s200,o32,icebreaker] + z_sor[s200,o33,helicopter]
+   + z_sor[s200,o33,ship] + z_sor[s200,o33,icebreaker]
+   + z_sor[s200,o34,helicopter] + z_sor[s200,o34,ship]
+   + z_sor[s200,o34,icebreaker] + z_sor[s200,o35,helicopter]
+   + z_sor[s200,o35,ship] + z_sor[s200,o35,icebreaker]
+   + z_sor[s200,o36,helicopter] + z_sor[s200,o36,ship]
+   + z_sor[s200,o36,icebreaker] + z_sor[s200,o37,helicopter]
+   + z_sor[s200,o37,ship] + z_sor[s200,o37,icebreaker]
+   + z_sor[s200,o38,helicopter] + z_sor[s200,o38,ship]
+   + z_sor[s200,o38,icebreaker] + z_sor[s200,o39,helicopter]
+   + z_sor[s200,o39,ship] + z_sor[s200,o39,icebreaker]
+   + z_sor[s200,o40,helicopter] + z_sor[s200,o40,ship]
+   + z_sor[s200,o40,icebreaker] + z_sor[s200,o41,helicopter]
+   + z_sor[s200,o41,ship] + z_sor[s200,o41,icebreaker]
+   + z_sor[s200,o42,helicopter] + z_sor[s200,o42,ship]
+   + z_sor[s200,o42,icebreaker] + z_sor[s200,o43,helicopter]
+   + z_sor[s200,o43,ship] + z_sor[s200,o43,icebreaker]
+   + z_sor[s200,o44,helicopter] + z_sor[s200,o44,ship]
+   + z_sor[s200,o44,icebreaker] + z_sor[s200,o45,helicopter]
+   + z_sor[s200,o45,ship] + z_sor[s200,o45,icebreaker]
+   + z_sor[s200,o46,helicopter] + z_sor[s200,o46,ship]
+   + z_sor[s200,o46,icebreaker] + z_sor[s200,o47,helicopter]
+   + z_sor[s200,o47,ship] + z_sor[s200,o47,icebreaker]
+   + z_sor[s200,o48,helicopter] + z_sor[s200,o48,ship]
+   + z_sor[s200,o48,icebreaker] + z_sor[s200,o49,helicopter]
+   + z_sor[s200,o49,ship] + z_sor[s200,o49,icebreaker]
+   + z_sor[s200,o50,helicopter] + z_sor[s200,o50,ship]
+   + z_sor[s200,o50,icebreaker] + z_sor[s200,o51,helicopter]
+   + z_sor[s200,o51,ship] + z_sor[s200,o51,icebreaker]
+   + z_sor[s200,o52,helicopter] + z_sor[s200,o52,ship]
+   + z_sor[s200,o52,icebreaker] + z_sor[s200,o53,helicopter]
+   + z_sor[s200,o53,ship] + z_sor[s200,o53,icebreaker]
+   + z_sor[s200,o54,helicopter] + z_sor[s200,o54,ship]
+   + z_sor[s200,o54,icebreaker] + z_sor[s200,o55,helicopter]
+   + z_sor[s200,o55,ship] + z_sor[s200,o55,icebreaker]
+   + z_sor[s200,o56,helicopter] + z_sor[s200,o56,ship]
+   + z_sor[s200,o56,icebreaker] + z_sor[s200,o57,helicopter]
+   + z_sor[s200,o57,ship] + z_sor[s200,o57,icebreaker]
+   + z_sor[s200,o58,helicopter] + z_sor[s200,o58,ship]
+   + z_sor[s200,o58,icebreaker] + z_sor[s200,o59,helicopter]
+   + z_sor[s200,o59,ship] + z_sor[s200,o59,icebreaker]
+   + z_sor[s200,o60,helicopter] + z_sor[s200,o60,ship]
+   + z_sor[s200,o60,icebreaker] + z_sor[s200,o61,helicopter]
+   + z_sor[s200,o61,ship] + z_sor[s200,o61,icebreaker]
+   + z_sor[s200,o62,helicopter] + z_sor[s200,o62,ship]
+   + z_sor[s200,o62,icebreaker] + z_sor[s200,o63,helicopter]
+   + z_sor[s200,o63,ship] + z_sor[s200,o63,icebreaker]
+   + z_sor[s200,o64,helicopter] + z_sor[s200,o64,ship]
+   + z_sor[s200,o64,icebreaker] + z_sor[s200,o65,helicopter]
+   + z_sor[s200,o65,ship] + z_sor[s200,o65,icebreaker]
+   + z_sor[s200,o66,helicopter] + z_sor[s200,o66,ship]
+   + z_sor[s200,o66,icebreaker] + z_sor[s200,o67,helicopter]
+   + z_sor[s200,o67,ship] + z_sor[s200,o67,icebreaker]
+   + z_sor[s200,o68,helicopter] + z_sor[s200,o68,ship]
+   + z_sor[s200,o68,icebreaker] + z_sor[s200,o69,helicopter]
+   + z_sor[s200,o69,ship] + z_sor[s200,o69,icebreaker]
+   + z_sor[s200,o70,helicopter] + z_sor[s200,o70,ship]
+   + z_sor[s200,o70,icebreaker] + z_sor[s200,o71,helicopter]
+   + z_sor[s200,o71,ship] + z_sor[s200,o71,icebreaker]
+   + z_sor[s200,o72,helicopter] + z_sor[s200,o72,ship]
+   + z_sor[s200,o72,icebreaker] + z_sor[s200,o73,helicopter]
+   + z_sor[s200,o73,ship] + z_sor[s200,o73,icebreaker]
+   + z_sor[s200,o74,helicopter] + z_sor[s200,o74,ship]
+   + z_sor[s200,o74,icebreaker] + z_sor[s200,o75,helicopter]
+   + z_sor[s200,o75,ship] + z_sor[s200,o75,icebreaker]
+   + z_sor[s200,o76,helicopter] + z_sor[s200,o76,ship]
+   + z_sor[s200,o76,icebreaker] + z_sor[s200,o77,helicopter]
+   + z_sor[s200,o77,ship] + z_sor[s200,o77,icebreaker]
+   + z_sor[s200,o78,helicopter] + z_sor[s200,o78,ship]
+   + z_sor[s200,o78,icebreaker] + z_sor[s200,o79,helicopter]
+   + z_sor[s200,o79,ship] + z_sor[s200,o79,icebreaker]
+   + z_sor[s200,o80,helicopter] + z_sor[s200,o80,ship]
+   + z_sor[s200,o80,icebreaker] + z_sor[s200,o81,helicopter]
+   + z_sor[s200,o81,ship] + z_sor[s200,o81,icebreaker]
+   + z_sor[s200,o82,helicopter] + z_sor[s200,o82,ship]
+   + z_sor[s200,o82,icebreaker] + z_sor[s200,o83,helicopter]
+   + z_sor[s200,o83,ship] + z_sor[s200,o83,icebreaker]
+   + z_sor[s200,o84,helicopter] + z_sor[s200,o84,ship]
+   + z_sor[s200,o84,icebreaker] + z_sor[s200,o85,helicopter]
+   + z_sor[s200,o85,ship] + z_sor[s200,o85,icebreaker]
+   + z_sor[s200,o86,helicopter] + z_sor[s200,o86,ship]
+   + z_sor[s200,o86,icebreaker] + z_sor[s200,o87,helicopter]
+   + z_sor[s200,o87,ship] + z_sor[s200,o87,icebreaker]
+   + z_sor[s200,o88,helicopter] + z_sor[s200,o88,ship]
+   + z_sor[s200,o88,icebreaker] + z_sor[s200,o89,helicopter]
+   + z_sor[s200,o89,ship] + z_sor[s200,o89,icebreaker]
+   + z_sor[s200,o90,helicopter] + z_sor[s200,o90,ship]
+   + z_sor[s200,o90,icebreaker] + z_sor[s200,o91,helicopter]
+   + z_sor[s200,o91,ship] + z_sor[s200,o91,icebreaker]
+   + z_sor[s200,o92,helicopter] + z_sor[s200,o92,ship]
+   + z_sor[s200,o92,icebreaker] + z_sor[s200,o93,helicopter]
+   + z_sor[s200,o93,ship] + z_sor[s200,o93,icebreaker]
+   + z_sor[s200,o94,helicopter] + z_sor[s200,o94,ship]
+   + z_sor[s200,o94,icebreaker] + z_sor[s200,o95,helicopter]
+   + z_sor[s200,o95,ship] + z_sor[s200,o95,icebreaker]
+   + z_sor[s200,o96,helicopter] + z_sor[s200,o96,ship]
+   + z_sor[s200,o96,icebreaker] + z_sor[s200,o97,helicopter]
+   + z_sor[s200,o97,ship] + z_sor[s200,o97,icebreaker]
+   + z_sor[s200,o98,helicopter] + z_sor[s200,o98,ship]
+   + z_sor[s200,o98,icebreaker] + z_sor[s200,o99,helicopter]
+   + z_sor[s200,o99,ship] + z_sor[s200,o99,icebreaker]
+   + z_sor[s200,o100,helicopter] + z_sor[s200,o100,ship]
+   + z_sor[s200,o100,icebreaker] <= 32
+ c17_facility_vessel_capacity_s300: z_sor[s300,o1,helicopter]
+   + z_sor[s300,o1,ship] + z_sor[s300,o1,icebreaker]
+   + z_sor[s300,o2,helicopter] + z_sor[s300,o2,ship]
+   + z_sor[s300,o2,icebreaker] + z_sor[s300,o3,helicopter]
+   + z_sor[s300,o3,ship] + z_sor[s300,o3,icebreaker]
+   + z_sor[s300,o4,helicopter] + z_sor[s300,o4,ship]
+   + z_sor[s300,o4,icebreaker] + z_sor[s300,o5,helicopter]
+   + z_sor[s300,o5,ship] + z_sor[s300,o5,icebreaker]
+   + z_sor[s300,o6,helicopter] + z_sor[s300,o6,ship]
+   + z_sor[s300,o6,icebreaker] + z_sor[s300,o7,helicopter]
+   + z_sor[s300,o7,ship] + z_sor[s300,o7,icebreaker]
+   + z_sor[s300,o8,helicopter] + z_sor[s300,o8,ship]
+   + z_sor[s300,o8,icebreaker] + z_sor[s300,o9,helicopter]
+   + z_sor[s300,o9,ship] + z_sor[s300,o9,icebreaker]
+   + z_sor[s300,o10,helicopter] + z_sor[s300,o10,ship]
+   + z_sor[s300,o10,icebreaker] + z_sor[s300,o11,helicopter]
+   + z_sor[s300,o11,ship] + z_sor[s300,o11,icebreaker]
+   + z_sor[s300,o12,helicopter] + z_sor[s300,o12,ship]
+   + z_sor[s300,o12,icebreaker] + z_sor[s300,o13,helicopter]
+   + z_sor[s300,o13,ship] + z_sor[s300,o13,icebreaker]
+   + z_sor[s300,o14,helicopter] + z_sor[s300,o14,ship]
+   + z_sor[s300,o14,icebreaker] + z_sor[s300,o15,helicopter]
+   + z_sor[s300,o15,ship] + z_sor[s300,o15,icebreaker]
+   + z_sor[s300,o16,helicopter] + z_sor[s300,o16,ship]
+   + z_sor[s300,o16,icebreaker] + z_sor[s300,o17,helicopter]
+   + z_sor[s300,o17,ship] + z_sor[s300,o17,icebreaker]
+   + z_sor[s300,o18,helicopter] + z_sor[s300,o18,ship]
+   + z_sor[s300,o18,icebreaker] + z_sor[s300,o19,helicopter]
+   + z_sor[s300,o19,ship] + z_sor[s300,o19,icebreaker]
+   + z_sor[s300,o20,helicopter] + z_sor[s300,o20,ship]
+   + z_sor[s300,o20,icebreaker] + z_sor[s300,o21,helicopter]
+   + z_sor[s300,o21,ship] + z_sor[s300,o21,icebreaker]
+   + z_sor[s300,o22,helicopter] + z_sor[s300,o22,ship]
+   + z_sor[s300,o22,icebreaker] + z_sor[s300,o23,helicopter]
+   + z_sor[s300,o23,ship] + z_sor[s300,o23,icebreaker]
+   + z_sor[s300,o24,helicopter] + z_sor[s300,o24,ship]
+   + z_sor[s300,o24,icebreaker] + z_sor[s300,o25,helicopter]
+   + z_sor[s300,o25,ship] + z_sor[s300,o25,icebreaker]
+   + z_sor[s300,o26,helicopter] + z_sor[s300,o26,ship]
+   + z_sor[s300,o26,icebreaker] + z_sor[s300,o27,helicopter]
+   + z_sor[s300,o27,ship] + z_sor[s300,o27,icebreaker]
+   + z_sor[s300,o28,helicopter] + z_sor[s300,o28,ship]
+   + z_sor[s300,o28,icebreaker] + z_sor[s300,o29,helicopter]
+   + z_sor[s300,o29,ship] + z_sor[s300,o29,icebreaker]
+   + z_sor[s300,o30,helicopter] + z_sor[s300,o30,ship]
+   + z_sor[s300,o30,icebreaker] + z_sor[s300,o31,helicopter]
+   + z_sor[s300,o31,ship] + z_sor[s300,o31,icebreaker]
+   + z_sor[s300,o32,helicopter] + z_sor[s300,o32,ship]
+   + z_sor[s300,o32,icebreaker] + z_sor[s300,o33,helicopter]
+   + z_sor[s300,o33,ship] + z_sor[s300,o33,icebreaker]
+   + z_sor[s300,o34,helicopter] + z_sor[s300,o34,ship]
+   + z_sor[s300,o34,icebreaker] + z_sor[s300,o35,helicopter]
+   + z_sor[s300,o35,ship] + z_sor[s300,o35,icebreaker]
+   + z_sor[s300,o36,helicopter] + z_sor[s300,o36,ship]
+   + z_sor[s300,o36,icebreaker] + z_sor[s300,o37,helicopter]
+   + z_sor[s300,o37,ship] + z_sor[s300,o37,icebreaker]
+   + z_sor[s300,o38,helicopter] + z_sor[s300,o38,ship]
+   + z_sor[s300,o38,icebreaker] + z_sor[s300,o39,helicopter]
+   + z_sor[s300,o39,ship] + z_sor[s300,o39,icebreaker]
+   + z_sor[s300,o40,helicopter] + z_sor[s300,o40,ship]
+   + z_sor[s300,o40,icebreaker] + z_sor[s300,o41,helicopter]
+   + z_sor[s300,o41,ship] + z_sor[s300,o41,icebreaker]
+   + z_sor[s300,o42,helicopter] + z_sor[s300,o42,ship]
+   + z_sor[s300,o42,icebreaker] + z_sor[s300,o43,helicopter]
+   + z_sor[s300,o43,ship] + z_sor[s300,o43,icebreaker]
+   + z_sor[s300,o44,helicopter] + z_sor[s300,o44,ship]
+   + z_sor[s300,o44,icebreaker] + z_sor[s300,o45,helicopter]
+   + z_sor[s300,o45,ship] + z_sor[s300,o45,icebreaker]
+   + z_sor[s300,o46,helicopter] + z_sor[s300,o46,ship]
+   + z_sor[s300,o46,icebreaker] + z_sor[s300,o47,helicopter]
+   + z_sor[s300,o47,ship] + z_sor[s300,o47,icebreaker]
+   + z_sor[s300,o48,helicopter] + z_sor[s300,o48,ship]
+   + z_sor[s300,o48,icebreaker] + z_sor[s300,o49,helicopter]
+   + z_sor[s300,o49,ship] + z_sor[s300,o49,icebreaker]
+   + z_sor[s300,o50,helicopter] + z_sor[s300,o50,ship]
+   + z_sor[s300,o50,icebreaker] + z_sor[s300,o51,helicopter]
+   + z_sor[s300,o51,ship] + z_sor[s300,o51,icebreaker]
+   + z_sor[s300,o52,helicopter] + z_sor[s300,o52,ship]
+   + z_sor[s300,o52,icebreaker] + z_sor[s300,o53,helicopter]
+   + z_sor[s300,o53,ship] + z_sor[s300,o53,icebreaker]
+   + z_sor[s300,o54,helicopter] + z_sor[s300,o54,ship]
+   + z_sor[s300,o54,icebreaker] + z_sor[s300,o55,helicopter]
+   + z_sor[s300,o55,ship] + z_sor[s300,o55,icebreaker]
+   + z_sor[s300,o56,helicopter] + z_sor[s300,o56,ship]
+   + z_sor[s300,o56,icebreaker] + z_sor[s300,o57,helicopter]
+   + z_sor[s300,o57,ship] + z_sor[s300,o57,icebreaker]
+   + z_sor[s300,o58,helicopter] + z_sor[s300,o58,ship]
+   + z_sor[s300,o58,icebreaker] + z_sor[s300,o59,helicopter]
+   + z_sor[s300,o59,ship] + z_sor[s300,o59,icebreaker]
+   + z_sor[s300,o60,helicopter] + z_sor[s300,o60,ship]
+   + z_sor[s300,o60,icebreaker] + z_sor[s300,o61,helicopter]
+   + z_sor[s300,o61,ship] + z_sor[s300,o61,icebreaker]
+   + z_sor[s300,o62,helicopter] + z_sor[s300,o62,ship]
+   + z_sor[s300,o62,icebreaker] + z_sor[s300,o63,helicopter]
+   + z_sor[s300,o63,ship] + z_sor[s300,o63,icebreaker]
+   + z_sor[s300,o64,helicopter] + z_sor[s300,o64,ship]
+   + z_sor[s300,o64,icebreaker] + z_sor[s300,o65,helicopter]
+   + z_sor[s300,o65,ship] + z_sor[s300,o65,icebreaker]
+   + z_sor[s300,o66,helicopter] + z_sor[s300,o66,ship]
+   + z_sor[s300,o66,icebreaker] + z_sor[s300,o67,helicopter]
+   + z_sor[s300,o67,ship] + z_sor[s300,o67,icebreaker]
+   + z_sor[s300,o68,helicopter] + z_sor[s300,o68,ship]
+   + z_sor[s300,o68,icebreaker] + z_sor[s300,o69,helicopter]
+   + z_sor[s300,o69,ship] + z_sor[s300,o69,icebreaker]
+   + z_sor[s300,o70,helicopter] + z_sor[s300,o70,ship]
+   + z_sor[s300,o70,icebreaker] + z_sor[s300,o71,helicopter]
+   + z_sor[s300,o71,ship] + z_sor[s300,o71,icebreaker]
+   + z_sor[s300,o72,helicopter] + z_sor[s300,o72,ship]
+   + z_sor[s300,o72,icebreaker] + z_sor[s300,o73,helicopter]
+   + z_sor[s300,o73,ship] + z_sor[s300,o73,icebreaker]
+   + z_sor[s300,o74,helicopter] + z_sor[s300,o74,ship]
+   + z_sor[s300,o74,icebreaker] + z_sor[s300,o75,helicopter]
+   + z_sor[s300,o75,ship] + z_sor[s300,o75,icebreaker]
+   + z_sor[s300,o76,helicopter] + z_sor[s300,o76,ship]
+   + z_sor[s300,o76,icebreaker] + z_sor[s300,o77,helicopter]
+   + z_sor[s300,o77,ship] + z_sor[s300,o77,icebreaker]
+   + z_sor[s300,o78,helicopter] + z_sor[s300,o78,ship]
+   + z_sor[s300,o78,icebreaker] + z_sor[s300,o79,helicopter]
+   + z_sor[s300,o79,ship] + z_sor[s300,o79,icebreaker]
+   + z_sor[s300,o80,helicopter] + z_sor[s300,o80,ship]
+   + z_sor[s300,o80,icebreaker] + z_sor[s300,o81,helicopter]
+   + z_sor[s300,o81,ship] + z_sor[s300,o81,icebreaker]
+   + z_sor[s300,o82,helicopter] + z_sor[s300,o82,ship]
+   + z_sor[s300,o82,icebreaker] + z_sor[s300,o83,helicopter]
+   + z_sor[s300,o83,ship] + z_sor[s300,o83,icebreaker]
+   + z_sor[s300,o84,helicopter] + z_sor[s300,o84,ship]
+   + z_sor[s300,o84,icebreaker] + z_sor[s300,o85,helicopter]
+   + z_sor[s300,o85,ship] + z_sor[s300,o85,icebreaker]
+   + z_sor[s300,o86,helicopter] + z_sor[s300,o86,ship]
+   + z_sor[s300,o86,icebreaker] + z_sor[s300,o87,helicopter]
+   + z_sor[s300,o87,ship] + z_sor[s300,o87,icebreaker]
+   + z_sor[s300,o88,helicopter] + z_sor[s300,o88,ship]
+   + z_sor[s300,o88,icebreaker] + z_sor[s300,o89,helicopter]
+   + z_sor[s300,o89,ship] + z_sor[s300,o89,icebreaker]
+   + z_sor[s300,o90,helicopter] + z_sor[s300,o90,ship]
+   + z_sor[s300,o90,icebreaker] + z_sor[s300,o91,helicopter]
+   + z_sor[s300,o91,ship] + z_sor[s300,o91,icebreaker]
+   + z_sor[s300,o92,helicopter] + z_sor[s300,o92,ship]
+   + z_sor[s300,o92,icebreaker] + z_sor[s300,o93,helicopter]
+   + z_sor[s300,o93,ship] + z_sor[s300,o93,icebreaker]
+   + z_sor[s300,o94,helicopter] + z_sor[s300,o94,ship]
+   + z_sor[s300,o94,icebreaker] + z_sor[s300,o95,helicopter]
+   + z_sor[s300,o95,ship] + z_sor[s300,o95,icebreaker]
+   + z_sor[s300,o96,helicopter] + z_sor[s300,o96,ship]
+   + z_sor[s300,o96,icebreaker] + z_sor[s300,o97,helicopter]
+   + z_sor[s300,o97,ship] + z_sor[s300,o97,icebreaker]
+   + z_sor[s300,o98,helicopter] + z_sor[s300,o98,ship]
+   + z_sor[s300,o98,icebreaker] + z_sor[s300,o99,helicopter]
+   + z_sor[s300,o99,ship] + z_sor[s300,o99,icebreaker]
+   + z_sor[s300,o100,helicopter] + z_sor[s300,o100,ship]
+   + z_sor[s300,o100,icebreaker] <= 32
+Bounds
+ z_sor[s6,o1,helicopter] free
+ z_sor[s6,o2,ship] free
+ z_sor[s6,o2,icebreaker] free
+ z_sor[s6,o3,helicopter] free
+ z_sor[s6,o4,ship] free
+ z_sor[s6,o4,icebreaker] free
+ z_sor[s6,o5,helicopter] free
+ z_sor[s6,o6,ship] free
+ z_sor[s6,o6,icebreaker] free
+ z_sor[s6,o7,ship] free
+ z_sor[s6,o7,icebreaker] free
+ z_sor[s6,o8,ship] free
+ z_sor[s6,o8,icebreaker] free
+ z_sor[s6,o10,ship] free
+ z_sor[s6,o10,icebreaker] free
+ z_sor[s6,o11,helicopter] free
+ z_sor[s6,o12,helicopter] free
+ z_sor[s6,o13,ship] free
+ z_sor[s6,o13,icebreaker] free
+ z_sor[s6,o14,helicopter] free
+ z_sor[s6,o16,helicopter] free
+ z_sor[s6,o17,helicopter] free
+ z_sor[s6,o18,ship] free
+ z_sor[s6,o18,icebreaker] free
+ z_sor[s6,o19,ship] free
+ z_sor[s6,o19,icebreaker] free
+ z_sor[s6,o22,helicopter] free
+ z_sor[s6,o24,helicopter] free
+ z_sor[s6,o25,ship] free
+ z_sor[s6,o25,icebreaker] free
+ z_sor[s6,o26,helicopter] free
+ z_sor[s6,o27,ship] free
+ z_sor[s6,o27,icebreaker] free
+ z_sor[s6,o28,helicopter] free
+ z_sor[s6,o29,helicopter] free
+ z_sor[s6,o30,helicopter] free
+ z_sor[s6,o31,helicopter] free
+ z_sor[s6,o32,ship] free
+ z_sor[s6,o32,icebreaker] free
+ z_sor[s6,o33,helicopter] free
+ z_sor[s6,o34,ship] free
+ z_sor[s6,o34,icebreaker] free
+ z_sor[s6,o35,ship] free
+ z_sor[s6,o35,icebreaker] free
+ z_sor[s6,o36,helicopter] free
+ z_sor[s6,o37,ship] free
+ z_sor[s6,o37,icebreaker] free
+ z_sor[s6,o39,helicopter] free
+ z_sor[s6,o40,helicopter] free
+ z_sor[s6,o40,ship] free
+ z_sor[s6,o40,icebreaker] free
+ z_sor[s6,o41,helicopter] free
+ z_sor[s6,o42,helicopter] free
+ z_sor[s6,o43,helicopter] free
+ z_sor[s6,o43,ship] free
+ z_sor[s6,o43,icebreaker] free
+ z_sor[s6,o44,ship] free
+ z_sor[s6,o44,icebreaker] free
+ z_sor[s6,o45,helicopter] free
+ z_sor[s6,o46,ship] free
+ z_sor[s6,o46,icebreaker] free
+ z_sor[s6,o48,helicopter] free
+ z_sor[s6,o50,helicopter] free
+ z_sor[s6,o51,helicopter] free
+ z_sor[s6,o52,helicopter] free
+ z_sor[s6,o52,ship] free
+ z_sor[s6,o52,icebreaker] free
+ z_sor[s6,o53,helicopter] free
+ z_sor[s6,o55,ship] free
+ z_sor[s6,o55,icebreaker] free
+ z_sor[s6,o56,ship] free
+ z_sor[s6,o56,icebreaker] free
+ z_sor[s6,o57,ship] free
+ z_sor[s6,o57,icebreaker] free
+ z_sor[s6,o58,helicopter] free
+ z_sor[s6,o59,ship] free
+ z_sor[s6,o59,icebreaker] free
+ z_sor[s6,o60,ship] free
+ z_sor[s6,o60,icebreaker] free
+ z_sor[s6,o62,ship] free
+ z_sor[s6,o62,icebreaker] free
+ z_sor[s6,o63,helicopter] free
+ z_sor[s6,o64,ship] free
+ z_sor[s6,o64,icebreaker] free
+ z_sor[s6,o65,helicopter] free
+ z_sor[s6,o66,helicopter] free
+ z_sor[s6,o67,ship] free
+ z_sor[s6,o67,icebreaker] free
+ z_sor[s6,o68,helicopter] free
+ z_sor[s6,o69,helicopter] free
+ z_sor[s6,o70,helicopter] free
+ z_sor[s6,o71,helicopter] free
+ z_sor[s6,o72,helicopter] free
+ z_sor[s6,o73,ship] free
+ z_sor[s6,o73,icebreaker] free
+ z_sor[s6,o74,helicopter] free
+ z_sor[s6,o75,ship] free
+ z_sor[s6,o75,icebreaker] free
+ z_sor[s6,o76,helicopter] free
+ z_sor[s6,o77,helicopter] free
+ z_sor[s6,o78,helicopter] free
+ z_sor[s6,o80,helicopter] free
+ z_sor[s6,o81,helicopter] free
+ z_sor[s6,o82,ship] free
+ z_sor[s6,o82,icebreaker] free
+ z_sor[s6,o83,helicopter] free
+ z_sor[s6,o84,ship] free
+ z_sor[s6,o84,icebreaker] free
+ z_sor[s6,o85,helicopter] free
+ z_sor[s6,o86,helicopter] free
+ z_sor[s6,o87,helicopter] free
+ z_sor[s6,o88,ship] free
+ z_sor[s6,o88,icebreaker] free
+ z_sor[s6,o89,helicopter] free
+ z_sor[s6,o89,ship] free
+ z_sor[s6,o89,icebreaker] free
+ z_sor[s6,o91,ship] free
+ z_sor[s6,o91,icebreaker] free
+ z_sor[s6,o92,ship] free
+ z_sor[s6,o92,icebreaker] free
+ z_sor[s6,o93,helicopter] free
+ z_sor[s6,o94,helicopter] free
+ z_sor[s6,o95,helicopter] free
+ z_sor[s6,o95,ship] free
+ z_sor[s6,o95,icebreaker] free
+ z_sor[s6,o96,ship] free
+ z_sor[s6,o96,icebreaker] free
+ z_sor[s6,o97,helicopter] free
+ z_sor[s6,o98,helicopter] free
+ z_sor[s6,o100,ship] free
+ z_sor[s6,o100,icebreaker] free
+ z_sor[s9,o1,helicopter] free
+ z_sor[s9,o2,ship] free
+ z_sor[s9,o2,icebreaker] free
+ z_sor[s9,o3,helicopter] free
+ z_sor[s9,o4,ship] free
+ z_sor[s9,o4,icebreaker] free
+ z_sor[s9,o5,helicopter] free
+ z_sor[s9,o6,ship] free
+ z_sor[s9,o6,icebreaker] free
+ z_sor[s9,o7,ship] free
+ z_sor[s9,o7,icebreaker] free
+ z_sor[s9,o8,ship] free
+ z_sor[s9,o8,icebreaker] free
+ z_sor[s9,o10,ship] free
+ z_sor[s9,o10,icebreaker] free
+ z_sor[s9,o11,helicopter] free
+ z_sor[s9,o12,helicopter] free
+ z_sor[s9,o13,ship] free
+ z_sor[s9,o13,icebreaker] free
+ z_sor[s9,o14,helicopter] free
+ z_sor[s9,o16,helicopter] free
+ z_sor[s9,o17,helicopter] free
+ z_sor[s9,o18,ship] free
+ z_sor[s9,o18,icebreaker] free
+ z_sor[s9,o19,ship] free
+ z_sor[s9,o19,icebreaker] free
+ z_sor[s9,o22,helicopter] free
+ z_sor[s9,o24,helicopter] free
+ z_sor[s9,o25,ship] free
+ z_sor[s9,o25,icebreaker] free
+ z_sor[s9,o26,helicopter] free
+ z_sor[s9,o27,ship] free
+ z_sor[s9,o27,icebreaker] free
+ z_sor[s9,o28,helicopter] free
+ z_sor[s9,o29,helicopter] free
+ z_sor[s9,o30,helicopter] free
+ z_sor[s9,o31,helicopter] free
+ z_sor[s9,o32,ship] free
+ z_sor[s9,o32,icebreaker] free
+ z_sor[s9,o33,helicopter] free
+ z_sor[s9,o34,ship] free
+ z_sor[s9,o34,icebreaker] free
+ z_sor[s9,o35,ship] free
+ z_sor[s9,o35,icebreaker] free
+ z_sor[s9,o36,helicopter] free
+ z_sor[s9,o37,ship] free
+ z_sor[s9,o37,icebreaker] free
+ z_sor[s9,o39,helicopter] free
+ z_sor[s9,o40,helicopter] free
+ z_sor[s9,o40,ship] free
+ z_sor[s9,o40,icebreaker] free
+ z_sor[s9,o41,helicopter] free
+ z_sor[s9,o42,helicopter] free
+ z_sor[s9,o43,helicopter] free
+ z_sor[s9,o43,ship] free
+ z_sor[s9,o43,icebreaker] free
+ z_sor[s9,o44,ship] free
+ z_sor[s9,o44,icebreaker] free
+ z_sor[s9,o45,helicopter] free
+ z_sor[s9,o46,ship] free
+ z_sor[s9,o46,icebreaker] free
+ z_sor[s9,o48,helicopter] free
+ z_sor[s9,o50,helicopter] free
+ z_sor[s9,o51,helicopter] free
+ z_sor[s9,o52,helicopter] free
+ z_sor[s9,o52,ship] free
+ z_sor[s9,o52,icebreaker] free
+ z_sor[s9,o53,helicopter] free
+ z_sor[s9,o55,ship] free
+ z_sor[s9,o55,icebreaker] free
+ z_sor[s9,o56,ship] free
+ z_sor[s9,o56,icebreaker] free
+ z_sor[s9,o57,ship] free
+ z_sor[s9,o57,icebreaker] free
+ z_sor[s9,o58,helicopter] free
+ z_sor[s9,o59,ship] free
+ z_sor[s9,o59,icebreaker] free
+ z_sor[s9,o60,ship] free
+ z_sor[s9,o60,icebreaker] free
+ z_sor[s9,o62,ship] free
+ z_sor[s9,o62,icebreaker] free
+ z_sor[s9,o63,helicopter] free
+ z_sor[s9,o64,ship] free
+ z_sor[s9,o64,icebreaker] free
+ z_sor[s9,o65,helicopter] free
+ z_sor[s9,o66,helicopter] free
+ z_sor[s9,o67,ship] free
+ z_sor[s9,o67,icebreaker] free
+ z_sor[s9,o68,helicopter] free
+ z_sor[s9,o69,helicopter] free
+ z_sor[s9,o70,helicopter] free
+ z_sor[s9,o71,helicopter] free
+ z_sor[s9,o72,helicopter] free
+ z_sor[s9,o73,ship] free
+ z_sor[s9,o73,icebreaker] free
+ z_sor[s9,o74,helicopter] free
+ z_sor[s9,o75,ship] free
+ z_sor[s9,o75,icebreaker] free
+ z_sor[s9,o76,helicopter] free
+ z_sor[s9,o77,helicopter] free
+ z_sor[s9,o78,helicopter] free
+ z_sor[s9,o80,helicopter] free
+ z_sor[s9,o81,helicopter] free
+ z_sor[s9,o82,ship] free
+ z_sor[s9,o82,icebreaker] free
+ z_sor[s9,o83,helicopter] free
+ z_sor[s9,o84,ship] free
+ z_sor[s9,o84,icebreaker] free
+ z_sor[s9,o85,helicopter] free
+ z_sor[s9,o86,helicopter] free
+ z_sor[s9,o87,helicopter] free
+ z_sor[s9,o88,ship] free
+ z_sor[s9,o88,icebreaker] free
+ z_sor[s9,o89,helicopter] free
+ z_sor[s9,o89,ship] free
+ z_sor[s9,o89,icebreaker] free
+ z_sor[s9,o91,ship] free
+ z_sor[s9,o91,icebreaker] free
+ z_sor[s9,o92,ship] free
+ z_sor[s9,o92,icebreaker] free
+ z_sor[s9,o93,helicopter] free
+ z_sor[s9,o94,helicopter] free
+ z_sor[s9,o96,ship] free
+ z_sor[s9,o96,icebreaker] free
+ z_sor[s9,o97,helicopter] free
+ z_sor[s9,o98,helicopter] free
+ z_sor[s9,o100,ship] free
+ z_sor[s9,o100,icebreaker] free
+ z_sor[s200,o1,helicopter] free
+ z_sor[s200,o2,ship] free
+ z_sor[s200,o2,icebreaker] free
+ z_sor[s200,o3,helicopter] free
+ z_sor[s200,o4,ship] free
+ z_sor[s200,o4,icebreaker] free
+ z_sor[s200,o5,helicopter] free
+ z_sor[s200,o6,ship] free
+ z_sor[s200,o6,icebreaker] free
+ z_sor[s200,o7,ship] free
+ z_sor[s200,o7,icebreaker] free
+ z_sor[s200,o8,ship] free
+ z_sor[s200,o8,icebreaker] free
+ z_sor[s200,o10,ship] free
+ z_sor[s200,o10,icebreaker] free
+ z_sor[s200,o11,helicopter] free
+ z_sor[s200,o12,helicopter] free
+ z_sor[s200,o13,ship] free
+ z_sor[s200,o13,icebreaker] free
+ z_sor[s200,o14,helicopter] free
+ z_sor[s200,o16,helicopter] free
+ z_sor[s200,o17,helicopter] free
+ z_sor[s200,o18,ship] free
+ z_sor[s200,o18,icebreaker] free
+ z_sor[s200,o19,ship] free
+ z_sor[s200,o19,icebreaker] free
+ z_sor[s200,o22,helicopter] free
+ z_sor[s200,o24,helicopter] free
+ z_sor[s200,o25,ship] free
+ z_sor[s200,o25,icebreaker] free
+ z_sor[s200,o26,helicopter] free
+ z_sor[s200,o27,ship] free
+ z_sor[s200,o27,icebreaker] free
+ z_sor[s200,o28,helicopter] free
+ z_sor[s200,o29,helicopter] free
+ z_sor[s200,o30,helicopter] free
+ z_sor[s200,o31,helicopter] free
+ z_sor[s200,o32,ship] free
+ z_sor[s200,o32,icebreaker] free
+ z_sor[s200,o33,helicopter] free
+ z_sor[s200,o34,ship] free
+ z_sor[s200,o34,icebreaker] free
+ z_sor[s200,o35,ship] free
+ z_sor[s200,o35,icebreaker] free
+ z_sor[s200,o36,helicopter] free
+ z_sor[s200,o37,ship] free
+ z_sor[s200,o37,icebreaker] free
+ z_sor[s200,o39,helicopter] free
+ z_sor[s200,o40,helicopter] free
+ z_sor[s200,o40,ship] free
+ z_sor[s200,o40,icebreaker] free
+ z_sor[s200,o41,helicopter] free
+ z_sor[s200,o42,helicopter] free
+ z_sor[s200,o44,ship] free
+ z_sor[s200,o44,icebreaker] free
+ z_sor[s200,o45,helicopter] free
+ z_sor[s200,o46,ship] free
+ z_sor[s200,o46,icebreaker] free
+ z_sor[s200,o48,helicopter] free
+ z_sor[s200,o50,helicopter] free
+ z_sor[s200,o51,helicopter] free
+ z_sor[s200,o53,helicopter] free
+ z_sor[s200,o55,ship] free
+ z_sor[s200,o55,icebreaker] free
+ z_sor[s200,o56,ship] free
+ z_sor[s200,o56,icebreaker] free
+ z_sor[s200,o57,ship] free
+ z_sor[s200,o57,icebreaker] free
+ z_sor[s200,o58,helicopter] free
+ z_sor[s200,o59,ship] free
+ z_sor[s200,o59,icebreaker] free
+ z_sor[s200,o60,ship] free
+ z_sor[s200,o60,icebreaker] free
+ z_sor[s200,o62,ship] free
+ z_sor[s200,o62,icebreaker] free
+ z_sor[s200,o63,helicopter] free
+ z_sor[s200,o64,ship] free
+ z_sor[s200,o64,icebreaker] free
+ z_sor[s200,o65,helicopter] free
+ z_sor[s200,o66,helicopter] free
+ z_sor[s200,o67,ship] free
+ z_sor[s200,o67,icebreaker] free
+ z_sor[s200,o68,helicopter] free
+ z_sor[s200,o69,helicopter] free
+ z_sor[s200,o70,helicopter] free
+ z_sor[s200,o71,helicopter] free
+ z_sor[s200,o72,helicopter] free
+ z_sor[s200,o73,ship] free
+ z_sor[s200,o73,icebreaker] free
+ z_sor[s200,o74,helicopter] free
+ z_sor[s200,o75,ship] free
+ z_sor[s200,o75,icebreaker] free
+ z_sor[s200,o76,helicopter] free
+ z_sor[s200,o77,helicopter] free
+ z_sor[s200,o78,helicopter] free
+ z_sor[s200,o80,helicopter] free
+ z_sor[s200,o81,helicopter] free
+ z_sor[s200,o82,ship] free
+ z_sor[s200,o82,icebreaker] free
+ z_sor[s200,o83,helicopter] free
+ z_sor[s200,o84,ship] free
+ z_sor[s200,o84,icebreaker] free
+ z_sor[s200,o85,helicopter] free
+ z_sor[s200,o86,helicopter] free
+ z_sor[s200,o87,helicopter] free
+ z_sor[s200,o88,ship] free
+ z_sor[s200,o88,icebreaker] free
+ z_sor[s200,o89,helicopter] free
+ z_sor[s200,o89,ship] free
+ z_sor[s200,o89,icebreaker] free
+ z_sor[s200,o91,ship] free
+ z_sor[s200,o91,icebreaker] free
+ z_sor[s200,o92,ship] free
+ z_sor[s200,o92,icebreaker] free
+ z_sor[s200,o93,helicopter] free
+ z_sor[s200,o94,helicopter] free
+ z_sor[s200,o95,helicopter] free
+ z_sor[s200,o95,ship] free
+ z_sor[s200,o95,icebreaker] free
+ z_sor[s200,o96,ship] free
+ z_sor[s200,o96,icebreaker] free
+ z_sor[s200,o97,helicopter] free
+ z_sor[s200,o98,helicopter] free
+ z_sor[s200,o100,ship] free
+ z_sor[s200,o100,icebreaker] free
+ z_sor[s300,o1,helicopter] free
+ z_sor[s300,o2,ship] free
+ z_sor[s300,o2,icebreaker] free
+ z_sor[s300,o3,helicopter] free
+ z_sor[s300,o4,ship] free
+ z_sor[s300,o4,icebreaker] free
+ z_sor[s300,o5,helicopter] free
+ z_sor[s300,o6,ship] free
+ z_sor[s300,o6,icebreaker] free
+ z_sor[s300,o7,ship] free
+ z_sor[s300,o7,icebreaker] free
+ z_sor[s300,o8,ship] free
+ z_sor[s300,o8,icebreaker] free
+ z_sor[s300,o10,ship] free
+ z_sor[s300,o10,icebreaker] free
+ z_sor[s300,o11,helicopter] free
+ z_sor[s300,o12,helicopter] free
+ z_sor[s300,o13,ship] free
+ z_sor[s300,o13,icebreaker] free
+ z_sor[s300,o14,helicopter] free
+ z_sor[s300,o16,helicopter] free
+ z_sor[s300,o17,helicopter] free
+ z_sor[s300,o18,ship] free
+ z_sor[s300,o18,icebreaker] free
+ z_sor[s300,o19,ship] free
+ z_sor[s300,o19,icebreaker] free
+ z_sor[s300,o22,helicopter] free
+ z_sor[s300,o24,helicopter] free
+ z_sor[s300,o25,ship] free
+ z_sor[s300,o25,icebreaker] free
+ z_sor[s300,o26,helicopter] free
+ z_sor[s300,o27,ship] free
+ z_sor[s300,o27,icebreaker] free
+ z_sor[s300,o28,helicopter] free
+ z_sor[s300,o29,helicopter] free
+ z_sor[s300,o30,helicopter] free
+ z_sor[s300,o31,helicopter] free
+ z_sor[s300,o32,ship] free
+ z_sor[s300,o32,icebreaker] free
+ z_sor[s300,o33,helicopter] free
+ z_sor[s300,o34,ship] free
+ z_sor[s300,o34,icebreaker] free
+ z_sor[s300,o35,ship] free
+ z_sor[s300,o35,icebreaker] free
+ z_sor[s300,o36,helicopter] free
+ z_sor[s300,o37,ship] free
+ z_sor[s300,o37,icebreaker] free
+ z_sor[s300,o39,helicopter] free
+ z_sor[s300,o41,helicopter] free
+ z_sor[s300,o42,helicopter] free
+ z_sor[s300,o43,helicopter] free
+ z_sor[s300,o43,ship] free
+ z_sor[s300,o43,icebreaker] free
+ z_sor[s300,o44,ship] free
+ z_sor[s300,o44,icebreaker] free
+ z_sor[s300,o45,helicopter] free
+ z_sor[s300,o46,ship] free
+ z_sor[s300,o46,icebreaker] free
+ z_sor[s300,o48,helicopter] free
+ z_sor[s300,o50,helicopter] free
+ z_sor[s300,o51,helicopter] free
+ z_sor[s300,o53,helicopter] free
+ z_sor[s300,o55,ship] free
+ z_sor[s300,o55,icebreaker] free
+ z_sor[s300,o56,ship] free
+ z_sor[s300,o56,icebreaker] free
+ z_sor[s300,o57,ship] free
+ z_sor[s300,o57,icebreaker] free
+ z_sor[s300,o58,helicopter] free
+ z_sor[s300,o59,ship] free
+ z_sor[s300,o59,icebreaker] free
+ z_sor[s300,o60,ship] free
+ z_sor[s300,o60,icebreaker] free
+ z_sor[s300,o62,ship] free
+ z_sor[s300,o62,icebreaker] free
+ z_sor[s300,o63,helicopter] free
+ z_sor[s300,o64,ship] free
+ z_sor[s300,o64,icebreaker] free
+ z_sor[s300,o65,helicopter] free
+ z_sor[s300,o66,helicopter] free
+ z_sor[s300,o67,ship] free
+ z_sor[s300,o67,icebreaker] free
+ z_sor[s300,o68,helicopter] free
+ z_sor[s300,o69,helicopter] free
+ z_sor[s300,o70,helicopter] free
+ z_sor[s300,o71,helicopter] free
+ z_sor[s300,o72,helicopter] free
+ z_sor[s300,o73,ship] free
+ z_sor[s300,o73,icebreaker] free
+ z_sor[s300,o74,helicopter] free
+ z_sor[s300,o75,ship] free
+ z_sor[s300,o75,icebreaker] free
+ z_sor[s300,o76,helicopter] free
+ z_sor[s300,o77,helicopter] free
+ z_sor[s300,o78,helicopter] free
+ z_sor[s300,o80,helicopter] free
+ z_sor[s300,o81,helicopter] free
+ z_sor[s300,o82,ship] free
+ z_sor[s300,o82,icebreaker] free
+ z_sor[s300,o83,helicopter] free
+ z_sor[s300,o84,ship] free
+ z_sor[s300,o84,icebreaker] free
+ z_sor[s300,o85,helicopter] free
+ z_sor[s300,o86,helicopter] free
+ z_sor[s300,o87,helicopter] free
+ z_sor[s300,o88,ship] free
+ z_sor[s300,o88,icebreaker] free
+ z_sor[s300,o91,ship] free
+ z_sor[s300,o91,icebreaker] free
+ z_sor[s300,o92,ship] free
+ z_sor[s300,o92,icebreaker] free
+ z_sor[s300,o93,helicopter] free
+ z_sor[s300,o94,helicopter] free
+ z_sor[s300,o96,ship] free
+ z_sor[s300,o96,icebreaker] free
+ z_sor[s300,o97,helicopter] free
+ z_sor[s300,o98,helicopter] free
+ z_sor[s300,o100,ship] free
+ z_sor[s300,o100,icebreaker] free
+ Constant1 = 1
+Binaries
+ y_os[o40,s6] y_os[o40,s9] y_os[o40,s200] y_os[o43,s6] y_os[o43,s9]
+ y_os[o43,s300] y_os[o52,s6] y_os[o52,s9] y_os[o89,s6] y_os[o89,s9]
+ y_os[o89,s200] y_os[o95,s6] y_os[o95,s200]
+Generals
+ z_sor[s6,o1,helicopter] z_sor[s6,o1,ship] z_sor[s6,o1,icebreaker]
+ z_sor[s6,o2,helicopter] z_sor[s6,o2,ship] z_sor[s6,o2,icebreaker]
+ z_sor[s6,o3,helicopter] z_sor[s6,o3,ship] z_sor[s6,o3,icebreaker]
+ z_sor[s6,o4,helicopter] z_sor[s6,o4,ship] z_sor[s6,o4,icebreaker]
+ z_sor[s6,o5,helicopter] z_sor[s6,o5,ship] z_sor[s6,o5,icebreaker]
+ z_sor[s6,o6,helicopter] z_sor[s6,o6,ship] z_sor[s6,o6,icebreaker]
+ z_sor[s6,o7,helicopter] z_sor[s6,o7,ship] z_sor[s6,o7,icebreaker]
+ z_sor[s6,o8,helicopter] z_sor[s6,o8,ship] z_sor[s6,o8,icebreaker]
+ z_sor[s6,o9,helicopter] z_sor[s6,o9,ship] z_sor[s6,o9,icebreaker]
+ z_sor[s6,o10,helicopter] z_sor[s6,o10,ship] z_sor[s6,o10,icebreaker]
+ z_sor[s6,o11,helicopter] z_sor[s6,o11,ship] z_sor[s6,o11,icebreaker]
+ z_sor[s6,o12,helicopter] z_sor[s6,o12,ship] z_sor[s6,o12,icebreaker]
+ z_sor[s6,o13,helicopter] z_sor[s6,o13,ship] z_sor[s6,o13,icebreaker]
+ z_sor[s6,o14,helicopter] z_sor[s6,o14,ship] z_sor[s6,o14,icebreaker]
+ z_sor[s6,o15,helicopter] z_sor[s6,o15,ship] z_sor[s6,o15,icebreaker]
+ z_sor[s6,o16,helicopter] z_sor[s6,o16,ship] z_sor[s6,o16,icebreaker]
+ z_sor[s6,o17,helicopter] z_sor[s6,o17,ship] z_sor[s6,o17,icebreaker]
+ z_sor[s6,o18,helicopter] z_sor[s6,o18,ship] z_sor[s6,o18,icebreaker]
+ z_sor[s6,o19,helicopter] z_sor[s6,o19,ship] z_sor[s6,o19,icebreaker]
+ z_sor[s6,o20,helicopter] z_sor[s6,o20,ship] z_sor[s6,o20,icebreaker]
+ z_sor[s6,o21,helicopter] z_sor[s6,o21,ship] z_sor[s6,o21,icebreaker]
+ z_sor[s6,o22,helicopter] z_sor[s6,o22,ship] z_sor[s6,o22,icebreaker]
+ z_sor[s6,o23,helicopter] z_sor[s6,o23,ship] z_sor[s6,o23,icebreaker]
+ z_sor[s6,o24,helicopter] z_sor[s6,o24,ship] z_sor[s6,o24,icebreaker]
+ z_sor[s6,o25,helicopter] z_sor[s6,o25,ship] z_sor[s6,o25,icebreaker]
+ z_sor[s6,o26,helicopter] z_sor[s6,o26,ship] z_sor[s6,o26,icebreaker]
+ z_sor[s6,o27,helicopter] z_sor[s6,o27,ship] z_sor[s6,o27,icebreaker]
+ z_sor[s6,o28,helicopter] z_sor[s6,o28,ship] z_sor[s6,o28,icebreaker]
+ z_sor[s6,o29,helicopter] z_sor[s6,o29,ship] z_sor[s6,o29,icebreaker]
+ z_sor[s6,o30,helicopter] z_sor[s6,o30,ship] z_sor[s6,o30,icebreaker]
+ z_sor[s6,o31,helicopter] z_sor[s6,o31,ship] z_sor[s6,o31,icebreaker]
+ z_sor[s6,o32,helicopter] z_sor[s6,o32,ship] z_sor[s6,o32,icebreaker]
+ z_sor[s6,o33,helicopter] z_sor[s6,o33,ship] z_sor[s6,o33,icebreaker]
+ z_sor[s6,o34,helicopter] z_sor[s6,o34,ship] z_sor[s6,o34,icebreaker]
+ z_sor[s6,o35,helicopter] z_sor[s6,o35,ship] z_sor[s6,o35,icebreaker]
+ z_sor[s6,o36,helicopter] z_sor[s6,o36,ship] z_sor[s6,o36,icebreaker]
+ z_sor[s6,o37,helicopter] z_sor[s6,o37,ship] z_sor[s6,o37,icebreaker]
+ z_sor[s6,o38,helicopter] z_sor[s6,o38,ship] z_sor[s6,o38,icebreaker]
+ z_sor[s6,o39,helicopter] z_sor[s6,o39,ship] z_sor[s6,o39,icebreaker]
+ z_sor[s6,o40,helicopter] z_sor[s6,o40,ship] z_sor[s6,o40,icebreaker]
+ z_sor[s6,o41,helicopter] z_sor[s6,o41,ship] z_sor[s6,o41,icebreaker]
+ z_sor[s6,o42,helicopter] z_sor[s6,o42,ship] z_sor[s6,o42,icebreaker]
+ z_sor[s6,o43,helicopter] z_sor[s6,o43,ship] z_sor[s6,o43,icebreaker]
+ z_sor[s6,o44,helicopter] z_sor[s6,o44,ship] z_sor[s6,o44,icebreaker]
+ z_sor[s6,o45,helicopter] z_sor[s6,o45,ship] z_sor[s6,o45,icebreaker]
+ z_sor[s6,o46,helicopter] z_sor[s6,o46,ship] z_sor[s6,o46,icebreaker]
+ z_sor[s6,o47,helicopter] z_sor[s6,o47,ship] z_sor[s6,o47,icebreaker]
+ z_sor[s6,o48,helicopter] z_sor[s6,o48,ship] z_sor[s6,o48,icebreaker]
+ z_sor[s6,o49,helicopter] z_sor[s6,o49,ship] z_sor[s6,o49,icebreaker]
+ z_sor[s6,o50,helicopter] z_sor[s6,o50,ship] z_sor[s6,o50,icebreaker]
+ z_sor[s6,o51,helicopter] z_sor[s6,o51,ship] z_sor[s6,o51,icebreaker]
+ z_sor[s6,o52,helicopter] z_sor[s6,o52,ship] z_sor[s6,o52,icebreaker]
+ z_sor[s6,o53,helicopter] z_sor[s6,o53,ship] z_sor[s6,o53,icebreaker]
+ z_sor[s6,o54,helicopter] z_sor[s6,o54,ship] z_sor[s6,o54,icebreaker]
+ z_sor[s6,o55,helicopter] z_sor[s6,o55,ship] z_sor[s6,o55,icebreaker]
+ z_sor[s6,o56,helicopter] z_sor[s6,o56,ship] z_sor[s6,o56,icebreaker]
+ z_sor[s6,o57,helicopter] z_sor[s6,o57,ship] z_sor[s6,o57,icebreaker]
+ z_sor[s6,o58,helicopter] z_sor[s6,o58,ship] z_sor[s6,o58,icebreaker]
+ z_sor[s6,o59,helicopter] z_sor[s6,o59,ship] z_sor[s6,o59,icebreaker]
+ z_sor[s6,o60,helicopter] z_sor[s6,o60,ship] z_sor[s6,o60,icebreaker]
+ z_sor[s6,o61,helicopter] z_sor[s6,o61,ship] z_sor[s6,o61,icebreaker]
+ z_sor[s6,o62,helicopter] z_sor[s6,o62,ship] z_sor[s6,o62,icebreaker]
+ z_sor[s6,o63,helicopter] z_sor[s6,o63,ship] z_sor[s6,o63,icebreaker]
+ z_sor[s6,o64,helicopter] z_sor[s6,o64,ship] z_sor[s6,o64,icebreaker]
+ z_sor[s6,o65,helicopter] z_sor[s6,o65,ship] z_sor[s6,o65,icebreaker]
+ z_sor[s6,o66,helicopter] z_sor[s6,o66,ship] z_sor[s6,o66,icebreaker]
+ z_sor[s6,o67,helicopter] z_sor[s6,o67,ship] z_sor[s6,o67,icebreaker]
+ z_sor[s6,o68,helicopter] z_sor[s6,o68,ship] z_sor[s6,o68,icebreaker]
+ z_sor[s6,o69,helicopter] z_sor[s6,o69,ship] z_sor[s6,o69,icebreaker]
+ z_sor[s6,o70,helicopter] z_sor[s6,o70,ship] z_sor[s6,o70,icebreaker]
+ z_sor[s6,o71,helicopter] z_sor[s6,o71,ship] z_sor[s6,o71,icebreaker]
+ z_sor[s6,o72,helicopter] z_sor[s6,o72,ship] z_sor[s6,o72,icebreaker]
+ z_sor[s6,o73,helicopter] z_sor[s6,o73,ship] z_sor[s6,o73,icebreaker]
+ z_sor[s6,o74,helicopter] z_sor[s6,o74,ship] z_sor[s6,o74,icebreaker]
+ z_sor[s6,o75,helicopter] z_sor[s6,o75,ship] z_sor[s6,o75,icebreaker]
+ z_sor[s6,o76,helicopter] z_sor[s6,o76,ship] z_sor[s6,o76,icebreaker]
+ z_sor[s6,o77,helicopter] z_sor[s6,o77,ship] z_sor[s6,o77,icebreaker]
+ z_sor[s6,o78,helicopter] z_sor[s6,o78,ship] z_sor[s6,o78,icebreaker]
+ z_sor[s6,o79,helicopter] z_sor[s6,o79,ship] z_sor[s6,o79,icebreaker]
+ z_sor[s6,o80,helicopter] z_sor[s6,o80,ship] z_sor[s6,o80,icebreaker]
+ z_sor[s6,o81,helicopter] z_sor[s6,o81,ship] z_sor[s6,o81,icebreaker]
+ z_sor[s6,o82,helicopter] z_sor[s6,o82,ship] z_sor[s6,o82,icebreaker]
+ z_sor[s6,o83,helicopter] z_sor[s6,o83,ship] z_sor[s6,o83,icebreaker]
+ z_sor[s6,o84,helicopter] z_sor[s6,o84,ship] z_sor[s6,o84,icebreaker]
+ z_sor[s6,o85,helicopter] z_sor[s6,o85,ship] z_sor[s6,o85,icebreaker]
+ z_sor[s6,o86,helicopter] z_sor[s6,o86,ship] z_sor[s6,o86,icebreaker]
+ z_sor[s6,o87,helicopter] z_sor[s6,o87,ship] z_sor[s6,o87,icebreaker]
+ z_sor[s6,o88,helicopter] z_sor[s6,o88,ship] z_sor[s6,o88,icebreaker]
+ z_sor[s6,o89,helicopter] z_sor[s6,o89,ship] z_sor[s6,o89,icebreaker]
+ z_sor[s6,o90,helicopter] z_sor[s6,o90,ship] z_sor[s6,o90,icebreaker]
+ z_sor[s6,o91,helicopter] z_sor[s6,o91,ship] z_sor[s6,o91,icebreaker]
+ z_sor[s6,o92,helicopter] z_sor[s6,o92,ship] z_sor[s6,o92,icebreaker]
+ z_sor[s6,o93,helicopter] z_sor[s6,o93,ship] z_sor[s6,o93,icebreaker]
+ z_sor[s6,o94,helicopter] z_sor[s6,o94,ship] z_sor[s6,o94,icebreaker]
+ z_sor[s6,o95,helicopter] z_sor[s6,o95,ship] z_sor[s6,o95,icebreaker]
+ z_sor[s6,o96,helicopter] z_sor[s6,o96,ship] z_sor[s6,o96,icebreaker]
+ z_sor[s6,o97,helicopter] z_sor[s6,o97,ship] z_sor[s6,o97,icebreaker]
+ z_sor[s6,o98,helicopter] z_sor[s6,o98,ship] z_sor[s6,o98,icebreaker]
+ z_sor[s6,o99,helicopter] z_sor[s6,o99,ship] z_sor[s6,o99,icebreaker]
+ z_sor[s6,o100,helicopter] z_sor[s6,o100,ship] z_sor[s6,o100,icebreaker]
+ z_sor[s9,o1,helicopter] z_sor[s9,o1,ship] z_sor[s9,o1,icebreaker]
+ z_sor[s9,o2,helicopter] z_sor[s9,o2,ship] z_sor[s9,o2,icebreaker]
+ z_sor[s9,o3,helicopter] z_sor[s9,o3,ship] z_sor[s9,o3,icebreaker]
+ z_sor[s9,o4,helicopter] z_sor[s9,o4,ship] z_sor[s9,o4,icebreaker]
+ z_sor[s9,o5,helicopter] z_sor[s9,o5,ship] z_sor[s9,o5,icebreaker]
+ z_sor[s9,o6,helicopter] z_sor[s9,o6,ship] z_sor[s9,o6,icebreaker]
+ z_sor[s9,o7,helicopter] z_sor[s9,o7,ship] z_sor[s9,o7,icebreaker]
+ z_sor[s9,o8,helicopter] z_sor[s9,o8,ship] z_sor[s9,o8,icebreaker]
+ z_sor[s9,o9,helicopter] z_sor[s9,o9,ship] z_sor[s9,o9,icebreaker]
+ z_sor[s9,o10,helicopter] z_sor[s9,o10,ship] z_sor[s9,o10,icebreaker]
+ z_sor[s9,o11,helicopter] z_sor[s9,o11,ship] z_sor[s9,o11,icebreaker]
+ z_sor[s9,o12,helicopter] z_sor[s9,o12,ship] z_sor[s9,o12,icebreaker]
+ z_sor[s9,o13,helicopter] z_sor[s9,o13,ship] z_sor[s9,o13,icebreaker]
+ z_sor[s9,o14,helicopter] z_sor[s9,o14,ship] z_sor[s9,o14,icebreaker]
+ z_sor[s9,o15,helicopter] z_sor[s9,o15,ship] z_sor[s9,o15,icebreaker]
+ z_sor[s9,o16,helicopter] z_sor[s9,o16,ship] z_sor[s9,o16,icebreaker]
+ z_sor[s9,o17,helicopter] z_sor[s9,o17,ship] z_sor[s9,o17,icebreaker]
+ z_sor[s9,o18,helicopter] z_sor[s9,o18,ship] z_sor[s9,o18,icebreaker]
+ z_sor[s9,o19,helicopter] z_sor[s9,o19,ship] z_sor[s9,o19,icebreaker]
+ z_sor[s9,o20,helicopter] z_sor[s9,o20,ship] z_sor[s9,o20,icebreaker]
+ z_sor[s9,o21,helicopter] z_sor[s9,o21,ship] z_sor[s9,o21,icebreaker]
+ z_sor[s9,o22,helicopter] z_sor[s9,o22,ship] z_sor[s9,o22,icebreaker]
+ z_sor[s9,o23,helicopter] z_sor[s9,o23,ship] z_sor[s9,o23,icebreaker]
+ z_sor[s9,o24,helicopter] z_sor[s9,o24,ship] z_sor[s9,o24,icebreaker]
+ z_sor[s9,o25,helicopter] z_sor[s9,o25,ship] z_sor[s9,o25,icebreaker]
+ z_sor[s9,o26,helicopter] z_sor[s9,o26,ship] z_sor[s9,o26,icebreaker]
+ z_sor[s9,o27,helicopter] z_sor[s9,o27,ship] z_sor[s9,o27,icebreaker]
+ z_sor[s9,o28,helicopter] z_sor[s9,o28,ship] z_sor[s9,o28,icebreaker]
+ z_sor[s9,o29,helicopter] z_sor[s9,o29,ship] z_sor[s9,o29,icebreaker]
+ z_sor[s9,o30,helicopter] z_sor[s9,o30,ship] z_sor[s9,o30,icebreaker]
+ z_sor[s9,o31,helicopter] z_sor[s9,o31,ship] z_sor[s9,o31,icebreaker]
+ z_sor[s9,o32,helicopter] z_sor[s9,o32,ship] z_sor[s9,o32,icebreaker]
+ z_sor[s9,o33,helicopter] z_sor[s9,o33,ship] z_sor[s9,o33,icebreaker]
+ z_sor[s9,o34,helicopter] z_sor[s9,o34,ship] z_sor[s9,o34,icebreaker]
+ z_sor[s9,o35,helicopter] z_sor[s9,o35,ship] z_sor[s9,o35,icebreaker]
+ z_sor[s9,o36,helicopter] z_sor[s9,o36,ship] z_sor[s9,o36,icebreaker]
+ z_sor[s9,o37,helicopter] z_sor[s9,o37,ship] z_sor[s9,o37,icebreaker]
+ z_sor[s9,o38,helicopter] z_sor[s9,o38,ship] z_sor[s9,o38,icebreaker]
+ z_sor[s9,o39,helicopter] z_sor[s9,o39,ship] z_sor[s9,o39,icebreaker]
+ z_sor[s9,o40,helicopter] z_sor[s9,o40,ship] z_sor[s9,o40,icebreaker]
+ z_sor[s9,o41,helicopter] z_sor[s9,o41,ship] z_sor[s9,o41,icebreaker]
+ z_sor[s9,o42,helicopter] z_sor[s9,o42,ship] z_sor[s9,o42,icebreaker]
+ z_sor[s9,o43,helicopter] z_sor[s9,o43,ship] z_sor[s9,o43,icebreaker]
+ z_sor[s9,o44,helicopter] z_sor[s9,o44,ship] z_sor[s9,o44,icebreaker]
+ z_sor[s9,o45,helicopter] z_sor[s9,o45,ship] z_sor[s9,o45,icebreaker]
+ z_sor[s9,o46,helicopter] z_sor[s9,o46,ship] z_sor[s9,o46,icebreaker]
+ z_sor[s9,o47,helicopter] z_sor[s9,o47,ship] z_sor[s9,o47,icebreaker]
+ z_sor[s9,o48,helicopter] z_sor[s9,o48,ship] z_sor[s9,o48,icebreaker]
+ z_sor[s9,o49,helicopter] z_sor[s9,o49,ship] z_sor[s9,o49,icebreaker]
+ z_sor[s9,o50,helicopter] z_sor[s9,o50,ship] z_sor[s9,o50,icebreaker]
+ z_sor[s9,o51,helicopter] z_sor[s9,o51,ship] z_sor[s9,o51,icebreaker]
+ z_sor[s9,o52,helicopter] z_sor[s9,o52,ship] z_sor[s9,o52,icebreaker]
+ z_sor[s9,o53,helicopter] z_sor[s9,o53,ship] z_sor[s9,o53,icebreaker]
+ z_sor[s9,o54,helicopter] z_sor[s9,o54,ship] z_sor[s9,o54,icebreaker]
+ z_sor[s9,o55,helicopter] z_sor[s9,o55,ship] z_sor[s9,o55,icebreaker]
+ z_sor[s9,o56,helicopter] z_sor[s9,o56,ship] z_sor[s9,o56,icebreaker]
+ z_sor[s9,o57,helicopter] z_sor[s9,o57,ship] z_sor[s9,o57,icebreaker]
+ z_sor[s9,o58,helicopter] z_sor[s9,o58,ship] z_sor[s9,o58,icebreaker]
+ z_sor[s9,o59,helicopter] z_sor[s9,o59,ship] z_sor[s9,o59,icebreaker]
+ z_sor[s9,o60,helicopter] z_sor[s9,o60,ship] z_sor[s9,o60,icebreaker]
+ z_sor[s9,o61,helicopter] z_sor[s9,o61,ship] z_sor[s9,o61,icebreaker]
+ z_sor[s9,o62,helicopter] z_sor[s9,o62,ship] z_sor[s9,o62,icebreaker]
+ z_sor[s9,o63,helicopter] z_sor[s9,o63,ship] z_sor[s9,o63,icebreaker]
+ z_sor[s9,o64,helicopter] z_sor[s9,o64,ship] z_sor[s9,o64,icebreaker]
+ z_sor[s9,o65,helicopter] z_sor[s9,o65,ship] z_sor[s9,o65,icebreaker]
+ z_sor[s9,o66,helicopter] z_sor[s9,o66,ship] z_sor[s9,o66,icebreaker]
+ z_sor[s9,o67,helicopter] z_sor[s9,o67,ship] z_sor[s9,o67,icebreaker]
+ z_sor[s9,o68,helicopter] z_sor[s9,o68,ship] z_sor[s9,o68,icebreaker]
+ z_sor[s9,o69,helicopter] z_sor[s9,o69,ship] z_sor[s9,o69,icebreaker]
+ z_sor[s9,o70,helicopter] z_sor[s9,o70,ship] z_sor[s9,o70,icebreaker]
+ z_sor[s9,o71,helicopter] z_sor[s9,o71,ship] z_sor[s9,o71,icebreaker]
+ z_sor[s9,o72,helicopter] z_sor[s9,o72,ship] z_sor[s9,o72,icebreaker]
+ z_sor[s9,o73,helicopter] z_sor[s9,o73,ship] z_sor[s9,o73,icebreaker]
+ z_sor[s9,o74,helicopter] z_sor[s9,o74,ship] z_sor[s9,o74,icebreaker]
+ z_sor[s9,o75,helicopter] z_sor[s9,o75,ship] z_sor[s9,o75,icebreaker]
+ z_sor[s9,o76,helicopter] z_sor[s9,o76,ship] z_sor[s9,o76,icebreaker]
+ z_sor[s9,o77,helicopter] z_sor[s9,o77,ship] z_sor[s9,o77,icebreaker]
+ z_sor[s9,o78,helicopter] z_sor[s9,o78,ship] z_sor[s9,o78,icebreaker]
+ z_sor[s9,o79,helicopter] z_sor[s9,o79,ship] z_sor[s9,o79,icebreaker]
+ z_sor[s9,o80,helicopter] z_sor[s9,o80,ship] z_sor[s9,o80,icebreaker]
+ z_sor[s9,o81,helicopter] z_sor[s9,o81,ship] z_sor[s9,o81,icebreaker]
+ z_sor[s9,o82,helicopter] z_sor[s9,o82,ship] z_sor[s9,o82,icebreaker]
+ z_sor[s9,o83,helicopter] z_sor[s9,o83,ship] z_sor[s9,o83,icebreaker]
+ z_sor[s9,o84,helicopter] z_sor[s9,o84,ship] z_sor[s9,o84,icebreaker]
+ z_sor[s9,o85,helicopter] z_sor[s9,o85,ship] z_sor[s9,o85,icebreaker]
+ z_sor[s9,o86,helicopter] z_sor[s9,o86,ship] z_sor[s9,o86,icebreaker]
+ z_sor[s9,o87,helicopter] z_sor[s9,o87,ship] z_sor[s9,o87,icebreaker]
+ z_sor[s9,o88,helicopter] z_sor[s9,o88,ship] z_sor[s9,o88,icebreaker]
+ z_sor[s9,o89,helicopter] z_sor[s9,o89,ship] z_sor[s9,o89,icebreaker]
+ z_sor[s9,o90,helicopter] z_sor[s9,o90,ship] z_sor[s9,o90,icebreaker]
+ z_sor[s9,o91,helicopter] z_sor[s9,o91,ship] z_sor[s9,o91,icebreaker]
+ z_sor[s9,o92,helicopter] z_sor[s9,o92,ship] z_sor[s9,o92,icebreaker]
+ z_sor[s9,o93,helicopter] z_sor[s9,o93,ship] z_sor[s9,o93,icebreaker]
+ z_sor[s9,o94,helicopter] z_sor[s9,o94,ship] z_sor[s9,o94,icebreaker]
+ z_sor[s9,o95,helicopter] z_sor[s9,o95,ship] z_sor[s9,o95,icebreaker]
+ z_sor[s9,o96,helicopter] z_sor[s9,o96,ship] z_sor[s9,o96,icebreaker]
+ z_sor[s9,o97,helicopter] z_sor[s9,o97,ship] z_sor[s9,o97,icebreaker]
+ z_sor[s9,o98,helicopter] z_sor[s9,o98,ship] z_sor[s9,o98,icebreaker]
+ z_sor[s9,o99,helicopter] z_sor[s9,o99,ship] z_sor[s9,o99,icebreaker]
+ z_sor[s9,o100,helicopter] z_sor[s9,o100,ship] z_sor[s9,o100,icebreaker]
+ z_sor[s200,o1,helicopter] z_sor[s200,o1,ship] z_sor[s200,o1,icebreaker]
+ z_sor[s200,o2,helicopter] z_sor[s200,o2,ship] z_sor[s200,o2,icebreaker]
+ z_sor[s200,o3,helicopter] z_sor[s200,o3,ship] z_sor[s200,o3,icebreaker]
+ z_sor[s200,o4,helicopter] z_sor[s200,o4,ship] z_sor[s200,o4,icebreaker]
+ z_sor[s200,o5,helicopter] z_sor[s200,o5,ship] z_sor[s200,o5,icebreaker]
+ z_sor[s200,o6,helicopter] z_sor[s200,o6,ship] z_sor[s200,o6,icebreaker]
+ z_sor[s200,o7,helicopter] z_sor[s200,o7,ship] z_sor[s200,o7,icebreaker]
+ z_sor[s200,o8,helicopter] z_sor[s200,o8,ship] z_sor[s200,o8,icebreaker]
+ z_sor[s200,o9,helicopter] z_sor[s200,o9,ship] z_sor[s200,o9,icebreaker]
+ z_sor[s200,o10,helicopter] z_sor[s200,o10,ship] z_sor[s200,o10,icebreaker]
+ z_sor[s200,o11,helicopter] z_sor[s200,o11,ship] z_sor[s200,o11,icebreaker]
+ z_sor[s200,o12,helicopter] z_sor[s200,o12,ship] z_sor[s200,o12,icebreaker]
+ z_sor[s200,o13,helicopter] z_sor[s200,o13,ship] z_sor[s200,o13,icebreaker]
+ z_sor[s200,o14,helicopter] z_sor[s200,o14,ship] z_sor[s200,o14,icebreaker]
+ z_sor[s200,o15,helicopter] z_sor[s200,o15,ship] z_sor[s200,o15,icebreaker]
+ z_sor[s200,o16,helicopter] z_sor[s200,o16,ship] z_sor[s200,o16,icebreaker]
+ z_sor[s200,o17,helicopter] z_sor[s200,o17,ship] z_sor[s200,o17,icebreaker]
+ z_sor[s200,o18,helicopter] z_sor[s200,o18,ship] z_sor[s200,o18,icebreaker]
+ z_sor[s200,o19,helicopter] z_sor[s200,o19,ship] z_sor[s200,o19,icebreaker]
+ z_sor[s200,o20,helicopter] z_sor[s200,o20,ship] z_sor[s200,o20,icebreaker]
+ z_sor[s200,o21,helicopter] z_sor[s200,o21,ship] z_sor[s200,o21,icebreaker]
+ z_sor[s200,o22,helicopter] z_sor[s200,o22,ship] z_sor[s200,o22,icebreaker]
+ z_sor[s200,o23,helicopter] z_sor[s200,o23,ship] z_sor[s200,o23,icebreaker]
+ z_sor[s200,o24,helicopter] z_sor[s200,o24,ship] z_sor[s200,o24,icebreaker]
+ z_sor[s200,o25,helicopter] z_sor[s200,o25,ship] z_sor[s200,o25,icebreaker]
+ z_sor[s200,o26,helicopter] z_sor[s200,o26,ship] z_sor[s200,o26,icebreaker]
+ z_sor[s200,o27,helicopter] z_sor[s200,o27,ship] z_sor[s200,o27,icebreaker]
+ z_sor[s200,o28,helicopter] z_sor[s200,o28,ship] z_sor[s200,o28,icebreaker]
+ z_sor[s200,o29,helicopter] z_sor[s200,o29,ship] z_sor[s200,o29,icebreaker]
+ z_sor[s200,o30,helicopter] z_sor[s200,o30,ship] z_sor[s200,o30,icebreaker]
+ z_sor[s200,o31,helicopter] z_sor[s200,o31,ship] z_sor[s200,o31,icebreaker]
+ z_sor[s200,o32,helicopter] z_sor[s200,o32,ship] z_sor[s200,o32,icebreaker]
+ z_sor[s200,o33,helicopter] z_sor[s200,o33,ship] z_sor[s200,o33,icebreaker]
+ z_sor[s200,o34,helicopter] z_sor[s200,o34,ship] z_sor[s200,o34,icebreaker]
+ z_sor[s200,o35,helicopter] z_sor[s200,o35,ship] z_sor[s200,o35,icebreaker]
+ z_sor[s200,o36,helicopter] z_sor[s200,o36,ship] z_sor[s200,o36,icebreaker]
+ z_sor[s200,o37,helicopter] z_sor[s200,o37,ship] z_sor[s200,o37,icebreaker]
+ z_sor[s200,o38,helicopter] z_sor[s200,o38,ship] z_sor[s200,o38,icebreaker]
+ z_sor[s200,o39,helicopter] z_sor[s200,o39,ship] z_sor[s200,o39,icebreaker]
+ z_sor[s200,o40,helicopter] z_sor[s200,o40,ship] z_sor[s200,o40,icebreaker]
+ z_sor[s200,o41,helicopter] z_sor[s200,o41,ship] z_sor[s200,o41,icebreaker]
+ z_sor[s200,o42,helicopter] z_sor[s200,o42,ship] z_sor[s200,o42,icebreaker]
+ z_sor[s200,o43,helicopter] z_sor[s200,o43,ship] z_sor[s200,o43,icebreaker]
+ z_sor[s200,o44,helicopter] z_sor[s200,o44,ship] z_sor[s200,o44,icebreaker]
+ z_sor[s200,o45,helicopter] z_sor[s200,o45,ship] z_sor[s200,o45,icebreaker]
+ z_sor[s200,o46,helicopter] z_sor[s200,o46,ship] z_sor[s200,o46,icebreaker]
+ z_sor[s200,o47,helicopter] z_sor[s200,o47,ship] z_sor[s200,o47,icebreaker]
+ z_sor[s200,o48,helicopter] z_sor[s200,o48,ship] z_sor[s200,o48,icebreaker]
+ z_sor[s200,o49,helicopter] z_sor[s200,o49,ship] z_sor[s200,o49,icebreaker]
+ z_sor[s200,o50,helicopter] z_sor[s200,o50,ship] z_sor[s200,o50,icebreaker]
+ z_sor[s200,o51,helicopter] z_sor[s200,o51,ship] z_sor[s200,o51,icebreaker]
+ z_sor[s200,o52,helicopter] z_sor[s200,o52,ship] z_sor[s200,o52,icebreaker]
+ z_sor[s200,o53,helicopter] z_sor[s200,o53,ship] z_sor[s200,o53,icebreaker]
+ z_sor[s200,o54,helicopter] z_sor[s200,o54,ship] z_sor[s200,o54,icebreaker]
+ z_sor[s200,o55,helicopter] z_sor[s200,o55,ship] z_sor[s200,o55,icebreaker]
+ z_sor[s200,o56,helicopter] z_sor[s200,o56,ship] z_sor[s200,o56,icebreaker]
+ z_sor[s200,o57,helicopter] z_sor[s200,o57,ship] z_sor[s200,o57,icebreaker]
+ z_sor[s200,o58,helicopter] z_sor[s200,o58,ship] z_sor[s200,o58,icebreaker]
+ z_sor[s200,o59,helicopter] z_sor[s200,o59,ship] z_sor[s200,o59,icebreaker]
+ z_sor[s200,o60,helicopter] z_sor[s200,o60,ship] z_sor[s200,o60,icebreaker]
+ z_sor[s200,o61,helicopter] z_sor[s200,o61,ship] z_sor[s200,o61,icebreaker]
+ z_sor[s200,o62,helicopter] z_sor[s200,o62,ship] z_sor[s200,o62,icebreaker]
+ z_sor[s200,o63,helicopter] z_sor[s200,o63,ship] z_sor[s200,o63,icebreaker]
+ z_sor[s200,o64,helicopter] z_sor[s200,o64,ship] z_sor[s200,o64,icebreaker]
+ z_sor[s200,o65,helicopter] z_sor[s200,o65,ship] z_sor[s200,o65,icebreaker]
+ z_sor[s200,o66,helicopter] z_sor[s200,o66,ship] z_sor[s200,o66,icebreaker]
+ z_sor[s200,o67,helicopter] z_sor[s200,o67,ship] z_sor[s200,o67,icebreaker]
+ z_sor[s200,o68,helicopter] z_sor[s200,o68,ship] z_sor[s200,o68,icebreaker]
+ z_sor[s200,o69,helicopter] z_sor[s200,o69,ship] z_sor[s200,o69,icebreaker]
+ z_sor[s200,o70,helicopter] z_sor[s200,o70,ship] z_sor[s200,o70,icebreaker]
+ z_sor[s200,o71,helicopter] z_sor[s200,o71,ship] z_sor[s200,o71,icebreaker]
+ z_sor[s200,o72,helicopter] z_sor[s200,o72,ship] z_sor[s200,o72,icebreaker]
+ z_sor[s200,o73,helicopter] z_sor[s200,o73,ship] z_sor[s200,o73,icebreaker]
+ z_sor[s200,o74,helicopter] z_sor[s200,o74,ship] z_sor[s200,o74,icebreaker]
+ z_sor[s200,o75,helicopter] z_sor[s200,o75,ship] z_sor[s200,o75,icebreaker]
+ z_sor[s200,o76,helicopter] z_sor[s200,o76,ship] z_sor[s200,o76,icebreaker]
+ z_sor[s200,o77,helicopter] z_sor[s200,o77,ship] z_sor[s200,o77,icebreaker]
+ z_sor[s200,o78,helicopter] z_sor[s200,o78,ship] z_sor[s200,o78,icebreaker]
+ z_sor[s200,o79,helicopter] z_sor[s200,o79,ship] z_sor[s200,o79,icebreaker]
+ z_sor[s200,o80,helicopter] z_sor[s200,o80,ship] z_sor[s200,o80,icebreaker]
+ z_sor[s200,o81,helicopter] z_sor[s200,o81,ship] z_sor[s200,o81,icebreaker]
+ z_sor[s200,o82,helicopter] z_sor[s200,o82,ship] z_sor[s200,o82,icebreaker]
+ z_sor[s200,o83,helicopter] z_sor[s200,o83,ship] z_sor[s200,o83,icebreaker]
+ z_sor[s200,o84,helicopter] z_sor[s200,o84,ship] z_sor[s200,o84,icebreaker]
+ z_sor[s200,o85,helicopter] z_sor[s200,o85,ship] z_sor[s200,o85,icebreaker]
+ z_sor[s200,o86,helicopter] z_sor[s200,o86,ship] z_sor[s200,o86,icebreaker]
+ z_sor[s200,o87,helicopter] z_sor[s200,o87,ship] z_sor[s200,o87,icebreaker]
+ z_sor[s200,o88,helicopter] z_sor[s200,o88,ship] z_sor[s200,o88,icebreaker]
+ z_sor[s200,o89,helicopter] z_sor[s200,o89,ship] z_sor[s200,o89,icebreaker]
+ z_sor[s200,o90,helicopter] z_sor[s200,o90,ship] z_sor[s200,o90,icebreaker]
+ z_sor[s200,o91,helicopter] z_sor[s200,o91,ship] z_sor[s200,o91,icebreaker]
+ z_sor[s200,o92,helicopter] z_sor[s200,o92,ship] z_sor[s200,o92,icebreaker]
+ z_sor[s200,o93,helicopter] z_sor[s200,o93,ship] z_sor[s200,o93,icebreaker]
+ z_sor[s200,o94,helicopter] z_sor[s200,o94,ship] z_sor[s200,o94,icebreaker]
+ z_sor[s200,o95,helicopter] z_sor[s200,o95,ship] z_sor[s200,o95,icebreaker]
+ z_sor[s200,o96,helicopter] z_sor[s200,o96,ship] z_sor[s200,o96,icebreaker]
+ z_sor[s200,o97,helicopter] z_sor[s200,o97,ship] z_sor[s200,o97,icebreaker]
+ z_sor[s200,o98,helicopter] z_sor[s200,o98,ship] z_sor[s200,o98,icebreaker]
+ z_sor[s200,o99,helicopter] z_sor[s200,o99,ship] z_sor[s200,o99,icebreaker]
+ z_sor[s200,o100,helicopter] z_sor[s200,o100,ship]
+ z_sor[s200,o100,icebreaker] z_sor[s300,o1,helicopter] z_sor[s300,o1,ship]
+ z_sor[s300,o1,icebreaker] z_sor[s300,o2,helicopter] z_sor[s300,o2,ship]
+ z_sor[s300,o2,icebreaker] z_sor[s300,o3,helicopter] z_sor[s300,o3,ship]
+ z_sor[s300,o3,icebreaker] z_sor[s300,o4,helicopter] z_sor[s300,o4,ship]
+ z_sor[s300,o4,icebreaker] z_sor[s300,o5,helicopter] z_sor[s300,o5,ship]
+ z_sor[s300,o5,icebreaker] z_sor[s300,o6,helicopter] z_sor[s300,o6,ship]
+ z_sor[s300,o6,icebreaker] z_sor[s300,o7,helicopter] z_sor[s300,o7,ship]
+ z_sor[s300,o7,icebreaker] z_sor[s300,o8,helicopter] z_sor[s300,o8,ship]
+ z_sor[s300,o8,icebreaker] z_sor[s300,o9,helicopter] z_sor[s300,o9,ship]
+ z_sor[s300,o9,icebreaker] z_sor[s300,o10,helicopter] z_sor[s300,o10,ship]
+ z_sor[s300,o10,icebreaker] z_sor[s300,o11,helicopter] z_sor[s300,o11,ship]
+ z_sor[s300,o11,icebreaker] z_sor[s300,o12,helicopter] z_sor[s300,o12,ship]
+ z_sor[s300,o12,icebreaker] z_sor[s300,o13,helicopter] z_sor[s300,o13,ship]
+ z_sor[s300,o13,icebreaker] z_sor[s300,o14,helicopter] z_sor[s300,o14,ship]
+ z_sor[s300,o14,icebreaker] z_sor[s300,o15,helicopter] z_sor[s300,o15,ship]
+ z_sor[s300,o15,icebreaker] z_sor[s300,o16,helicopter] z_sor[s300,o16,ship]
+ z_sor[s300,o16,icebreaker] z_sor[s300,o17,helicopter] z_sor[s300,o17,ship]
+ z_sor[s300,o17,icebreaker] z_sor[s300,o18,helicopter] z_sor[s300,o18,ship]
+ z_sor[s300,o18,icebreaker] z_sor[s300,o19,helicopter] z_sor[s300,o19,ship]
+ z_sor[s300,o19,icebreaker] z_sor[s300,o20,helicopter] z_sor[s300,o20,ship]
+ z_sor[s300,o20,icebreaker] z_sor[s300,o21,helicopter] z_sor[s300,o21,ship]
+ z_sor[s300,o21,icebreaker] z_sor[s300,o22,helicopter] z_sor[s300,o22,ship]
+ z_sor[s300,o22,icebreaker] z_sor[s300,o23,helicopter] z_sor[s300,o23,ship]
+ z_sor[s300,o23,icebreaker] z_sor[s300,o24,helicopter] z_sor[s300,o24,ship]
+ z_sor[s300,o24,icebreaker] z_sor[s300,o25,helicopter] z_sor[s300,o25,ship]
+ z_sor[s300,o25,icebreaker] z_sor[s300,o26,helicopter] z_sor[s300,o26,ship]
+ z_sor[s300,o26,icebreaker] z_sor[s300,o27,helicopter] z_sor[s300,o27,ship]
+ z_sor[s300,o27,icebreaker] z_sor[s300,o28,helicopter] z_sor[s300,o28,ship]
+ z_sor[s300,o28,icebreaker] z_sor[s300,o29,helicopter] z_sor[s300,o29,ship]
+ z_sor[s300,o29,icebreaker] z_sor[s300,o30,helicopter] z_sor[s300,o30,ship]
+ z_sor[s300,o30,icebreaker] z_sor[s300,o31,helicopter] z_sor[s300,o31,ship]
+ z_sor[s300,o31,icebreaker] z_sor[s300,o32,helicopter] z_sor[s300,o32,ship]
+ z_sor[s300,o32,icebreaker] z_sor[s300,o33,helicopter] z_sor[s300,o33,ship]
+ z_sor[s300,o33,icebreaker] z_sor[s300,o34,helicopter] z_sor[s300,o34,ship]
+ z_sor[s300,o34,icebreaker] z_sor[s300,o35,helicopter] z_sor[s300,o35,ship]
+ z_sor[s300,o35,icebreaker] z_sor[s300,o36,helicopter] z_sor[s300,o36,ship]
+ z_sor[s300,o36,icebreaker] z_sor[s300,o37,helicopter] z_sor[s300,o37,ship]
+ z_sor[s300,o37,icebreaker] z_sor[s300,o38,helicopter] z_sor[s300,o38,ship]
+ z_sor[s300,o38,icebreaker] z_sor[s300,o39,helicopter] z_sor[s300,o39,ship]
+ z_sor[s300,o39,icebreaker] z_sor[s300,o40,helicopter] z_sor[s300,o40,ship]
+ z_sor[s300,o40,icebreaker] z_sor[s300,o41,helicopter] z_sor[s300,o41,ship]
+ z_sor[s300,o41,icebreaker] z_sor[s300,o42,helicopter] z_sor[s300,o42,ship]
+ z_sor[s300,o42,icebreaker] z_sor[s300,o43,helicopter] z_sor[s300,o43,ship]
+ z_sor[s300,o43,icebreaker] z_sor[s300,o44,helicopter] z_sor[s300,o44,ship]
+ z_sor[s300,o44,icebreaker] z_sor[s300,o45,helicopter] z_sor[s300,o45,ship]
+ z_sor[s300,o45,icebreaker] z_sor[s300,o46,helicopter] z_sor[s300,o46,ship]
+ z_sor[s300,o46,icebreaker] z_sor[s300,o47,helicopter] z_sor[s300,o47,ship]
+ z_sor[s300,o47,icebreaker] z_sor[s300,o48,helicopter] z_sor[s300,o48,ship]
+ z_sor[s300,o48,icebreaker] z_sor[s300,o49,helicopter] z_sor[s300,o49,ship]
+ z_sor[s300,o49,icebreaker] z_sor[s300,o50,helicopter] z_sor[s300,o50,ship]
+ z_sor[s300,o50,icebreaker] z_sor[s300,o51,helicopter] z_sor[s300,o51,ship]
+ z_sor[s300,o51,icebreaker] z_sor[s300,o52,helicopter] z_sor[s300,o52,ship]
+ z_sor[s300,o52,icebreaker] z_sor[s300,o53,helicopter] z_sor[s300,o53,ship]
+ z_sor[s300,o53,icebreaker] z_sor[s300,o54,helicopter] z_sor[s300,o54,ship]
+ z_sor[s300,o54,icebreaker] z_sor[s300,o55,helicopter] z_sor[s300,o55,ship]
+ z_sor[s300,o55,icebreaker] z_sor[s300,o56,helicopter] z_sor[s300,o56,ship]
+ z_sor[s300,o56,icebreaker] z_sor[s300,o57,helicopter] z_sor[s300,o57,ship]
+ z_sor[s300,o57,icebreaker] z_sor[s300,o58,helicopter] z_sor[s300,o58,ship]
+ z_sor[s300,o58,icebreaker] z_sor[s300,o59,helicopter] z_sor[s300,o59,ship]
+ z_sor[s300,o59,icebreaker] z_sor[s300,o60,helicopter] z_sor[s300,o60,ship]
+ z_sor[s300,o60,icebreaker] z_sor[s300,o61,helicopter] z_sor[s300,o61,ship]
+ z_sor[s300,o61,icebreaker] z_sor[s300,o62,helicopter] z_sor[s300,o62,ship]
+ z_sor[s300,o62,icebreaker] z_sor[s300,o63,helicopter] z_sor[s300,o63,ship]
+ z_sor[s300,o63,icebreaker] z_sor[s300,o64,helicopter] z_sor[s300,o64,ship]
+ z_sor[s300,o64,icebreaker] z_sor[s300,o65,helicopter] z_sor[s300,o65,ship]
+ z_sor[s300,o65,icebreaker] z_sor[s300,o66,helicopter] z_sor[s300,o66,ship]
+ z_sor[s300,o66,icebreaker] z_sor[s300,o67,helicopter] z_sor[s300,o67,ship]
+ z_sor[s300,o67,icebreaker] z_sor[s300,o68,helicopter] z_sor[s300,o68,ship]
+ z_sor[s300,o68,icebreaker] z_sor[s300,o69,helicopter] z_sor[s300,o69,ship]
+ z_sor[s300,o69,icebreaker] z_sor[s300,o70,helicopter] z_sor[s300,o70,ship]
+ z_sor[s300,o70,icebreaker] z_sor[s300,o71,helicopter] z_sor[s300,o71,ship]
+ z_sor[s300,o71,icebreaker] z_sor[s300,o72,helicopter] z_sor[s300,o72,ship]
+ z_sor[s300,o72,icebreaker] z_sor[s300,o73,helicopter] z_sor[s300,o73,ship]
+ z_sor[s300,o73,icebreaker] z_sor[s300,o74,helicopter] z_sor[s300,o74,ship]
+ z_sor[s300,o74,icebreaker] z_sor[s300,o75,helicopter] z_sor[s300,o75,ship]
+ z_sor[s300,o75,icebreaker] z_sor[s300,o76,helicopter] z_sor[s300,o76,ship]
+ z_sor[s300,o76,icebreaker] z_sor[s300,o77,helicopter] z_sor[s300,o77,ship]
+ z_sor[s300,o77,icebreaker] z_sor[s300,o78,helicopter] z_sor[s300,o78,ship]
+ z_sor[s300,o78,icebreaker] z_sor[s300,o79,helicopter] z_sor[s300,o79,ship]
+ z_sor[s300,o79,icebreaker] z_sor[s300,o80,helicopter] z_sor[s300,o80,ship]
+ z_sor[s300,o80,icebreaker] z_sor[s300,o81,helicopter] z_sor[s300,o81,ship]
+ z_sor[s300,o81,icebreaker] z_sor[s300,o82,helicopter] z_sor[s300,o82,ship]
+ z_sor[s300,o82,icebreaker] z_sor[s300,o83,helicopter] z_sor[s300,o83,ship]
+ z_sor[s300,o83,icebreaker] z_sor[s300,o84,helicopter] z_sor[s300,o84,ship]
+ z_sor[s300,o84,icebreaker] z_sor[s300,o85,helicopter] z_sor[s300,o85,ship]
+ z_sor[s300,o85,icebreaker] z_sor[s300,o86,helicopter] z_sor[s300,o86,ship]
+ z_sor[s300,o86,icebreaker] z_sor[s300,o87,helicopter] z_sor[s300,o87,ship]
+ z_sor[s300,o87,icebreaker] z_sor[s300,o88,helicopter] z_sor[s300,o88,ship]
+ z_sor[s300,o88,icebreaker] z_sor[s300,o89,helicopter] z_sor[s300,o89,ship]
+ z_sor[s300,o89,icebreaker] z_sor[s300,o90,helicopter] z_sor[s300,o90,ship]
+ z_sor[s300,o90,icebreaker] z_sor[s300,o91,helicopter] z_sor[s300,o91,ship]
+ z_sor[s300,o91,icebreaker] z_sor[s300,o92,helicopter] z_sor[s300,o92,ship]
+ z_sor[s300,o92,icebreaker] z_sor[s300,o93,helicopter] z_sor[s300,o93,ship]
+ z_sor[s300,o93,icebreaker] z_sor[s300,o94,helicopter] z_sor[s300,o94,ship]
+ z_sor[s300,o94,icebreaker] z_sor[s300,o95,helicopter] z_sor[s300,o95,ship]
+ z_sor[s300,o95,icebreaker] z_sor[s300,o96,helicopter] z_sor[s300,o96,ship]
+ z_sor[s300,o96,icebreaker] z_sor[s300,o97,helicopter] z_sor[s300,o97,ship]
+ z_sor[s300,o97,icebreaker] z_sor[s300,o98,helicopter] z_sor[s300,o98,ship]
+ z_sor[s300,o98,icebreaker] z_sor[s300,o99,helicopter] z_sor[s300,o99,ship]
+ z_sor[s300,o99,icebreaker] z_sor[s300,o100,helicopter]
+ z_sor[s300,o100,ship] z_sor[s300,o100,icebreaker]
+End
