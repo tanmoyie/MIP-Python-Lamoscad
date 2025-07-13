@@ -16,7 +16,7 @@ def build_large_model(Stations, OilSpills, Resources, Vehicles, W,
     x_s = model.addVars(Stations, vtype=GRB.BINARY, name="x_s")  # Station open decision
     y_os = model.addVars(OilSpills, Stations, vtype=GRB.BINARY, name="y_os")  # Spill coverage
     z_sor = model.addVars(Stations, OilSpills, Resources, vtype=GRB.INTEGER, name="z_sor")  # Resource deployment
-    h_sov = model.addVars(Stations, OilSpills, Vehicles, vtype=GRB.INTEGER, name="z_sor")  # Resource deployment
+    h_sov = model.addVars(Stations, OilSpills, Vehicles, vtype=GRB.INTEGER, name="h_sov")  # Resource deployment
 
     b_os = model.addVars(OilSpills, Stations, vtype=GRB.BINARY, name="b_os")  # Binary penalty variable
     b_o_prime = model.addVars(OilSpills, vtype=GRB.BINARY, name="b_o_prime")  # Binary penalty variable

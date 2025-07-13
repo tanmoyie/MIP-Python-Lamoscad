@@ -15,7 +15,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
     x_s = model.addVars(Stations, vtype=GRB.BINARY, name="x_s")  # Station open decision
     y_os = model.addVars(OilSpills, Stations, vtype=GRB.BINARY, name="y_os")  # Spill coverage
     z_sor = model.addVars(Stations, OilSpills, Resources, vtype=GRB.INTEGER, name="z_sor")  # Resource deployment
-    h_sov = model.addVars(Stations, OilSpills, Vehicles, vtype=GRB.INTEGER, name="z_sor")  # Resource deployment
+    h_sov = model.addVars(Stations, OilSpills, Vehicles, vtype=GRB.INTEGER, name="h_sov")  # Vehicle
 
     b_os = model.addVars(OilSpills, Stations, vtype=GRB.BINARY, name="b_os")  # Binary penalty variable
     b_o_prime = model.addVars(OilSpills, vtype=GRB.BINARY, name="b_o_prime")  # Binary penalty variable
@@ -114,7 +114,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
                     name=f"c18_capacity_link_s{s}_o{o}_r{r}")
 
     # Solve the model
-    # model.write('results/model_artifacts/model_lamoscad.lp')
+    model.write('../results/model_artifacts/model_lamoscad_july2025.lp')
     return model, x_s, y_os, z_sor, h_sov
 
 
@@ -143,8 +143,8 @@ def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=Fa
 
     x_s1 = pd.Series(model.getAttr('X', x_s))[lambda x: x > 0.5]
     y_os1 = pd.Series(model.getAttr('X', y_os))[lambda x: x > 0.5]
-    z_sor1 = pd.Series(model.getAttr('X', z_sor))[lambda x: x >= 0.1]
-    h_sov1 = pd.Series(model.getAttr('X', h_sov))[lambda x: x > 0.5]
+    z_sor1 = pd.Series(model.getAttr('X', z_sor))[lambda x: x > 0]
+    h_sov1 = pd.Series(model.getAttr('X', h_sov))[lambda x: x > 0]
 
     if needMultiSolutions:
         objVals = []

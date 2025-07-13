@@ -6,9 +6,9 @@ Revision Date: 11 July 2025
 """
 
 # %% 📦 Imports & Configurations
-from src.models import model_lamoscad, model_mclp  # Example
 from src.models.model_lamoscad import build_model, solve_model
 from src.models.model_mclp import build_model_mclp, solve_model_mclp
+from src.solvers import branch_and_cut
 from src.preprocessing import data_loader, preprocess_utils
 from src.visualization.draw_network import draw_network_diagram
 from src.config import config_loader
@@ -22,7 +22,6 @@ with open("../data/preprocessed_data_model_p256.pkl", "rb") as f:
     data = pickle.load(f)
 
 # %% 📊 Data Loading
-v_o = data["v_o_n"]
 OilSpills = data["OilSpills"]
 Resources = data["Resources"]
 demand_or = data["demand_or"]
@@ -61,12 +60,11 @@ Vehicles = config["assets"]["vehicles"]
 c_v = config["assets"]["c_v"]
 Q_vr = {(vehicle, resource): config["assets"]["Q_vr"][vehicle][resource]
         for vehicle in config["assets"]["Q_vr"] for resource in config["assets"]["Q_vr"][vehicle]}
-
 n_vs = {(v, s): config["assets"]["n_vs_values"][v]
         for v in Vehicles for s in Stations}
-
 L_p_or = {(o, r): config["L_p_or_values"]["c_i"] for o in OilSpills for r in ["c", "i"]}
 L_p_or.update({(o, r): float("inf") for o in OilSpills for r in ["m"]})
+
 spill_df = preprocess_utils.create_spill_dataframe(coordinates_spill, SizeSpill, Sensitivity_R)
 station_df = preprocess_utils.create_station_dataframe(coordinates_st)
 
@@ -82,29 +80,34 @@ Mean_response_time_dict = {m: None for m in model_config}
 # %% 🔧 Run Optimization Models
 # Model 2, Proposed, 5, 6
 print("Running optimization models ")
-for m in ['model_2', 'model_p', 'model_5', 'model_6']:
-    print(f'Running {m}')
+for m1 in ['model_p']:  # , 'model_2', 'model_5', 'model_6']:
+    print(f'Running {m1}')
     time_start_gurobi = time.time()
     model_1, x_s, y_os, z_sor, h_sov = build_model(Stations, OilSpills, Resources, Vehicles, W,
-                                                   v_o, eta_o, t_os, gamma, M, demand_or, demand_ov, L_p_or,
-                                                   NumberStMax_dict[m], A_sr, nH, nUN, nQ, Q_vr, n_vs,
-                                                   F_s, C_sr, Eff_sor, pn_sor, c_v, Distance, DistanceMax_dict[m], m)
+                                                   v_o_n, eta_o, t_os_n, gamma, M, demand_or, demand_ov, L_p_or,
+                                                   NumberStMax_dict[m1], A_sr, nH, nUN, nQ, Q_vr, n_vs,
+                                                   F_s, C_sr, Eff_sor, pn_sor, c_v, Distance, DistanceMax_dict[m1], m1)
+
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values \
         = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
     # Draw the network
-    mean_response_time = draw_network_diagram(y_os1, spill_df, station_df, name=m)
-    if m == 'model_p':
+    mean_response_time = draw_network_diagram(y_os1, spill_df, station_df, name=m1)
+    if m1 == 'model_p':
         results_table5_lamoscad = preprocess_utils.convert_table5(
             coverage_percentage, mean_response_time, 25, time.time()-time_start_gurobi, len(x_s1), 'lamoscad')
-        z_sor_lamoscad = z_sor1
         h_sov_lamoscad = h_sov1
-    # fig 5(b,d) fig 7(a,b)
-    if m == 'model_p': z_sor1_modelP = z_sor1
-    Objective1_dict[m] = model_objectives[0]
-    Objective2_dict[m] = model_objectives[1]
-    Coverage_dict[m] = coverage_percentage
-    Mean_response_time_dict[m] = mean_response_time
+        z_sor_lamoscad = z_sor1
+        print('z_sor_lamoscad: ', z_sor_lamoscad)
 
+        # run another run of model_2 (for Fig 9a)
+        # fig 5(b,d) fig 7(a,b)
+
+    Objective1_dict[m1] = model_objectives[0]
+    Objective2_dict[m1] = model_objectives[1]
+    Coverage_dict[m1] = coverage_percentage
+    Mean_response_time_dict[m1] = mean_response_time
+
+"""
 # %% Model 3 and current
 # Model 3 and Current (Model C) — Facility Location Variants
 for m in ['model_c', 'model_3']:
@@ -201,3 +204,16 @@ with pd.ExcelWriter('../results/computational_findings_s4.2.xlsx', engine='openp
     resource_allocation.to_excel(writer, sheet_name='tab6. asset allocation', index=False)
 
 print("Section 4.2 computational findings complete.")
+"""
+
+
+best_sol, LB_final, UB_final = branch_and_cut.branch_and_cut_loop(
+OilSpills, Stations, Resources, Vehicles,
+A_sr, Eff_sor, Distance, F_s, t_os, pn_sor,
+demand_or, demand_ov, Q_vr, n_vs, L_p_or, b_os, b_prime,
+M, gamma, w, N,
+max_iters=50, tolerance=0.01, stable_iterations=3)
+
+print("Facilities opened:", [s for s in best_sol["x"] if best_sol["x"][s] > 0.5])
+print("Final LB:", LB_final)
+print("Final UB:", UB_final)

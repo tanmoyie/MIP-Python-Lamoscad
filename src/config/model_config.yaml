@@ -1,5 +1,5 @@
 general:
-  M: 1000
+  M: 100000
   gamma: 1
   weights: [2.5, 2.5, 0.25, 0.0025, 0.25, 0.25, 0.25, 0.25]
   nQ: 0
@@ -11,7 +11,7 @@ general:
 
 L_p_or_values:
   c_i: 1200
-  m: inf
+  m: 24000
 
 assets:
   vehicles:
