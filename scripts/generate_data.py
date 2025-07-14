@@ -50,7 +50,7 @@ for model in models:
         station_data = station_data.iloc[model["station_rows"]]
 
     # Preprocess
-    Stations, OilSpills, Resources, demand_or, demand_ov, A_sr, Eff_sor, Distance, t_os, F_s, C_sr = (
+    Stations, OilSpills, Resources, demand_or, demand_ov, A_sr, Eff_sor, Distance, t_os, F_s = (
         preprocess_utils.generate_input_data(station_data, spill_data, parameters))
 
     coordinates_spill = preprocess_utils.extract_spill_coordinate(spill_data)
@@ -68,9 +68,10 @@ for model in models:
     preprocessed_data = {
         "Stations": Stations, "OilSpills": OilSpills, "Resources": Resources,
         "demand_or": demand_or, "demand_ov": demand_ov, "A_sr": A_sr, "Eff_sor": Eff_sor,
-        "Distance": Distance, "t_os": t_os, "F_s": F_s, "C_sr": C_sr,
+        "Distance": Distance, "t_os": t_os, "F_s": F_s,
         "coordinates_spill": coordinates_spill, "coordinates_st": coordinates_st,
-        "SizeSpill": SizeSpill, "Sensitivity_R": Sensitivity_R,
+        "Sensitivity_R": Sensitivity_R,
+        "v_o": SizeSpill,
         "v_o_n": v_o_n, "eta_o": eta_o, "Distance_n": Distance_n,
         "t_os_n": t_os_n, "pn_sor": pn_sor
     }

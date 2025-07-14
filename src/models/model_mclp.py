@@ -38,14 +38,15 @@ def build_model_mclp(OilSpills, Stations, v_o, NumberStMax, Distance, DistanceMa
 
 def solve_model_mclp(model_mclp, x_s, y_os, OilSpills):
     start_time = time.time()
+    model_mclp.params.OutputFlag = 0
     model_mclp.optimize()
     runtime_mclp = time.time() - start_time
     x_s1 = pd.Series(model_mclp.getAttr('X', x_s))[lambda x: x > 0.5]
     y_os1_mclp = pd.Series(model_mclp.getAttr('X', y_os))[lambda x: x > 0.5]
 
-    print('y_os1 mclp: ', y_os1_mclp)
+    # print('y_os1 mclp: ', y_os1_mclp)
     coverage_percentage = int(100 * len(y_os1_mclp) / len(OilSpills))
-    print(f'Coverage Percentage: {coverage_percentage}%')
+    print(f'MCLP Coverage Percentage: {coverage_percentage}%')
 
     number_facility_selected = len(x_s1)
     num_sensitive_spills = 21

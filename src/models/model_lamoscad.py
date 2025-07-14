@@ -5,8 +5,8 @@ import pandas as pd
 def build_model(Stations, OilSpills, Resources, Vehicles, W,
                 v_o, eta_o, t_os, gamma, M, demand_or, demand_ov, L_p_or,
                 NumberStMax, A_sr, nH, nUN, nQ, Q_vr, n_vs,
-                F_s, C_sr, Eff_sor, pn_sor, c_v, Distance, DistanceMax, model_name):
-    # access data
+                F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax, model_name):
+
     w1, w2, w3, w4, w5, w6, w7, w8 = W[0], W[1], W[2], W[3], W[4], W[5], W[6], W[7]
 
     # Create the model
@@ -28,7 +28,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
 
     objective_2 = w4 * quicksum(F_s[s] * x_s[s] for s in Stations) \
                   + quicksum(
-        (w5 * C_sr[s, r] - w6 * Eff_sor[s, o, r]) * z_sor[s, o, r] for s in Stations for o in OilSpills for r in
+        (w5 * C_r[r] - w6 * Eff_sor[s, o, r]) * z_sor[s, o, r] for s in Stations for o in OilSpills for r in
         Resources) \
                   + quicksum(
         w7 * c_v[v] * Distance[(o, s)] + w8 * quicksum(pn_sor[s, o, r] for r in Resources) * h_sov[s, o, v]
@@ -41,7 +41,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
     model.addConstrs((y_os[o, s] <= x_s[s] for o in OilSpills for s in Stations), name="c3_facility_cover")  # (3)
     # Constraints 4 - 8
     model.addConstr(quicksum(x_s[s] for s in Stations) == NumberStMax, "c4_Max_Facilities")  # Constraint (4)
-
+    # ++ <=  ==
     for o in OilSpills:
         for s in Stations:
             model.addConstr(
@@ -53,10 +53,12 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
                         >= nH, "c6_Hudson_Facilities")  # Constraint (6)
         model.addConstr(quicksum(x_s[s] for s in ['s9', 's12', 's13', 's15', 's16', 's18', 's20'])
                         <= nUN, "c7_Up_North")  # Constraint (7)
+
     for r in Resources:
         for s in Stations:
             model.addConstr(quicksum(z_sor[s, o, r] for o in OilSpills)
                             <= A_sr[s, r] * x_s[s], name=f"c8_Resource_Deploy_{s}_{r}")  # Constraint (8)
+
 
     # Constraint 9 - 13
     for o in OilSpills:
@@ -66,6 +68,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
         model.addConstr(
             (quicksum(y_os[o, s] for s in Stations) >= 1 - M * b_o_prime[o] * (1 if eta_o[o] < 0.8 else 0)),
             name=f"c10_coverage_constraint_{o}")  # Constraint 10
+
 
     for o in OilSpills:
         for r in Resources:
@@ -108,10 +111,11 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
     # (18) Vehicle Capacity
     for s in Stations:
         for o in OilSpills:
-            for r in Resources:
+            for v in Vehicles:
                 model.addConstr(
-                    z_sor[s, o, r] <= quicksum(Q_vr[v, r] * h_sov[s, o, v] for v in Vehicles),
-                    name=f"c18_capacity_link_s{s}_o{o}_r{r}")
+                    quicksum(z_sor[s, o, r] for r in Resources) <= quicksum(Q_vr[v, r] for r in Resources) * h_sov[
+                        s, o, v],
+                    name=f"c18_capacity_link_{s}_{o}_{v}")
 
     # Solve the model
     model.write('../results/model_artifacts/model_lamoscad_july2025.lp')
@@ -120,7 +124,6 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
 
 def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=False):
     if needMultiSolutions:
-        print('whatever')
         model.setParam('PoolSolutions', 20)  # useful for exploring pareto frontier
         model.setParam('PoolSearchMode', 2)
     model.params.OutPutFlag = 0

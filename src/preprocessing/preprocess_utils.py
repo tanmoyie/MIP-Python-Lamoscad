@@ -256,16 +256,7 @@ def generate_input_data(station_data, spill_data, input_parameters):
     for ii in Stations:
         Cf_s[ii] = Cf_data.loc[Cf_data['Station_cf'] == ii, 'Cf_setup ($)'].iloc[0]  # Cf_data[ii]
 
-    C_sr = {(s, r): None for s in Stations for r in ResourcesD}
-    for s, o, r in Eff_sor:
-        if r == 'm':  # For resource 'm' (boom)
-            C_sr[(s, r)] = 330  # 25,000 CAD for boom
-        elif r == 'c':  # For resource 'c' (skimmer)
-            C_sr[(s, r)] = 125  # 6,000 CAD per ton of dispersant
-        elif r == 'i':  # For resource 'i' (pump)
-            C_sr[(s, r)] = 100  # 5,000 CAD for pump
-    # print('C_sr\n', C_sr)
-    return Stations, OilSpills, ResourcesD, Demand, demand_ov, Availability, Eff_sor, Distance, TimeR, Cf_s, C_sr
+    return Stations, OilSpills, ResourcesD, Demand, demand_ov, Availability, Eff_sor, Distance, TimeR, Cf_s
 
 
 def compute_penalty(Stations, OilSpills, ResourcesD):

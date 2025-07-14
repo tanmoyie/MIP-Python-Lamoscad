@@ -27,8 +27,8 @@ Resources = data["Resources"]
 demand_or = data["demand_or"]
 demand_ov = data["demand_ov"]
 coordinates_spill = data["coordinates_spill"]
-SizeSpill = data["SizeSpill"]
 Sensitivity_R = data["Sensitivity_R"]
+v_o = data["v_o"]
 v_o_n = data["v_o_n"]
 eta_o = data["eta_o"]
 
@@ -40,7 +40,6 @@ Distance = data["Distance"]
 Distance_n = data["Distance_n"]
 t_os = data["t_os"]
 F_s = data["F_s"]
-C_sr = data["C_sr"]
 t_os_n = data["t_os_n"]
 pn_sor = data["pn_sor"]
 
@@ -60,14 +59,16 @@ Vehicles = config["assets"]["vehicles"]
 c_v = config["assets"]["c_v"]
 Q_vr = {(vehicle, resource): config["assets"]["Q_vr"][vehicle][resource]
         for vehicle in config["assets"]["Q_vr"] for resource in config["assets"]["Q_vr"][vehicle]}
+C_r = config["assets"]["C_r"]
 n_vs = {(v, s): config["assets"]["n_vs_values"][v]
         for v in Vehicles for s in Stations}
 L_p_or = {(o, r): config["L_p_or_values"]["c_i"] for o in OilSpills for r in ["c", "i"]}
 L_p_or.update({(o, r): float("inf") for o in OilSpills for r in ["m"]})
 
-spill_df = preprocess_utils.create_spill_dataframe(coordinates_spill, SizeSpill, Sensitivity_R)
+spill_df = preprocess_utils.create_spill_dataframe(coordinates_spill, v_o, Sensitivity_R)
 station_df = preprocess_utils.create_station_dataframe(coordinates_st)
 
+"""
 # %% Experimental Design
 model_config = ['model_2', 'model_p', 'model_5', 'model_6', 'model_c', 'model_3']  # ,
 NumberStMax_dict = {'model_c': 4, 'model_2': 4, 'model_3': 5, 'model_p': 5, 'model_5': 6, 'model_6': 8}
@@ -80,7 +81,7 @@ Mean_response_time_dict = {m: None for m in model_config}
 # %% 🔧 Run Optimization Models
 # Model 2, Proposed, 5, 6
 print("Running optimization models ")
-for m1 in ['model_p']:  # , 'model_2', 'model_5', 'model_6']:
+for m1 in ['model_p', 'model_2', 'model_5', 'model_6']:
     print(f'Running {m1}')
     time_start_gurobi = time.time()
     model_1, x_s, y_os, z_sor, h_sov = build_model(Stations, OilSpills, Resources, Vehicles, W,
@@ -107,7 +108,6 @@ for m1 in ['model_p']:  # , 'model_2', 'model_5', 'model_6']:
     Coverage_dict[m1] = coverage_percentage
     Mean_response_time_dict[m1] = mean_response_time
 
-"""
 # %% Model 3 and current
 # Model 3 and Current (Model C) — Facility Location Variants
 for m in ['model_c', 'model_3']:
@@ -137,7 +137,7 @@ for m in ['model_c', 'model_3']:
     # Solve Model
     time_start_gurobi = time.time()
     model_1, x_s, y_os, z_sor, h_sov = build_model(Stations, OilSpills, Resources, Vehicles, W,
-                                                   v_o, eta_o, t_os, gamma, M, demand_or, demand_ov, L_p_or,
+                                                   v_o_n, eta_o, t_os, gamma, M, demand_or, demand_ov, L_p_or,
                                                    NumberStMax_dict[m], A_sr, nH, nUN, nQ, Q_vr, n_vs,
                                                    F_s, C_sr, Eff_sor, pn_sor, c_v, Distance, DistanceMax_dict[m], m)
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values = solve_model(
@@ -188,32 +188,40 @@ for i, row in Table5_MCLP_vs_proposed_optimization_model.iterrows():
 # Add the new column to the dataframe
 Table5_MCLP_vs_proposed_optimization_model["Comparison"] = comparison
 
-# %% Figure 6
-
+"""
 # %% Table 6
 safety_buffer = 3
+W = [2.5, 2.5, 0.25, 0.0025, 0.025, 25, 0.25, 0.25]  # why new weight values??
+
+model_1, x_s, y_os, z_sor, h_sov = build_model(Stations, OilSpills, Resources, Vehicles, W,
+                                                   v_o_n, eta_o, t_os_n, gamma, M, demand_or, demand_ov, L_p_or,
+                                                   NumberStMax, A_sr, nH, nUN, nQ, Q_vr, n_vs,
+                                                   F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax, 'model_p')
+
+model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor_lamoscad, h_sov_lamoscad, solution_values \
+    = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
 
 resource_allocation = utility_functions.compute_stockpiling(z_sor_lamoscad, h_sov_lamoscad, safety_buffer)
 
-#%%
-# Create Excel file for 5 previously created dataframe
-# df_table4.to_excel('../results/computational_findings_s4.2.xlsx', sheet_name='tab4. experimental design', index=False)
-with pd.ExcelWriter('../results/computational_findings_s4.2.xlsx', engine='openpyxl', mode='w') as writer:
-    df_table4.to_excel(writer, sheet_name='tab4. experimental design', index=False)
-    Table5_MCLP_vs_proposed_optimization_model.to_excel(writer, sheet_name='tab5. mclp vs lamoscad', index=False)
-    resource_allocation.to_excel(writer, sheet_name='tab6. asset allocation', index=False)
+# Figure 6(b) is based on Equipment columns of Table 5
+# ++
 
-print("Section 4.2 computational findings complete.")
-"""
-
-
-best_sol, LB_final, UB_final = branch_and_cut.branch_and_cut_loop(
-OilSpills, Stations, Resources, Vehicles,
-A_sr, Eff_sor, Distance, F_s, t_os, pn_sor,
-demand_or, demand_ov, Q_vr, n_vs, L_p_or, b_os, b_prime,
-M, gamma, w, N,
-max_iters=50, tolerance=0.01, stable_iterations=3)
+best_sol, LB_final, UB_final, milp_obj1_from_mp = branch_and_cut.branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
+                        A_sr, C_r, Eff_sor, Distance, F_s,  v_o_n, eta_o, t_os_n, pn_sor,
+                        demand_or, demand_ov, nQ, Q_vr, n_vs, L_p_or, M, gamma, W, NumberStMax,
+                        max_iters = 50, tolerance = 0.01, stable_iterations = 3)
 
 print("Facilities opened:", [s for s in best_sol["x"] if best_sol["x"][s] > 0.5])
 print("Final LB:", LB_final)
 print("Final UB:", UB_final)
+
+#%%
+# # Create Excel file for 5 previously created dataframe
+# # df_table4.to_excel('../results/computational_findings_s4.2.xlsx', sheet_name='tab4. experimental design', index=False)
+# with pd.ExcelWriter('../results/computational_findings_s4.2.xlsx', engine='openpyxl', mode='w') as writer:
+#     df_table4.to_excel(writer, sheet_name='tab4. experimental design', index=False)
+#     Table5_MCLP_vs_proposed_optimization_model.to_excel(writer, sheet_name='tab5. mclp vs lamoscad', index=False)
+#     resource_allocation.to_excel(writer, sheet_name='tab6. asset allocation', index=False)
+#
+
+print("Section 4.2 computational findings complete.")
