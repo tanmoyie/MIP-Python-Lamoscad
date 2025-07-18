@@ -1,0 +1,26 @@
+\ Model Oil Spill Response Optimization_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize multi-objectives
+  objective_1: Priority=3 Weight=-1 AbsTol=1e-06 RelTol=0
+  
+  objective_2: Priority=2 Weight=1 AbsTol=1e-06 RelTol=0
+   810000 x_s[s1] + 360000 x_s[s2] + 270000 x_s[s3] + 630000 x_s[s4]
+   + 450000 x_s[s5] + 630000 x_s[s6] + 270000 x_s[s7] + 810000 x_s[s8]
+   + 180000 x_s[s9] + 900000 x_s[s10] + 630000 x_s[s11] + 630000 x_s[s12]
+   + 630000 x_s[s13] + 180000 x_s[s14] + 540000 x_s[s15] + 900000 x_s[s16]
+   + 540000 x_s[s17] + 720000 x_s[s18] + 180000 x_s[s19] + 900000 x_s[s20]
+   + 819511.0399999998 Constant1
+Subject To
+ c4_Max_Facilities: x_s[s1] + x_s[s2] + x_s[s3] + x_s[s4] + x_s[s5]
+   + x_s[s6] + x_s[s7] + x_s[s8] + x_s[s9] + x_s[s10] + x_s[s11] + x_s[s12]
+   + x_s[s13] + x_s[s14] + x_s[s15] + x_s[s16] + x_s[s17] + x_s[s18]
+   + x_s[s19] + x_s[s20] = 15
+ c7_Up_North: x_s[s9] + x_s[s12] + x_s[s13] + x_s[s15] + x_s[s16]
+   + x_s[s18] + x_s[s20] <= 1
+Bounds
+ Constant1 = 1
+Binaries
+ x_s[s1] x_s[s2] x_s[s3] x_s[s4] x_s[s5] x_s[s6] x_s[s7] x_s[s8] x_s[s9]
+ x_s[s10] x_s[s11] x_s[s12] x_s[s13] x_s[s14] x_s[s15] x_s[s16] x_s[s17]
+ x_s[s18] x_s[s19] x_s[s20]
+End

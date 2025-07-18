@@ -199,7 +199,7 @@ def generate_input_data(station_data, spill_data, input_parameters):
         # Helicopter conditions
         if category == 'c' and value > 750 or category == 'i' and value > 1000:
             demand_ov[(spill, 'helicopter')] += 4
-        elif category == 'c' and value > 400 or category == 'i' and value > 500:
+        elif category == 'c' and value > 400 or category == 'i' and value > 0:  # 500 previous value for 0
             demand_ov[(spill, 'helicopter')] += 2
 
         # Ship and Ice Breaker conditions

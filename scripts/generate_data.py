@@ -91,7 +91,6 @@ for model in models:
             pd.DataFrame.from_dict(v_o_n, orient="index").to_excel(writer, sheet_name="v_o")
             pd.DataFrame.from_dict(eta_o, orient="index").to_excel(writer, sheet_name="eta_o")
             pd.DataFrame.from_dict(F_s, orient="index").to_excel(writer, sheet_name="F_s")
-            pd.DataFrame.from_dict(C_sr, orient="index").to_excel(writer, sheet_name="C_sr")
             pd.DataFrame.from_dict(Eff_sor, orient="index").to_excel(writer, sheet_name="Eff_sor")
             pd.DataFrame.from_dict(pn_sor, orient="index").to_excel(writer, sheet_name="pn_sor")
 

@@ -96,7 +96,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
     for o in OilSpills:
         for v in Vehicles:
             model.addConstr(quicksum(h_sov[s, o, v] for s in Stations) >= demand_ov[o, v],
-                            name=f"c15_vessel_capacity_{o}")
+                            name=f"c15_vessel_capacity_{o}_{v}")
     # (16) Vessel deployment from station to oil spill
     for s in Stations:
         for o in OilSpills:
@@ -118,25 +118,25 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
                     name=f"c18_capacity_link_{s}_{o}_{v}")
 
     # Solve the model
-    model.write('../results/model_artifacts/model_lamoscad_july2025.lp')
+    # model.write('../results/artifacts/model_lamoscad_july2025.lp')
     return model, x_s, y_os, z_sor, h_sov
 
 
 def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=False):
+    model.update()
     num_var_constr = [model.NumVars, model.NumConstrs]
     if needMultiSolutions:
         model.setParam('PoolSolutions', 20)  # useful for exploring pareto frontier
         model.setParam('PoolSearchMode', 2)
     model.params.OutPutFlag = 1
+    model.params.TimeLimit = 1*60
     model.optimize()
-    milp_gap = round(model.MIPGap, 2)    # gap= |obj bound - objVal| / |objVal|
-
-
+    # milp_gap = round(model.MIPGap, 2)    # gap= |obj bound - objVal| / |objVal|
 
     if model.status == GRB.INFEASIBLE:
         print("Model is infeasible. ")
         model.computeIIS()
-        model.write("../results/model_artifacts/infeasible_model.ilp")  # Save IIS to a file
+        model.write("../results/artifacts/infeasible_model.ilp")  # Save IIS to a file
 
         print("IIS Constraints:")
         for c in model.getConstrs():
@@ -181,4 +181,4 @@ def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=Fa
     resource_stockpile_r = []
 
     return objVals, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values, \
-            num_var_constr, milp_gap
+            num_var_constr

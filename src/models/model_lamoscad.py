@@ -25,7 +25,6 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
     # Objective Function
     objective_1 = quicksum((w1 * v_o[o] + w2 * eta_o[o] - w3 * t_os[o, s]) * y_os[o, s]
                            for o in OilSpills for s in Stations)
-
     objective_2 = w4 * quicksum(F_s[s] * x_s[s] for s in Stations) \
                   + quicksum(
         (w5 * C_r[r] - w6 * Eff_sor[s, o, r]) * z_sor[s, o, r] for s in Stations for o in OilSpills for r in
@@ -59,7 +58,6 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
             model.addConstr(quicksum(z_sor[s, o, r] for o in OilSpills)
                             <= A_sr[s, r] * x_s[s], name=f"c8_Resource_Deploy_{s}_{r}")  # Constraint (8)
 
-
     # Constraint 9 - 13
     for o in OilSpills:
         model.addConstr((quicksum(y_os[o, s] for s in Stations) <= gamma), name=f"c9_max_facilities_{o}")  # (9)
@@ -68,7 +66,6 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
         model.addConstr(
             (quicksum(y_os[o, s] for s in Stations) >= 1 - M * b_o_prime[o] * (1 if eta_o[o] < 0.8 else 0)),
             name=f"c10_coverage_constraint_{o}")  # Constraint 10
-
 
     for o in OilSpills:
         for r in Resources:
@@ -96,7 +93,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
     for o in OilSpills:
         for v in Vehicles:
             model.addConstr(quicksum(h_sov[s, o, v] for s in Stations) >= demand_ov[o, v],
-                            name=f"c15_vessel_capacity_{o}")
+                            name=f"c15_vessel_capacity_{o}_{v}")
     # (16) Vessel deployment from station to oil spill
     for s in Stations:
         for o in OilSpills:
@@ -113,36 +110,46 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
         for o in OilSpills:
             for v in Vehicles:
                 model.addConstr(
-                    quicksum(z_sor[s, o, r] for r in Resources) <= quicksum(Q_vr[v, r] for r in Resources) * h_sov[
-                        s, o, v],
-                    name=f"c18_capacity_link_{s}_{o}_{v}")
-
+                    quicksum(z_sor[s, o, r] for r in Resources)
+                    <= quicksum(Q_vr[v, r] for r in Resources) * h_sov[s, o, v], name=f"c18_capacity_link_{s}_{o}_{v}")
+    # for s in Stations:
+    #     for o in OilSpills:
+    #         for v in Vehicles:
+    #             for r in Resources:
+    #                 model.addConstr(
+    #                     z_sor[s, o, r] <= Q_vr[v, r] * h_sov[s, o, v],
+    #                     name=f"c18_capacity_link_{s}_{o}_{v}")
     # Solve the model
-    model.write('../results/model_artifacts/model_lamoscad_july2025.lp')
+    # model.write('../results/artifacts/model_lamoscad_july2025.lp')
     return model, x_s, y_os, z_sor, h_sov
 
 
-def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=False):
+def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=False, uncertaintyEvaluation=False,
+                ):
     if needMultiSolutions:
         model.setParam('PoolSolutions', 20)  # useful for exploring pareto frontier
         model.setParam('PoolSearchMode', 2)
+
+    if uncertaintyEvaluation:
+        model.setParam('MIPGap', 0.05)  # 0.05% = 0.0005
+        model.params.TimeLimit = 10 * 60
+
+
     model.params.OutPutFlag = 0
     model.optimize()
 
     if model.status == GRB.INFEASIBLE:
         print("Model is infeasible. ")
         model.computeIIS()
-        model.write("../results/model_artifacts/infeasible_model.ilp")  # Save IIS to a file
-
         print("IIS Constraints:")
         for c in model.getConstrs():
             if c.IISConstr:
                 print(f"{c.constrName}")
-
-        print("\nIIS Variables:")
-        for v in model.getVars():
-            if v.IISLB or v.IISUB:
-                print(f"{v.varName}: Lower Bound {v.IISLB}, Upper Bound {v.IISUB}")
+        # print("\nIIS Variables:")
+        # for v in model.getVars():
+        #     if v.IISLB or v.IISUB:
+        #         print(f"{v.varName}: Lower Bound {v.IISLB}, Upper Bound {v.IISUB}")
+        # model.write("../results/artifacts/infeasible_model.ilp")  # Save IIS to a file
 
     x_s1 = pd.Series(model.getAttr('X', x_s))[lambda x: x > 0.5]
     y_os1 = pd.Series(model.getAttr('X', y_os))[lambda x: x > 0.5]
@@ -165,15 +172,13 @@ def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=Fa
         solution_values2 = [objVals[i][1] for i in range(len(solution_values1))]
         # Print all extracted solutions
         solution_values = [[solution_values1[i], solution_values2[i]] for i in range(len(solution_values1))]
-        print("Extracted Objective Values:", solution_values)
+        # print("Extracted Objective Values:", solution_values)
     else:
         objVals = [round(model.getObjective(0).getValue(), 2), round(model.getObjective(1).getValue(), 2)]
         solution_values = []
+
     print('objVals: ', objVals)
-
     coverage_percentage = int(100 * len(y_os1) / len(OilSpills))
-
-    # mean_response_time = 0  # round((DistanceTravelled / 60) / len(assignment), 2)  # len() +++ OilSpills
     resource_stockpile_r = []
 
     return objVals, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values

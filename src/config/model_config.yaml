@@ -43,11 +43,11 @@ assets:
       i: 1
 
   C_r:
-    m: 330
+    m: 330  # CAD
     c: 125
     i: 100
 
-  c_v:
+  c_v:  # transport cost per kilometer by vehicle v
     helicopter: 40
     ship: 2
     icebreaker: 20

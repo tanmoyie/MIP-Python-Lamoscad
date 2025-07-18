@@ -1,5 +1,6 @@
 from gurobipy import *
 
+
 def solve_master_problem(OilSpills, Stations, Resources, F_s, v_o, eta_o, t_os, demand_or, W, A_sr, M, gamma, NumberStMax, dual_cuts):
     w1, w2, w3, w4, *_ = W
 
@@ -67,9 +68,9 @@ def solve_primal_subproblem(OilSpills, Stations, Resources, Vehicles,
     model.addConstrs(quicksum(z[s, o, r] for r in Resources) <= quicksum(Q_vr[v, r] * h[s, o, v] for v in Vehicles for r in Resources) for s in Stations for o in OilSpills)
 
     model.optimize()
-    print('SP obj: ', model.ObjVal)
 
     if model.Status == GRB.OPTIMAL:
+        print('SP obj: ', model.ObjVal)
         z_sol = {(s, o, r): z[s, o, r].X for s in Stations for o in OilSpills for r in Resources}
         h_sol = {(s, o, v): h[s, o, v].X for s in Stations for o in OilSpills for v in Vehicles}
         duals = 'n/a'  # \
@@ -99,7 +100,7 @@ def generate_cuts(OilSpills, Stations, Resources, A_sr, demand_or, x_bar, y_bar,
 def branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
                         A_sr, C_r, Eff_sor, Distance, F_s,  v_o, eta_o, t_os, pn_sor,
                         demand_or, demand_ov, nQ, Q_vr, n_vs, L_p_or, M, gamma, W, NumberStMax,
-                        max_iters = 50, tolerance = 0.01, stable_iterations = 3):
+                        max_iters=5, tolerance = 0.01, stable_iterations = 3):
 
     dual_cuts = []
     UB, LB = float('inf'), -float('inf')
@@ -107,7 +108,7 @@ def branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
     stable_count = 0
 
     for it in range(max_iters):
-        print(f"\n📘 Iteration {it+1}")
+        print(f"\n Iteration {it+1}")
 
         x_bar, y_bar, y_prime_val, UB_candidate, milp_obj1_from_mp = solve_master_problem(
             OilSpills, Stations, Resources, F_s, v_o, eta_o, t_os, demand_or, W, A_sr, M, gamma, NumberStMax, dual_cuts)
@@ -126,7 +127,7 @@ def branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
         # if gap <= tolerance:
         #     stable_count += 1
         #     if stable_count >= stable_iterations:
-        #         print("🎯 Converged!")
+        #         print("Converged!")
         #         best_solution = {"x": x_bar, "y": y_bar, "z": z_sol, "h": h_sol}
         #         break
         # else:
@@ -134,10 +135,10 @@ def branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
         #
         # violated, cut = generate_cuts(OilSpills, Stations, Resources, A_sr, demand_or, x_bar, y_bar, duals, y_prime_val)
         # if violated:
-        #     print("➕ Adding Benders cut")
+        #     print("Adding Benders cut")
         #     dual_cuts.append(cut)
         # else:
-        #     print("✔ No violated Benders cut found")
+        #     print("No violated Benders cut found")
 
     if best_solution is None:
         best_solution = {"x": x_bar, "y": y_bar, "z": z_sol, "h": h_sol}

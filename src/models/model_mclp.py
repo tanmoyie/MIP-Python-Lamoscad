@@ -29,8 +29,7 @@ def build_model_mclp(OilSpills, Stations, v_o, NumberStMax, Distance, DistanceMa
     # ----------------------------------------------- Objective function -------------------------------------------
     model.ModelSense = GRB.MAXIMIZE
     model.setObjective(quicksum(v_o[o] * y_os[o, s] for o in OilSpills for s in Stations))
-    # Write the model
-    # model.write(f'../results/model_artifacts/model_mclp.lp')
+    # model.write(f'../results/artifacts/model_mclp.lp')
 
     # Solve the model
     return model, x_s, y_os
@@ -39,6 +38,7 @@ def build_model_mclp(OilSpills, Stations, v_o, NumberStMax, Distance, DistanceMa
 def solve_model_mclp(model_mclp, x_s, y_os, OilSpills):
     start_time = time.time()
     model_mclp.params.OutputFlag = 0
+    model_mclp.params.TimeLimit = 10*60
     model_mclp.optimize()
     runtime_mclp = time.time() - start_time
     x_s1 = pd.Series(model_mclp.getAttr('X', x_s))[lambda x: x > 0.5]
