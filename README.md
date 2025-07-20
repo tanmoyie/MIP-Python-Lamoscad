@@ -90,7 +90,7 @@ pip install -r requirements.txt
 
 - **Scripts**: Execute optimization models from `scripts/`:
 ```bash
-python scripts/run_large_scale.py
+python scripts/perform_sensitivity_analysis_s4.3.py
 ```
 
 - **Configurations**: Adjust model parameters inside `src/config/model_config.yaml`.
