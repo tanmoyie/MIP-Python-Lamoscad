@@ -10,25 +10,31 @@ The models are designed to solve complex **facility location**, **resource alloc
 ## 📂 Project Structure
 
 ```
-lamoscad-optimization-project/
+MIP-Python-Lamoscad/
 │
-├── src/                       # Source code (models, solvers, preprocessing)
-│├── config/                   # Config loader & YAML config files
-│├── preprocessing/            # Data loading & preprocessing utilities
-│├── models/                   # Optimization models (Gurobi, MILP, etc.)
-│├── solvers/                  # Solver wrappers and algorithms
-│├── visualization/            # Map plotting & result visualization
-│└── utils/                    # Helper utilities
+├── data/                            # Input datasets (e.g., oil spill, station info)
 │
-├── notebooks/                 # Jupyter notebooks for experiments
-├── data/                      # Input data (ignored by Git)
-├── results/                   # Model results (ignored by Git)
-├── tests/                     # Unit tests (optional)
-├── scripts/                   # CLI-friendly experiment scripts
+├── results/                         # Output results
+│   ├── artifacts/                   # Saved output files or model artifacts
+│   └── plots/                       # Excel and figure output files (e.g., .xlsx, .png)
 │
-├── README.md                  # This file
-├── .gitignore                 # Ignore cache, logs, and data
-├── requirements.txt           # Python dependencies
+├── scripts/                         # Experiment scripts for running models and analyses
+│   ├── generate_data.py             # Preprocessing script
+│   ├── obtain_pcp_data_s4.3.2.py
+│   ├── perform_sensitivity_analysis_s4.3.py
+│   ├── run_computational_findings_s4.2.py
+│   ├── run_lamoscad_mclp_s4.2.3.py
+│   └── run_milp_BnC_s4.2.6.py
+│
+├── src/                             # Core source code
+│   ├── config/                      # Configuration and YAML loaders
+│   ├── models/                      # Mathematical model definitions
+│   ├── preprocessing/               # Data loading and preprocessing utils
+│   ├── solvers/                     # Custom solver logic (e.g., branch and cut)
+│   ├── utils/                       # General utilities
+│   └── visualization/               # Drawing maps, routes, and networks
+│
+├── requirement.txt
 ```
 
 ---
