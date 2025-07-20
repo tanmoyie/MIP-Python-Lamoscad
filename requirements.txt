@@ -1,0 +1,11 @@
+geopandas==0.14.2
+geopandas==0.13.2
+gurobipy==10.0.2
+matplotlib==3.8.4
+matplotlib==3.7.2
+numpy==1.25.2
+pandas==2.0.3
+PyYAML==6.0
+PyYAML==6.0.2
+seaborn==0.13.2
+Shapely==2.1.1

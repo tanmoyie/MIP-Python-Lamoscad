@@ -35,10 +35,11 @@ def draw_network_diagram(y_os1, spill_df, station_df,
 
     # ............................. Extract related data
     selected_supply_stations = list(y_os1.reset_index().level_1.unique())
+    print('selected_supply_stations: ', selected_supply_stations)
     spill_df_covered = spill_df[spill_df['Spill #'].isin([item[0] for item in y_os1.index])]
     spill_df_not_covered = spill_df[~spill_df['Spill #'].isin([item[0] for item in y_os1.index])]
     station_df_selected = station_df[station_df['Station no.'].isin(selected_supply_stations)]
-
+    print('station_df_selected:\n', station_df_selected)
     # ............................. Draw the GIS map
     fig, ax = plt.subplots(figsize=(6, 6))  # ++
     # Load geometric file for map
@@ -91,9 +92,16 @@ def draw_network_diagram(y_os1, spill_df, station_df,
                      edgecolors='black',
                      zorder=5,
                      c=station_color)
-    # Annotate station numbers
-    for ii, row in station_df_selected.iterrows():
-        ax.text(row['St_Longitude']+1.1, row['St_Latitude']-0.3, f"$s_{{{ii + 1}}}$",
+
+    # # Annotate station numbers
+    # for ii, row in station_df_selected.iterrows():
+    #     ax.text(row['St_Longitude'] + 1.1, row['St_Latitude'] - 0.3, f"$s_{{{ii + 1}}}$",  # ++
+    #             zorder=6, fontsize=10, ha='right', va='bottom', color=facility_text_color, fontweight='bold')
+    # Annotate station numbers using the 'Station no.' column
+    for _, row in station_df_selected.iterrows():
+        station_no = row['Station no.']  # e.g., 's1'
+        digit = station_no.replace('s', '')  # extract just the number part
+        ax.text(row['St_Longitude'] + 1.1, row['St_Latitude'] - 0.3, f"$s_{{{digit}}}$",
                 zorder=6, fontsize=10, ha='right', va='bottom', color=facility_text_color, fontweight='bold')
 
     # Showing station number as text for current stations
@@ -112,7 +120,7 @@ def draw_network_diagram(y_os1, spill_df, station_df,
     station_colors = {station: mcolors.to_hex(cmap(i)) for i, station in enumerate(unique_stations)}
 
     # Draw lines between eligible pairs with different colors for different stations
-    total_response_time = 0
+    # total_response_time = 0
     for spill, station in list(y_os1.index):
         spill_loc = spill_df[spill_df['Spill #'] == spill]
         station_loc = station_df[station_df['Station no.'] == station]
@@ -120,7 +128,7 @@ def draw_network_diagram(y_os1, spill_df, station_df,
         if not spill_loc.empty and not station_loc.empty:
             x_values = [spill_loc.iloc[0]['Spill_Longitude'], station_loc.iloc[0]['St_Longitude']]
             y_values = [spill_loc.iloc[0]['Spill_Latitude'], station_loc.iloc[0]['St_Latitude']]
-            total_response_time += compute_distance(x_values, y_values)
+            # total_response_time += compute_distance(x_values, y_values)
 
             # Use assigned color for each station
             line_color = station_colors.get(station, 'k')  # Default to black if station not found
@@ -137,5 +145,5 @@ def draw_network_diagram(y_os1, spill_df, station_df,
     plt.axis('off')
     fig.tight_layout()
     plt.savefig(f'../results/plots/network_diagram_{name}.png', dpi=500)
-    # plt.show()
-    plt.close()
+    plt.show()
+    # plt.close()

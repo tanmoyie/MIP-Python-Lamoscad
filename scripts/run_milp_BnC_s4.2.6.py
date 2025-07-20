@@ -56,21 +56,21 @@ for oil in [200, 300, 400, 500, 750, 1000]:  # instance_o
             elif sta == 30: NumberStMax = 10
             elif sta == 50: NumberStMax = 15
             #%% ------------------------------------- MILP -------------------------------------
-            # print('Running MILP')
-            # W = [3.1, 2.5, 0.25, 0.0025, 0.025, 25, 0.5, 0.25]
-            # start_time_milp = time.time()
-            # model_1, x_s, y_os, z_sor, h_sov = build_model(Stations, OilSpills, Resources, Vehicles, W,
-            #                                                    v_o_n, eta_o, t_os_n, gamma, M, demand_or, demand_ov, L_p_or,
-            #                                                    NumberStMax, A_sr, nH, nUN, nQ, Q_vr, n_vs,
-            #                                                    F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax, 'model_p')
-            #
-            # model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor_lamoscad, h_sov_lamoscad, solution_values, \
-            #             num_var_constr = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
-            # runtime_milp = round(time.time() - start_time_milp, 2)
-            # print('num_var_constr', num_var_constr)
-            # print('runtime_milp', runtime_milp)
+            print('Running MILP')
+            W = [3.1, 2.5, 0.25, 0.0025, 0.025, 25, 0.5, 0.25]
+            start_time_milp = time.time()
+            model_1, x_s, y_os, z_sor, h_sov = build_model(Stations, OilSpills, Resources, Vehicles, W,
+                                                               v_o_n, eta_o, t_os_n, gamma, M, demand_or, demand_ov, L_p_or,
+                                                               NumberStMax, A_sr, nH, nUN, nQ, Q_vr, n_vs,
+                                                               F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax, 'model_p')
+
+            model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor_lamoscad, h_sov_lamoscad, solution_values, \
+                        num_var_constr = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
+            runtime_milp = round(time.time() - start_time_milp, 2)
+            print('num_var_constr', num_var_constr)
+            print('runtime_milp', runtime_milp)
             #%% ------------------------------------- Branch and Cut -------------------------------------
-            # print('Running BnC')
+            print('Running BnC')
             W = [3.1, 2.5, 0.25, 0.0025, 0.025, 25, 0.025, 0.25]
             start_time_BnC = time.time()
             best_sol, LB_final, UB_final, obj1_from_rmp = branch_and_cut.branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
@@ -78,15 +78,15 @@ for oil in [200, 300, 400, 500, 750, 1000]:  # instance_o
                                     demand_or, demand_ov, nQ, Q_vr, n_vs, L_p_or, M, gamma, W, NumberStMax,
                                     max_iters=1, tolerance=0.01, stable_iterations=3)
             runtime_BnC = time.time() - start_time_BnC
-            print("Facilities opened:", [s for s in best_sol["x"] if best_sol["x"][s] > 0.5])
-            print("Final LB:", LB_final)
-            print("Final UB:", UB_final)
+            # print("Facilities opened:", [s for s in best_sol["x"] if best_sol["x"][s] > 0.5])
+            # print("Final LB:", LB_final)
+            # print("Final UB:", UB_final)
 
             results.append({
                 "instance": instance,
-                # "num_var_constr": num_var_constr,
-                # "model_objectives[0]": model_objectives[0],
-                # "runtime_milp": runtime_milp,
+                "num_var_constr": num_var_constr,
+                "model_objectives[0]": model_objectives[0],
+                "runtime_milp": runtime_milp,
                 "milp_obj1_from_mp": round(obj1_from_rmp, 2),
                 "runtime_BnC": round(runtime_BnC, 2)
             })

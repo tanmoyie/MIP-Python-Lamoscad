@@ -1,5 +1,6 @@
 """
 Section 4.3.
+Filename= perform_sensitivity_analysis_s4.3
 This script will produce all tables and figures in Section 4.3
 """
 from src.models.model_insensitive import build_model_insensi, solve_model_insensi
@@ -20,6 +21,7 @@ import pandas as pd
 results = []
 for oil in [100, 200]:
     sta = 20
+    print(f'Running on len(OilSpill)={oil}, N={sta}')
     # Load data for this oil size
     with open(f"../data/large scale processed dataset/preprocessed_data_o{oil}_s{sta}.pkl", "rb") as f:
         data = pickle.load(f)
@@ -94,3 +96,5 @@ plot_pareto_frontier(df_pareto_front_fig11)
 with pd.ExcelWriter('../results/sensitivity_analysis_s4.3.xlsx',
                     engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
     tab8_num_facilities_sensitivity.to_excel(writer, sheet_name='tab8. sensitivity num facility', index=False)
+
+print('Run completed on perform_sensitivity_analysis_s4.3')

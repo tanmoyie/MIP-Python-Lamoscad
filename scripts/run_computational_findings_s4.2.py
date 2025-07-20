@@ -32,7 +32,9 @@ with open("../data/preprocessed_data_model_p256.pkl", "rb") as f:
 
 # Load config parameters
 cfg = config_loader.load_config("../src/config/model_config.yaml")
-W, M, gamma = cfg["general"]["weights"], cfg["general"]["M"], cfg["general"]["gamma"]
+M, gamma = cfg["general"]["M"], cfg["general"]["gamma"]
+# W = cfg["general"]["weights"]
+W = [2.5, 2.5, 0.25, 0.0025, 0.025, 0.25, .75, 0.25]
 nQ, nS, nH, nUN = cfg["general"]["nQ"], cfg["general"]["nS"], cfg["general"]["nH"], cfg["general"]["nUN"]
 DistanceMax, NumberStMax = cfg["general"]["DistanceMax"], cfg["general"]["NumberStMax"]
 
@@ -68,10 +70,10 @@ for m1 in ['model_p', 'model_2', 'model_5', 'model_6']:
 
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values \
         = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
-    mean_response_time = utility_functions.compute_mean_response_time(y_os1, spill_df, station_df)
     # Draw the network fig 5(b,d) fig 7(a,b)
-    draw_network_diagram(y_os1, spill_df, station_df, name=m1)
+    # draw_network_diagram(y_os1, spill_df, station_df, name=m1)
 
+    mean_response_time = utility_functions.compute_mean_response_time(y_os1, spill_df, station_df)
     Objective1_dict[m1] = model_objectives[0]
     Objective2_dict[m1] = model_objectives[1]
     Coverage_dict[m1] = coverage_percentage
@@ -99,8 +101,9 @@ for m2 in ['model_3']:
                                                    F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax_dict[m2], m2)
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values \
         = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
+    # draw_network_diagram(y_os1, spill_df, station_df, name=m2)
+
     mean_response_time = utility_functions.compute_mean_response_time(y_os1, spill_df, station_df)
-    draw_network_diagram(y_os1, spill_df, station_df, name=m2)
     Objective1_dict[m2] = model_objectives[0]
     Objective2_dict[m2] = model_objectives[1]
     Coverage_dict[m2] = coverage_percentage
@@ -129,8 +132,9 @@ for m2 in ['model_c']:
                                                    F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax_dict[m2], m2)
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values \
         = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
+    # draw_network_diagram(y_os1, spill_df, station_df, name=m2)
+
     mean_response_time = utility_functions.compute_mean_response_time(y_os1, spill_df, station_df,  modelType=True)
-    draw_network_diagram(y_os1, spill_df, station_df, name=m2)
     Objective1_dict[m2] = model_objectives[0]
     Objective2_dict[m2] = model_objectives[1]
     Coverage_dict[m2] = coverage_percentage
@@ -143,7 +147,7 @@ data = {
     'N': [NumberStMax_dict[m] for m in model_config],
     'Max Distance (in Km)': [80 * DistanceMax_dict[m] for m in model_config],  # 80 to convert GIS data into km
     'Objective 1': [Objective1_dict[m] for m in model_config],
-    'Objective 2 (in thousands)': [round(Objective2_dict[m] / 1000, 2) for m in model_config],
+    'Objective 2': [round(Objective2_dict[m] / 1000, 2) for m in model_config],
     'Coverage Percentage (in %)': [f'{Coverage_dict[m]}%' for m in model_config],
     'Min Response Time (in hr)': [Mean_response_time_dict[m] for m in model_config]}
 
@@ -153,5 +157,5 @@ df_table4 = pd.DataFrame(data, index=model_config)
 with pd.ExcelWriter('../results/computational_findings_s4.2.xlsx',
                     engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
     df_table4.to_excel(writer, sheet_name='tab4. experimental design', index=False)
-
+print(df_table4[['Model config','Objective 1', 'Objective 2']])
 print("Section 4.2.5 computational findings complete.")
