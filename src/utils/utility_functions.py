@@ -25,13 +25,15 @@ def compute_stockpiling(z_sor, h_sov, safety_buffer):
         if v not in asset_stock.columns:
             asset_stock[v] = 0
     asset_stock = asset_stock[['Stations', 'helicopter', 'ship', 'icebreaker']]
-
+    # since we dont need two or more icebreaker to travel from stations s to some places.
+    asset_stock['icebreaker'] = asset_stock['icebreaker'].apply(lambda x: 1 if x != 0 else 0)
     # === Merge both tables ===
+
     resource_allocation = asset_stock.merge(equipment_stock, on='Stations', how='inner')
     return resource_allocation
 
 
-def compute_mean_response_time(y_os1, spill_df, station_df):
+def compute_mean_response_time(y_os1, spill_df, station_df, modelType=False):
     import math
 
     def compute_distance(loc1, loc2):
@@ -40,7 +42,8 @@ def compute_mean_response_time(y_os1, spill_df, station_df):
         return round(math.sqrt(dx * dx + dy * dy), 2)
     # Initialization
     total_response_time = 0
-    speed = 30  # km/hr
+    if modelType: speed = 20
+    else: speed = 30  # km/hr
 
     #
     for spill, station in list(y_os1.index):

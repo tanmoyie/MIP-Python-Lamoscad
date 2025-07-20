@@ -1,22 +1,18 @@
 """
-Script: run_computational_findings_s4.2.py
+Script: run_milp_BnC_s4.2.6.py
 Purpose: Automate computational experiments for Section 4.2 (findings) of the manuscript.
 Author: <TANMOY DAS>
 Revision Date: 11 July 2025
 """
 
-# %% 📦 Imports & Configurations
+# %% Imports & Configurations
 import time
 import pickle
 import pandas as pd
-
 from src.models.model_lamoscad_large_scale import build_model, solve_model
-from src.models.model_mclp import build_model_mclp, solve_model_mclp
 from src.solvers import branch_and_cut
 from src.preprocessing import data_loader, preprocess_utils
-from src.visualization.draw_network import draw_network_diagram
 from src.config import config_loader
-from src.utils import utility_functions
 
 #%%
 instance_o = [200, 300, 400, 500, 750, 1000]
@@ -24,11 +20,11 @@ instance_st = [10, 20, 30, 50]
 results = []
 
 # data_o300_s30
-for oil in [200, 300]:  # instance_o
-    for sta in [20]:
+for oil in [200, 300, 400, 500, 750, 1000]:  # instance_o
+    for sta in [10, 20, 30, 50]:
         try:
             instance = f'{oil} x {sta}'
-            print(f'............................. Solving {instance}............................. ')
+            print(f'\n\n====================================== Solving {instance} ====================================')
             with open(f"../data/large scale processed dataset/preprocessed_data_o{oil}_s{sta}.pkl", "rb") as f:
                 d = pickle.load(f)
 
@@ -43,7 +39,7 @@ for oil in [200, 300]:  # instance_o
             M, gamma = cfg["general"]["M"], cfg["general"]["gamma"]
             nQ, nS, nH, nUN = cfg["general"]["nQ"], cfg["general"]["nS"], cfg["general"]["nH"], cfg["general"]["nUN"]
             Vehicles, c_v, C_r = cfg["assets"]["vehicles"], cfg["assets"]["c_v"], cfg["assets"]["C_r"]
-            W = [2.5, 2.5, 0.25, 0.0025, 0.025, 250, 0.25, 0.25]
+            W = [3.1, 2.5, 0.25, 0.0025, 0.025, 250, 0.25, 0.25]
             # W = cfg["general"]["weights"]
 
             Q_vr = {(v, r): cfg["assets"]["Q_vr"][v][r] for v in cfg["assets"]["Q_vr"] for r in
@@ -59,6 +55,7 @@ for oil in [200, 300]:  # instance_o
             NumberStMax = 5 if sta in [10, 20] else 10
 
             #%% ------------------------------------- MILP -------------------------------------
+            print('Running MILP')
             start_time_milp = time.time()
             model_1, x_s, y_os, z_sor, h_sov = build_model(Stations, OilSpills, Resources, Vehicles, W,
                                                                v_o_n, eta_o, t_os_n, gamma, M, demand_or, demand_ov, L_p_or,
@@ -68,31 +65,34 @@ for oil in [200, 300]:  # instance_o
             model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor_lamoscad, h_sov_lamoscad, solution_values, \
                         num_var_constr = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
             runtime_milp = round(time.time() - start_time_milp, 2)
-
+            print('model_objectives', model_objectives[0])
             #%% ------------------------------------- Branch and Cut -------------------------------------
-            start_time_BnC = time.time()
-            best_sol, LB_final, UB_final, obj1_from_rmp = branch_and_cut.branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
-                                    A_sr, C_r, Eff_sor, Distance, F_s,  v_o_n, eta_o, t_os_n, pn_sor,
-                                    demand_or, demand_ov, nQ, Q_vr, n_vs, L_p_or, M, gamma, W, NumberStMax,
-                                    max_iters=5, tolerance=0.01, stable_iterations=3)
-            runtime_BnC = time.time() - start_time_BnC
-            print("Facilities opened:", [s for s in best_sol["x"] if best_sol["x"][s] > 0.5])
-            print("Final LB:", LB_final)
-            print("Final UB:", UB_final)
+            # print('Running BnC')
+            # start_time_BnC = time.time()
+            # best_sol, LB_final, UB_final, obj1_from_rmp = branch_and_cut.branch_and_cut_loop(OilSpills, Stations, Resources, Vehicles,
+            #                         A_sr, C_r, Eff_sor, Distance, F_s,  v_o_n, eta_o, t_os_n, pn_sor,
+            #                         demand_or, demand_ov, nQ, Q_vr, n_vs, L_p_or, M, gamma, W, NumberStMax,
+            #                         max_iters=1, tolerance=0.01, stable_iterations=3)
+            # runtime_BnC = time.time() - start_time_BnC
+            # print("Facilities opened:", [s for s in best_sol["x"] if best_sol["x"][s] > 0.5])
+            # print("Final LB:", LB_final)
+            # print("Final UB:", UB_final)
 
             results.append({
                 "instance": instance,
                 "num_var_constr": num_var_constr,
                 "model_objectives[0]": model_objectives[0],
                 "runtime_milp": runtime_milp,
-                "milp_obj1_from_mp": round(obj1_from_rmp, 2),
-                "runtime_BnC": round(runtime_BnC, 2)
+                # "milp_obj1_from_mp": round(obj1_from_rmp, 2),
+                # "runtime_BnC": round(runtime_BnC, 2)
             })
 
         except KeyError as e:
             print(e)
 df_BnC = pd.DataFrame(results)
 
-with pd.ExcelWriter('../results/4.2_computational_findings.xlsx',
+with pd.ExcelWriter('../results/computational_findings_s4.2.xlsx',
                     engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
     df_BnC.to_excel(writer, sheet_name='tab7. BnC_vs_MILP', index=False)
+
+print('Run complete for Section 4.2.6')

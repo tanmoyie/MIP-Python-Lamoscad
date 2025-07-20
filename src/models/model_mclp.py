@@ -52,4 +52,4 @@ def solve_model_mclp(model_mclp, x_s, y_os, OilSpills):
     num_sensitive_spills = 21
 
     return (model_mclp, y_os1_mclp, int(coverage_percentage), int(num_sensitive_spills),
-            round(runtime_mclp, 2), int(number_facility_selected))
+            runtime_mclp, int(number_facility_selected))

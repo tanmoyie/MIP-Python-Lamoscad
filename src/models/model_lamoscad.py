@@ -1,3 +1,6 @@
+"""
+Optimization model of the manuscript
+"""
 from gurobipy import Model, GRB, quicksum
 import pandas as pd
 
@@ -106,19 +109,19 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
                         <= quicksum(n_vs[v, s] for v in Vehicles), name=f"c17_facility_vessel_capacity_{s}")  # ++
 
     # (18) Vehicle Capacity
-    for s in Stations:
-        for o in OilSpills:
-            for v in Vehicles:
-                model.addConstr(
-                    quicksum(z_sor[s, o, r] for r in Resources)
-                    <= quicksum(Q_vr[v, r] for r in Resources) * h_sov[s, o, v], name=f"c18_capacity_link_{s}_{o}_{v}")
     # for s in Stations:
     #     for o in OilSpills:
     #         for v in Vehicles:
-    #             for r in Resources:
-    #                 model.addConstr(
-    #                     z_sor[s, o, r] <= Q_vr[v, r] * h_sov[s, o, v],
-    #                     name=f"c18_capacity_link_{s}_{o}_{v}")
+    #             model.addConstr(
+    #                 quicksum(z_sor[s, o, r] for r in Resources)
+    #                 <= quicksum(Q_vr[v, r] for r in Resources) * h_sov[s, o, v], name=f"c18_capacity_link_{s}_{o}_{v}")
+    for s in Stations:
+        for o in OilSpills:
+            for v in Vehicles:
+                for r in Resources:
+                    model.addConstr(
+                        z_sor[s, o, r] <= Q_vr[v, r] * h_sov[s, o, v],
+                        name=f"c18_capacity_link_{s}_{o}_{v}")
     # Solve the model
     # model.write('../results/artifacts/model_lamoscad_july2025.lp')
     return model, x_s, y_os, z_sor, h_sov
@@ -133,7 +136,6 @@ def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=Fa
     if uncertaintyEvaluation:
         model.setParam('MIPGap', 0.05)  # 0.05% = 0.0005
         model.params.TimeLimit = 10 * 60
-
 
     model.params.OutPutFlag = 0
     model.optimize()
@@ -177,7 +179,7 @@ def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=Fa
         objVals = [round(model.getObjective(0).getValue(), 2), round(model.getObjective(1).getValue(), 2)]
         solution_values = []
 
-    print('objVals: ', objVals)
+    # print('objVals: ', objVals)
     coverage_percentage = int(100 * len(y_os1) / len(OilSpills))
     resource_stockpile_r = []
 

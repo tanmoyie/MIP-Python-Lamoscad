@@ -5,8 +5,6 @@ Developer: Tanmoy Das
 
 # import libraries
 from src.preprocessing.preprocess_utils import compute_distance
-import pandas as pd
-from matplotlib import collections as mc
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import matplotlib.cm as cm
@@ -34,10 +32,8 @@ def draw_network_diagram(y_os1, spill_df, station_df,
         legend_y_position = 0.50
         facility_text_color = 'green'
         st_name = ['$s_{tu}$', '$s_{ha}$', '$s_{ch}$', '$s_{iq}$']
-        speed = 20
+
     # ............................. Extract related data
-    # unique_stations =
-    # spills = list(y_os1.reset_index().level_1.unique())
     selected_supply_stations = list(y_os1.reset_index().level_1.unique())
     spill_df_covered = spill_df[spill_df['Spill #'].isin([item[0] for item in y_os1.index])]
     spill_df_not_covered = spill_df[~spill_df['Spill #'].isin([item[0] for item in y_os1.index])]
@@ -141,6 +137,5 @@ def draw_network_diagram(y_os1, spill_df, station_df,
     plt.axis('off')
     fig.tight_layout()
     plt.savefig(f'../results/plots/network_diagram_{name}.png', dpi=500)
-
-    mean_response_time = round(total_response_time / (len(spill_df) * speed), 2)  # assuming speed of 30 km/hr
-    return mean_response_time
+    # plt.show()
+    plt.close()

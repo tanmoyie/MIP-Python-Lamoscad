@@ -51,6 +51,7 @@ def draw_boxplot(df_boxplot):
         ax.set_xlabel('')
         ax.tick_params(axis='x', labelrotation=30)
     plt.tight_layout()
-    fig.savefig('../results/plots/Fig10 boxplot.png', transparent=False, dpi=500)
-
+    fig.savefig('../results/plots/fig10_boxplot.png', transparent=False, dpi=500)
+    plt.show()
+    # plt.close()
 

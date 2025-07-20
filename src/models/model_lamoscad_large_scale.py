@@ -40,7 +40,7 @@ def build_model(Stations, OilSpills, Resources, Vehicles, W,
     # Constraints
     model.addConstrs((y_os[o, s] <= x_s[s] for o in OilSpills for s in Stations), name="c3_facility_cover")  # (3)
     # Constraints 4 - 8
-    model.addConstr(quicksum(x_s[s] for s in Stations) == NumberStMax, "c4_Max_Facilities")  # Constraint (4)
+    model.addConstr(quicksum(x_s[s] for s in Stations) <= NumberStMax, "c4_Max_Facilities")  # Constraint (4) +++
     # ++ <=  ==
     for o in OilSpills:
         for s in Stations:
@@ -128,25 +128,25 @@ def solve_model(model, x_s, y_os, z_sor, h_sov, OilSpills, needMultiSolutions=Fa
     if needMultiSolutions:
         model.setParam('PoolSolutions', 20)  # useful for exploring pareto frontier
         model.setParam('PoolSearchMode', 2)
-    model.params.OutPutFlag = 1
-    model.params.TimeLimit = 1*60
+    model.params.OutPutFlag = 0
+    model.params.TimeLimit = 10*60
     model.optimize()
     # milp_gap = round(model.MIPGap, 2)    # gap= |obj bound - objVal| / |objVal|
 
     if model.status == GRB.INFEASIBLE:
         print("Model is infeasible. ")
-        model.computeIIS()
-        model.write("../results/artifacts/infeasible_model.ilp")  # Save IIS to a file
-
-        print("IIS Constraints:")
-        for c in model.getConstrs():
-            if c.IISConstr:
-                print(f"{c.constrName}")
-
-        print("\nIIS Variables:")
-        for v in model.getVars():
-            if v.IISLB or v.IISUB:
-                print(f"{v.varName}: Lower Bound {v.IISLB}, Upper Bound {v.IISUB}")
+        # model.computeIIS()
+        # model.write("../results/artifacts/infeasible_model.ilp")  # Save IIS to a file
+        #
+        # print("IIS Constraints:")
+        # for c in model.getConstrs():
+        #     if c.IISConstr:
+        #         print(f"{c.constrName}")
+        #
+        # print("\nIIS Variables:")
+        # for v in model.getVars():
+        #     if v.IISLB or v.IISUB:
+        #         print(f"{v.varName}: Lower Bound {v.IISLB}, Upper Bound {v.IISUB}")
 
     x_s1 = pd.Series(model.getAttr('X', x_s))[lambda x: x > 0.5]
     y_os1 = pd.Series(model.getAttr('X', y_os))[lambda x: x > 0.5]

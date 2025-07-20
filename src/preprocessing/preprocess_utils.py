@@ -3,7 +3,7 @@ File Name: custom_func.py
 
 
 All the custom functions related to data processing and optimization modeling are written here
-& called as module in main.ipynb or model.py script
+& called as module in main.ipynb or model_insensitive.py script
 Function list
 1. Compute Distance
 2. Compute Pairings
