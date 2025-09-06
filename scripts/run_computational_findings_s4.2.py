@@ -71,7 +71,7 @@ for m1 in ['model_p', 'model_2', 'model_5', 'model_6']:
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values \
         = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
     # Draw the network fig 5(b,d) fig 7(a,b)
-    # draw_network_diagram(y_os1, spill_df, station_df, name=m1)
+    draw_network_diagram(y_os1, spill_df, station_df, name=m1)
 
     mean_response_time = utility_functions.compute_mean_response_time(y_os1, spill_df, station_df)
     Objective1_dict[m1] = model_objectives[0]
@@ -101,7 +101,7 @@ for m2 in ['model_3']:
                                                    F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax_dict[m2], m2)
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values \
         = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
-    # draw_network_diagram(y_os1, spill_df, station_df, name=m2)
+    draw_network_diagram(y_os1, spill_df, station_df, name=m2)
 
     mean_response_time = utility_functions.compute_mean_response_time(y_os1, spill_df, station_df)
     Objective1_dict[m2] = model_objectives[0]
@@ -132,7 +132,7 @@ for m2 in ['model_c']:
                                                    F_s, C_r, Eff_sor, pn_sor, c_v, Distance, DistanceMax_dict[m2], m2)
     model_objectives, coverage_percentage, resource_stockpile_r, x_s1, y_os1, z_sor1, h_sov1, solution_values \
         = solve_model(model_1, x_s, y_os, z_sor, h_sov, OilSpills)
-    # draw_network_diagram(y_os1, spill_df, station_df, name=m2)
+    draw_network_diagram(y_os1, spill_df, station_df, name=m2, proposed=False)
 
     mean_response_time = utility_functions.compute_mean_response_time(y_os1, spill_df, station_df,  modelType=True)
     Objective1_dict[m2] = model_objectives[0]
