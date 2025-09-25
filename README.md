@@ -115,7 +115,7 @@ This project is based on research in operations research and optimization for ma
 
 For questions or collaborations, please contact:
 **[Tanmoy Das]** — *Operations Research Scientist*  
-GitHub: [tanmoiyie](https://github.com/tanmoyie)
+GitHub: [tanmoyie](https://github.com/tanmoyie)
 
 ---
 
